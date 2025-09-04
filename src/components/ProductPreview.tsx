@@ -193,8 +193,8 @@ const ProductPreview = () => {
     const isTop = hotspot.y < imageCenter.y;
 
     // Position callout away from center
-    let calloutX = isLeft ? hotspot.x - calloutDistance : hotspot.x + calloutDistance;
-    let calloutY = isTop ? hotspot.y - 15 : hotspot.y + 15;
+    let calloutX = isLeft ? hotspot.x - calloutDistance - 5 : hotspot.x + calloutDistance + 5;
+    let calloutY = isTop ? hotspot.y - 20 : hotspot.y + 20;
 
     // Add viewport boundary checking with margins (in percentage)
     const viewportMargin = 15; // Margin from viewport edges in percentage
@@ -327,9 +327,6 @@ const ProductPreview = () => {
                         </h4>
                         <p className="text-muted-foreground text-xs leading-relaxed">
                           {hotspot.description}
-                        </p>
-                        <p className="text-xs text-primary font-medium mt-2">
-                          Click to see more details →
                         </p>
                       </div>
                       

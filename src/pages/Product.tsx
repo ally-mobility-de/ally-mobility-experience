@@ -45,8 +45,8 @@ const Product = () => {
     const isTop = hotspot.y < imageCenter.y;
     
     // Position callout away from center
-    let calloutX = isLeft ? hotspot.x - calloutDistance : hotspot.x + calloutDistance;
-    let calloutY = isTop ? hotspot.y - 15 : hotspot.y + 15;
+    let calloutX = isLeft ? hotspot.x - calloutDistance - 5 : hotspot.x + calloutDistance + 5;
+    let calloutY = isTop ? hotspot.y - 20 : hotspot.y + 20;
     
     // Add viewport boundary checking with margins (in percentage)
     const viewportMargin = 15; // Margin from viewport edges in percentage
@@ -417,7 +417,7 @@ const Product = () => {
             </div>
           </div>
 
-          {/* Technical Specifications */}
+          {/* Technical Specifications with Use Case */}
           <div className="space-y-8">
             <div className="text-center space-y-4">
               <h3 className="text-2xl font-bold text-primary">Technical Specifications</h3>
@@ -426,7 +426,61 @@ const Product = () => {
               </p>
             </div>
 
-            <div className="max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+              {/* Use Case Content */}
+              <div className="space-y-6">
+                <div className="space-y-4">
+                  <h4 className="text-xl font-semibold text-primary">
+                    {currentProduct.name === 'Flatbed' && 'Perfect for Construction & Trades'}
+                    {currentProduct.name === 'Box' && 'Ideal for Secure Delivery Services'}
+                    {currentProduct.name === 'Swap Container' && 'Revolutionize Your Logistics'}
+                  </h4>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {currentProduct.name === 'Flatbed' && 'The flatbed configuration offers unlimited versatility for construction materials, tools, and equipment. Its open design with reinforced lashing points makes it perfect for contractors, landscapers, and service technicians who need to transport diverse cargo efficiently.'}
+                    {currentProduct.name === 'Box' && 'The enclosed box design provides weather protection and security for valuable cargo. Perfect for delivery services, e-commerce logistics, and businesses requiring secure transport of sensitive goods in urban environments.'}
+                    {currentProduct.name === 'Swap Container' && 'The innovative swap container system enables record-time loading and unloading. Ideal for high-frequency delivery routes, logistics companies, and businesses that need maximum efficiency in cargo handling operations.'}
+                  </p>
+                </div>
+                
+                <div className="bg-gradient-subtle rounded-lg p-4">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center">
+                      {currentProduct.name === 'Flatbed' && <Package className="w-4 h-4 text-primary" />}
+                      {currentProduct.name === 'Box' && <Shield className="w-4 h-4 text-primary" />}
+                      {currentProduct.name === 'Swap Container' && <Zap className="w-4 h-4 text-primary" />}
+                    </div>
+                    <h5 className="font-medium text-primary">Key Benefits</h5>
+                  </div>
+                  <ul className="space-y-2 text-sm text-muted-foreground">
+                    {currentProduct.name === 'Flatbed' && (
+                      <>
+                        <li>• Versatile lashing points for any cargo type</li>
+                        <li>• Low loading height for easy access</li>
+                        <li>• Professional-grade reinforced frame</li>
+                        <li>• Compatible with all bike types</li>
+                      </>
+                    )}
+                    {currentProduct.name === 'Box' && (
+                      <>
+                        <li>• Weather-protected cargo compartment</li>
+                        <li>• Keyless lock system for security</li>
+                        <li>• 2.3 m³ of enclosed storage space</li>
+                        <li>• Ideal for valuable or sensitive goods</li>
+                      </>
+                    )}
+                    {currentProduct.name === 'Swap Container' && (
+                      <>
+                        <li>• Record-time loading/unloading</li>
+                        <li>• Up to 3 containers without tools</li>
+                        <li>• 4 braked castors for mobility</li>
+                        <li>• Perfect for high-frequency routes</li>
+                      </>
+                    )}
+                  </ul>
+                </div>
+              </div>
+
+              {/* Technical Specifications Table */}
               <div className="bg-card rounded-2xl p-6 border shadow-card">
                 <div className="flex items-center gap-3 mb-4">
                   <Package className="w-5 h-5 text-primary" />

@@ -17,13 +17,13 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <ProductPreview />
         <ValuesBanner />
-        <ProductRange />
         <CTABanner />
+        <ProductPreview />
+        <TestRideBanner />
+        <ProductRange />
         <Community />
         <UseCases />
-        <TestRideBanner />
         <DealerCTA />
         <ContactForm />
       </main>
