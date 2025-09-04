@@ -87,53 +87,72 @@ const Community = () => {
           {/* Carousel */}
           <div className="relative">
             <div className="overflow-hidden">
-              <div className="flex transition-transform duration-500 ease-out" style={{
-              transform: `translateX(-${currentSlide * 100}%)`,
-              width: `${totalSlides * 100}%`
-            }}>
-                {Array.from({
-                length: totalSlides
-              }).map((_, slideIndex) => <div key={slideIndex} className="w-full flex-shrink-0">
-                    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
-                      {articles.slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide).map(article => <div key={article.id} onClick={() => window.open(article.link, '_blank')} className="product-card group cursor-pointer">
-                            {/* Image */}
-                            <div className="relative aspect-[16/9] overflow-hidden">
-                              <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
-                              
-                              {/* Platform Badge */}
-                              <div className="absolute top-4 left-4">
-                                <span className={`${getPlatformColor(article.platform)} text-white px-3 py-1 rounded-full text-sm font-medium`}>
-                                  {article.platform}
-                                </span>
-                              </div>
-                            </div>
+<div className="flex transition-transform duration-500 ease-out"
+     style={{ transform: `translateX(-${currentSlide * 100}%)`, width: `${totalSlides * 100}%` }}>
 
-                            {/* Content */}
-                            <div className="p-6 space-y-4">
-                              <div className="space-y-2">
-                                <h3 className="text-xl font-semibold text-brand-green group-hover:text-primary transition-colors duration-300 line-clamp-2">
-                                  {article.title}
-                                </h3>
-                                <p className="text-muted-foreground line-clamp-3 leading-relaxed">
-                                  {article.excerpt}
-                                </p>
-                              </div>
-
-                              <div className="flex items-center justify-between pt-4 border-t border-border">
-                                <div className="text-sm font-medium text-brand-aqua">
-                                  {article.source}
-                                </div>
-                                <div className="w-6 h-6 text-primary">
-                                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                  </svg>
-                                </div>
-                              </div>
-                            </div>
-                          </div>)}
-                    </div>
-                  </div>)}
+  {Array.from({ length: totalSlides }).map((_, slideIndex) => (
+    // SLIDE: nimmt (fast) die ganze Höhe ein und zentriert vertikal
+    <div
+      key={slideIndex}
+      className="w-full flex-shrink-0 min-h-[70vh] flex items-center"
+    >
+      {/* GRID: exakt 2 Karten pro Slide, zentriert */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 max-w-5xl mx-auto place-items-center">
+        {articles
+          .slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide)
+          .map((article) => (
+            <div
+              key={article.id}
+              onClick={() => window.open(article.link, '_blank')}
+              // KARTE: fixe max-Breite, damit 2 Karten schön nebeneinander passen
+              className="product-card group cursor-pointer w-full max-w-[540px]"
+            >
+              {/* Image */}
+              <div className="relative aspect-[16/9] overflow-hidden">
+                <img
+                  src={article.image}
+                  alt={article.title}
+                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  loading="lazy"
+                />
+                {/* Platform Badge */}
+                <div className="absolute top-4 left-4">
+                  <span className={`${getPlatformColor(article.platform)} text-white px-3 py-1 rounded-full text-sm font-medium`}>
+                    {article.platform}
+                  </span>
+                </div>
               </div>
+
+              {/* Content */}
+              <div className="p-6 space-y-4">
+                <div className="space-y-2">
+                  <h3 className="text-xl font-semibold text-brand-green group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                    {article.title}
+                  </h3>
+                  <p className="text-muted-foreground line-clamp-3 leading-relaxed">
+                    {article.excerpt}
+                  </p>
+                </div>
+
+                <div className="flex items-center justify-between pt-4 border-t border-border">
+                  <div className="text-sm font-medium text-brand-aqua">
+                    {article.source}
+                  </div>
+                  <div className="w-6 h-6 text-primary">
+                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                    </svg>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+      </div>
+    </div>
+  ))}
+</div>
+
+    
             </div>
 
             {/* Navigation Buttons */}
