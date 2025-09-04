@@ -1,39 +1,50 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroCargoBike from "@/assets/hero-cargo-bike.jpg";
 import dealerPerson from "@/assets/dealer-person.jpg";
-import { Instagram, Linkedin, MessageCircle, MapPin, Phone, Mail, Calendar } from "lucide-react";
+import { Instagram, Linkedin, MessageCircle, MapPin, Phone, Mail, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 
 const AboutUs = () => {
   const navigate = useNavigate();
   const [currentEventIndex, setCurrentEventIndex] = useState(0);
+  const [currentTeamIndex, setCurrentTeamIndex] = useState(0);
 
   const teamMembers = [
     {
       id: 1,
-      name: "Dr. Sarah Mitchell",
-      role: "CEO & Co-Founder",
+      name: "Eliah",
+      role: "CEO",
       quote: "We believe mobility should be sustainable, efficient, and accessible to everyone. Our mission is to revolutionize urban transport.",
       image: "/lovable-uploads/93f64d63-22a9-46a0-8efa-e70fbcfcbf49.png"
     },
     {
       id: 2,
-      name: "Marcus Weber",
-      role: "CTO & Co-Founder",
-      quote: "Innovation through engineering excellence. Every component is designed for durability, efficiency, and user experience.",
+      name: "Chanti",
+      role: "CFO",
+      quote: "Financial excellence drives sustainable growth. Every investment decision supports our mission of transforming urban mobility.",
       image: "/lovable-uploads/a05449e6-bcab-4dd7-ab51-a035e539c831.png"
     },
     {
       id: 3,
-      name: "Lisa Chen",
-      role: "Head of Design",
-      quote: "Great design isn't just about looks—it's about creating solutions that seamlessly integrate into people's daily lives.",
+      name: "Noah",
+      role: "CTO",
+      quote: "Innovation through engineering excellence. Every component is designed for durability, efficiency, and user experience.",
       image: "/lovable-uploads/4b19d7f4-7d6d-44c5-9db1-f14823dafd21.png"
     }
   ];
+
+  // Auto-cycling for team carousel
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTeamIndex((prev) => (prev + 1) % teamMembers.length);
+    }, 5000); // Change every 5 seconds
+
+    return () => clearInterval(interval);
+  }, [teamMembers.length]);
 
   const events = [
     {
@@ -128,7 +139,7 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* We Are ally-mobility */}
+      {/* We Are ally-mobility - Team Carousel */}
       <section className="section-padding">
         <div className="container-custom">
           <div className="text-center space-y-12 mb-16">
@@ -137,29 +148,59 @@ const AboutUs = () => {
             </h2>
           </div>
           
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            <div className="relative">
-              <img 
-                src={dealerPerson} 
-                alt="Our team working on sustainable mobility" 
-                className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
-              />
-              <div className="absolute -bottom-6 -right-6 bg-brand-aqua text-white p-6 rounded-2xl shadow-lg">
-                <div className="text-3xl font-bold">2019</div>
-                <div className="text-sm">Founded</div>
-              </div>
-            </div>
-            
-            <div className="space-y-8">
-              <blockquote className="text-2xl lg:text-3xl text-muted-foreground leading-relaxed italic border-l-4 border-brand-aqua pl-8">
-                "We believe mobility should be sustainable, efficient, and accessible to everyone. 
-                Our mission is to revolutionize urban transport by creating innovative solutions 
-                that make cities cleaner, quieter, and more livable."
-              </blockquote>
-              <div className="space-y-2">
-                <p className="font-semibold text-primary text-lg">Dr. Sarah Mitchell</p>
-                <p className="text-muted-foreground">CEO & Co-Founder, ally-mobility</p>
-              </div>
+          <div className="relative max-w-6xl mx-auto">
+            <Carousel 
+              className="w-full"
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+            >
+              <CarouselContent>
+                {teamMembers.map((member, index) => (
+                  <CarouselItem key={member.id}>
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                      <div className="relative">
+                        <img 
+                          src={member.image} 
+                          alt={`${member.name} - ${member.role}`}
+                          className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
+                        />
+                        <div className="absolute -bottom-6 -right-6 bg-brand-aqua text-white p-6 rounded-2xl shadow-lg">
+                          <div className="text-3xl font-bold">{member.role}</div>
+                          <div className="text-sm">{member.name}</div>
+                        </div>
+                      </div>
+                      
+                      <div className="space-y-8">
+                        <blockquote className="text-2xl lg:text-3xl text-muted-foreground leading-relaxed italic border-l-4 border-brand-aqua pl-8">
+                          "{member.quote}"
+                        </blockquote>
+                        <div className="space-y-2">
+                          <p className="font-semibold text-primary text-lg">{member.name}</p>
+                          <p className="text-muted-foreground">{member.role}, ally-mobility</p>
+                        </div>
+                      </div>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              
+              <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white" />
+              <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white" />
+            </Carousel>
+
+            {/* Carousel Indicators */}
+            <div className="flex justify-center gap-2 mt-8">
+              {teamMembers.map((_, index) => (
+                <button
+                  key={index}
+                  onClick={() => setCurrentTeamIndex(index)}
+                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                    index === currentTeamIndex ? 'bg-primary' : 'bg-primary/30'
+                  }`}
+                />
+              ))}
             </div>
           </div>
         </div>
