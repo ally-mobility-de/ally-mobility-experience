@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroCargoBike from "@/assets/hero-cargo-bike.jpg";
@@ -84,6 +83,14 @@ const AboutUs = () => {
     setCurrentEventIndex((prev) => (prev - 1 + events.length) % events.length);
   };
 
+  const nextTeam = () => {
+    setCurrentTeamIndex((prev) => (prev + 1) % teamMembers.length);
+  };
+
+  const prevTeam = () => {
+    setCurrentTeamIndex((prev) => (prev - 1 + teamMembers.length) % teamMembers.length);
+  };
+
   const bannerBlocks = [
     {
       id: 1,
@@ -149,58 +156,54 @@ const AboutUs = () => {
           </div>
           
           <div className="relative max-w-6xl mx-auto">
-            <Carousel 
-              className="w-full"
-              opts={{
-                align: "start",
-                loop: true,
-              }}
-            >
-              <CarouselContent>
-                {teamMembers.map((member, index) => (
-                  <CarouselItem key={member.id}>
-                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-                      <div className="relative">
-                        <img 
-                          src={member.image} 
-                          alt={`${member.name} - ${member.role}`}
-                          className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
-                        />
-                        <div className="absolute -bottom-6 -right-6 bg-brand-aqua text-white p-6 rounded-2xl shadow-lg">
-                          <div className="text-3xl font-bold">{member.role}</div>
-                          <div className="text-sm">{member.name}</div>
-                        </div>
-                      </div>
-                      
-                      <div className="space-y-8">
-                        <blockquote className="text-2xl lg:text-3xl text-muted-foreground leading-relaxed italic border-l-4 border-brand-aqua pl-8">
-                          "{member.quote}"
-                        </blockquote>
-                        <div className="space-y-2">
-                          <p className="font-semibold text-primary text-lg">{member.name}</p>
-                          <p className="text-muted-foreground">{member.role}, ally-mobility</p>
-                        </div>
-                      </div>
-                    </div>
-                  </CarouselItem>
-                ))}
-              </CarouselContent>
-              
-              <CarouselPrevious className="absolute left-4 top-1/2 -translate-y-1/2 bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white" />
-              <CarouselNext className="absolute right-4 top-1/2 -translate-y-1/2 bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white" />
-            </Carousel>
-
-            {/* Carousel Indicators */}
-            <div className="flex justify-center gap-2 mt-8">
-              {teamMembers.map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentTeamIndex(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                    index === currentTeamIndex ? 'bg-primary' : 'bg-primary/30'
-                  }`}
+            {/* Team Member Display */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+              <div className="relative">
+                <img 
+                  src={teamMembers[currentTeamIndex].image} 
+                  alt={`${teamMembers[currentTeamIndex].name} - ${teamMembers[currentTeamIndex].role}`}
+                  className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
                 />
-              ))}
+              </div>
+              
+              <div className="space-y-8">
+                <blockquote className="text-2xl lg:text-3xl text-muted-foreground leading-relaxed italic border-l-4 border-brand-aqua pl-8">
+                  "{teamMembers[currentTeamIndex].quote}"
+                </blockquote>
+                <div className="space-y-2">
+                  <p className="font-semibold text-primary text-lg">{teamMembers[currentTeamIndex].name}</p>
+                  <p className="text-muted-foreground">{teamMembers[currentTeamIndex].role}, ally-mobility</p>
+                </div>
+              </div>
+            </div>
+
+            {/* Manual Navigation */}
+            <div className="flex justify-between items-center mt-8">
+              <button
+                onClick={prevTeam}
+                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center"
+              >
+                <ChevronLeft className="w-6 h-6" />
+              </button>
+              
+              <div className="flex gap-2">
+                {teamMembers.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentTeamIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                      index === currentTeamIndex ? 'bg-primary' : 'bg-primary/30'
+                    }`}
+                  />
+                ))}
+              </div>
+              
+              <button
+                onClick={nextTeam}
+                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center"
+              >
+                <ChevronRight className="w-6 h-6" />
+              </button>
             </div>
           </div>
         </div>
