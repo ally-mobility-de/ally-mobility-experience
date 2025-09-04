@@ -93,6 +93,35 @@ const ProductPreview = () => {
   const [activeProduct, setActiveProduct] = useState('flatbed');
   const [activeHotspot, setActiveHotspot] = useState<string | null>(null);
 
+  // Calculate callout position based on hotspot location
+  const getCalloutPosition = (hotspot: any) => {
+    const centerX = 50;
+    const centerY = 50;
+    const offset = 120; // Distance from hotspot
+    
+    // Position callout away from center
+    let calloutX = hotspot.x;
+    let calloutY = hotspot.y;
+    
+    if (hotspot.x < centerX) {
+      calloutX = hotspot.x - 25; // Move left
+    } else {
+      calloutX = hotspot.x + 25; // Move right
+    }
+    
+    if (hotspot.y < centerY) {
+      calloutY = hotspot.y - 15; // Move up
+    } else {
+      calloutY = hotspot.y + 15; // Move down  
+    }
+    
+    // Ensure callout stays within reasonable bounds while allowing overflow
+    calloutX = Math.max(-10, Math.min(110, calloutX));
+    calloutY = Math.max(-5, Math.min(105, calloutY));
+    
+    return { x: calloutX, y: calloutY };
+  };
+
   useEffect(() => {
     const handleProductSwitch = (event: CustomEvent) => {
       const { productId } = event.detail;
@@ -153,22 +182,6 @@ const ProductPreview = () => {
               </div>
             </div>
 
-            {/* Active Hotspot Info */}
-            {activeHotspot && (
-              <div className="hotspot-info">
-                {(() => {
-                  const hotspot = currentProduct.hotspots.find(h => h.id === activeHotspot);
-                  if (!hotspot) return null;
-                  
-                  return (
-                    <div className="space-y-4">
-                      <h4 className="font-semibold text-primary">{hotspot.title}</h4>
-                      <p className="text-muted-foreground">{hotspot.description}</p>
-                    </div>
-                  );
-                })()}
-              </div>
-            )}
           </div>
 
           {/* Interactive Product Image */}
@@ -192,6 +205,65 @@ const ProductPreview = () => {
                   <span className="text-primary font-bold text-lg">+</span>
                 </button>
               ))}
+
+              {/* Hotspot Callouts with Connecting Lines */}
+              {activeHotspot && (() => {
+                const hotspot = currentProduct.hotspots.find(h => h.id === activeHotspot);
+                if (!hotspot) return null;
+                
+                const calloutPos = getCalloutPosition(hotspot);
+                
+                return (
+                  <>
+                    {/* SVG for connecting line */}
+                    <svg 
+                      className="absolute inset-0 w-full h-full pointer-events-none overflow-visible"
+                      style={{ zIndex: 10 }}
+                    >
+                      <line
+                        x1={`${hotspot.x}%`}
+                        y1={`${hotspot.y}%`}
+                        x2={`${calloutPos.x}%`}
+                        y2={`${calloutPos.y}%`}
+                        stroke="hsl(var(--primary))"
+                        strokeWidth="2"
+                        className="drop-shadow-sm"
+                      />
+                    </svg>
+                    
+                    {/* Callout */}
+                    <div
+                      className="absolute z-20 bg-background border-2 border-primary rounded-lg p-4 shadow-lg min-w-[280px] max-w-[320px] w-auto h-auto"
+                      style={{ 
+                        left: `${calloutPos.x}%`, 
+                        top: `${calloutPos.y}%`,
+                        transform: 'translate(-50%, -50%)'
+                      }}
+                    >
+                      <div className="space-y-2">
+                        <h4 className="font-semibold text-primary text-sm leading-tight">
+                          {hotspot.title}
+                        </h4>
+                        <p className="text-muted-foreground text-xs leading-relaxed">
+                          {hotspot.description}
+                        </p>
+                      </div>
+                      
+                      {/* Close button */}
+                      <button
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          setActiveHotspot(null);
+                        }}
+                        className="absolute -top-2 -right-2 w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold hover:bg-primary/80 transition-colors"
+                        aria-label="Close callout"
+                      >
+                        ×
+                      </button>
+                    </div>
+                  </>
+                );
+              })()}
             </div>
 
             {/* Product indicator */}
