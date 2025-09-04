@@ -94,7 +94,7 @@ const Community = () => {
                 {Array.from({
                 length: totalSlides
               }).map((_, slideIndex) => <div key={slideIndex} className="w-full flex-shrink-0">
-                    <div className="grid md:grid-cols-3 gap-6 mx-0 px-0 py-[3px] my-px">
+                    <div className="grid md:grid-cols-3 gap-8 justify-items-center px-4">
                       {articles.slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide).map(article => <div key={article.id} onClick={() => window.open(article.link, '_blank')} className="product-card group cursor-pointer my-[18px] mx-[125px] px-0 py-[25px]">
                             {/* Image */}
                             <div className="relative aspect-[16/9] overflow-hidden">
