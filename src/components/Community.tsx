@@ -75,7 +75,7 @@ const Community = () => {
   };
   return <section className="section-padding bg-muted/30">
       <div className="container-custom">
-        <div className="text-center space-y-12">
+        <div className="text-center space-y-12 mx-[19px] px-0 py-0 my-[21px]">
           {/* Header */}
           <div className="space-y-6">
             <h2 className="text-brand-green">Community & Press</h2>
@@ -94,7 +94,7 @@ const Community = () => {
                 {Array.from({
                 length: totalSlides
               }).map((_, slideIndex) => <div key={slideIndex} className="w-full flex-shrink-0">
-                    <div className="grid md:grid-cols-3 gap-8 justify-items-center px-4">
+                    <div className="grid md:grid-cols-3 gap-6 mx-0 px-0 py-[3px] my-px">
                       {articles.slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide).map(article => <div key={article.id} onClick={() => window.open(article.link, '_blank')} className="product-card group cursor-pointer my-[18px] mx-[125px] px-0 py-[25px]">
                             {/* Image */}
                             <div className="relative aspect-[16/9] overflow-hidden">
