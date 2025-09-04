@@ -51,7 +51,7 @@ const Community = () => {
     image: '/lovable-uploads/4b19d7f4-7d6d-44c5-9db1-f14823dafd21.png',
     link: '#'
   }];
-  const itemsPerSlide = 3;
+  const itemsPerSlide = 2;
   const totalSlides = Math.ceil(articles.length / itemsPerSlide);
   const nextSlide = () => {
     setCurrentSlide(prev => (prev + 1) % totalSlides);
@@ -94,8 +94,8 @@ const Community = () => {
                 {Array.from({
                 length: totalSlides
               }).map((_, slideIndex) => <div key={slideIndex} className="w-full flex-shrink-0">
-                    <div className="grid md:grid-cols-3 gap-6 mx-0 px-0 py-[3px] my-px">
-                      {articles.slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide).map(article => <div key={article.id} onClick={() => window.open(article.link, '_blank')} className="product-card group cursor-pointer my-[18px] mx-[125px] px-0 py-[25px]">
+                    <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                      {articles.slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide).map(article => <div key={article.id} onClick={() => window.open(article.link, '_blank')} className="product-card group cursor-pointer">
                             {/* Image */}
                             <div className="relative aspect-[16/9] overflow-hidden">
                               <img src={article.image} alt={article.title} className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" loading="lazy" />
@@ -109,7 +109,7 @@ const Community = () => {
                             </div>
 
                             {/* Content */}
-                            <div className="p-6 space-y-4 mx-0 my-[37px] py-[19px] px-[18px]">
+                            <div className="p-6 space-y-4">
                               <div className="space-y-2">
                                 <h3 className="text-xl font-semibold text-brand-green group-hover:text-primary transition-colors duration-300 line-clamp-2">
                                   {article.title}
