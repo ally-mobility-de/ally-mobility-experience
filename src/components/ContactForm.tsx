@@ -48,10 +48,8 @@ const ContactForm = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
-              <div className="space-y-6">
-                
-                
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
+              <div className="flex justify-center">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center max-w-2xl">
                   <div className="space-y-2">
                     <div className="w-8 h-8 text-brand-aqua mx-auto">
                       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -59,7 +57,9 @@ const ContactForm = () => {
                       </svg>
                     </div>
                     <h4 className="font-medium text-foreground">Email</h4>
-                    <p className="text-muted-foreground">info@ally-mobility.de</p>
+                    <a href="mailto:info@allymobility" className="text-muted-foreground hover:text-brand-aqua transition-colors">
+                      info@allymobility
+                    </a>
                   </div>
 
                   <div className="space-y-2">
@@ -80,22 +80,23 @@ const ContactForm = () => {
                       </svg>
                     </div>
                     <h4 className="font-medium text-foreground">Address</h4>
-                    <p className="text-muted-foreground">Innovation Campus<br />Berlin, Germany</p>
+                    <p className="text-muted-foreground">
+                      ally-mobility<br />
+                      Haselbacherstraße 18A<br />
+                      04617 Treben, DE
+                    </p>
                   </div>
                 </div>
-                
-                <div className="text-center mt-8">
-                  <Button 
-                    asChild
-                    className="btn-aqua text-lg px-8 py-4"
-                  >
-                    <a href="mailto:info@ally-mobility.de">Contact us</a>
-                  </Button>
-                </div>
               </div>
-
-              {/* Quick Contact Options */}
-              
+                
+              <div className="text-center mt-8">
+                <Button 
+                  asChild
+                  className="btn-aqua text-lg px-8 py-4"
+                >
+                  <a href="mailto:info@allymobility">Contact us</a>
+                </Button>
+              </div>
             </div>
 
             {/* Contact Form */}
@@ -103,6 +104,6 @@ const ContactForm = () => {
           </div>
         </div>
       </div>
-    </section>;
+    </section>
 };
 export default ContactForm;
