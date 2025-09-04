@@ -50,16 +50,8 @@ const Community = () => {
     platform: 'Instagram',
     image: '/lovable-uploads/4b19d7f4-7d6d-44c5-9db1-f14823dafd21.png',
     link: '#'
-  }, {
-    id: '6',
-    title: 'Green Fleet Initiative',
-    excerpt: 'Major corporations are adopting electric cargo bikes for last-mile delivery solutions.',
-    source: 'EcoTransport Today',
-    platform: 'News',
-    image: '/lovable-uploads/93f64d63-22a9-46a0-8efa-e70fbcfcbf49.png',
-    link: '#'
   }];
-  const itemsPerSlide = 2;
+  const itemsPerSlide = 3;
   const totalSlides = Math.ceil(articles.length / itemsPerSlide);
   const nextSlide = () => {
     setCurrentSlide(prev => (prev + 1) % totalSlides);
@@ -102,7 +94,7 @@ const Community = () => {
                 {Array.from({
                 length: totalSlides
               }).map((_, slideIndex) => <div key={slideIndex} className="w-full flex-shrink-0">
-                    <div className="grid md:grid-cols-2 gap-8 mx-0 px-0 py-[3px] my-px">
+                    <div className="grid md:grid-cols-3 gap-6 mx-0 px-0 py-[3px] my-px">
                       {articles.slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide).map(article => <div key={article.id} onClick={() => window.open(article.link, '_blank')} className="product-card group cursor-pointer my-[18px] mx-[125px] px-0 py-[25px]">
                             {/* Image */}
                             <div className="relative aspect-[16/9] overflow-hidden">
