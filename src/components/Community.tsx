@@ -61,7 +61,7 @@ const Community = () => {
     }
   ];
 
-  const itemsPerSlide = 2;
+  const itemsPerSlide = 3;
   const totalSlides = Math.ceil(articles.length / itemsPerSlide);
 
   const nextSlide = () => {
@@ -106,7 +106,7 @@ const Community = () => {
               >
                 {Array.from({ length: totalSlides }).map((_, slideIndex) => (
                   <div key={slideIndex} className="w-full flex-shrink-0">
-                    <div className="grid md:grid-cols-2 gap-6 px-4">
+                    <div className="grid md:grid-cols-3 gap-6 px-4">
                       {articles
                         .slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide)
                         .map((article) => (
