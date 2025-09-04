@@ -29,26 +29,23 @@ const Community = () => {
 
   const getPlatformColor = (platform: string) => {
     switch (platform) {
-      case 'LinkedIn':
-        return 'bg-blue-600';
-      case 'Instagram':
-        return 'bg-pink-600';
-      case 'News':
-        return 'bg-brand-aqua';
-      case 'Blog':
-        return 'bg-primary';
-      default:
-        return 'bg-muted-foreground';
+      case 'LinkedIn': return 'bg-blue-600';
+      case 'Instagram': return 'bg-pink-600';
+      case 'News': return 'bg-brand-aqua';
+      case 'Blog': return 'bg-primary';
+      default: return 'bg-muted-foreground';
     }
   };
 
   return (
     <section className="section-padding bg-muted/30">
       <div className="container-custom">
-        {/* tighter overall vertical spacing */}
-        <div className="text-center space-y-5 mx-[19px] px-0 py-0 my-[14px]">
-          {/* Header — tighter */}
-          <div className="space-y-3">
+        {/* TWEAK: Abstand Header <-> Carousel:
+            space-y-4 (kleiner) / space-y-6 (größer)
+            my-[8px] für noch enger oben/unten */}
+        <div className="text-center space-y-4 mx-[19px] px-0 py-0 my-[8px]">
+          {/* Header – TWEAK: Abstand innerhalb Header: space-y-2/3/4 */}
+          <div className="space-y-2">
             <h2 className="text-brand-green">Community & Press</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
               Stay updated with the latest news, insights, and stories from the ally-mobility community
@@ -66,74 +63,81 @@ const Community = () => {
                 }}
               >
                 {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-                  <div
-                    key={slideIndex}
-                    // centers the two cards on the page (vertically + horizontally)
-                    className="w-full flex-shrink-0 min-h-[70vh] flex items-center justify-center"
-                  >
-                    {/* exactly two per slide, equal spacing */}
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto place-items-center">
-                      {articles
-                        .slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide)
-                        .map(article => (
-                          <div
-                            key={article.id}
-                            onClick={() => window.open(article.link, '_blank')}
-                            // bigger cards, consistent width for both so spacing stays equal
-                            className="product-card group cursor-pointer w-full max-w-[620px]"
-                          >
-                            {/* Image */}
-                            <div className="relative aspect-[16/9] overflow-hidden">
-                              <img
-                                src={article.image}
-                                alt={article.title}
-                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy"
-                              />
-
-                              {/* Platform Badge */}
-                              <div className="absolute top-4 left-4">
-                                <span className={`${getPlatformColor(article.platform)} text-white px-3 py-1 rounded-full text-sm font-medium`}>
-                                  {article.platform}
-                                </span>
-                              </div>
-                            </div>
-
-                            {/* Content */}
-                            <div className="p-6 space-y-4">
-                              <div className="space-y-2">
-                                <h3 className="text-xl font-semibold text-brand-green group-hover:text-primary transition-colors duration-300 line-clamp-2">
-                                  {article.title}
-                                </h3>
-                                <p className="text-muted-foreground line-clamp-3 leading-relaxed">
-                                  {article.excerpt}
-                                </p>
-                              </div>
-
-                              <div className="flex items-center justify-between pt-4 border-t border-border">
-                                <div className="text-sm font-medium text-brand-aqua">
-                                  {article.source}
+                  // Jede Slide ist exakt 100% breit -> kein “Rausrutschen”
+                  <div key={slideIndex} className="basis-full flex-none w-full">
+                    {/* TWEAK: Höhe + vertikale Zentrierung der 2 Karten:
+                        min-h-[60vh] (niedriger) / min-h-[70vh] oder min-h-screen (höher) */}
+                    <div className="min-h-[60vh] flex items-center justify-center">
+                      {/* TWEAK: Maximalbreite des gesamten Kartenbereichs:
+                          max-w-[1100px] ist sicher für 2 Karten + Gap
+                          größer -> max-w-[1200px], kleiner -> max-w-[1000px] */}
+                      <div className="w-full max-w-[1100px] px-4 mx-auto">
+                        {/* Genau 2 Karten pro Slide (md+), gleichmäßiger Abstand und zentriert */}
+                        {/* TWEAK: Abstand zwischen den beiden Karten: gap-6/gap-8/gap-10 */}
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 place-items-center">
+                          {articles
+                            .slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide)
+                            .map(article => (
+                              // TWEAK: Kartengröße:
+                              // md:max-w-[520px] -> größer: [540px]/[560px], kleiner: [500px]
+                              <div
+                                key={article.id}
+                                onClick={() => window.open(article.link, '_blank')}
+                                className="product-card group cursor-pointer w-full md:max-w-[520px]"
+                              >
+                                {/* Image */}
+                                <div className="relative aspect-[16/9] overflow-hidden">
+                                  <img
+                                    src={article.image}
+                                    alt={article.title}
+                                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                    loading="lazy"
+                                  />
+                                  {/* Platform Badge */}
+                                  <div className="absolute top-4 left-4">
+                                    <span className={`${getPlatformColor(article.platform)} text-white px-3 py-1 rounded-full text-sm font-medium`}>
+                                      {article.platform}
+                                    </span>
+                                  </div>
                                 </div>
-                                <div className="w-6 h-6 text-primary">
-                                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                  </svg>
+
+                                {/* Content */}
+                                <div className="p-6 space-y-4">
+                                  <div className="space-y-2">
+                                    <h3 className="text-xl font-semibold text-brand-green group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                                      {article.title}
+                                    </h3>
+                                    <p className="text-muted-foreground line-clamp-3 leading-relaxed">
+                                      {article.excerpt}
+                                    </p>
+                                  </div>
+                                  <div className="flex items-center justify-between pt-4 border-t border-border">
+                                    <div className="text-sm font-medium text-brand-aqua">
+                                      {article.source}
+                                    </div>
+                                    <div className="w-6 h-6 text-primary">
+                                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                      </svg>
+                                    </div>
+                                  </div>
                                 </div>
                               </div>
-                            </div>
-                          </div>
-                        ))}
+                            ))}
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ))}
               </div>
             </div>
 
-            {/* Navigation Buttons */}
+            {/* Navigation Buttons (optional) */}
             <button
               onClick={prevSlide}
               className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white shadow-soft rounded-full flex items-center justify-center hover:shadow-lg transition-all duration-300 disabled:opacity-50"
               disabled={currentSlide === 0}
+              aria-label="Previous slide"
             >
               <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -144,13 +148,14 @@ const Community = () => {
               onClick={nextSlide}
               className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white shadow-soft rounded-full flex items-center justify-center hover:shadow-lg transition-all duration-300 disabled:opacity-50"
               disabled={currentSlide === totalSlides - 1}
+              aria-label="Next slide"
             >
               <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
               </svg>
             </button>
 
-            {/* Dots Indicator — tighter spacing below */}
+            {/* Dots – TWEAK: Abstand der Dots nach oben: mt-2/mt-3/mt-4 */}
             <div className="flex justify-center space-x-2 mt-3">
               {Array.from({ length: totalSlides }).map((_, index) => (
                 <button
@@ -169,4 +174,3 @@ const Community = () => {
 };
 
 export default Community;
-
