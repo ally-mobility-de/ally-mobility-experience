@@ -166,9 +166,7 @@ const ProductPreview = () => {
   // Calculate callout position based on hotspot location - always away from center with L-shaped lines
   const getCalloutPosition = (hotspot: any) => {
     const imageCenter = { x: 50, y: 50 }; // Image center in percentage
-    const calloutDistance = 30; // Reduced distance for closer positioning
-    const calloutWidth = 340; // Callout width in pixels (approximate)
-    const calloutHeight = 100; // Callout height in pixels (approximate)
+    const calloutDistance = 20; // Distance for positioning
     
     // Determine placement direction away from center
     const isLeft = hotspot.x < imageCenter.x;
@@ -176,10 +174,10 @@ const ProductPreview = () => {
     
     // Position callout away from center
     let calloutX = isLeft ? hotspot.x - calloutDistance : hotspot.x + calloutDistance;
-    let calloutY = isTop ? hotspot.y - 20 : hotspot.y + 20;
+    let calloutY = isTop ? hotspot.y - 15 : hotspot.y + 15;
     
-    // Add viewport boundary checking with margins
-    const viewportMargin = 20; // Margin from viewport edges in percentage
+    // Add viewport boundary checking with margins (in percentage)
+    const viewportMargin = 15; // Margin from viewport edges in percentage
     const maxX = 100 - viewportMargin;
     const minX = viewportMargin;
     const maxY = 100 - viewportMargin;
@@ -189,24 +187,31 @@ const ProductPreview = () => {
     calloutX = Math.max(minX, Math.min(maxX, calloutX));
     calloutY = Math.max(minY, Math.min(maxY, calloutY));
     
-    // Calculate L-shaped line coordinates (vertical then horizontal to callout border)
-    const midX = isLeft ? calloutX + 17 : calloutX - 17; // Adjust to callout border
-    const midY = hotspot.y;
+    // Calculate L-shaped line coordinates from hotspot border to callout border
+    const hotspotRadius = 1.5; // Visual hotspot radius in percentage
+    const calloutBorderOffset = 17; // Distance to callout border in percentage
     
-    // Calculate line endpoints from hotspot border to callout border
-    const hotspotRadius = 1.5; // Hotspot visual radius in percentage
-    const startX = hotspot.x + (isLeft ? -hotspotRadius : hotspotRadius);
+    // Start from hotspot border (edge of the + button)
+    const startX = hotspot.x;
     const startY = hotspot.y;
-    const endX = midX;
-    const endY = calloutY + (isTop ? 8 : -8); // Adjust to callout border
+    
+    // Calculate actual callout border position
+    const calloutBorderX = isLeft ? calloutX + calloutBorderOffset : calloutX - calloutBorderOffset;
+    const calloutBorderY = isTop ? calloutY + 8 : calloutY - 8;
+    
+    // L-shaped line: vertical first, then horizontal
+    const midX = startX;
+    const midY = calloutBorderY;
+    const endX = calloutBorderX;
+    const endY = calloutBorderY;
     
     return { 
       x: calloutX, 
       y: calloutY,
-      midX,
-      midY,
       startX,
       startY,
+      midX,
+      midY,
       endX,
       endY,
       isLeft,
@@ -312,14 +317,14 @@ const ProductPreview = () => {
                       className="absolute inset-0 w-full h-full pointer-events-none overflow-visible"
                       style={{ zIndex: 10 }}
                     >
-                      {/* L-shaped line: vertical then horizontal from hotspot border to callout border */}
-                      <polyline
-                        points={`${calloutPos.startX},${calloutPos.startY} ${calloutPos.midX},${calloutPos.midY} ${calloutPos.endX},${calloutPos.endY}`}
-                        fill="none"
-                        stroke="hsl(var(--primary))"
-                        strokeWidth="2"
-                        className="drop-shadow-sm"
-                      />
+          {/* L-shaped line: vertical then horizontal from hotspot border to callout border */}
+          <polyline
+            points={`${calloutPos.startX}%,${calloutPos.startY}% ${calloutPos.midX}%,${calloutPos.midY}% ${calloutPos.endX}%,${calloutPos.endY}%`}
+            fill="none"
+            stroke="hsl(var(--primary))"
+            strokeWidth="2"
+            className="drop-shadow-sm"
+          />
                     </svg>
                     
                     {/* Callout */}
@@ -332,7 +337,7 @@ const ProductPreview = () => {
                       }}
                       onClick={() => {
                         // Navigate to product page with product and hotspot state
-                        window.location.href = `/product?product=${activeProduct}&hotspot=${activeHotspot}#specifications`;
+                        window.location.href = `/product?product=${activeProduct}&hotspot=${activeHotspot}#maximum-versatility`;
                       }}
                     >
                       <div className="space-y-2">

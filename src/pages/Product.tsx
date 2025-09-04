@@ -38,9 +38,7 @@ const Product = () => {
   // Calculate callout position based on hotspot location - always away from center with L-shaped lines
   const getCalloutPosition = (hotspot: any) => {
     const imageCenter = { x: 50, y: 50 }; // Image center in percentage
-    const calloutDistance = 30; // Reduced distance for closer positioning
-    const calloutWidth = 340; // Callout width in pixels (approximate)
-    const calloutHeight = 100; // Callout height in pixels (approximate)
+    const calloutDistance = 20; // Distance for positioning
     
     // Determine placement direction away from center
     const isLeft = hotspot.x < imageCenter.x;
@@ -48,10 +46,10 @@ const Product = () => {
     
     // Position callout away from center
     let calloutX = isLeft ? hotspot.x - calloutDistance : hotspot.x + calloutDistance;
-    let calloutY = isTop ? hotspot.y - 20 : hotspot.y + 20;
+    let calloutY = isTop ? hotspot.y - 15 : hotspot.y + 15;
     
-    // Add viewport boundary checking with margins
-    const viewportMargin = 20; // Margin from viewport edges in percentage
+    // Add viewport boundary checking with margins (in percentage)
+    const viewportMargin = 15; // Margin from viewport edges in percentage
     const maxX = 100 - viewportMargin;
     const minX = viewportMargin;
     const maxY = 100 - viewportMargin;
@@ -61,24 +59,31 @@ const Product = () => {
     calloutX = Math.max(minX, Math.min(maxX, calloutX));
     calloutY = Math.max(minY, Math.min(maxY, calloutY));
     
-    // Calculate L-shaped line coordinates (vertical then horizontal to callout border)
-    const midX = isLeft ? calloutX + 17 : calloutX - 17; // Adjust to callout border
-    const midY = hotspot.y;
+    // Calculate L-shaped line coordinates from hotspot border to callout border
+    const hotspotRadius = 1.5; // Visual hotspot radius in percentage
+    const calloutBorderOffset = 17; // Distance to callout border in percentage
     
-    // Calculate line endpoints from hotspot border to callout border
-    const hotspotRadius = 1.5; // Hotspot visual radius in percentage
-    const startX = hotspot.x + (isLeft ? -hotspotRadius : hotspotRadius);
+    // Start from hotspot border (edge of the + button)
+    const startX = hotspot.x;
     const startY = hotspot.y;
-    const endX = midX;
-    const endY = calloutY + (isTop ? 8 : -8); // Adjust to callout border
+    
+    // Calculate actual callout border position
+    const calloutBorderX = isLeft ? calloutX + calloutBorderOffset : calloutX - calloutBorderOffset;
+    const calloutBorderY = isTop ? calloutY + 8 : calloutY - 8;
+    
+    // L-shaped line: vertical first, then horizontal
+    const midX = startX;
+    const midY = calloutBorderY;
+    const endX = calloutBorderX;
+    const endY = calloutBorderY;
     
     return { 
       x: calloutX, 
       y: calloutY,
-      midX,
-      midY,
       startX,
       startY,
+      midX,
+      midY,
       endX,
       endY,
       isLeft,
@@ -266,9 +271,9 @@ const Product = () => {
       <Header />
       
       {/* Hero Section with Product Selection */}
-      <section className="section-padding bg-gradient-subtle mt-16 lg:mt-20">
+      <section id="maximum-versatility" className="section-padding bg-gradient-subtle mt-16 lg:mt-20">
         <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             {/* Left side - Product selection and text */}
             <div className="space-y-8">
               <div className="space-y-6">
@@ -360,7 +365,7 @@ const Product = () => {
                       >
                         {/* L-shaped line: vertical then horizontal from hotspot border to callout border */}
                         <polyline
-                          points={`${calloutPos.startX},${calloutPos.startY} ${calloutPos.midX},${calloutPos.midY} ${calloutPos.endX},${calloutPos.endY}`}
+                          points={`${calloutPos.startX}%,${calloutPos.startY}% ${calloutPos.midX}%,${calloutPos.midY}% ${calloutPos.endX}%,${calloutPos.endY}%`}
                           fill="none"
                           stroke="hsl(var(--primary))"
                           strokeWidth="2"
@@ -411,6 +416,41 @@ const Product = () => {
               </div>
             </div>
           </div>
+
+          {/* Technical Specifications */}
+          <div className="space-y-8">
+            <div className="text-center space-y-4">
+              <h3 className="text-2xl font-bold text-primary">Technical Specifications</h3>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+                Detailed technical data for our modular cargo platform
+              </p>
+            </div>
+
+            <div className="max-w-2xl mx-auto">
+              <div className="bg-card rounded-2xl p-6 border shadow-card">
+                <div className="flex items-center gap-3 mb-4">
+                  <Package className="w-5 h-5 text-primary" />
+                  <h3 className="text-xl font-semibold text-primary">
+                    {currentProduct.name} Specifications
+                  </h3>
+                </div>
+                <Table>
+                  <TableBody>
+                    {currentProduct.data.map((item, index) => (
+                      <TableRow key={index}>
+                        <TableCell className="font-medium text-foreground">
+                          {item.label}
+                        </TableCell>
+                        <TableCell className="text-muted-foreground">
+                          {item.value}
+                        </TableCell>
+                      </TableRow>
+                    ))}
+                  </TableBody>
+                </Table>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -441,105 +481,6 @@ const Product = () => {
               </button>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* Specifications */}
-      <section id="specifications" className="section-padding">
-        <div className="container-custom">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start mb-12">
-            <div className="space-y-6">
-              <h2 className="text-primary">Technical Specifications</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Detailed technical data for our modular cargo platform. Each configuration is 
-                engineered for maximum performance, reliability, and versatility in professional 
-                applications.
-              </p>
-            </div>
-            <div className="lg:pl-8">
-              <div className="relative">
-                <img 
-                  src={currentProduct.image} 
-                  alt="Technical specifications" 
-                  className="w-full h-auto rounded-2xl shadow-lg"
-                />
-                <div className="absolute top-4 right-4 bg-brand-aqua/20 backdrop-blur-sm rounded-lg p-2">
-                  <Package className="w-6 h-6 text-primary" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <Tabs value={activeProduct} onValueChange={setActiveProduct} className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-8 bg-muted">
-              <TabsTrigger 
-                value="flatbed" 
-                className="data-[state=active]:bg-primary data-[state=active]:text-white"
-              >
-                Flatbed
-              </TabsTrigger>
-              <TabsTrigger 
-                value="box"
-                className="data-[state=active]:bg-primary data-[state=active]:text-white"
-              >
-                Box
-              </TabsTrigger>
-              <TabsTrigger 
-                value="swap"
-                className="data-[state=active]:bg-primary data-[state=active]:text-white"
-              >
-                Swap Container
-                <span className="ml-2 text-xs bg-brand-aqua text-white px-1.5 py-0.5 rounded">NEW</span>
-              </TabsTrigger>
-            </TabsList>
-            
-            {Object.entries(products).map(([key, product]) => (
-              <TabsContent key={key} value={key} className="space-y-8">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div className="bg-card rounded-2xl p-6 border shadow-card">
-                    <div className="flex items-center gap-3 mb-4">
-                      <Package className="w-5 h-5 text-primary" />
-                      <h3 className="text-xl font-semibold text-primary">
-                        {product.name} Specifications
-                      </h3>
-                    </div>
-                    <Table>
-                      <TableBody>
-                        {product.data.map((item, index) => (
-                          <TableRow key={index}>
-                            <TableCell className="font-medium text-foreground">
-                              {item.label}
-                            </TableCell>
-                            <TableCell className="text-muted-foreground">
-                              {item.value}
-                            </TableCell>
-                          </TableRow>
-                        ))}
-                      </TableBody>
-                    </Table>
-                  </div>
-                  
-                  <div className="bg-card rounded-2xl p-6 border shadow-card">
-                    <h3 className="text-xl font-semibold text-primary mb-6">Trailer Base Data</h3>
-                    <Table>
-                      <TableBody>
-                        {trailerBaseData.slice(0, 8).map((item, index) => (
-                          <TableRow key={index}>
-                            <TableCell className="font-medium text-foreground">
-                              {item.label}
-                            </TableCell>
-                            <TableCell className="text-muted-foreground">
-                              {item.value}
-                            </TableCell>
-                          </TableRow>
-                        ))}
-                      </TableBody>
-                    </Table>
-                  </div>
-                </div>
-              </TabsContent>
-            ))}
-          </Tabs>
         </div>
       </section>
 

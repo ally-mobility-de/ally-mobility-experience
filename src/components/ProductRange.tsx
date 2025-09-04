@@ -32,16 +32,13 @@ const ProductRange = () => {
     }
   ];
 
-  const scrollToProduct = (productId: string) => {
-    const element = document.getElementById('product');
-    if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
-      // Trigger product switcher after scroll
-      setTimeout(() => {
-        const event = new CustomEvent('switchProduct', { detail: { productId } });
-        window.dispatchEvent(event);
-      }, 800);
+  const navigateToProduct = (productId: string) => {
+    // Navigate to product page with specific product selected
+    let productKey = productId;
+    if (productId === 'swap-container') {
+      productKey = 'swap';
     }
+    window.location.href = `/product?product=${productKey}#maximum-versatility`;
   };
 
   return (
@@ -64,7 +61,7 @@ const ProductRange = () => {
                 className={`product-card group cursor-pointer ${
                   product.highlight ? 'ring-2 ring-brand-aqua ring-offset-4' : ''
                 }`}
-                onClick={() => scrollToProduct(product.id)}
+                onClick={() => navigateToProduct(product.id)}
               >
                 {/* Image */}
                 <div className="relative overflow-hidden aspect-[4/3]">
