@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import heroImage from "@/assets/hero-cargo-bike.jpg";
+import heroBikeStreet from "@/assets/hero-bike-street.jpg";
 
 const HeroSection = () => {
   const scrollToSection = (id: string) => {
@@ -10,7 +11,12 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-gradient-hero pt-20">
+    <section className="relative min-h-screen flex items-center justify-center pt-20" style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroBikeStreet})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
       <div className="container-custom">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Content */}

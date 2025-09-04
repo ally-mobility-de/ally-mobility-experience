@@ -78,7 +78,12 @@ const Customers = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding bg-gradient-subtle mt-16 lg:mt-20">
+      <section className="section-padding mt-16 lg:mt-20 relative" style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/lovable-uploads/f2c41187-9bfe-4a86-b3df-36135488fd11.png)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
         <div className="container-custom text-center space-y-8">
           <div className="relative mx-auto max-w-5xl">
             <img src={heroCargoBike} alt="Why Choose Radlogistik" className="w-full h-[500px] object-cover rounded-2xl shadow-lg" />
