@@ -94,112 +94,88 @@ const Community = () => {
             </p>
           </div>
 
-          {/* Carousel */}
-          <div className="relative">
-            <div className="overflow-hidden">
-              <div 
-                className="flex transition-transform duration-500 ease-out"
-                style={{ 
-                  transform: `translateX(-${currentSlide * 100}%)`,
-                  width: `${totalSlides * 100}%`
-                }}
-              >
-                {Array.from({ length: totalSlides }).map((_, slideIndex) => (
-                  <div key={slideIndex} className="w-full flex-shrink-0">
-                    <div className="grid md:grid-cols-3 gap-6 px-4">
-                      {articles
-                        .slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide)
-                        .map((article) => (
-                          <div
-                            key={article.id}
-                            className="product-card group cursor-pointer"
-                            onClick={() => window.open(article.link, '_blank')}
-                          >
-                            {/* Image */}
-                            <div className="relative aspect-[16/9] overflow-hidden">
-                              <img 
-                                src={article.image}
-                                alt={article.title}
-                                className="w-full h-full object-contain group-hover:scale-105 transition-transform duration-500"
-                                loading="lazy"
-                              />
-                              
-                              {/* Platform Badge */}
-                              <div className="absolute top-4 left-4">
-                                <span className={`${getPlatformColor(article.platform)} text-white px-3 py-1 rounded-full text-sm font-medium`}>
-                                  {article.platform}
-                                </span>
-                              </div>
-                            </div>
+          {/* Events Section */}
+      <section className="section-padding bg-secondary-light">
+        <div className="container-custom">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-primary text-5xl lg:text-6xl font-bold">Events</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Besuchen Sie uns auf den wichtigsten Mobilitätsmessen und Events
+            </p>
+          </div>
 
-                            {/* Content */}
-                            <div className="p-6 space-y-4">
-                              <div className="space-y-2">
-                                <h3 className="text-xl font-semibold text-brand-green group-hover:text-primary transition-colors duration-300 line-clamp-2">
-                                  {article.title}
-                                </h3>
-                                <p className="text-muted-foreground line-clamp-3 leading-relaxed">
-                                  {article.excerpt}
-                                </p>
-                              </div>
-
-                              <div className="flex items-center justify-between pt-4 border-t border-border">
-                                <div className="text-sm font-medium text-brand-aqua">
-                                  {article.source}
-                                </div>
-                                <div className="w-6 h-6 text-primary">
-                                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                  </svg>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        ))}
+          {/* Events Carousel */}
+          <div className="relative max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2">
+                <div className="relative">
+                  <img 
+                    src={events[currentEventIndex].image} 
+                    alt={events[currentEventIndex].title}
+                    className="w-full h-64 md:h-full object-cover"
+                  />
+                  {events[currentEventIndex].status === 'upcoming' && (
+                    <div className="absolute top-4 left-4 bg-brand-aqua text-white px-3 py-1 rounded-full text-sm font-medium">
+                      Bevorstehend
+                    </div>
+                  )}
+                </div>
+                <div className="p-8 space-y-6">
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-bold text-primary">{events[currentEventIndex].title}</h3>
+                    <div className="flex items-center gap-4 text-muted-foreground">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>{events[currentEventIndex].date}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="w-4 h-4" />
+                        <span>{events[currentEventIndex].location}</span>
+                      </div>
                     </div>
                   </div>
-                ))}
+                  
+                  <p className="text-muted-foreground leading-relaxed">
+                    {events[currentEventIndex].description}
+                  </p>
+                  
+                  <Button className="btn-aqua">
+                    Zum Event →
+                  </Button>
+                </div>
               </div>
             </div>
 
-            {/* Navigation Buttons */}
-            <button
-              onClick={prevSlide}
-              className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 w-12 h-12 bg-white shadow-soft rounded-full flex items-center justify-center hover:shadow-lg transition-all duration-300 disabled:opacity-50"
-              disabled={currentSlide === 0}
-            >
-              <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
-              </svg>
-            </button>
-
-            <button
-              onClick={nextSlide}
-              className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 w-12 h-12 bg-white shadow-soft rounded-full flex items-center justify-center hover:shadow-lg transition-all duration-300 disabled:opacity-50"
-              disabled={currentSlide === totalSlides - 1}
-            >
-              <svg className="w-5 h-5 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-
-            {/* Dots Indicator */}
-            <div className="flex justify-center space-x-2 mt-8">
-              {Array.from({ length: totalSlides }).map((_, index) => (
-                <button
-                  key={index}
-                  onClick={() => setCurrentSlide(index)}
-                  className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                    currentSlide === index ? 'bg-primary' : 'bg-border'
-                  }`}
-                />
-              ))}
+            {/* Carousel Navigation */}
+            <div className="flex justify-between items-center mt-6">
+              <button
+                onClick={prevEvent}
+                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center"
+              >
+                ←
+              </button>
+              
+              <div className="flex gap-2">
+                {events.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentEventIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                      index === currentEventIndex ? 'bg-primary' : 'bg-primary/30'
+                    }`}
+                  />
+                ))}
+              </div>
+              
+              <button
+                onClick={nextEvent}
+                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center"
+              >
+                →
+              </button>
             </div>
           </div>
         </div>
-      </div>
-    </section>
-  );
-};
+      </section>
 
 export default Community;
