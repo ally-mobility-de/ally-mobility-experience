@@ -8,13 +8,10 @@ const CTABanner = () => {
       });
     }
   };
-  
-  return (
-    <div className="text-center">
-      <Button onClick={scrollToContact} className="btn-aqua">
-        Contact Us
-      </Button>
-    </div>
-  );
+  return <section className="py-16 bg-gradient-to-r from-brand-aqua to-secondary">
+      <div className="container-custom">
+        
+      </div>
+    </section>;
 };
 export default CTABanner;
