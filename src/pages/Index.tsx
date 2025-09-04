@@ -22,8 +22,8 @@ const Index = () => {
         <ProductPreview />
         <TestRideBanner />
         <ProductRange />
-        <Community />
         <UseCases />
+        <Community />
         <DealerCTA />
         <ContactForm />
       </main>

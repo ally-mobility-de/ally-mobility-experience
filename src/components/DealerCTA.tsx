@@ -76,10 +76,10 @@ const DealerCTA = () => {
               </div>
 
               <Button 
-                onClick={scrollToContact}
+                asChild
                 className="btn-aqua text-lg px-8 py-4"
               >
-                Learn More
+                <a href="mailto:info@ally-mobility.de">Contact us</a>
               </Button>
             </div>
           </div>
