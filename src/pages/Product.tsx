@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
@@ -13,8 +13,23 @@ import { Package, Truck, Zap, Shield, Users } from "lucide-react";
 
 const Product = () => {
   const navigate = useNavigate();
+  const [searchParams] = useSearchParams();
   const [activeProduct, setActiveProduct] = useState('flatbed');
   const [activeHotspot, setActiveHotspot] = useState<string | null>(null);
+
+  // Handle URL parameters on component mount
+  useEffect(() => {
+    const productParam = searchParams.get('product');
+    const hotspotParam = searchParams.get('hotspot');
+    
+    if (productParam && ['flatbed', 'box', 'swap'].includes(productParam)) {
+      setActiveProduct(productParam);
+    }
+    
+    if (hotspotParam) {
+      setActiveHotspot(hotspotParam);
+    }
+  }, [searchParams]);
 
   const toggleHotspot = (hotspotId: string) => {
     setActiveHotspot(activeHotspot === hotspotId ? null : hotspotId);
@@ -23,7 +38,9 @@ const Product = () => {
   // Calculate callout position based on hotspot location - always away from center with L-shaped lines
   const getCalloutPosition = (hotspot: any) => {
     const imageCenter = { x: 50, y: 50 }; // Image center in percentage
-    const calloutDistance = 45; // Distance from hotspot to callout
+    const calloutDistance = 30; // Reduced distance for closer positioning
+    const calloutWidth = 340; // Callout width in pixels (approximate)
+    const calloutHeight = 100; // Callout height in pixels (approximate)
     
     // Determine placement direction away from center
     const isLeft = hotspot.x < imageCenter.x;
@@ -31,21 +48,39 @@ const Product = () => {
     
     // Position callout away from center
     let calloutX = isLeft ? hotspot.x - calloutDistance : hotspot.x + calloutDistance;
-    let calloutY = isTop ? hotspot.y - 25 : hotspot.y + 25;
+    let calloutY = isTop ? hotspot.y - 20 : hotspot.y + 20;
     
-    // Allow callouts to extend beyond image boundaries for visibility
-    calloutX = Math.max(-35, Math.min(135, calloutX));
-    calloutY = Math.max(-25, Math.min(125, calloutY));
+    // Add viewport boundary checking with margins
+    const viewportMargin = 20; // Margin from viewport edges in percentage
+    const maxX = 100 - viewportMargin;
+    const minX = viewportMargin;
+    const maxY = 100 - viewportMargin;
+    const minY = viewportMargin;
     
-    // Calculate L-shaped line coordinates (horizontal then vertical)
-    const midX = calloutX;
+    // Constrain callout within viewport bounds
+    calloutX = Math.max(minX, Math.min(maxX, calloutX));
+    calloutY = Math.max(minY, Math.min(maxY, calloutY));
+    
+    // Calculate L-shaped line coordinates (vertical then horizontal to callout border)
+    const midX = isLeft ? calloutX + 17 : calloutX - 17; // Adjust to callout border
     const midY = hotspot.y;
+    
+    // Calculate line endpoints from hotspot border to callout border
+    const hotspotRadius = 1.5; // Hotspot visual radius in percentage
+    const startX = hotspot.x + (isLeft ? -hotspotRadius : hotspotRadius);
+    const startY = hotspot.y;
+    const endX = midX;
+    const endY = calloutY + (isTop ? 8 : -8); // Adjust to callout border
     
     return { 
       x: calloutX, 
       y: calloutY,
       midX,
       midY,
+      startX,
+      startY,
+      endX,
+      endY,
       isLeft,
       isTop
     };
@@ -323,9 +358,9 @@ const Product = () => {
                         className="absolute inset-0 w-full h-full pointer-events-none overflow-visible"
                         style={{ zIndex: 10 }}
                       >
-                        {/* L-shaped line: horizontal first, then vertical */}
+                        {/* L-shaped line: vertical then horizontal from hotspot border to callout border */}
                         <polyline
-                          points={`${hotspot.x + (calloutPos.isLeft ? -1.5 : 1.5)},${hotspot.y} ${calloutPos.midX + (calloutPos.isLeft ? 14 : -14)},${calloutPos.midY} ${calloutPos.midX + (calloutPos.isLeft ? 14 : -14)},${calloutPos.y + (calloutPos.isTop ? 8 : -8)}`}
+                          points={`${calloutPos.startX},${calloutPos.startY} ${calloutPos.midX},${calloutPos.midY} ${calloutPos.endX},${calloutPos.endY}`}
                           fill="none"
                           stroke="hsl(var(--primary))"
                           strokeWidth="2"
