@@ -163,50 +163,34 @@ const ProductPreview = () => {
   const [activeProduct, setActiveProduct] = useState('flatbed');
   const [activeHotspot, setActiveHotspot] = useState<string | null>(null);
 
-  // Calculate callout position based on hotspot location with horizontal/vertical lines
+  // Calculate callout position based on hotspot location - always away from center with L-shaped lines
   const getCalloutPosition = (hotspot: any) => {
-    const distance = 150; // Increased distance from hotspot
+    const imageCenter = { x: 50, y: 50 }; // Image center in percentage
+    const calloutDistance = 45; // Distance from hotspot to callout
     
-    // Determine which side to place callout based on hotspot position
-    let calloutX = hotspot.x;
-    let calloutY = hotspot.y;
-    let lineType = 'horizontal'; // 'horizontal' or 'vertical'
+    // Determine placement direction away from center
+    const isLeft = hotspot.x < imageCenter.x;
+    const isTop = hotspot.y < imageCenter.y;
     
-    // Position callout with more distance and prefer horizontal/vertical placement
-    if (hotspot.x < 50) {
-      // Hotspot on left side - place callout to the right
-      calloutX = hotspot.x + 40;
-      calloutY = hotspot.y;
-      lineType = 'horizontal';
-    } else {
-      // Hotspot on right side - place callout to the left  
-      calloutX = hotspot.x - 40;
-      calloutY = hotspot.y;
-      lineType = 'horizontal';
-    }
+    // Position callout away from center
+    let calloutX = isLeft ? hotspot.x - calloutDistance : hotspot.x + calloutDistance;
+    let calloutY = isTop ? hotspot.y - 25 : hotspot.y + 25;
     
-    // If horizontal placement would go too far out of bounds, use vertical
-    if (calloutX < -20 || calloutX > 120) {
-      calloutX = hotspot.x;
-      if (hotspot.y < 50) {
-        calloutY = hotspot.y + 30;
-      } else {
-        calloutY = hotspot.y - 30;
-      }
-      lineType = 'vertical';
-    }
+    // Allow callouts to extend beyond image boundaries for visibility
+    calloutX = Math.max(-35, Math.min(135, calloutX));
+    calloutY = Math.max(-25, Math.min(125, calloutY));
     
-    // Allow callouts to go outside image bounds for better visibility
-    calloutX = Math.max(-30, Math.min(130, calloutX));
-    calloutY = Math.max(-20, Math.min(120, calloutY));
+    // Calculate L-shaped line coordinates (horizontal then vertical)
+    const midX = calloutX;
+    const midY = hotspot.y;
     
     return { 
       x: calloutX, 
-      y: calloutY, 
-      lineType,
-      // Calculate intermediate point for L-shaped line
-      midX: lineType === 'horizontal' ? (hotspot.x + calloutX) / 2 : hotspot.x,
-      midY: lineType === 'vertical' ? (hotspot.y + calloutY) / 2 : hotspot.y
+      y: calloutY,
+      midX,
+      midY,
+      isLeft,
+      isTop
     };
   };
 
@@ -303,42 +287,32 @@ const ProductPreview = () => {
                 
                 return (
                   <>
-                    {/* SVG for connecting line */}
+                    {/* SVG for L-shaped connecting line */}
                     <svg 
                       className="absolute inset-0 w-full h-full pointer-events-none overflow-visible"
                       style={{ zIndex: 10 }}
                     >
-                      {/* Horizontal/Vertical line */}
-                      {calloutPos.lineType === 'horizontal' ? (
-                        <line
-                          x1={`${hotspot.x > calloutPos.x ? hotspot.x - 1.5 : hotspot.x + 1.5}%`}
-                          y1={`${hotspot.y}%`}
-                          x2={`${calloutPos.x > hotspot.x ? calloutPos.x - 14 : calloutPos.x + 14}%`}
-                          y2={`${calloutPos.y}%`}
-                          stroke="hsl(var(--primary))"
-                          strokeWidth="2"
-                          className="drop-shadow-sm"
-                        />
-                      ) : (
-                        <line
-                          x1={`${hotspot.x}%`}
-                          y1={`${hotspot.y > calloutPos.y ? hotspot.y - 1.5 : hotspot.y + 1.5}%`}
-                          x2={`${calloutPos.x}%`}
-                          y2={`${calloutPos.y > hotspot.y ? calloutPos.y - 8 : calloutPos.y + 8}%`}
-                          stroke="hsl(var(--primary))"
-                          strokeWidth="2"
-                          className="drop-shadow-sm"
-                        />
-                      )}
+                      {/* L-shaped line: horizontal first, then vertical */}
+                      <polyline
+                        points={`${hotspot.x + (calloutPos.isLeft ? -1.5 : 1.5)},${hotspot.y} ${calloutPos.midX + (calloutPos.isLeft ? 14 : -14)},${calloutPos.midY} ${calloutPos.midX + (calloutPos.isLeft ? 14 : -14)},${calloutPos.y + (calloutPos.isTop ? 8 : -8)}`}
+                        fill="none"
+                        stroke="hsl(var(--primary))"
+                        strokeWidth="2"
+                        className="drop-shadow-sm"
+                      />
                     </svg>
                     
                     {/* Callout */}
                     <div
-                      className="absolute z-20 bg-background border-2 border-primary rounded-lg p-4 shadow-lg min-w-[320px] max-w-[360px] w-auto h-auto"
+                      className="absolute z-20 bg-background border-2 border-primary rounded-lg p-4 shadow-lg min-w-[340px] max-w-[380px] w-auto h-auto cursor-pointer hover:shadow-xl transition-all duration-300"
                       style={{ 
                         left: `${calloutPos.x}%`, 
                         top: `${calloutPos.y}%`,
                         transform: 'translate(-50%, -50%)'
+                      }}
+                      onClick={() => {
+                        // Navigate to product page maximum versatility section
+                        window.location.href = '/product#specifications';
                       }}
                     >
                       <div className="space-y-2">
@@ -347,6 +321,9 @@ const ProductPreview = () => {
                         </h4>
                         <p className="text-muted-foreground text-xs leading-relaxed">
                           {hotspot.description}
+                        </p>
+                        <p className="text-xs text-primary font-medium mt-2">
+                          Click to see more details →
                         </p>
                       </div>
                       

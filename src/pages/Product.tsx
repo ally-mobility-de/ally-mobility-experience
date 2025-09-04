@@ -20,6 +20,37 @@ const Product = () => {
     setActiveHotspot(activeHotspot === hotspotId ? null : hotspotId);
   };
 
+  // Calculate callout position based on hotspot location - always away from center with L-shaped lines
+  const getCalloutPosition = (hotspot: any) => {
+    const imageCenter = { x: 50, y: 50 }; // Image center in percentage
+    const calloutDistance = 45; // Distance from hotspot to callout
+    
+    // Determine placement direction away from center
+    const isLeft = hotspot.x < imageCenter.x;
+    const isTop = hotspot.y < imageCenter.y;
+    
+    // Position callout away from center
+    let calloutX = isLeft ? hotspot.x - calloutDistance : hotspot.x + calloutDistance;
+    let calloutY = isTop ? hotspot.y - 25 : hotspot.y + 25;
+    
+    // Allow callouts to extend beyond image boundaries for visibility
+    calloutX = Math.max(-35, Math.min(135, calloutX));
+    calloutY = Math.max(-25, Math.min(125, calloutY));
+    
+    // Calculate L-shaped line coordinates (horizontal then vertical)
+    const midX = calloutX;
+    const midY = hotspot.y;
+    
+    return { 
+      x: calloutX, 
+      y: calloutY,
+      midX,
+      midY,
+      isLeft,
+      isTop
+    };
+  };
+
   const products = {
     flatbed: {
       name: 'Flatbed',
@@ -38,6 +69,27 @@ const Product = () => {
           y: 50,
           title: 'Cargo Area',
           description: 'Versatile lashing points for secure transport'
+        },
+        {
+          id: 'wheels',
+          x: 15,
+          y: 75,
+          title: 'Heavy-Duty Wheels',
+          description: 'All-terrain wheels designed for urban and off-road use'
+        },
+        {
+          id: 'hitch',
+          x: 80,
+          y: 65,
+          title: 'Universal Hitch',
+          description: 'Compatible with most bicycle types and e-bikes'
+        },
+        {
+          id: 'suspension',
+          x: 45,
+          y: 80,
+          title: 'Suspension System',
+          description: 'Advanced suspension for smooth ride and cargo protection'
         }
       ],
       data: [
@@ -57,6 +109,34 @@ const Product = () => {
           y: 40,
           title: 'Keyless Lock System',
           description: '2 doors with advanced security features'
+        },
+        {
+          id: 'walls',
+          x: 45,
+          y: 25,
+          title: 'Weatherproof Walls',
+          description: 'Fully enclosed cargo protection from elements'
+        },
+        {
+          id: 'floor',
+          x: 55,
+          y: 70,
+          title: 'Reinforced Floor',
+          description: 'Heavy-duty flooring with anti-slip surface'
+        },
+        {
+          id: 'ventilation',
+          x: 25,
+          y: 35,
+          title: 'Ventilation System',
+          description: 'Optimal air circulation for cargo protection'
+        },
+        {
+          id: 'loading',
+          x: 70,
+          y: 60,
+          title: 'Easy Loading',
+          description: 'Low loading height for convenient access'
         }
       ],
       data: [
@@ -85,6 +165,27 @@ const Product = () => {
           y: 80,
           title: '4 Braked Castors',
           description: 'Smooth mobility and secure parking'
+        },
+        {
+          id: 'mechanism',
+          x: 50,
+          y: 45,
+          title: 'Quick-Release System',
+          description: 'Effortless container swapping mechanism'
+        },
+        {
+          id: 'platform',
+          x: 75,
+          y: 55,
+          title: 'Modular Platform',
+          description: 'Stable base for secure container mounting'
+        },
+        {
+          id: 'guide',
+          x: 35,
+          y: 65,
+          title: 'Container Guides',
+          description: 'Precision alignment for easy loading'
         }
       ],
       data: [
@@ -187,12 +288,12 @@ const Product = () => {
             </div>
             
             {/* Right side - Interactive Product Image */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-soft bg-gradient-subtle">
+            <div className="relative overflow-visible">
+              <div className="relative rounded-2xl overflow-visible shadow-soft bg-gradient-subtle">
                 <img 
                   src={currentProduct.image} 
                   alt={`ally-mobility ${currentProduct.name} cargo trailer`}
-                  className="w-full h-auto object-cover transition-opacity duration-500"
+                  className="w-full h-auto object-cover transition-opacity duration-500 rounded-2xl"
                 />
                 
                 {/* Interactive Hotspots */}
@@ -207,6 +308,64 @@ const Product = () => {
                     <span className="text-primary font-bold text-lg">+</span>
                   </button>
                 ))}
+
+                {/* Hotspot Callouts with Connecting Lines */}
+                {activeHotspot && (() => {
+                  const hotspot = currentProduct.hotspots.find(h => h.id === activeHotspot);
+                  if (!hotspot) return null;
+                  
+                  const calloutPos = getCalloutPosition(hotspot);
+                  
+                  return (
+                    <>
+                      {/* SVG for L-shaped connecting line */}
+                      <svg 
+                        className="absolute inset-0 w-full h-full pointer-events-none overflow-visible"
+                        style={{ zIndex: 10 }}
+                      >
+                        {/* L-shaped line: horizontal first, then vertical */}
+                        <polyline
+                          points={`${hotspot.x + (calloutPos.isLeft ? -1.5 : 1.5)},${hotspot.y} ${calloutPos.midX + (calloutPos.isLeft ? 14 : -14)},${calloutPos.midY} ${calloutPos.midX + (calloutPos.isLeft ? 14 : -14)},${calloutPos.y + (calloutPos.isTop ? 8 : -8)}`}
+                          fill="none"
+                          stroke="hsl(var(--primary))"
+                          strokeWidth="2"
+                          className="drop-shadow-sm"
+                        />
+                      </svg>
+                      
+                      {/* Callout */}
+                      <div
+                        className="absolute z-20 bg-background border-2 border-primary rounded-lg p-4 shadow-lg min-w-[340px] max-w-[380px] w-auto h-auto"
+                        style={{ 
+                          left: `${calloutPos.x}%`, 
+                          top: `${calloutPos.y}%`,
+                          transform: 'translate(-50%, -50%)'
+                        }}
+                      >
+                        <div className="space-y-2">
+                          <h4 className="font-semibold text-primary text-sm leading-tight">
+                            {hotspot.title}
+                          </h4>
+                          <p className="text-muted-foreground text-xs leading-relaxed">
+                            {hotspot.description}
+                          </p>
+                        </div>
+                        
+                        {/* Close button */}
+                        <button
+                          onClick={(e) => {
+                            e.stopPropagation();
+                            setActiveHotspot(null);
+                          }}
+                          className="absolute -top-2 -right-2 w-6 h-6 bg-primary text-primary-foreground rounded-full flex items-center justify-center text-xs font-bold hover:bg-primary/80 transition-colors"
+                          aria-label="Close callout"
+                        >
+                          ×
+                        </button>
+                      </div>
+                    </>
+                  );
+                })()}
               </div>
 
               {/* Product indicator */}
