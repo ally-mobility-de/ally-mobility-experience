@@ -184,11 +184,7 @@ All colors MUST be HSL.
     @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
   }
 
-  /* Brand specific utilities */
-  .text-brand-green { @apply text-primary; }
-  .text-brand-aqua { @apply text-brand-aqua; }
-  .text-brand-purple { @apply text-accent; }
-  .bg-brand-cream { @apply bg-background; }
+  /* Brand specific utilities - colors are already available via Tailwind config */
 
   /* Text utilities */
   .line-clamp-2 {
