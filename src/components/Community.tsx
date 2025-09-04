@@ -94,88 +94,82 @@ const Community = () => {
             </p>
           </div>
 
-          {/* Events Section */}
-      <section className="section-padding bg-secondary-light">
-        <div className="container-custom">
-          <div className="text-center space-y-4 mb-12">
-            <h2 className="text-primary text-5xl lg:text-6xl font-bold">Events</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Besuchen Sie uns auf den wichtigsten Mobilitätsmessen und Events
-            </p>
-          </div>
-
-          {/* Events Carousel */}
-          <div className="relative max-w-4xl mx-auto">
-            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
-              <div className="grid grid-cols-1 md:grid-cols-2">
-                <div className="relative">
-                  <img 
-                    src={events[currentEventIndex].image} 
-                    alt={events[currentEventIndex].title}
-                    className="w-full h-64 md:h-full object-cover"
-                  />
-                  {events[currentEventIndex].status === 'upcoming' && (
-                    <div className="absolute top-4 left-4 bg-brand-aqua text-white px-3 py-1 rounded-full text-sm font-medium">
-                      Bevorstehend
-                    </div>
-                  )}
-                </div>
-                <div className="p-8 space-y-6">
-                  <div className="space-y-3">
-                    <h3 className="text-2xl font-bold text-primary">{events[currentEventIndex].title}</h3>
-                    <div className="flex items-center gap-4 text-muted-foreground">
-                      <div className="flex items-center gap-2">
-                        <Calendar className="w-4 h-4" />
-                        <span>{events[currentEventIndex].date}</span>
-                      </div>
-                      <div className="flex items-center gap-2">
-                        <MapPin className="w-4 h-4" />
-                        <span>{events[currentEventIndex].location}</span>
-                      </div>
+          {/* Articles Carousel */}
+          <div className="relative max-w-6xl mx-auto">
+            <div className="overflow-hidden">
+              <div 
+                className="flex transition-transform duration-300 ease-in-out"
+                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+              >
+                {Array.from({ length: totalSlides }, (_, slideIndex) => (
+                  <div key={slideIndex} className="w-full flex-shrink-0">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                      {articles
+                        .slice(slideIndex * itemsPerSlide, slideIndex * itemsPerSlide + itemsPerSlide)
+                        .map((article) => (
+                          <div key={article.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                            <img 
+                              src={article.image} 
+                              alt={article.title}
+                              className="w-full h-48 object-cover"
+                            />
+                            <div className="p-6 space-y-4">
+                              <div className="flex items-center justify-between">
+                                <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${getPlatformColor(article.platform)}`}>
+                                  {article.platform}
+                                </span>
+                                <span className="text-sm text-muted-foreground">{article.source}</span>
+                              </div>
+                              <h3 className="text-xl font-semibold text-primary line-clamp-2">{article.title}</h3>
+                              <p className="text-muted-foreground line-clamp-3">{article.excerpt}</p>
+                              <a 
+                                href={article.link} 
+                                className="inline-flex items-center text-brand-aqua hover:text-brand-aqua/80 transition-colors font-medium"
+                              >
+                                Read More →
+                              </a>
+                            </div>
+                          </div>
+                        ))}
                     </div>
                   </div>
-                  
-                  <p className="text-muted-foreground leading-relaxed">
-                    {events[currentEventIndex].description}
-                  </p>
-                  
-                  <Button className="btn-aqua">
-                    Zum Event →
-                  </Button>
-                </div>
+                ))}
               </div>
             </div>
 
-            {/* Carousel Navigation */}
-            <div className="flex justify-between items-center mt-6">
+            {/* Navigation */}
+            <div className="flex justify-between items-center mt-8">
               <button
-                onClick={prevEvent}
-                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center"
+                onClick={prevSlide}
+                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center shadow-lg"
               >
                 ←
               </button>
               
               <div className="flex gap-2">
-                {events.map((_, index) => (
+                {Array.from({ length: totalSlides }, (_, index) => (
                   <button
                     key={index}
-                    onClick={() => setCurrentEventIndex(index)}
+                    onClick={() => setCurrentSlide(index)}
                     className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                      index === currentEventIndex ? 'bg-primary' : 'bg-primary/30'
+                      index === currentSlide ? 'bg-primary' : 'bg-primary/30'
                     }`}
                   />
                 ))}
               </div>
               
               <button
-                onClick={nextEvent}
-                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center"
+                onClick={nextSlide}
+                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center shadow-lg"
               >
                 →
               </button>
             </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+  );
+};
 
 export default Community;
