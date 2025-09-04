@@ -58,10 +58,19 @@ const Community = () => {
       platform: 'Instagram',
       image: '/lovable-uploads/4b19d7f4-7d6d-44c5-9db1-f14823dafd21.png',
       link: '#'
+    },
+    {
+      id: '6',
+      title: 'E-Mobility Revolution',
+      excerpt: 'Exploring the latest trends in electric mobility and their impact on urban transportation.',
+      source: 'TechNews',
+      platform: 'News',
+      image: '/lovable-uploads/93f64d63-22a9-46a0-8efa-e70fbcfcbf49.png',
+      link: '#'
     }
   ];
 
-  const itemsPerSlide = 3;
+  const itemsPerSlide = 2;
   const totalSlides = Math.ceil(articles.length / itemsPerSlide);
 
   const nextSlide = () => {
@@ -106,15 +115,20 @@ const Community = () => {
               >
                 {Array.from({ length: totalSlides }).map((_, slideIndex) => (
                   <div key={slideIndex} className="w-full flex-shrink-0">
-                    <div className="grid md:grid-cols-3 gap-6 px-4">
+                    <div className="flex gap-6 px-4">
                       {articles
                         .slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide)
-                        .map((article) => (
-                          <div
-                            key={article.id}
-                            className="product-card group cursor-pointer"
-                            onClick={() => window.open(article.link, '_blank')}
-                          >
+                        .map((article, index) => {
+                          // Alternate between wide and small cards
+                          const isWide = (slideIndex % 2 === 0) ? index === 0 : index === 1;
+                          return (
+                            <div
+                              key={article.id}
+                              className={`product-card group cursor-pointer flex-shrink-0 ${
+                                isWide ? 'w-2/3' : 'w-1/3'
+                              }`}
+                              onClick={() => window.open(article.link, '_blank')}
+                            >
                             {/* Image */}
                             <div className="relative aspect-[16/9] overflow-hidden">
                               <img 
@@ -154,8 +168,9 @@ const Community = () => {
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        ))}
+                           </div>
+                         );
+                        })}
                     </div>
                   </div>
                 ))}
