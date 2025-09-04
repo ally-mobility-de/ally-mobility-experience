@@ -1,95 +1,93 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
+import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
+import { Package } from "lucide-react";
 import flatbedImage from "@/assets/product-flatbed.jpg";
 import boxImage from "@/assets/product-box.jpg";
 import swapImage from "@/assets/product-swap.jpg";
 
-interface HotspotInfo {
-  id: string;
-  title: string;
-  specs: string[];
-  features: string[];
-}
-
-interface ProductData {
-  id: string;
-  name: string;
-  image: string;
-  hotspots: Array<{
-    id: string;
-    x: number;
-    y: number;
-    info: HotspotInfo;
-  }>;
-}
-
-const products: ProductData[] = [
-  {
-    id: 'flatbed',
+const products = {
+  flatbed: {
     name: 'Flatbed',
     image: flatbedImage,
     hotspots: [
       {
-        id: 'payload',
-        x: 30,
-        y: 40,
-        info: {
-          id: 'payload',
-          title: 'Flatbed Specifications',
-          specs: ['Payload: 500 kg', 'Cargo area: 186 × 86 cm', 'Side walls: 25 cm'],
-          features: ['Versatile lashing points', 'Weather resistant', 'Tool-free assembly']
-        }
+        id: 'frame',
+        x: 25,
+        y: 30,
+        title: 'Reinforced Frame',
+        description: 'Professional grade component for maximum durability'
       },
       {
-        id: 'wheels',
-        x: 70,
-        y: 80,
-        info: {
-          id: 'wheels',
-          title: 'Drive System',
-          specs: ['Electric 5-gang support', 'Range: 50 km with 2 batteries', 'Speed: up to 25 km/h'],
-          features: ['Regenerative braking', 'All-weather performance']
-        }
+        id: 'cargo',
+        x: 60,
+        y: 50,
+        title: 'Cargo Area',
+        description: 'Versatile lashing points for secure transport'
       }
+    ],
+    data: [
+      { label: "Payload", value: "500 kg" },
+      { label: "Cargo area", value: "186 × 86 cm" },
+      { label: "Side walls", value: "25 cm" },
+      { label: "Features", value: "Versatile lashing points" }
     ]
   },
-  {
-    id: 'box',
+  box: {
     name: 'Box',
     image: boxImage,
     hotspots: [
       {
-        id: 'cargo',
-        x: 25,
-        y: 35,
-        info: {
-          id: 'cargo',
-          title: 'Box Specifications',
-          specs: ['Payload: 500 kg', 'Cargo area: 182 × 82 cm', 'Cargo height: 156 cm', 'Volume: 2.3 m³'],
-          features: ['2 doors + keyless lock', 'Versatile lashing points', 'Weatherproof']
-        }
+        id: 'doors',
+        x: 80,
+        y: 40,
+        title: 'Keyless Lock System',
+        description: '2 doors with advanced security features'
       }
+    ],
+    data: [
+      { label: "Payload", value: "500 kg" },
+      { label: "Cargo area", value: "182 × 82 cm" },
+      { label: "Cargo height", value: "156 cm" },
+      { label: "Volume", value: "2.3 m³" },
+      { label: "Doors", value: "2 doors + keyless lock" },
+      { label: "Features", value: "Versatile lashing points" }
     ]
   },
-  {
-    id: 'swap-container',
+  swap: {
     name: 'Swap Container',
     image: swapImage,
     hotspots: [
       {
         id: 'container',
-        x: 20,
-        y: 30,
-        info: {
-          id: 'container',
-          title: 'Swap Container System',
-          specs: ['Load up to 3 wheeled containers', 'Tool-free operation', 'Payload: 150 kg per container'],
-          features: ['Record-time loading/unloading', '4 braked castors', 'Modular system']
-        }
+        x: 30,
+        y: 35,
+        title: 'Roll, load & go',
+        description: 'Up to 3 wheeled containers tool-free'
+      },
+      {
+        id: 'castors',
+        x: 70,
+        y: 80,
+        title: '4 Braked Castors',
+        description: 'Smooth mobility and secure parking'
       }
+    ],
+    data: [
+      { label: "Concept", value: "Roll, load & go" },
+      { label: "Containers", value: "Up to 3 wheeled containers tool-free" },
+      { label: "Loading", value: "Record-time loading/unloading" },
+      { label: "Payload", value: "150 kg per container" },
+      { label: "Cargo area", value: "74 × 56 cm" },
+      { label: "Cargo height", value: "156 cm" },
+      { label: "Volume", value: "2.3 m³" },
+      { label: "Doors", value: "2 doors + keyless lock" },
+      { label: "Features", value: "Versatile lashing points" },
+      { label: "Mobility", value: "4 braked castors" }
     ]
   }
-];
+};
 
 const ProductPreview = () => {
   const [activeProduct, setActiveProduct] = useState('flatbed');
@@ -109,7 +107,7 @@ const ProductPreview = () => {
     };
   }, []);
 
-  const currentProduct = products.find(p => p.id === activeProduct)!;
+  const currentProduct = products[activeProduct as keyof typeof products];
 
   const toggleHotspot = (hotspotId: string) => {
     setActiveHotspot(activeHotspot === hotspotId ? null : hotspotId);
@@ -118,11 +116,11 @@ const ProductPreview = () => {
   return (
     <section id="product" className="section-padding bg-background">
       <div className="container-custom">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center mb-16">
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h2 className="text-brand-green">Maximum Versatility</h2>
+              <h2 className="text-primary">Maximum Versatility</h2>
               <p className="text-xl text-muted-foreground leading-relaxed">
                 Flexible modules for every purpose. Thanks to a modular concept and a robust, 
                 high-quality platform, our heavy-duty bicycle trailers are ready for anything. 
@@ -132,24 +130,27 @@ const ProductPreview = () => {
             </div>
 
             {/* Product Switcher */}
-            <div className="flex flex-wrap gap-3">
-              {products.map((product) => (
-                <Button
-                  key={product.id}
-                  onClick={() => {
-                    setActiveProduct(product.id);
-                    setActiveHotspot(null);
-                  }}
-                  variant={activeProduct === product.id ? "default" : "outline"}
-                  className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
-                    activeProduct === product.id 
-                      ? 'bg-primary text-primary-foreground shadow-soft' 
-                      : 'bg-background border-2 border-secondary text-secondary hover:bg-secondary hover:text-white'
-                  }`}
-                >
-                  {product.name}
-                </Button>
-              ))}
+            <div className="space-y-4">
+              <div className="flex flex-wrap gap-3">
+                {Object.entries(products).map(([key, product]) => (
+                  <Button
+                    key={key}
+                    onClick={() => {
+                      setActiveProduct(key);
+                      setActiveHotspot(null);
+                    }}
+                    variant={activeProduct === key ? "default" : "outline"}
+                    className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                      activeProduct === key 
+                        ? 'bg-primary text-primary-foreground shadow-soft' 
+                        : 'bg-background border-2 border-secondary text-secondary hover:bg-secondary hover:text-white'
+                    }`}
+                  >
+                    {product.name}
+                    {key === 'swap' && <span className="ml-2 text-xs bg-brand-aqua text-white px-2 py-1 rounded">NEW</span>}
+                  </Button>
+                ))}
+              </div>
             </div>
 
             {/* Active Hotspot Info */}
@@ -161,35 +162,8 @@ const ProductPreview = () => {
                   
                   return (
                     <div className="space-y-4">
-                      <h4 className="font-semibold text-brand-green">{hotspot.info.title}</h4>
-                      <div className="space-y-3">
-                        <div>
-                          <h5 className="font-medium text-sm text-muted-foreground uppercase tracking-wide mb-2">
-                            Specifications
-                          </h5>
-                          <ul className="space-y-1">
-                            {hotspot.info.specs.map((spec, index) => (
-                              <li key={index} className="text-sm flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 bg-brand-aqua rounded-full flex-shrink-0"></div>
-                                {spec}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                        <div>
-                          <h5 className="font-medium text-sm text-muted-foreground uppercase tracking-wide mb-2">
-                            Features
-                          </h5>
-                          <ul className="space-y-1">
-                            {hotspot.info.features.map((feature, index) => (
-                              <li key={index} className="text-sm flex items-center gap-2">
-                                <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0"></div>
-                                {feature}
-                              </li>
-                            ))}
-                          </ul>
-                        </div>
-                      </div>
+                      <h4 className="font-semibold text-primary">{hotspot.title}</h4>
+                      <p className="text-muted-foreground">{hotspot.description}</p>
                     </div>
                   );
                 })()}
@@ -199,7 +173,7 @@ const ProductPreview = () => {
 
           {/* Interactive Product Image */}
           <div className="relative">
-            <div className="relative rounded-2xl overflow-hidden shadow-soft">
+            <div className="relative rounded-2xl overflow-hidden shadow-soft bg-gradient-subtle">
               <img 
                 src={currentProduct.image} 
                 alt={`ally-mobility ${currentProduct.name} cargo trailer`}
@@ -212,23 +186,84 @@ const ProductPreview = () => {
                   key={hotspot.id}
                   onClick={() => toggleHotspot(hotspot.id)}
                   className="absolute hotspot"
-                  style={{ left: `${hotspot.x}%`, top: `${hotspot.y}%` }}
-                  aria-label={`View ${hotspot.info.title} details`}
+                  style={{ left: `${hotspot.x}%`, top: `${hotspot.y}%`, transform: 'translate(-50%, -50%)' }}
+                  aria-label={`View ${hotspot.title} details`}
                 >
-                  <svg className="w-4 h-4 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
-                  </svg>
+                  <span className="text-primary font-bold text-lg">+</span>
                 </button>
               ))}
             </div>
 
             {/* Product indicator */}
             <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 shadow-card">
-              <div className="text-sm font-medium text-brand-green">
-                {currentProduct.name}
+              <div className="text-sm font-medium text-primary">
+                {currentProduct.name} Configuration
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Technical Specifications */}
+        <div className="space-y-8">
+          <div className="text-center space-y-4">
+            <h3 className="text-2xl font-bold text-primary">Technical Specifications</h3>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Detailed technical data for our modular cargo platform
+            </p>
+          </div>
+
+          <Tabs value={activeProduct} onValueChange={setActiveProduct} className="w-full">
+            <TabsList className="grid w-full grid-cols-3 mb-8 bg-muted">
+              <TabsTrigger 
+                value="flatbed" 
+                className="data-[state=active]:bg-primary data-[state=active]:text-white"
+              >
+                Flatbed
+              </TabsTrigger>
+              <TabsTrigger 
+                value="box"
+                className="data-[state=active]:bg-primary data-[state=active]:text-white"
+              >
+                Box
+              </TabsTrigger>
+              <TabsTrigger 
+                value="swap"
+                className="data-[state=active]:bg-primary data-[state=active]:text-white"
+              >
+                Swap Container
+                <span className="ml-2 text-xs bg-brand-aqua text-white px-1.5 py-0.5 rounded">NEW</span>
+              </TabsTrigger>
+            </TabsList>
+            
+            {Object.entries(products).map(([key, product]) => (
+              <TabsContent key={key} value={key} className="space-y-8">
+                <div className="max-w-2xl mx-auto">
+                  <div className="bg-card rounded-2xl p-6 border shadow-card">
+                    <div className="flex items-center gap-3 mb-4">
+                      <Package className="w-5 h-5 text-primary" />
+                      <h3 className="text-xl font-semibold text-primary">
+                        {product.name} Specifications
+                      </h3>
+                    </div>
+                    <Table>
+                      <TableBody>
+                        {product.data.map((item, index) => (
+                          <TableRow key={index}>
+                            <TableCell className="font-medium text-foreground">
+                              {item.label}
+                            </TableCell>
+                            <TableCell className="text-muted-foreground">
+                              {item.value}
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
+                  </div>
+                </div>
+              </TabsContent>
+            ))}
+          </Tabs>
         </div>
       </div>
     </section>
