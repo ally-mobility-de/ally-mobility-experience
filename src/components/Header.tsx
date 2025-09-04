@@ -31,27 +31,15 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            {location.pathname === '/' ? <>
-                <button onClick={() => scrollToSection('product')} className="text-foreground hover:text-primary transition-colors duration-200">
-                  Product
-                </button>
-                <button onClick={() => scrollToSection('customers')} className="text-foreground hover:text-primary transition-colors duration-200">
-                  Customers
-                </button>
-                <button onClick={() => scrollToSection('about')} className="text-foreground hover:text-primary transition-colors duration-200">
-                  About us
-                </button>
-              </> : <>
-                <Link to="/product" className="text-foreground hover:text-primary transition-colors duration-200">
-                  Product
-                </Link>
-                <Link to="/customers" className="text-foreground hover:text-primary transition-colors duration-200">
-                  Customers
-                </Link>
-                <Link to="/about-us" className="text-foreground hover:text-primary transition-colors duration-200">
-                  About us
-                </Link>
-              </>}
+            <Link to="/product" className="text-foreground hover:text-primary transition-colors duration-200">
+              Product
+            </Link>
+            <Link to="/customers" className="text-foreground hover:text-primary transition-colors duration-200">
+              Customers
+            </Link>
+            <Link to="/about-us" className="text-foreground hover:text-primary transition-colors duration-200">
+              About us
+            </Link>
             <Button variant="outline" onClick={() => location.pathname === '/' ? scrollToSection('contact') : window.location.href = '/#contact'} className="btn-secondary-outline">
               Contact us
             </Button>
