@@ -48,48 +48,66 @@ const ContactForm = () => {
           <div className="grid lg:grid-cols-2 gap-12">
             {/* Contact Information */}
             <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-primary text-4xl lg:text-5xl font-bold">Contact</h2>
+                <p className="text-xl text-muted-foreground">
+                  Ready to transform your urban logistics? Get in touch with our team.
+                </p>
+              </div>
+
               <div className="space-y-6">
-                <h3 className="text-2xl font-semibold text-brand-green">Contact Information</h3>
-                
-                <div className="space-y-4">
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 text-brand-aqua flex-shrink-0 mt-1">
-                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-foreground">Email</h4>
-                      <p className="text-muted-foreground">contact@ally-mobility.com</p>
-                    </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-brand-aqua/20 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 7.89a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                    </svg>
                   </div>
-
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 text-brand-aqua flex-shrink-0 mt-1">
-                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-foreground">Office</h4>
-                      <p className="text-muted-foreground">Innovation Campus<br />Sustainable Transport Hub</p>
-                    </div>
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">Email</p>
+                    <a 
+                      href="mailto:info@ally-mobility.com" 
+                      className="text-lg font-medium text-primary hover:text-secondary transition-colors"
+                    >
+                      info@ally-mobility.com
+                    </a>
                   </div>
+                </div>
 
-                  <div className="flex items-start gap-3">
-                    <div className="w-6 h-6 text-brand-aqua flex-shrink-0 mt-1">
-                      <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
-                    </div>
-                    <div>
-                      <h4 className="font-medium text-foreground">Response Time</h4>
-                      <p className="text-muted-foreground">Within 24 hours on business days</p>
-                    </div>
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-brand-aqua/20 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">Telefon</p>
+                    <p className="text-lg font-medium text-foreground">+49 (0) 30 12345678</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-brand-aqua/20 rounded-full flex items-center justify-center">
+                    <svg className="w-6 h-6 text-primary" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
+                    </svg>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">Adresse</p>
+                    <p className="text-lg font-medium text-foreground">
+                      Musterstraße 123<br />
+                      10115 Berlin, Deutschland
+                    </p>
                   </div>
                 </div>
               </div>
+
+              <Button 
+                className="btn-aqua text-lg px-8 py-4"
+                onClick={() => window.location.href = 'mailto:info@ally-mobility.com'}
+              >
+                Contact now
+              </Button>
 
               {/* Quick Contact Options */}
               

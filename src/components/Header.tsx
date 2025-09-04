@@ -31,13 +31,34 @@ const Header = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8">
-            <Link to="/product" className="text-foreground hover:text-primary transition-colors duration-200">
+            <Link 
+              to="/product" 
+              className={`transition-colors duration-200 ${
+                location.pathname === '/product' 
+                  ? 'text-primary font-semibold' 
+                  : 'text-foreground hover:text-primary'
+              }`}
+            >
               Product
             </Link>
-            <Link to="/customers" className="text-foreground hover:text-primary transition-colors duration-200">
+            <Link 
+              to="/customers" 
+              className={`transition-colors duration-200 ${
+                location.pathname === '/customers' 
+                  ? 'text-primary font-semibold' 
+                  : 'text-foreground hover:text-primary'
+              }`}
+            >
               Customers
             </Link>
-            <Link to="/about-us" className="text-foreground hover:text-primary transition-colors duration-200">
+            <Link 
+              to="/about-us" 
+              className={`transition-colors duration-200 ${
+                location.pathname === '/about-us' 
+                  ? 'text-primary font-semibold' 
+                  : 'text-foreground hover:text-primary'
+              }`}
+            >
               About us
             </Link>
             <Button variant="outline" onClick={() => location.pathname === '/' ? scrollToSection('contact') : window.location.href = '/#contact'} className="btn-secondary-outline">

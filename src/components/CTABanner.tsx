@@ -8,6 +8,13 @@ const CTABanner = () => {
       });
     }
   };
-  return;
+  
+  return (
+    <div className="text-center">
+      <Button onClick={scrollToContact} className="btn-aqua">
+        Contact Us
+      </Button>
+    </div>
+  );
 };
 export default CTABanner;
