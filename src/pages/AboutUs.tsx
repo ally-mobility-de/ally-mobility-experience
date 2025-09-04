@@ -1,11 +1,16 @@
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import heroCargoBike from "@/assets/hero-cargo-bike.jpg";
 import dealerPerson from "@/assets/dealer-person.jpg";
-import { Instagram, Linkedin, MessageCircle } from "lucide-react";
+import { Instagram, Linkedin, MessageCircle, MapPin, Phone, Mail, Calendar } from "lucide-react";
 
 const AboutUs = () => {
+  const navigate = useNavigate();
+  const [currentEventIndex, setCurrentEventIndex] = useState(0);
+
   const teamMembers = [
     {
       id: 1,
@@ -29,6 +34,44 @@ const AboutUs = () => {
       image: "/lovable-uploads/4b19d7f4-7d6d-44c5-9db1-f14823dafd21.png"
     }
   ];
+
+  const events = [
+    {
+      id: 1,
+      title: "mobifuture 2025",
+      date: "15-17 März 2025",
+      location: "Frankfurt, Deutschland",
+      description: "Deutschlands größte Fachmesse für nachhaltige Mobilität. Entdecken Sie die neuesten Innovationen im Bereich urbaner Logistik.",
+      status: "upcoming",
+      image: heroCargoBike
+    },
+    {
+      id: 2,
+      title: "Urban Logistics Summit",
+      date: "22-24 April 2025", 
+      location: "Berlin, Deutschland",
+      description: "Internationale Konferenz für nachhaltige Stadtlogistik und Mobilitätslösungen.",
+      status: "upcoming",
+      image: dealerPerson
+    },
+    {
+      id: 3,
+      title: "Cargo Bike Festival",
+      date: "12-14 September 2024",
+      location: "München, Deutschland", 
+      description: "Das größte Lastenrad-Festival Europas mit Test-Parcours und Fachvorträgen.",
+      status: "past",
+      image: heroCargoBike
+    }
+  ];
+
+  const nextEvent = () => {
+    setCurrentEventIndex((prev) => (prev + 1) % events.length);
+  };
+
+  const prevEvent = () => {
+    setCurrentEventIndex((prev) => (prev - 1 + events.length) % events.length);
+  };
 
   const bannerBlocks = [
     {
@@ -64,15 +107,15 @@ const AboutUs = () => {
       {/* Hero Section */}
       <section className="section-padding bg-gradient-subtle mt-16 lg:mt-20">
         <div className="container-custom text-center space-y-8">
-          <div className="relative mx-auto max-w-4xl">
+          <div className="relative mx-auto max-w-5xl">
             <img 
               src={heroCargoBike} 
               alt="About ally-mobility" 
-              className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
+              className="w-full h-[600px] object-cover rounded-2xl shadow-lg"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-2xl flex items-end">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-2xl flex items-end">
               <div className="p-8 text-white">
-                <h1 className="text-4xl lg:text-6xl font-bold mb-4">
+                <h1 className="text-4xl lg:text-7xl font-bold mb-4">
                   About ally-mobility
                 </h1>
                 <p className="text-xl opacity-90 max-w-2xl">
@@ -85,148 +128,251 @@ const AboutUs = () => {
         </div>
       </section>
 
-      {/* Mission Statement */}
+      {/* We Are ally-mobility */}
       <section className="section-padding">
+        <div className="container-custom">
+          <div className="text-center space-y-12 mb-16">
+            <h2 className="text-6xl lg:text-8xl font-bold text-primary">
+              We are ally-mobility
+            </h2>
+          </div>
+          
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="relative">
+              <img 
+                src={dealerPerson} 
+                alt="Our team working on sustainable mobility" 
+                className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
+              />
+              <div className="absolute -bottom-6 -right-6 bg-brand-aqua text-white p-6 rounded-2xl shadow-lg">
+                <div className="text-3xl font-bold">2019</div>
+                <div className="text-sm">Founded</div>
+              </div>
+            </div>
+            
+            <div className="space-y-8">
+              <blockquote className="text-2xl lg:text-3xl text-muted-foreground leading-relaxed italic border-l-4 border-brand-aqua pl-8">
+                "We believe mobility should be sustainable, efficient, and accessible to everyone. 
+                Our mission is to revolutionize urban transport by creating innovative solutions 
+                that make cities cleaner, quieter, and more livable."
+              </blockquote>
+              <div className="space-y-2">
+                <p className="font-semibold text-primary text-lg">Dr. Sarah Mitchell</p>
+                <p className="text-muted-foreground">CEO & Co-Founder, ally-mobility</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Join Our Community */}
+      <section className="section-padding bg-brand-aqua">
         <div className="container-custom text-center space-y-12">
-          <div className="max-w-4xl mx-auto space-y-8">
-            <h2 className="text-primary">Our Mission</h2>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              We aim to sustainably relieve cities by providing innovative, efficient, 
-              and accessible mobility solutions. Our cargo bike trailers represent the future 
-              of urban logistics—fast, quiet, and environmentally responsible.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-brand-aqua/20 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl">🌱</span>
-              </div>
-              <h3 className="text-xl font-semibold text-primary">Sustainable</h3>
-              <p className="text-muted-foreground">Zero emissions, maximum impact on urban air quality</p>
-            </div>
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-brand-aqua/20 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl">⚡</span>
-              </div>
-              <h3 className="text-xl font-semibold text-primary">Efficient</h3>
-              <p className="text-muted-foreground">Smart design for maximum productivity and minimal effort</p>
-            </div>
-            <div className="text-center space-y-4">
-              <div className="w-16 h-16 bg-brand-aqua/20 rounded-full flex items-center justify-center mx-auto">
-                <span className="text-2xl">🤝</span>
-              </div>
-              <h3 className="text-xl font-semibold text-primary">Accessible</h3>
-              <p className="text-muted-foreground">No license required, simple operation for everyone</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Team Portraits */}
-      <section className="section-padding bg-secondary-light">
-        <div className="container-custom space-y-16">
-          <div className="text-center space-y-4">
-            <h2 className="text-primary">Meet Our Team</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              The passionate minds behind ally-mobility, working together to create 
-              the future of sustainable urban transport.
-            </p>
-          </div>
-          
-          {teamMembers.map((member, index) => (
-            <div key={member.id} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${
-              index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''
-            }`}>
-              {/* Portrait */}
-              <div className={index % 2 === 1 ? 'lg:col-start-1' : 'lg:col-start-2'}>
-                <div className="relative">
-                  <img 
-                    src={member.image} 
-                    alt={member.name}
-                    className="w-80 h-80 object-cover rounded-full mx-auto shadow-lg"
-                  />
-                </div>
-              </div>
-              
-              {/* Quote */}
-              <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : 'lg:col-start-1'}`}>
-                <div className="space-y-3">
-                  <h3 className="text-2xl font-bold text-primary">{member.name}</h3>
-                  <p className="text-lg font-medium text-secondary">{member.role}</p>
-                </div>
-                
-                <blockquote className="text-xl text-muted-foreground leading-relaxed italic border-l-4 border-brand-aqua pl-6">
-                  "{member.quote}"
-                </blockquote>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Banner Blocks */}
-      <section className="section-padding">
-        <div className="container-custom space-y-16">
-          {bannerBlocks.map((block, index) => (
-            <div key={block.id} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              {/* Content */}
-              <div className="space-y-6">
-                <div className="space-y-3">
-                  <h2 className="text-primary">{block.title}</h2>
-                  <h3 className="text-xl font-semibold text-secondary">{block.subtitle}</h3>
-                </div>
-                
-                <p className="text-lg text-muted-foreground leading-relaxed">
-                  {block.description}
-                </p>
-                
-                <Button className="btn-aqua">
-                  {block.buttonText}
-                </Button>
-              </div>
-              
-              {/* Image */}
-              <div>
-                <img 
-                  src={block.image} 
-                  alt={block.title}
-                  className="w-full h-[400px] object-cover rounded-2xl shadow-lg"
-                />
-              </div>
-            </div>
-          ))}
-        </div>
-      </section>
-
-      {/* Community Banner */}
-      <section className="section-padding bg-brand-dark-purple text-white">
-        <div className="container-custom text-center space-y-8">
-          <h2 className="text-white">Join Our Community</h2>
-          <p className="text-xl text-white/80 max-w-2xl mx-auto">
-            Stay connected with the ally-mobility community. Follow our journey, 
-            get updates on new products, and connect with other sustainable mobility enthusiasts.
+          <h2 className="text-white text-5xl lg:text-6xl font-bold">Join Our Community</h2>
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
+            Connect with us and stay updated on the latest in sustainable urban mobility
           </p>
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-dark-purple">
-              <Instagram className="w-5 h-5 mr-2" />
-              Follow on Instagram
-            </Button>
-            <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-dark-purple">
-              <Linkedin className="w-5 h-5 mr-2" />
-              Connect on LinkedIn
-            </Button>
-            <Button className="btn-aqua">
-              <MessageCircle className="w-5 h-5 mr-2" />
-              Join Telegram
-            </Button>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+            {/* Instagram */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center space-y-4 hover:bg-white/20 transition-colors duration-300">
+              <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-orange-400 rounded-2xl mx-auto flex items-center justify-center">
+                <Instagram className="w-10 h-10 text-white" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-2">@ally.mobility</h3>
+                <p className="text-white/80 text-sm mb-4">Follow our journey and see our products in action</p>
+                <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-aqua">
+                  Follow on Instagram
+                </Button>
+              </div>
+            </div>
+
+            {/* LinkedIn */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center space-y-4 hover:bg-white/20 transition-colors duration-300">
+              <div className="w-20 h-20 bg-blue-600 rounded-2xl mx-auto flex items-center justify-center">
+                <Linkedin className="w-10 h-10 text-white" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-2">ally-mobility</h3>
+                <p className="text-white/80 text-sm mb-4">Professional updates and industry insights</p>
+                <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-aqua">
+                  Connect on LinkedIn
+                </Button>
+              </div>
+            </div>
+
+            {/* Telegram */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center space-y-4 hover:bg-white/20 transition-colors duration-300">
+              <div className="w-20 h-20 bg-blue-500 rounded-2xl mx-auto flex items-center justify-center">
+                <MessageCircle className="w-10 h-10 text-white" />
+              </div>
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-2">bikerave</h3>
+                <p className="text-white/80 text-sm mb-4">Join our community discussions and get support</p>
+                <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-aqua">
+                  Join Telegram
+                </Button>
+              </div>
+            </div>
           </div>
-          
-          <div className="pt-8">
-            <p className="text-brand-aqua font-medium text-lg">
-              Be part of the sustainable mobility revolution →
+        </div>
+      </section>
+
+      {/* Events Section */}
+      <section className="section-padding bg-secondary-light">
+        <div className="container-custom">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-primary text-5xl lg:text-6xl font-bold">Events</h2>
+            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+              Besuchen Sie uns auf den wichtigsten Mobilitätsmessen und Events
             </p>
+          </div>
+
+          {/* Events Carousel */}
+          <div className="relative max-w-4xl mx-auto">
+            <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
+              <div className="grid grid-cols-1 md:grid-cols-2">
+                <div className="relative">
+                  <img 
+                    src={events[currentEventIndex].image} 
+                    alt={events[currentEventIndex].title}
+                    className="w-full h-64 md:h-full object-cover"
+                  />
+                  {events[currentEventIndex].status === 'upcoming' && (
+                    <div className="absolute top-4 left-4 bg-brand-aqua text-white px-3 py-1 rounded-full text-sm font-medium">
+                      Bevorstehend
+                    </div>
+                  )}
+                </div>
+                <div className="p-8 space-y-6">
+                  <div className="space-y-3">
+                    <h3 className="text-2xl font-bold text-primary">{events[currentEventIndex].title}</h3>
+                    <div className="flex items-center gap-4 text-muted-foreground">
+                      <div className="flex items-center gap-2">
+                        <Calendar className="w-4 h-4" />
+                        <span>{events[currentEventIndex].date}</span>
+                      </div>
+                      <div className="flex items-center gap-2">
+                        <MapPin className="w-4 h-4" />
+                        <span>{events[currentEventIndex].location}</span>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  <p className="text-muted-foreground leading-relaxed">
+                    {events[currentEventIndex].description}
+                  </p>
+                  
+                  <Button className="btn-aqua">
+                    Zum Event →
+                  </Button>
+                </div>
+              </div>
+            </div>
+
+            {/* Carousel Navigation */}
+            <div className="flex justify-between items-center mt-6">
+              <button
+                onClick={prevEvent}
+                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center"
+              >
+                ←
+              </button>
+              
+              <div className="flex gap-2">
+                {events.map((_, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setCurrentEventIndex(index)}
+                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                      index === currentEventIndex ? 'bg-primary' : 'bg-primary/30'
+                    }`}
+                  />
+                ))}
+              </div>
+              
+              <button
+                onClick={nextEvent}
+                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center"
+              >
+                →
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Section */}
+      <section id="contact" className="section-padding">
+        <div className="container-custom">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            {/* Contact Information */}
+            <div className="space-y-8">
+              <div className="space-y-4">
+                <h2 className="text-primary text-4xl lg:text-5xl font-bold">Contact</h2>
+                <p className="text-xl text-muted-foreground">
+                  Ready to transform your urban logistics? Get in touch with our team.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-brand-aqua/20 rounded-full flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">Email</p>
+                    <a 
+                      href="mailto:info@ally-mobility.com" 
+                      className="text-lg font-medium text-primary hover:text-secondary transition-colors"
+                    >
+                      info@ally-mobility.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-brand-aqua/20 rounded-full flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">Telefon</p>
+                    <p className="text-lg font-medium text-foreground">+49 (0) 30 12345678</p>
+                  </div>
+                </div>
+
+                <div className="flex items-center gap-4">
+                  <div className="w-12 h-12 bg-brand-aqua/20 rounded-full flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-primary" />
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">Adresse</p>
+                    <p className="text-lg font-medium text-foreground">
+                      Musterstraße 123<br />
+                      10115 Berlin, Deutschland
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              <Button 
+                className="btn-aqua text-lg px-8 py-4"
+                onClick={() => window.location.href = 'mailto:info@ally-mobility.com'}
+              >
+                Contact now
+              </Button>
+            </div>
+
+            {/* Contact Image */}
+            <div className="relative">
+              <img 
+                src={dealerPerson} 
+                alt="Contact ally-mobility" 
+                className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
+            </div>
           </div>
         </div>
       </section>

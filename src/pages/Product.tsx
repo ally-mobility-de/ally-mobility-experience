@@ -1,25 +1,45 @@
 import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import ValuesBanner from "@/components/ValuesBanner";
 import productFlatbed from "@/assets/product-flatbed.jpg";
 import productBox from "@/assets/product-box.jpg";
 import productSwap from "@/assets/product-swap.jpg";
 import dealerPerson from "@/assets/dealer-person.jpg";
+import { Package, Truck, Zap, Shield, Users } from "lucide-react";
 
 const Product = () => {
-  const [activeHotspot, setActiveHotspot] = useState<number | null>(null);
+  const navigate = useNavigate();
+  const [activeProduct, setActiveProduct] = useState('flatbed');
+  const [activeHotspot, setActiveHotspot] = useState<string | null>(null);
 
-  const toggleHotspot = (hotspotId: number) => {
+  const toggleHotspot = (hotspotId: string) => {
     setActiveHotspot(activeHotspot === hotspotId ? null : hotspotId);
   };
 
-  const productSpecs = {
+  const products = {
     flatbed: {
+      name: 'Flatbed',
       image: productFlatbed,
+      hotspots: [
+        {
+          id: 'frame',
+          x: 25,
+          y: 30,
+          title: 'Reinforced Frame',
+          description: 'Professional grade component for maximum durability'
+        },
+        {
+          id: 'cargo',
+          x: 60,
+          y: 50,
+          title: 'Cargo Area',
+          description: 'Versatile lashing points for secure transport'
+        }
+      ],
       data: [
         { label: "Payload", value: "500 kg" },
         { label: "Cargo area", value: "186 × 86 cm" },
@@ -28,7 +48,17 @@ const Product = () => {
       ]
     },
     box: {
+      name: 'Box',
       image: productBox,
+      hotspots: [
+        {
+          id: 'doors',
+          x: 80,
+          y: 40,
+          title: 'Keyless Lock System',
+          description: '2 doors with advanced security features'
+        }
+      ],
       data: [
         { label: "Payload", value: "500 kg" },
         { label: "Cargo area", value: "182 × 82 cm" },
@@ -39,7 +69,24 @@ const Product = () => {
       ]
     },
     swap: {
+      name: 'Swap Container',
       image: productSwap,
+      hotspots: [
+        {
+          id: 'container',
+          x: 30,
+          y: 35,
+          title: 'Roll, load & go',
+          description: 'Up to 3 wheeled containers tool-free'
+        },
+        {
+          id: 'castors',
+          x: 70,
+          y: 80,
+          title: '4 Braked Castors',
+          description: 'Smooth mobility and secure parking'
+        }
+      ],
       data: [
         { label: "Concept", value: "Roll, load & go" },
         { label: "Containers", value: "Up to 3 wheeled containers tool-free" },
@@ -55,6 +102,14 @@ const Product = () => {
     }
   };
 
+  const customerIcons = [
+    { icon: Package, title: "Delivery Services", description: "Last-mile delivery solutions" },
+    { icon: Truck, title: "Logistics", description: "Professional transport solutions" },
+    { icon: Zap, title: "Service Providers", description: "Mobile service operations" },
+    { icon: Shield, title: "Municipalities", description: "Public service applications" },
+    { icon: Users, title: "Healthcare", description: "Medical supply transport" }
+  ];
+
   const trailerBaseData = [
     { label: "Load edge height", value: "45 cm" },
     { label: "Load area L × W", value: "187 × 87 cm" },
@@ -68,96 +123,132 @@ const Product = () => {
     { label: "Hand operation", value: "Up to 6 km/h" }
   ];
 
-  const hotspots = [
-    {
-      id: 1,
-      x: 25,
-      y: 30,
-      title: "Robust Frame",
-      description: "Heavy-duty steel construction for maximum durability"
-    },
-    {
-      id: 2,
-      x: 70,
-      y: 45,
-      title: "Modular System",
-      description: "Quick-change system for different cargo modules"
-    },
-    {
-      id: 3,
-      x: 40,
-      y: 70,
-      title: "Premium Wheels",
-      description: "High-quality wheels with excellent road grip"
-    }
-  ];
+  const currentProduct = products[activeProduct as keyof typeof products];
 
   return (
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Product Intro with Hotspots */}
-      <section className="section-padding bg-secondary-light mt-16 lg:mt-20">
+      {/* Hero Section with Product Selection */}
+      <section className="section-padding bg-gradient-subtle mt-16 lg:mt-20">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <h1 className="text-primary">The Cargo Platform</h1>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Thanks to a modular concept and a robust, high-quality platform, 
-                our heavy-duty bicycle trailers are ready for anything. Whether 
-                Flatbed, Box, or Swap Container — we have the right solution.
-              </p>
-              <Button className="btn-aqua">
-                Discover the possibilities
-              </Button>
+            {/* Left side - Product selection and text */}
+            <div className="space-y-8">
+              <div className="space-y-6">
+                <h1 className="text-primary">Maximum Versatility</h1>
+                <p className="text-xl text-muted-foreground leading-relaxed">
+                  Flexible modules for every purpose. Thanks to a modular concept and a robust, 
+                  high-quality platform, our heavy-duty bicycle trailers are ready for anything. 
+                  Whether Flatbed, Box, or Swap Container — we have the right solution.
+                </p>
+              </div>
+
+              {/* Product Switcher */}
+              <div className="space-y-4">
+                <div className="flex flex-wrap gap-3">
+                  {Object.entries(products).map(([key, product]) => (
+                    <Button
+                      key={key}
+                      onClick={() => {
+                        setActiveProduct(key);
+                        setActiveHotspot(null);
+                      }}
+                      variant={activeProduct === key ? "default" : "outline"}
+                      className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
+                        activeProduct === key 
+                          ? 'bg-primary text-primary-foreground shadow-soft' 
+                          : 'bg-background border-2 border-secondary text-secondary hover:bg-secondary hover:text-white'
+                      }`}
+                    >
+                      {product.name}
+                      {key === 'swap' && <span className="ml-2 text-xs bg-brand-aqua text-white px-2 py-1 rounded">NEW</span>}
+                    </Button>
+                  ))}
+                </div>
+              </div>
+
+              {/* Active Hotspot Info */}
+              {activeHotspot && (
+                <div className="hotspot-info">
+                  {(() => {
+                    const hotspot = currentProduct.hotspots.find(h => h.id === activeHotspot);
+                    if (!hotspot) return null;
+                    
+                    return (
+                      <div className="space-y-4">
+                        <h4 className="font-semibold text-primary">{hotspot.title}</h4>
+                        <p className="text-muted-foreground">{hotspot.description}</p>
+                      </div>
+                    );
+                  })()}
+                </div>
+              )}
             </div>
             
-            {/* Interactive Product Image */}
+            {/* Right side - Interactive Product Image */}
             <div className="relative">
-              <img 
-                src={productFlatbed} 
-                alt="ally-mobility cargo platform" 
-                className="w-full h-auto rounded-2xl shadow-lg"
-              />
-              
-              {/* Hotspots */}
-              {hotspots.map((hotspot) => (
-                <div key={hotspot.id} className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-soft bg-gradient-subtle">
+                <img 
+                  src={currentProduct.image} 
+                  alt={`ally-mobility ${currentProduct.name} cargo trailer`}
+                  className="w-full h-auto object-cover transition-opacity duration-500"
+                />
+                
+                {/* Interactive Hotspots */}
+                {currentProduct.hotspots.map((hotspot) => (
                   <button
+                    key={hotspot.id}
                     onClick={() => toggleHotspot(hotspot.id)}
-                    className="absolute w-8 h-8 bg-background border-2 border-primary rounded-full flex items-center justify-center hover:scale-110 transition-transform duration-200 z-10"
-                    style={{
-                      left: `${hotspot.x}%`,
-                      top: `${hotspot.y}%`,
-                      transform: 'translate(-50%, -50%)'
-                    }}
+                    className="absolute hotspot"
+                    style={{ left: `${hotspot.x}%`, top: `${hotspot.y}%`, transform: 'translate(-50%, -50%)' }}
+                    aria-label={`View ${hotspot.title} details`}
                   >
                     <span className="text-primary font-bold text-lg">+</span>
                   </button>
-                  
-                  {/* Hotspot Info Card */}
-                  {activeHotspot === hotspot.id && (
-                    <div 
-                      className="absolute bg-background border border-border rounded-xl p-4 shadow-lg z-20 min-w-[200px]"
-                      style={{
-                        left: `${hotspot.x}%`,
-                        top: `${hotspot.y + 10}%`,
-                        transform: 'translateX(-50%)'
-                      }}
-                    >
-                      <h4 className="font-semibold text-foreground mb-2">{hotspot.title}</h4>
-                      <p className="text-sm text-muted-foreground">{hotspot.description}</p>
-                    </div>
-                  )}
+                ))}
+              </div>
+
+              {/* Product indicator */}
+              <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 shadow-card">
+                <div className="text-sm font-medium text-primary">
+                  {currentProduct.name} Configuration
                 </div>
-              ))}
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Values Banner */}
-      <ValuesBanner />
+      {/* Customer Icons Navigation */}
+      <section className="section-padding bg-brand-aqua">
+        <div className="container-custom text-center space-y-12">
+          <div className="space-y-4">
+            <h2 className="text-white">The Smart Alternative</h2>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+              Fast, quiet and efficient — right into the heart of the city
+            </p>
+          </div>
+          
+          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
+            {customerIcons.map((item, index) => (
+              <button
+                key={index}
+                onClick={() => navigate('/customers')}
+                className="flex flex-col items-center space-y-4 group cursor-pointer"
+              >
+                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300">
+                  <item.icon className="w-8 h-8 text-white" />
+                </div>
+                <div className="text-center">
+                  <h3 className="font-semibold text-white text-sm">{item.title}</h3>
+                  <p className="text-xs text-white/80 mt-1">{item.description}</p>
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Specifications */}
       <section id="specifications" className="section-padding">
@@ -166,39 +257,61 @@ const Product = () => {
             <div className="space-y-6">
               <h2 className="text-primary">Technical Specifications</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Built for maximum versatility and professional use. Our cargo platform 
-                adapts to your specific needs with interchangeable modules and 
-                robust construction.
+                Detailed technical data for our modular cargo platform. Each configuration is 
+                engineered for maximum performance, reliability, and versatility in professional 
+                applications.
               </p>
             </div>
             <div className="lg:pl-8">
-              <img 
-                src={productFlatbed} 
-                alt="Technical specifications" 
-                className="w-full h-auto rounded-2xl shadow-lg"
-              />
+              <div className="relative">
+                <img 
+                  src={currentProduct.image} 
+                  alt="Technical specifications" 
+                  className="w-full h-auto rounded-2xl shadow-lg"
+                />
+                <div className="absolute top-4 right-4 bg-brand-aqua/20 backdrop-blur-sm rounded-lg p-2">
+                  <Package className="w-6 h-6 text-primary" />
+                </div>
+              </div>
             </div>
           </div>
 
-          <Tabs defaultValue="flatbed" className="w-full">
-            <TabsList className="grid w-full grid-cols-3 mb-8">
-              <TabsTrigger value="flatbed" className="text-sm font-medium">Flatbed</TabsTrigger>
-              <TabsTrigger value="box" className="text-sm font-medium">Box</TabsTrigger>
-              <TabsTrigger value="swap" className="text-sm font-medium">Swap Container</TabsTrigger>
+          <Tabs value={activeProduct} onValueChange={setActiveProduct} className="w-full">
+            <TabsList className="grid w-full grid-cols-3 mb-8 bg-muted">
+              <TabsTrigger 
+                value="flatbed" 
+                className="data-[state=active]:bg-primary data-[state=active]:text-white"
+              >
+                Flatbed
+              </TabsTrigger>
+              <TabsTrigger 
+                value="box"
+                className="data-[state=active]:bg-primary data-[state=active]:text-white"
+              >
+                Box
+              </TabsTrigger>
+              <TabsTrigger 
+                value="swap"
+                className="data-[state=active]:bg-primary data-[state=active]:text-white"
+              >
+                Swap Container
+                <span className="ml-2 text-xs bg-brand-aqua text-white px-1.5 py-0.5 rounded">NEW</span>
+              </TabsTrigger>
             </TabsList>
             
-            {Object.entries(productSpecs).map(([key, spec]) => (
+            {Object.entries(products).map(([key, product]) => (
               <TabsContent key={key} value={key} className="space-y-8">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-                  <div className="bg-card rounded-2xl p-6 border">
-                    <h3 className="text-xl font-semibold text-primary mb-4">
-                      {key === 'flatbed' ? 'Flatbed Module' : 
-                       key === 'box' ? 'Box Module' : 
-                       'Swap Container Module'}
-                    </h3>
+                  <div className="bg-card rounded-2xl p-6 border shadow-card">
+                    <div className="flex items-center gap-3 mb-4">
+                      <Package className="w-5 h-5 text-primary" />
+                      <h3 className="text-xl font-semibold text-primary">
+                        {product.name} Specifications
+                      </h3>
+                    </div>
                     <Table>
                       <TableBody>
-                        {spec.data.map((item, index) => (
+                        {product.data.map((item, index) => (
                           <TableRow key={index}>
                             <TableCell className="font-medium text-foreground">
                               {item.label}
@@ -212,52 +325,27 @@ const Product = () => {
                     </Table>
                   </div>
                   
-                  <div>
-                    <img 
-                      src={spec.image} 
-                      alt={`${key} module`}
-                      className="w-full h-auto rounded-2xl shadow-lg"
-                    />
+                  <div className="bg-card rounded-2xl p-6 border shadow-card">
+                    <h3 className="text-xl font-semibold text-primary mb-6">Trailer Base Data</h3>
+                    <Table>
+                      <TableBody>
+                        {trailerBaseData.slice(0, 8).map((item, index) => (
+                          <TableRow key={index}>
+                            <TableCell className="font-medium text-foreground">
+                              {item.label}
+                            </TableCell>
+                            <TableCell className="text-muted-foreground">
+                              {item.value}
+                            </TableCell>
+                          </TableRow>
+                        ))}
+                      </TableBody>
+                    </Table>
                   </div>
                 </div>
               </TabsContent>
             ))}
           </Tabs>
-
-          {/* Trailer Base Data */}
-          <div className="mt-12 bg-secondary-light rounded-2xl p-8">
-            <h3 className="text-xl font-semibold text-primary mb-6">Trailer Base Specifications</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              <Table>
-                <TableBody>
-                  {trailerBaseData.slice(0, 5).map((item, index) => (
-                    <TableRow key={index}>
-                      <TableCell className="font-medium text-foreground">
-                        {item.label}
-                      </TableCell>
-                      <TableCell className="text-muted-foreground">
-                        {item.value}
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-              <Table>
-                <TableBody>
-                  {trailerBaseData.slice(5).map((item, index) => (
-                    <TableRow key={index}>
-                      <TableCell className="font-medium text-foreground">
-                        {item.label}
-                      </TableCell>
-                      <TableCell className="text-muted-foreground">
-                        {item.value}
-                      </TableCell>
-                    </TableRow>
-                  ))}
-                </TableBody>
-              </Table>
-            </div>
-          </div>
         </div>
       </section>
 
@@ -265,12 +353,19 @@ const Product = () => {
       <section className="section-padding bg-secondary-light">
         <div className="container-custom text-center space-y-8">
           <h2 className="text-primary">Get Detailed Information</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            Download our comprehensive product datasheet or schedule a personal 
+            consultation to discuss your specific transport requirements.
+          </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="btn-secondary-outline">
-              Download Product Datasheet (PDF, 1.25 MB)
+              📄 ally-mobility product datasheet (PDF, 1.25 MB)
             </Button>
-            <Button className="btn-aqua">
-              Schedule Appointment
+            <Button 
+              className="btn-aqua"
+              onClick={() => navigate('/about-us#contact')}
+            >
+              📅 Schedule appointment
             </Button>
           </div>
         </div>
@@ -294,8 +389,11 @@ const Product = () => {
                 solutions to your region. We support you with comprehensive training, 
                 marketing materials, and ongoing technical support.
               </p>
-              <Button className="btn-aqua">
-                Learn More About Partnership
+              <Button 
+                className="btn-aqua"
+                onClick={() => navigate('/about-us#contact')}
+              >
+                Become a dealer
               </Button>
             </div>
           </div>
