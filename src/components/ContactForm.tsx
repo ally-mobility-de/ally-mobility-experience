@@ -45,13 +45,13 @@ const ContactForm = () => {
             </div>
           </div>
 
-          <div className="grid lg:grid-cols-2 gap-12">
+          <div className="grid lg:grid-cols-2 gap-12 px-0 mx-[9px]">
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="space-y-6">
                 <h3 className="text-2xl font-semibold text-brand-green">Contact Information</h3>
                 
-                <div className="space-y-4">
+                <div className="space-y-4 my-[12px] px-0 py-0">
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 text-brand-aqua flex-shrink-0 mt-1">
                       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -72,7 +72,7 @@ const ContactForm = () => {
                       </svg>
                     </div>
                     <div>
-                      <h4 className="font-medium text-foreground">Office</h4>
+                      <h4 className="font-medium text-foreground mx-0 px-px my-[5px] py-[3px]">Office</h4>
                       <p className="text-muted-foreground">Innovation Campus<br />Sustainable Transport Hub</p>
                     </div>
                   </div>
@@ -80,7 +80,7 @@ const ContactForm = () => {
                   <div className="flex items-start gap-3">
                     <div className="w-6 h-6 text-brand-aqua flex-shrink-0 mt-1">
                       <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" className="mx-0 my-[17px] py-0 px-0" />
                       </svg>
                     </div>
                     <div>
@@ -94,7 +94,26 @@ const ContactForm = () => {
               {/* Quick Contact Options */}
               <div className="feature-card">
                 <h4 className="font-semibold text-brand-green mb-4">Quick Contact Options</h4>
-                
+                <div className="space-y-3">
+                  <Button variant="outline" className="w-full justify-start btn-secondary-outline" onClick={() => setFormData({
+                  ...formData,
+                  interest: 'test-ride'
+                })}>
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    Book a Test Ride
+                  </Button>
+                  <Button variant="outline" className="w-full justify-start btn-secondary-outline" onClick={() => setFormData({
+                  ...formData,
+                  interest: 'dealer'
+                })}>
+                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H3m2 0h4m-2 0V9a2 2 0 012-2h2a2 2 0 012 2v12" />
+                    </svg>
+                    Become a Dealer
+                  </Button>
+                </div>
               </div>
             </div>
 

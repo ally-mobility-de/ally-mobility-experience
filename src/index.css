@@ -19,7 +19,7 @@ All colors MUST be HSL.
     --popover-foreground: 210 14% 19%;
 
     /* Primary: #007744 green */
-    --primary: 157 100% 23%;
+    --primary: 188 93% 33%;
     --primary-foreground: 0 0% 100%;
 
     /* Secondary: #68C3A2 light green */
@@ -36,7 +36,7 @@ All colors MUST be HSL.
 
     /* Additional brand colors */
     --brand-purple: 269 60% 73%; /* #D396EF */
-    --brand-dark-purple: 270 46% 31%; /* #4D2A73 */
+    --brand-dark-purple: 281 74% 76%; /* #4D2A73 */
     --brand-yellow: 62 100% 64%; /* #FCFF5B */
     --brand-aqua: 157 39% 59%; /* #68C3A2 */
 
