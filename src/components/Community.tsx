@@ -58,19 +58,10 @@ const Community = () => {
       platform: 'Instagram',
       image: '/lovable-uploads/4b19d7f4-7d6d-44c5-9db1-f14823dafd21.png',
       link: '#'
-    },
-    {
-      id: '6',
-      title: 'The Electric Revolution',
-      excerpt: 'Exploring how electric cargo bikes are transforming last-mile delivery and urban logistics.',
-      source: 'Green Tech Today',
-      platform: 'News',
-      image: '/lovable-uploads/93f64d63-22a9-46a0-8efa-e70fbcfcbf49.png',
-      link: '#'
     }
   ];
 
-  const itemsPerSlide = 2;
+  const itemsPerSlide = 3;
   const totalSlides = Math.ceil(articles.length / itemsPerSlide);
 
   const nextSlide = () => {
@@ -113,75 +104,61 @@ const Community = () => {
                   width: `${totalSlides * 100}%`
                 }}
               >
-                {Array.from({ length: totalSlides }).map((_, slideIndex) => {
-                  const slideArticles = articles.slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide);
-                  const isEvenSlide = slideIndex % 2 === 0;
-                  
-                  return (
-                    <div key={slideIndex} className="w-full flex-shrink-0">
-                      <div className="flex gap-6 px-4 justify-center items-stretch">
-                        {slideArticles.map((article, index) => {
-                          // Determine if this is the large card
-                          const isLarge = isEvenSlide ? index === 0 : index === 1;
-                          
-                          return (
-                            <div
-                              key={article.id}
-                              className={`bg-muted border border-border rounded-xl overflow-hidden shadow-soft
-                                         group cursor-pointer hover:shadow-lg transform hover:-translate-y-1
-                                         transition-all duration-300 ease-out ${
-                                isLarge ? 'w-2/3' : 'w-1/3'
-                              }`}
-                              onClick={() => window.open(article.link, '_blank')}
-                            >
-                              {/* Image */}
-                              <div className="relative aspect-[16/9] overflow-hidden">
-                                <img 
-                                  src={article.image}
-                                  alt={article.title}
-                                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                                  loading="lazy"
-                                />
-                                
-                                {/* Platform Badge */}
-                                <div className="absolute top-4 left-4">
-                                  <span className={`${getPlatformColor(article.platform)} text-white px-3 py-1 rounded-full text-sm font-medium`}>
-                                    {article.platform}
-                                  </span>
-                                </div>
+                {Array.from({ length: totalSlides }).map((_, slideIndex) => (
+                  <div key={slideIndex} className="w-full flex-shrink-0">
+                    <div className="grid md:grid-cols-3 gap-6 px-4">
+                      {articles
+                        .slice(slideIndex * itemsPerSlide, (slideIndex + 1) * itemsPerSlide)
+                        .map((article) => (
+                          <div
+                            key={article.id}
+                            className="product-card group cursor-pointer"
+                            onClick={() => window.open(article.link, '_blank')}
+                          >
+                            {/* Image */}
+                            <div className="relative aspect-[16/9] overflow-hidden">
+                              <img 
+                                src={article.image}
+                                alt={article.title}
+                                className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                                loading="lazy"
+                              />
+                              
+                              {/* Platform Badge */}
+                              <div className="absolute top-4 left-4">
+                                <span className={`${getPlatformColor(article.platform)} text-white px-3 py-1 rounded-full text-sm font-medium`}>
+                                  {article.platform}
+                                </span>
+                              </div>
+                            </div>
+
+                            {/* Content */}
+                            <div className="p-6 space-y-4">
+                              <div className="space-y-2">
+                                <h3 className="text-xl font-semibold text-brand-green group-hover:text-primary transition-colors duration-300 line-clamp-2">
+                                  {article.title}
+                                </h3>
+                                <p className="text-muted-foreground line-clamp-3 leading-relaxed">
+                                  {article.excerpt}
+                                </p>
                               </div>
 
-                              {/* Content */}
-                              <div className="p-6 space-y-4">
-                                <div className="space-y-2">
-                                  <h3 className={`font-semibold text-brand-green group-hover:text-primary transition-colors duration-300 line-clamp-2 ${
-                                    isLarge ? 'text-xl' : 'text-lg'
-                                  }`}>
-                                    {article.title}
-                                  </h3>
-                                  <p className="text-muted-foreground line-clamp-3 leading-relaxed">
-                                    {article.excerpt}
-                                  </p>
+                              <div className="flex items-center justify-between pt-4 border-t border-border">
+                                <div className="text-sm font-medium text-brand-aqua">
+                                  {article.source}
                                 </div>
-
-                                <div className="flex items-center justify-between pt-4 border-t border-border">
-                                  <div className="text-sm font-medium text-brand-aqua">
-                                    {article.source}
-                                  </div>
-                                  <div className="w-6 h-6 text-primary">
-                                    <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                                    </svg>
-                                  </div>
+                                <div className="w-6 h-6 text-primary">
+                                  <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                  </svg>
                                 </div>
                               </div>
                             </div>
-                          );
-                        })}
-                      </div>
+                          </div>
+                        ))}
                     </div>
-                  );
-                })}
+                  </div>
+                ))}
               </div>
             </div>
 
