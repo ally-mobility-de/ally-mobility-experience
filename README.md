@@ -1,73 +1,111 @@
-# Welcome to your Lovable project
+# ally-mobility Website
 
-## Project info
+A modern, responsive website for ally-mobility's heavy-duty electric bicycle trailers with modular components.
 
-**URL**: https://lovable.dev/projects/09243e7f-ea06-4d5d-bae1-46a093e022be
+## Features
 
-## How can I edit this code?
+- **Product Showcase**: Interactive product preview with hotspots for detailed specifications
+- **Modular Design**: Three trailer types - Flatbed, Box, and Swap Container
+- **Use Cases**: Comprehensive coverage of delivery, logistics, trades, and municipal applications
+- **Community Content**: Dynamic carousel of articles and press coverage
+- **Contact Integration**: Direct email integration for inquiries and test ride bookings
+- **Dealer Program**: Information and signup for dealer partnerships
 
-There are several ways of editing your application.
+## Design System
 
-**Use Lovable**
+- **Colors**: Custom brand palette with primary green (#007744) and aqua accents (#68C3A2)
+- **Typography**: Inter font family for modern, readable text
+- **Components**: Fully styled with Tailwind CSS and custom component variants
+- **Responsive**: Mobile-first design optimized for all screen sizes
+- **Animations**: Smooth transitions and hover effects throughout
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/09243e7f-ea06-4d5d-bae1-46a093e022be) and start prompting.
+## Technology Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+- **React 18** with TypeScript
+- **Tailwind CSS** for styling
+- **Vite** for build tooling
+- **shadcn/ui** components
+- **Lucide React** for icons
 
-**Use your preferred IDE**
+## Performance & SEO
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+- **Optimized Images**: Modern formats with lazy loading
+- **SEO Ready**: Proper meta tags, structured data, and semantic HTML
+- **Accessibility**: ARIA labels, keyboard navigation, and high contrast
+- **Fast Loading**: Optimized assets and efficient code splitting
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## Deployment
 
-Follow these steps:
+This website is designed for GitHub Pages deployment:
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. Push to your GitHub repository
+2. Enable GitHub Pages in repository settings
+3. Select source branch (usually `main` or `gh-pages`)
+4. Your site will be available at `https://yourusername.github.io/repository-name`
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### Custom Domain Setup
 
-# Step 3: Install the necessary dependencies.
-npm i
+To use a custom domain:
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+1. Add a `CNAME` file to the `public` directory with your domain name
+2. Configure DNS records with your domain provider
+3. Enable HTTPS in GitHub Pages settings
+
+## Local Development
+
+```bash
+# Install dependencies
+npm install
+
+# Start development server
 npm run dev
+
+# Build for production
+npm run build
+
+# Preview production build
+npm run preview
 ```
 
-**Edit a file directly in GitHub**
+## Project Structure
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+```
+/
+├── public/                 # Static assets
+│   ├── robots.txt         # SEO robot instructions
+│   ├── sitemap.xml        # SEO sitemap
+│   └── favicon.ico        # Site favicon
+├── src/
+│   ├── assets/           # Images and media
+│   ├── components/       # React components
+│   │   ├── ui/          # Reusable UI components
+│   │   ├── Header.tsx   # Navigation header
+│   │   ├── HeroSection.tsx
+│   │   ├── ProductPreview.tsx
+│   │   ├── ValuesBanner.tsx
+│   │   ├── ProductRange.tsx
+│   │   ├── CTABanner.tsx
+│   │   ├── Community.tsx
+│   │   ├── UseCases.tsx
+│   │   ├── TestRideBanner.tsx
+│   │   ├── DealerCTA.tsx
+│   │   ├── ContactForm.tsx
+│   │   └── Footer.tsx
+│   ├── pages/
+│   │   └── Index.tsx     # Main page
+│   ├── index.css         # Global styles & design system
+│   └── main.tsx          # App entry point
+├── tailwind.config.ts    # Tailwind configuration
+├── index.html            # HTML template
+└── README.md            # This file
+```
 
-**Use GitHub Codespaces**
+## Contact
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+For questions about this website or ally-mobility products:
+- Email: contact@ally-mobility.com
+- Website: https://ally-mobility.com
 
-## What technologies are used for this project?
+## License
 
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/09243e7f-ea06-4d5d-bae1-46a093e022be) and click on Share -> Publish.
-
-## Can I connect a custom domain to my Lovable project?
-
-Yes, you can!
-
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
-
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+© 2024 ally-mobility. All rights reserved.
