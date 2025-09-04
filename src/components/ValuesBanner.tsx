@@ -2,60 +2,43 @@ const ValuesBanner = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  const values = [
-    {
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+  const values = [{
+    icon: <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
-        </svg>
-      ),
-      title: "Affordable & Practical",
-      description: "More volume for less money"
-    },
-    {
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        </svg>,
+    title: "Affordable & Practical",
+    description: "More volume for less money"
+  }, {
+    icon: <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-        </svg>
-      ),
-      title: "Robust & Reliable",
-      description: "Proven components & materials"
-    },
-    {
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        </svg>,
+    title: "Robust & Reliable",
+    description: "Proven components & materials"
+  }, {
+    icon: <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-        </svg>
-      ),
-      title: "More Flexibility",
-      description: "Modular & versatile, by bike or on foot"
-    },
-    {
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        </svg>,
+    title: "More Flexibility",
+    description: "Modular & versatile, by bike or on foot"
+  }, {
+    icon: <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-        </svg>
-      ),
-      title: "Barrier-Free Mobility",
-      description: "Past traffic, through bollards, right to the doorstep"
-    },
-    {
-      icon: (
-        <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        </svg>,
+    title: "Barrier-Free Mobility",
+    description: "Past traffic, through bollards, right to the doorstep"
+  }, {
+    icon: <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15.232 5.232l3.536 3.536m-2.036-5.036a2.5 2.5 0 113.536 3.536L6.5 21.036H3v-3.572L16.732 3.732z" />
-        </svg>
-      ),
-      title: "Simple & Accessible",
-      description: "No driver's license, no stress"
-    }
-  ];
-
-  return (
-    <section className="section-padding bg-brand-dark-purple text-white">
+        </svg>,
+    title: "Simple & Accessible",
+    description: "No driver's license, no stress"
+  }];
+  return <section className="section-padding bg-brand-dark-purple text-white">
       <div className="container-custom">
         <div className="text-center space-y-12">
           {/* Header */}
@@ -68,12 +51,7 @@ const ValuesBanner = () => {
 
           {/* Values Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {values.map((value, index) => (
-              <button
-                key={index}
-                onClick={() => scrollToSection('customers')}
-                className="group text-center space-y-4 p-6 rounded-2xl hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1"
-              >
+            {values.map((value, index) => <button key={index} onClick={() => scrollToSection('customers')} className="group text-center space-y-4 p-6 rounded-2xl hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
                 {/* Icon Circle */}
                 <div className="mx-auto w-20 h-20 bg-brand-aqua/20 rounded-full flex items-center justify-center text-brand-aqua group-hover:bg-brand-aqua group-hover:text-white transition-all duration-300">
                   {value.icon}
@@ -88,20 +66,15 @@ const ValuesBanner = () => {
                     {value.description}
                   </p>
                 </div>
-              </button>
-            ))}
+              </button>)}
           </div>
 
           {/* Bottom CTA */}
           <div className="pt-8">
-            <p className="text-brand-aqua font-medium text-lg">
-              Click any value to explore customer use cases →
-            </p>
+            
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default ValuesBanner;

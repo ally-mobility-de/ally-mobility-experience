@@ -92,29 +92,7 @@ const ContactForm = () => {
               </div>
 
               {/* Quick Contact Options */}
-              <div className="feature-card">
-                <h4 className="font-semibold text-brand-green mb-4">Quick Contact Options</h4>
-                <div className="space-y-3">
-                  <Button variant="outline" className="w-full justify-start btn-secondary-outline" onClick={() => setFormData({
-                  ...formData,
-                  interest: 'test-ride'
-                })}>
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                    </svg>
-                    Book a Test Ride
-                  </Button>
-                  <Button variant="outline" className="w-full justify-start btn-secondary-outline" onClick={() => setFormData({
-                  ...formData,
-                  interest: 'dealer'
-                })}>
-                    <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-4m-5 0H3m2 0h4m-2 0V9a2 2 0 012-2h2a2 2 0 012 2v12" />
-                    </svg>
-                    Become a Dealer
-                  </Button>
-                </div>
-              </div>
+              
             </div>
 
             {/* Contact Form */}
