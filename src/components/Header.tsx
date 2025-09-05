@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
 import { Button } from "@/components/ui/button";
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
   useEffect(() => {
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
@@ -17,6 +18,18 @@ const Header = () => {
       element.scrollIntoView({
         behavior: 'smooth'
       });
+    }
+  };
+
+  const handleContactClick = () => {
+    if (location.pathname === '/') {
+      scrollToSection('contact');
+    } else {
+      navigate('/', { replace: false });
+      // Wait for navigation to complete, then scroll to contact
+      setTimeout(() => {
+        scrollToSection('contact');
+      }, 100);
     }
   };
   return <header className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled ? 'nav-sticky' : 'bg-background/60 backdrop-blur-sm'}`}>
@@ -61,7 +74,7 @@ const Header = () => {
             >
               About us
             </Link>
-            <Button variant="outline" onClick={() => location.pathname === '/' ? scrollToSection('contact') : window.location.href = '/#contact'} className="btn-secondary-outline">
+            <Button variant="outline" onClick={handleContactClick} className="btn-secondary-outline">
               Contact us
             </Button>
             
