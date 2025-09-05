@@ -24,8 +24,9 @@ const Footer = () => {
             <div className="space-y-3">
               <h4 className="font-semibold text-white">Contact</h4>
               <div className="space-y-2 text-white/80">
-                <p>contact@ally-mobility.com</p>
-                <p>Innovation Campus<br />Sustainable Transport Hub</p>
+                <p>info@ally-mobility.com</p>
+                <p>+49 (0) 30 123 456 789</p>
+                <p>Berlin, Germany<br />Innovation District</p>
               </div>
             </div>
 
@@ -60,9 +61,6 @@ const Footer = () => {
               <button onClick={() => scrollToSection('product')} className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
                 Swap Container
               </button>
-              <a href="#specifications" className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
-                Specifications
-              </a>
             </nav>
           </div>
 
@@ -101,13 +99,21 @@ const Footer = () => {
               <a href="#dealer" className="block text-brand-aqua font-medium hover:text-white transition-colors duration-300">
                 Become a Dealer
               </a>
-              <a href="#funding" className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
-                Funding
-              </a>
               <a href="#events" className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
                 Event Calendar
               </a>
             </nav>
+          </div>
+        </div>
+
+        {/* Funding Acknowledgment */}
+        <div className="border-t border-white/20 py-8">
+          <div className="flex justify-center mb-6">
+            <img 
+              src="/lovable-uploads/cde7af16-d889-43da-929b-7d51be96a45c.png" 
+              alt="Funded by German Federal Ministry for Economic Affairs and Climate Protection and European Social Fund Plus"
+              className="max-w-full h-auto max-h-20"
+            />
           </div>
         </div>
 
