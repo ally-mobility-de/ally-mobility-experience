@@ -82,14 +82,20 @@ const Community = () => {
     }
   };
 
+  const getPlatformOffset = (platform: string, index: number) => {
+    // Adjust vertical positioning based on platform to maintain equal spacing to parallelogram edges
+    const baseOffsets = ['mt-0', 'mt-8', 'mt-4', 'mt-12', 'mt-6'];
+    return baseOffsets[index % baseOffsets.length] || 'mt-0';
+  };
+
   return (
-    <section className="section-padding bg-muted/30">
+    <section className="section-padding parallelogram-section">
       <div className="container-custom">
         <div className="text-center space-y-12">
           {/* Header */}
-          <div className="space-y-6">
-            <h2 className="text-brand-green">Community & Press</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+           <div className="space-y-6">
+             <h2 className="text-white">Community & Press</h2>
+             <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Stay updated with the latest news, insights, and stories from the ally-mobility community
             </p>
           </div>
@@ -106,8 +112,8 @@ const Community = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
                       {articles
                         .slice(slideIndex * itemsPerSlide, slideIndex * itemsPerSlide + itemsPerSlide)
-                        .map((article) => (
-                          <div key={article.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
+                        .map((article, idx) => (
+                          <div key={article.id} className={`bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300 ${getPlatformOffset(article.platform, slideIndex * itemsPerSlide + idx)}`}>
                             <img 
                               src={article.image} 
                               alt={article.title}

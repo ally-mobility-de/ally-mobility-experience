@@ -310,6 +310,47 @@ All colors MUST be HSL.
     clip-path: polygon(0% 0%, 80% 30%, 100% 100%, 20% 100%);
   }
 
+  /* Parallelogram Sections */
+  .parallelogram-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .parallelogram-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-diagonal);
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
+    z-index: 1;
+  }
+
+  .parallelogram-section-dark {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .parallelogram-section-dark::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, hsl(var(--brand-dark-teal)), hsl(var(--brand-purple)));
+    clip-path: polygon(0 10%, 100% 0%, 100% 90%, 0 100%);
+    z-index: 1;
+  }
+
+  .parallelogram-section > *, 
+  .parallelogram-section-dark > * {
+    position: relative;
+    z-index: 3;
+  }
+
   /* Text utilities */
   .line-clamp-2 {
     display: -webkit-box;
