@@ -75,95 +75,97 @@ const Community = () => {
   const getPlatformColor = (platform: string) => {
     switch (platform) {
       case 'LinkedIn': return 'bg-blue-600';
-      case 'Instagram': return 'bg-pink-600';
+      case 'Instagram': return 'bg-brand-purple';
       case 'News': return 'bg-brand-aqua';
-      case 'Blog': return 'bg-primary';
+      case 'Blog': return 'bg-accent';
       default: return 'bg-muted-foreground';
     }
   };
 
   return (
-    <section className="section-padding bg-muted/30">
-      <div className="container-custom">
-        <div className="text-center space-y-12">
-          {/* Header */}
-          <div className="space-y-6">
-            <h2 className="text-brand-green">Community & Press</h2>
-            <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Stay updated with the latest news, insights, and stories from the ally-mobility community
-            </p>
-          </div>
-
-          {/* Articles Carousel */}
-          <div className="relative max-w-6xl mx-auto">
-            <div className="overflow-hidden">
-              <div 
-                className="flex transition-transform duration-300 ease-in-out"
-                style={{ transform: `translateX(-${currentSlide * 100}%)` }}
-              >
-                {Array.from({ length: totalSlides }, (_, slideIndex) => (
-                  <div key={slideIndex} className="w-full flex-shrink-0">
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
-                      {articles
-                        .slice(slideIndex * itemsPerSlide, slideIndex * itemsPerSlide + itemsPerSlide)
-                        .map((article) => (
-                          <div key={article.id} className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300">
-                            <img 
-                              src={article.image} 
-                              alt={article.title}
-                              className="w-full h-48 object-cover"
-                            />
-                            <div className="p-6 space-y-4">
-                              <div className="flex items-center justify-between">
-                                <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${getPlatformColor(article.platform)}`}>
-                                  {article.platform}
-                                </span>
-                                <span className="text-sm text-muted-foreground">{article.source}</span>
-                              </div>
-                              <h3 className="text-xl font-semibold text-primary line-clamp-2">{article.title}</h3>
-                              <p className="text-muted-foreground line-clamp-3">{article.excerpt}</p>
-                              <a 
-                                href={article.link} 
-                                className="inline-flex items-center text-brand-aqua hover:text-brand-aqua/80 transition-colors font-medium"
-                              >
-                                Read More →
-                              </a>
-                            </div>
-                          </div>
-                        ))}
-                    </div>
-                  </div>
-                ))}
-              </div>
+    <section className="diagonal-section diagonal-colorful">
+      <div className="diagonal-section-content">
+        <div className="container-custom">
+          <div className="text-center space-y-12">
+            {/* Header */}
+            <div className="space-y-6">
+              <h2 className="text-white">Community & Press</h2>
+              <p className="text-xl text-white/90 max-w-3xl mx-auto">
+                Stay updated with the latest news, insights, and stories from the ally-mobility community
+              </p>
             </div>
 
-            {/* Navigation */}
-            <div className="flex justify-between items-center mt-8">
-              <button
-                onClick={prevSlide}
-                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center shadow-lg"
-              >
-                ←
-              </button>
-              
-              <div className="flex gap-2">
-                {Array.from({ length: totalSlides }, (_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentSlide(index)}
-                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                      index === currentSlide ? 'bg-primary' : 'bg-primary/30'
-                    }`}
-                  />
-                ))}
+            {/* Articles Carousel */}
+            <div className="relative max-w-6xl mx-auto">
+              <div className="overflow-hidden">
+                <div 
+                  className="flex transition-transform duration-300 ease-in-out"
+                  style={{ transform: `translateX(-${currentSlide * 100}%)` }}
+                >
+                  {Array.from({ length: totalSlides }, (_, slideIndex) => (
+                    <div key={slideIndex} className="w-full flex-shrink-0">
+                      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 px-4">
+                        {articles
+                          .slice(slideIndex * itemsPerSlide, slideIndex * itemsPerSlide + itemsPerSlide)
+                          .map((article) => (
+                            <div key={article.id} className="bg-white/95 backdrop-blur-sm rounded-2xl shadow-colorful overflow-hidden hover:shadow-xl hover:bg-white transition-all duration-300">
+                              <img 
+                                src={article.image} 
+                                alt={article.title}
+                                className="w-full h-48 object-cover"
+                              />
+                              <div className="p-6 space-y-4">
+                                <div className="flex items-center justify-between">
+                                  <span className={`px-3 py-1 rounded-full text-xs font-medium text-white ${getPlatformColor(article.platform)}`}>
+                                    {article.platform}
+                                  </span>
+                                  <span className="text-sm text-muted-foreground">{article.source}</span>
+                                </div>
+                                <h3 className="text-xl font-semibold text-primary line-clamp-2">{article.title}</h3>
+                                <p className="text-muted-foreground line-clamp-3">{article.excerpt}</p>
+                                <a 
+                                  href={article.link} 
+                                  className="inline-flex items-center text-accent hover:text-accent/80 transition-colors font-medium"
+                                >
+                                  Read More →
+                                </a>
+                              </div>
+                            </div>
+                          ))}
+                      </div>
+                    </div>
+                  ))}
+                </div>
               </div>
-              
-              <button
-                onClick={nextSlide}
-                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center shadow-lg"
-              >
-                →
-              </button>
+
+              {/* Navigation */}
+              <div className="flex justify-between items-center mt-8">
+                <button
+                  onClick={prevSlide}
+                  className="w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm border-2 border-white text-accent hover:bg-accent hover:text-white transition-colors duration-300 flex items-center justify-center shadow-colorful"
+                >
+                  ←
+                </button>
+                
+                <div className="flex gap-2">
+                  {Array.from({ length: totalSlides }, (_, index) => (
+                    <button
+                      key={index}
+                      onClick={() => setCurrentSlide(index)}
+                      className={`w-3 h-3 rounded-full transition-colors duration-300 ${
+                        index === currentSlide ? 'bg-white' : 'bg-white/40'
+                      }`}
+                    />
+                  ))}
+                </div>
+                
+                <button
+                  onClick={nextSlide}
+                  className="w-12 h-12 rounded-full bg-white/90 backdrop-blur-sm border-2 border-white text-accent hover:bg-accent hover:text-white transition-colors duration-300 flex items-center justify-center shadow-colorful"
+                >
+                  →
+                </button>
+              </div>
             </div>
           </div>
         </div>

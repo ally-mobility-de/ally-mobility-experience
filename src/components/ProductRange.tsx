@@ -56,54 +56,70 @@ const ProductRange = () => {
           {/* Product Cards */}
           <div className="grid md:grid-cols-3 gap-8">
             {products.map((product, index) => (
-              <div
-                key={product.id}
-                className={`product-card group cursor-pointer ${
-                  product.highlight ? 'ring-2 ring-brand-aqua ring-offset-4' : ''
-                }`}
-                onClick={() => navigateToProduct(product.id)}
-              >
-                {/* Image */}
-                <div className="relative overflow-hidden aspect-[4/3]">
-                  <img 
-                    src={product.image}
-                    alt={`ally-mobility ${product.name}`}
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
-                    loading="lazy"
-                  />
-                  
-                  {product.highlight && (
-                    <div className="absolute top-4 left-4">
-                      <span className="bg-brand-aqua text-white px-3 py-1 rounded-full text-sm font-medium">
-                        Featured
-                      </span>
-                    </div>
-                  )}
-                </div>
-
-                {/* Content */}
-                <div className="p-6 space-y-4">
-                  <div className="space-y-2">
-                    <h3 className="text-2xl font-semibold text-brand-green group-hover:text-primary transition-colors duration-300">
-                      {product.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed">
-                      {product.description}
-                    </p>
+                <div
+                  key={product.id}
+                  className={`product-card group cursor-pointer ${
+                    product.highlight ? 'purple-card ring-0' : ''
+                  }`}
+                  onClick={() => navigateToProduct(product.id)}
+                >
+                  {/* Image */}
+                  <div className="relative overflow-hidden aspect-[4/3]">
+                    <img 
+                      src={product.image}
+                      alt={`ally-mobility ${product.name}`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    
+                    {product.highlight && (
+                      <div className="absolute top-4 left-4">
+                        <span className="bg-white/90 text-accent px-3 py-1 rounded-full text-sm font-medium shadow-lg">
+                          Featured
+                        </span>
+                      </div>
+                    )}
                   </div>
 
-                  <div className="flex items-center justify-between pt-4">
-                    <div className="text-sm font-medium text-brand-aqua uppercase tracking-wide">
-                      {product.name}
+                  {/* Content */}
+                  <div className="p-6 space-y-4">
+                    <div className="space-y-2">
+                      <h3 className={`text-2xl font-semibold transition-colors duration-300 ${
+                        product.highlight 
+                          ? 'text-white group-hover:text-white/90' 
+                          : 'text-brand-green group-hover:text-primary'
+                      }`}>
+                        {product.title}
+                      </h3>
+                      <p className={`leading-relaxed ${
+                        product.highlight 
+                          ? 'text-white/90' 
+                          : 'text-muted-foreground'
+                      }`}>
+                        {product.description}
+                      </p>
                     </div>
-                    <div className="w-8 h-8 bg-primary/10 rounded-full flex items-center justify-center group-hover:bg-primary group-hover:text-white transition-all duration-300">
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                      </svg>
+
+                    <div className="flex items-center justify-between pt-4">
+                      <div className={`text-sm font-medium uppercase tracking-wide ${
+                        product.highlight 
+                          ? 'text-white/80' 
+                          : 'text-brand-aqua'
+                      }`}>
+                        {product.name}
+                      </div>
+                      <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
+                        product.highlight 
+                          ? 'bg-white/20 text-white group-hover:bg-white group-hover:text-accent' 
+                          : 'bg-primary/10 group-hover:bg-primary group-hover:text-white'
+                      }`}>
+                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
             ))}
           </div>
         </div>

@@ -80,7 +80,11 @@ const UseCases = () => {
 
                   <button
                     onClick={scrollToCustomers}
-                    className="inline-flex items-center gap-2 text-primary font-medium hover:text-brand-aqua transition-colors duration-300"
+                    className={`inline-flex items-center gap-2 font-medium transition-colors duration-300 ${
+                      index % 2 === 1 
+                        ? 'text-accent hover:text-accent/80' 
+                        : 'text-primary hover:text-brand-aqua'
+                    }`}
                   >
                     Learn more about this use case
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -103,8 +107,12 @@ const UseCases = () => {
                   </div>
 
                   {/* Overlay badge */}
-                  <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-4 py-2 shadow-card">
-                    <div className="text-sm font-medium text-brand-green">
+                  <div className={`absolute bottom-4 left-4 backdrop-blur-sm rounded-lg px-4 py-2 shadow-card ${
+                    index % 2 === 1 
+                      ? 'bg-accent/90 text-white' 
+                      : 'bg-white/90 text-brand-green'
+                  }`}>
+                    <div className="text-sm font-medium">
                       {useCase.title}
                     </div>
                   </div>

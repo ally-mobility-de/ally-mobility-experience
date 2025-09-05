@@ -71,10 +71,14 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-colorful': 'var(--gradient-colorful)',
+				'gradient-diagonal-purple': 'var(--gradient-diagonal-purple)',
+				'gradient-diagonal-pink': 'var(--gradient-diagonal-pink)',
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
 				'card': 'var(--shadow-card)',
+				'colorful': 'var(--shadow-colorful)',
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
