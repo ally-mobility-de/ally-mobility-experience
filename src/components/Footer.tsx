@@ -104,16 +104,16 @@ const Footer = () => {
               </a>
             </nav>
           </div>
-        </div>
 
-        {/* Funding Acknowledgment */}
-        <div className="border-t border-white/20 py-8">
-          <div className="flex justify-center mb-6">
-            <img 
-              src="/lovable-uploads/cde7af16-d889-43da-929b-7d51be96a45c.png" 
-              alt="Funded by German Federal Ministry for Economic Affairs and Climate Protection and European Social Fund Plus"
-              className="max-w-full h-auto max-h-20"
-            />
+          {/* Funding Acknowledgment */}
+          <div className="lg:col-span-5 mt-8 pt-8 border-t border-white/20">
+            <div className="flex justify-center">
+              <img 
+                src="/lovable-uploads/cde7af16-d889-43da-929b-7d51be96a45c.png" 
+                alt="Funded by German Federal Ministry for Economic Affairs and Climate Protection and European Social Fund Plus"
+                className="max-w-full h-auto max-h-32"
+              />
+            </div>
           </div>
         </div>
 
