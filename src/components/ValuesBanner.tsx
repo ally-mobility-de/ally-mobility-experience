@@ -37,18 +37,13 @@ const ValuesBanner = () => {
     title: "Simple & Accessible",
     description: "No driver's license, no stress"
   }];
-  return <section className="relative section-padding text-cream-light overflow-hidden" style={{
-      backgroundImage: `linear-gradient(rgba(0, 100, 150, 0.8), rgba(0, 180, 200, 0.8)), url('/lovable-uploads/d1142148-78d0-4d87-80b6-11064b9735e9.png')`,
-      backgroundSize: 'cover',
-      backgroundPosition: 'center',
-      backgroundRepeat: 'no-repeat'
-    }}>
+  return <section className="section-padding bg-gradient-to-r from-primary to-brand-aqua text-white">
       <div className="container-custom">
         <div className="text-center space-y-12">
           {/* Header */}
           <div className="space-y-6">
-            <h2 className="text-cream-light">The Smart Alternative</h2>
-            <p className="text-xl text-cream-light/90 max-w-3xl mx-auto">
+            <h2 className="text-white">The Smart Alternative</h2>
+            <p className="text-xl text-white/80 max-w-3xl mx-auto">
               Fast, quiet and efficient — right into the heart of the city
             </p>
           </div>
@@ -57,16 +52,16 @@ const ValuesBanner = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {values.map((value, index) => <button key={index} onClick={() => scrollToSection(index.toString())} className="group text-center space-y-4 p-6 rounded-2xl hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
                 {/* Icon Circle */}
-                <div className="mx-auto w-20 h-20 bg-cream-light/20 rounded-full flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-cream-light transition-all duration-300">
+                <div className="mx-auto w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-all duration-300">
                   {value.icon}
                 </div>
                 
                 {/* Content */}
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-cream-light group-hover:text-cream-light transition-colors duration-300">
+                  <h4 className="font-semibold text-white group-hover:text-brand-purple transition-colors duration-300">
                     {value.title}
                   </h4>
-                  <p className="text-sm text-cream-light/80 leading-relaxed">
+                  <p className="text-sm text-white/70 leading-relaxed">
                     {value.description}
                   </p>
                 </div>
