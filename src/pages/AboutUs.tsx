@@ -405,8 +405,8 @@ const AboutUs = () => {
             {/* Contact Image */}
             <div className="relative">
               <img 
-                src={dealerPerson} 
-                alt="Contact ally-mobility" 
+                src="/lovable-uploads/ad1d92d2-27a7-4918-9722-0d450061dd87.png" 
+                alt="Contact ally-mobility team" 
                 className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
