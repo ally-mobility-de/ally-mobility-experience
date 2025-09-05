@@ -8,10 +8,6 @@ const CTABanner = () => {
       });
     }
   };
-  return <section className="py-16 bg-gradient-to-r from-brand-aqua to-secondary">
-      <div className="container-custom">
-        
-      </div>
-    </section>;
+  return;
 };
 export default CTABanner;
