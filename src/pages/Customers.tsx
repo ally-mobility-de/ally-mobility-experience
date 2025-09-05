@@ -1,4 +1,4 @@
-import { useState, createElement } from 'react';
+import { useState, createElement, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -73,7 +73,31 @@ const Customers = () => {
     description: "Safe and secure transport of medical supplies, equipment, and sensitive materials. Built for hospitals, pharmacies, and medical services requiring dependable logistics.",
     image: useCaseTrades,
     features: ["Secure compartments", "Climate control ready", "Medical compliance", "Emergency accessibility"]
+  }, {
+    title: "E-commerce & Retail",
+    subtitle: "Last-mile delivery excellence",
+    description: "Perfect for online retailers and local shops needing efficient, eco-friendly delivery solutions. Reach customers faster while reducing operational costs.",
+    image: useCaseDelivery,
+    features: ["Same-day delivery", "Reduced fuel costs", "Customer satisfaction", "Brand visibility"]
+  }, {
+    title: "Construction & Trades", 
+    subtitle: "Tools and materials on the move",
+    description: "Transport construction tools, materials, and equipment efficiently across job sites. Built tough for the demands of professional tradespeople.",
+    image: useCaseTrades,
+    features: ["Heavy-duty construction", "Weather resistant", "Secure storage", "Job site mobility"]
   }];
+
+  // Auto-rotate functionality
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIcon((current) => {
+        if (current === null) return 0;
+        return (current + 1) % customerIcons.length;
+      });
+    }, 10000); // 10 seconds
+
+    return () => clearInterval(interval);
+  }, [customerIcons.length]);
   return <div className="min-h-screen bg-background">
       <Header />
       
@@ -105,14 +129,14 @@ const Customers = () => {
       {/* Header Use Cases */}
       <section className="section-padding">
         <div className="container-custom space-y-16">
-          {headerUseCases.map((useCase, index) => <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${useCase.imageLeft ? 'lg:grid-flow-col-dense' : ''}`}>
+          {headerUseCases.map((useCase, index) => <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Image */}
-              <div className={useCase.imageLeft ? 'lg:col-start-1' : 'lg:col-start-2'}>
+              <div className={`order-2 ${useCase.imageLeft ? 'lg:order-1' : 'lg:order-2'}`}>
                 <img src={useCase.image} alt={useCase.title} className="w-full h-[400px] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300" />
               </div>
               
               {/* Content */}
-              <div className={`space-y-6 ${useCase.imageLeft ? 'lg:col-start-2' : 'lg:col-start-1'}`}>
+              <div className={`order-1 space-y-6 ${useCase.imageLeft ? 'lg:order-2' : 'lg:order-1'}`}>
                 <div className="space-y-3">
                   <h2 className="text-[#043a43] text-[188_93%_33%]">{useCase.title}</h2>
                   <h3 className="text-xl font-semibold text-[#43b28d]">{useCase.subtitle}</h3>
@@ -131,7 +155,7 @@ const Customers = () => {
       </section>
 
       {/* Interactive Icons Section */}
-      <section className="section-padding bg-brand-aqua">
+      <section className="section-padding bg-gradient-to-br from-brand-aqua to-brand-teal">
         <div className="container-custom text-center space-y-12">
           <div className="space-y-4">
             <h2 className="text-white">The Smart Alternative</h2>
@@ -142,11 +166,22 @@ const Customers = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {customerIcons.map((item, index) => <div key={index} className="space-y-4">
-                <button onClick={() => setActiveIcon(activeIcon === index ? null : index)} className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto hover:bg-white/30 transition-colors duration-300 cursor-pointer group">
-                  <item.icon className="w-10 h-10 text-white group-hover:scale-110 transition-transform duration-300" />
+                <button 
+                  onClick={() => setActiveIcon(index)} 
+                  className={`w-20 h-20 rounded-full flex items-center justify-center mx-auto transition-all duration-300 cursor-pointer group ${
+                    activeIcon === index 
+                      ? 'bg-white text-brand-aqua shadow-lg scale-110' 
+                      : 'bg-white/20 text-white hover:bg-white/30'
+                  }`}
+                >
+                  <item.icon className={`w-10 h-10 transition-transform duration-300 ${
+                    activeIcon === index ? 'scale-110' : 'group-hover:scale-110'
+                  }`} />
                 </button>
                 <div className="text-center">
-                  <h3 className="font-semibold text-white text-lg">{item.title}</h3>
+                  <h3 className={`font-semibold text-lg transition-colors duration-300 ${
+                    activeIcon === index ? 'text-white' : 'text-white/90'
+                  }`}>{item.title}</h3>
                   <p className="text-sm text-white/80 mt-1">{item.subtitle}</p>
                 </div>
               </div>)}
@@ -172,14 +207,14 @@ const Customers = () => {
       {/* Additional Use Cases */}
       <section className="section-padding">
         <div className="container-custom space-y-16">
-          {detailedUseCases.map((useCase, index) => <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
+          {detailedUseCases.map((useCase, index) => <div key={index} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               {/* Image */}
-              <div className={index % 2 === 1 ? 'lg:col-start-1' : 'lg:col-start-2'}>
+              <div className={`order-2 ${index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}`}>
                 <img src={useCase.image} alt={useCase.title} className="w-full h-[400px] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300" />
               </div>
               
               {/* Content */}
-              <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : 'lg:col-start-1'}`}>
+              <div className={`order-1 space-y-6 ${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
                 <div className="space-y-3">
                   <h2 className="text-primary">{useCase.title}</h2>
                   <h3 className="text-xl font-semibold text-secondary">{useCase.subtitle}</h3>
