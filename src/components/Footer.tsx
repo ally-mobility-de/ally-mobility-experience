@@ -105,20 +105,22 @@ const Footer = () => {
             </nav>
           </div>
 
-     {/* Funding Acknowledgment (inline unter den Link-Blöcken) */}
-<div className="col-span-full mt-6">
-  <div className="flex flex-col items-center text-center gap-3">
-    <img
-      src="/lovable-uploads/cde7af16-d889-43da-929b-7d51be96a45c.png"
-      alt="Gefördert durch das Bundesministerium und den ESF Plus"
-      className="max-w-full h-auto max-h-28"
-    />
-    <p className="text-white/80 text-sm max-w-3xl">
-      Ally-mobility wird im Rahmen des EXIST-Programms durch das Bundesministerium für Wirtschaft und Energie
-      und den Europäischen Sozialfonds Plus (ESF Plus) gefördert.
-    </p>
-  </div>
-</div>
+          {/* Funding Acknowledgment */}
+          <div className="col-span-full mt-8">
+            <div className="flex flex-col items-center text-center gap-4">
+              <img
+                src="/lovable-uploads/adefa6cc-8b89-4cb0-a294-6db863b29fe1.png"
+                alt="Gefördert durch das Bundesministerium für Wirtschaft und Klimaschutz, kofinanziert von der Europäischen Union, EXIST Existenzgründungen aus der Wissenschaft"
+                className="max-w-full h-auto max-h-40 w-auto"
+              />
+              <div className="flex justify-center w-full">
+                <p className="text-white/80 text-sm" style={{maxWidth: 'min(100%, 800px)'}}>
+                  Ally-mobility wird im Rahmen des EXIST-Programms durch das Bundesministerium für Wirtschaft und Klimaschutz
+                  und den Europäischen Sozialfonds Plus (ESF Plus) gefördert.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
 
         {/* Bottom Bar */}
