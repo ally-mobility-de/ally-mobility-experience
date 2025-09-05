@@ -19,21 +19,21 @@ const AboutUs = () => {
       name: "Eliah",
       role: "CEO",
       quote: "We believe mobility should be sustainable, efficient, and accessible to everyone. Our mission is to revolutionize urban transport.",
-      image: "/lovable-uploads/93f64d63-22a9-46a0-8efa-e70fbcfcbf49.png"
+      image: "/lovable-uploads/605721e5-fa14-422b-b77a-35b93be0c8ff.png"
     },
     {
       id: 2,
       name: "Chanti",
       role: "CFO",
       quote: "Financial excellence drives sustainable growth. Every investment decision supports our mission of transforming urban mobility.",
-      image: "/lovable-uploads/a05449e6-bcab-4dd7-ab51-a035e539c831.png"
+      image: "/lovable-uploads/6f7b3532-0531-4217-84ac-9969faa59981.png"
     },
     {
       id: 3,
       name: "Noah",
       role: "CTO",
       quote: "Innovation through engineering excellence. Every component is designed for durability, efficiency, and user experience.",
-      image: "/lovable-uploads/4b19d7f4-7d6d-44c5-9db1-f14823dafd21.png"
+      image: "/lovable-uploads/90e30aa4-dbec-42db-8be2-ccb1c039477f.png"
     }
   ];
 
