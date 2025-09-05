@@ -10,13 +10,13 @@ All colors MUST be HSL.
   :root {
     /* ally-mobility Brand Colors */
     --background: 44 29% 96%; /* #F7F4EE cream base */
-    --foreground: 210 14% 19%; /* #2D3136 dark text */
+    --foreground: 182 100% 23%; /* #2D3136 dark text */
 
     --card: 44 29% 96%;
-    --card-foreground: 210 14% 19%;
+    --card-foreground: 182 100% 23%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 210 14% 19%;
+    --popover-foreground: 182 100% 23%;
 
     /* Primary: #007744 green */
     --primary: 188 93% 33%;
