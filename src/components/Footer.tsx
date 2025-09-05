@@ -111,7 +111,7 @@ const Footer = () => {
     <img
       src="/lovable-uploads/cde7af16-d889-43da-929b-7d51be96a45c.png"
       alt="Gefördert durch das Bundesministerium und den ESF Plus"
-      className="max-w-full h-auto max-h-24"
+      className="max-w-full h-auto max-h-35"
     />
     <p className="text-white/80 text-sm max-w-3xl">
       Ally-mobility wird im Rahmen des EXIST-Programms durch das Bundesministerium für Wirtschaft und Energie
