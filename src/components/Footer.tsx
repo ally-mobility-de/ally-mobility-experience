@@ -101,6 +101,8 @@ const Footer = () => {
               <a href="#dealer" className="block text-brand-aqua font-medium hover:text-white transition-colors duration-300">
                 Become a Dealer
               </a>
+              <a href="#funding" className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
+                Funding
               </a>
               <a href="#events" className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
                 Event Calendar
