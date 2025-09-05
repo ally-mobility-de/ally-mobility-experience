@@ -237,14 +237,14 @@ const Customers = () => {
       </section>
 
       {/* Test Ride CTA */}
-      <section className="section-padding bg-brand-dark-purple bg-[#d396ef]">
+      <section className="section-padding bg-gradient-to-br from-brand-purple via-accent to-brand-aqua">
         <div className="container-custom text-center space-y-8">
           <h2 className="text-white">Book a Test Ride Now!</h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Experience the ally-mobility difference firsthand. Schedule your test ride 
             and discover how our cargo solutions can transform your business.
           </p>
-          <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-dark-purple" onClick={() => navigate('/about-us#contact')}>
+          <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-purple" onClick={() => navigate('/about-us#contact')}>
             Schedule Appointment
           </Button>
         </div>

@@ -187,53 +187,70 @@ const AboutUs = () => {
       </section>
 
       {/* Join Our Community */}
-      <section className="section-padding bg-brand-aqua">
-        <div className="container-custom text-center space-y-12">
-          <h2 className="text-white text-5xl lg:text-6xl font-bold">Join Our Community</h2>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Connect with us and stay updated on the latest in sustainable urban mobility
-          </p>
-          
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {/* Instagram */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center space-y-4 hover:bg-white/20 transition-colors duration-300">
-              <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-orange-400 rounded-2xl mx-auto flex items-center justify-center">
-                <Instagram className="w-10 h-10 text-white" />
+      <section className="diagonal-section diagonal-colorful">
+        <div className="diagonal-section-content">
+          <div className="container-custom text-center space-y-12">
+            <h2 className="text-white text-5xl lg:text-6xl font-bold">Join Our Community</h2>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
+              Connect with us and stay updated on the latest in sustainable urban mobility
+            </p>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
+              {/* Instagram */}
+              <div className="group bg-white/95 backdrop-blur-sm rounded-3xl p-8 text-center space-y-6 hover:bg-white hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div className="relative">
+                  <div className="w-24 h-24 bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 rounded-3xl mx-auto flex items-center justify-center shadow-lg group-hover:shadow-pink-500/25 transition-shadow duration-500">
+                    <Instagram className="w-12 h-12 text-white" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">•</span>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold bg-gradient-to-br from-pink-600 to-orange-500 bg-clip-text text-transparent">@ally.mobility</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">Follow our journey and see our products in action with daily updates and behind-the-scenes content</p>
+                  <Button className="w-full bg-gradient-to-r from-pink-500 to-orange-400 text-white border-0 hover:from-pink-600 hover:to-orange-500 rounded-2xl py-3 font-semibold shadow-lg">
+                    Follow on Instagram
+                  </Button>
+                </div>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-2">@ally.mobility</h3>
-                <p className="text-white/80 text-sm mb-4">Follow our journey and see our products in action</p>
-                <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-aqua">
-                  Follow on Instagram
-                </Button>
-              </div>
-            </div>
 
-            {/* LinkedIn */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center space-y-4 hover:bg-white/20 transition-colors duration-300">
-              <div className="w-20 h-20 bg-blue-600 rounded-2xl mx-auto flex items-center justify-center">
-                <Linkedin className="w-10 h-10 text-white" />
+              {/* LinkedIn */}
+              <div className="group bg-white/95 backdrop-blur-sm rounded-3xl p-8 text-center space-y-6 hover:bg-white hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div className="relative">
+                  <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl mx-auto flex items-center justify-center shadow-lg group-hover:shadow-blue-500/25 transition-shadow duration-500">
+                    <Linkedin className="w-12 h-12 text-white" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">✓</span>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-blue-700">ally-mobility</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">Professional updates, industry insights, and networking opportunities in sustainable mobility</p>
+                  <Button className="w-full bg-blue-600 text-white border-0 hover:bg-blue-700 rounded-2xl py-3 font-semibold shadow-lg">
+                    Connect on LinkedIn
+                  </Button>
+                </div>
               </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-2">ally-mobility</h3>
-                <p className="text-white/80 text-sm mb-4">Professional updates and industry insights</p>
-                <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-aqua">
-                  Connect on LinkedIn
-                </Button>
-              </div>
-            </div>
 
-            {/* Telegram */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center space-y-4 hover:bg-white/20 transition-colors duration-300">
-              <div className="w-20 h-20 bg-blue-500 rounded-2xl mx-auto flex items-center justify-center">
-                <MessageCircle className="w-10 h-10 text-white" />
-              </div>
-              <div>
-                <h3 className="text-2xl font-bold text-white mb-2">bikerave</h3>
-                <p className="text-white/80 text-sm mb-4">Join our community discussions and get support</p>
-                <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-aqua">
-                  Join Telegram
-                </Button>
+              {/* Telegram */}
+              <div className="group bg-white/95 backdrop-blur-sm rounded-3xl p-8 text-center space-y-6 hover:bg-white hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2">
+                <div className="relative">
+                  <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-600 rounded-3xl mx-auto flex items-center justify-center shadow-lg group-hover:shadow-blue-400/25 transition-shadow duration-500">
+                    <MessageCircle className="w-12 h-12 text-white" />
+                  </div>
+                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
+                    <span className="text-white text-xs font-bold">!</span>
+                  </div>
+                </div>
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-bold text-blue-600">bikerave</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">Join our community discussions, get instant support, and connect with other mobility enthusiasts</p>
+                  <Button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white border-0 hover:from-blue-600 hover:to-blue-700 rounded-2xl py-3 font-semibold shadow-lg">
+                    Join Telegram
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
