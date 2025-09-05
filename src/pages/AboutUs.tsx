@@ -149,10 +149,11 @@ const AboutUs = () => {
       </section>
 
       {/* We Are ally-mobility - Team Carousel */}
-      <section className="section-padding">
+      <section className="section-padding bg-gradient-diagonal-blue">
+        <div className="geometric-overlay"></div>
         <div className="container-custom">
           <div className="text-center space-y-12 mb-16">
-            <h2 className="text-6xl lg:text-8xl font-bold text-primary">
+            <h2 className="text-6xl lg:text-8xl font-bold text-white">
               We are ally-mobility
             </h2>
           </div>
@@ -169,12 +170,12 @@ const AboutUs = () => {
               </div>
               
               <div className="space-y-8">
-                <blockquote className="text-2xl lg:text-3xl text-muted-foreground leading-relaxed italic border-l-4 border-brand-aqua pl-8">
+                <blockquote className="text-2xl lg:text-3xl text-white/90 leading-relaxed italic border-l-4 border-white pl-8">
                   "{teamMembers[currentTeamIndex].quote}"
                 </blockquote>
                 <div className="space-y-2">
-                  <p className="font-semibold text-primary text-lg">{teamMembers[currentTeamIndex].name}</p>
-                  <p className="text-muted-foreground">{teamMembers[currentTeamIndex].role}, ally-mobility</p>
+                  <p className="font-semibold text-white text-lg">{teamMembers[currentTeamIndex].name}</p>
+                  <p className="text-white/80">{teamMembers[currentTeamIndex].role}, ally-mobility</p>
                 </div>
               </div>
             </div>
@@ -350,28 +351,29 @@ const AboutUs = () => {
       </section>
 
       {/* Contact Section */}
-      <section id="contact" className="section-padding">
+      <section id="contact" className="section-padding bg-gradient-diagonal-green">
+        <div className="geometric-overlay"></div>
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-primary text-4xl lg:text-5xl font-bold">Contact</h2>
-                <p className="text-xl text-muted-foreground">
+                <h2 className="text-white text-4xl lg:text-5xl font-bold">Contact</h2>
+                <p className="text-xl text-white/90">
                   Ready to transform your urban logistics? Get in touch with our team.
                 </p>
               </div>
 
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-brand-aqua/20 rounded-full flex items-center justify-center">
-                    <Mail className="w-6 h-6 text-primary" />
+                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                    <Mail className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">Email</p>
+                    <p className="text-sm font-medium text-white/80 uppercase tracking-wide">Email</p>
                     <a 
                       href="mailto:info@ally-mobility.com" 
-                      className="text-lg font-medium text-primary hover:text-secondary transition-colors"
+                      className="text-lg font-medium text-white hover:text-white/80 transition-colors"
                     >
                       info@ally-mobility.com
                     </a>
@@ -379,22 +381,22 @@ const AboutUs = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-brand-aqua/20 rounded-full flex items-center justify-center">
-                    <Phone className="w-6 h-6 text-primary" />
+                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                    <Phone className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">Telefon</p>
-                    <p className="text-lg font-medium text-foreground">+49 (0) 30 12345678</p>
+                    <p className="text-sm font-medium text-white/80 uppercase tracking-wide">Telefon</p>
+                    <p className="text-lg font-medium text-white">+49 (0) 30 12345678</p>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-brand-aqua/20 rounded-full flex items-center justify-center">
-                    <MapPin className="w-6 h-6 text-primary" />
+                  <div className="w-12 h-12 bg-white/20 rounded-full flex items-center justify-center">
+                    <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">Adresse</p>
-                    <p className="text-lg font-medium text-foreground">
+                    <p className="text-sm font-medium text-white/80 uppercase tracking-wide">Adresse</p>
+                    <p className="text-lg font-medium text-white">
                       Musterstraße 123<br />
                       10115 Berlin, Deutschland
                     </p>
@@ -403,7 +405,7 @@ const AboutUs = () => {
               </div>
 
               <Button 
-                className="btn-aqua text-lg px-8 py-4"
+                className="btn-secondary-outline text-white border-white hover:bg-white hover:text-primary text-lg px-8 py-4"
                 onClick={() => window.location.href = 'mailto:info@ally-mobility.com'}
               >
                 Contact now

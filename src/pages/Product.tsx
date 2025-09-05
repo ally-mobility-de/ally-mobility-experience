@@ -539,19 +539,20 @@ const Product = () => {
       </section>
 
       {/* Download & CTA */}
-      <section className="section-padding bg-secondary-light">
+      <section className="section-padding bg-gradient-diagonal-blue">
+        <div className="geometric-overlay"></div>
         <div className="container-custom text-center space-y-8">
-          <h2 className="text-primary">Get Detailed Information</h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <h2 className="text-white">Get Detailed Information</h2>
+          <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Download our comprehensive product datasheet or schedule a personal 
             consultation to discuss your specific transport requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="btn-secondary-outline">
+            <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-primary">
               📄 ally-mobility product datasheet (PDF, 1.25 MB)
             </Button>
             <Button 
-              className="btn-aqua"
+              className="btn-secondary-outline text-white border-white hover:bg-white hover:text-primary"
               onClick={() => navigate('/about-us#contact')}
             >
               📅 Schedule appointment
@@ -561,7 +562,8 @@ const Product = () => {
       </section>
 
       {/* Become a Dealer */}
-      <section className="section-padding">
+      <section className="section-padding bg-gradient-diagonal-green">
+        <div className="geometric-overlay"></div>
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -572,14 +574,14 @@ const Product = () => {
               />
             </div>
             <div className="space-y-6">
-              <h2 className="text-primary">Become a Dealer</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
+              <h2 className="text-white">Become a Dealer</h2>
+              <p className="text-lg text-white/90 leading-relaxed">
                 Join our growing network of partners and bring sustainable mobility 
                 solutions to your region. We support you with comprehensive training, 
                 marketing materials, and ongoing technical support.
               </p>
               <Button 
-                className="btn-aqua"
+                className="btn-secondary-outline text-white border-white hover:bg-white hover:text-primary"
                 onClick={() => navigate('/about-us#contact')}
               >
                 Become a dealer
