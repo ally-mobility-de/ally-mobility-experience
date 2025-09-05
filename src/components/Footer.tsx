@@ -10,7 +10,7 @@ const Footer = () => {
   return <footer className="bg-brand-dark-purple text-white bg-[#043a43]">
       <div className="container-custom">
         {/* Main Footer */}
-        <div className="py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
+        <div className="py-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
           {/* Brand & Contact */}
           <div className="lg:col-span-2 space-y-6">
             <div className="space-y-4">
@@ -106,15 +106,15 @@ const Footer = () => {
           </div>
 
           {/* Funding Acknowledgment */}
-          <div className="col-span-full mt-8">
-            <div className="flex flex-col items-center text-center gap-4">
+          <div className="col-span-full mt-6">
+            <div className="flex flex-col items-center text-center gap-3">
               <img
                 src="/lovable-uploads/adefa6cc-8b89-4cb0-a294-6db863b29fe1.png"
                 alt="Gefördert durch das Bundesministerium für Wirtschaft und Klimaschutz, kofinanziert von der Europäischen Union, EXIST Existenzgründungen aus der Wissenschaft"
-                className="max-w-full h-auto max-h-40 w-auto"
+                className="max-w-full h-auto max-h-24 w-auto"
               />
               <div className="flex justify-center w-full">
-                <p className="text-white/80 text-sm" style={{maxWidth: 'min(100%, 800px)'}}>
+                <p className="text-white/80 text-sm" style={{maxWidth: 'min(100%, 600px)'}}>
                   Ally-mobility wird im Rahmen des EXIST-Programms durch das Bundesministerium für Wirtschaft und Klimaschutz
                   und den Europäischen Sozialfonds Plus (ESF Plus) gefördert.
                 </p>
@@ -124,7 +124,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-white/20 py-8">
+        <div className="border-t border-white/20 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-white/60 text-sm">
               © 2024 ally-mobility. All rights reserved.
