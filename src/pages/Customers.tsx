@@ -131,7 +131,7 @@ const Customers = () => {
       </section>
 
       {/* Interactive Icons Section */}
-      <section className="section-padding diagonal-section">
+      <section className="section-padding bg-brand-aqua">
         <div className="container-custom text-center space-y-12">
           <div className="space-y-4">
             <h2 className="text-white">The Smart Alternative</h2>
@@ -193,7 +193,7 @@ const Customers = () => {
                   <h4 className="font-semibold text-foreground">Key Benefits:</h4>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {useCase.features.map((feature, idx) => <li key={idx} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-brand-purple rounded-full flex-shrink-0"></div>
+                        <div className="w-2 h-2 bg-brand-aqua rounded-full flex-shrink-0"></div>
                         <span className="text-muted-foreground">{feature}</span>
                       </li>)}
                   </ul>
@@ -208,14 +208,14 @@ const Customers = () => {
       </section>
 
       {/* Test Ride CTA */}
-      <section className="section-padding diagonal-section-reverse">
+      <section className="section-padding bg-brand-dark-purple bg-[#d396ef]">
         <div className="container-custom text-center space-y-8">
           <h2 className="text-white">Book a Test Ride Now!</h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Experience the ally-mobility difference firsthand. Schedule your test ride 
             and discover how our cargo solutions can transform your business.
           </p>
-          <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-purple" onClick={() => navigate('/about-us#contact')}>
+          <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-dark-purple" onClick={() => navigate('/about-us#contact')}>
             Schedule Appointment
           </Button>
         </div>

@@ -55,15 +55,15 @@ const HeroSection = () => {
               </p>
               <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
                 <span className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-brand-purple rounded-full"></div>
+                  <div className="w-2 h-2 bg-brand-aqua rounded-full"></div>
                   Fast, quiet and efficient
                 </span>
                 <span className="flex items-center gap-2">
-                    <div className="w-2 h-2 bg-brand-purple rounded-full"></div>
+                  <div className="w-2 h-2 bg-brand-aqua rounded-full"></div>
                   Right into the heart of the city
                 </span>
                 <span className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-brand-purple rounded-full"></div>
+                  <div className="w-2 h-2 bg-brand-aqua rounded-full"></div>
                   Up to 500kg payload
                 </span>
               </div>

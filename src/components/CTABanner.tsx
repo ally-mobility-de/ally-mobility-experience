@@ -9,7 +9,7 @@ const CTABanner = () => {
     }
   };
   return (
-    <section className="section-padding bg-gradient-to-r from-brand-teal to-brand-purple">
+    <section className="section-padding bg-gradient-to-r from-primary to-brand-aqua">
       <div className="container-custom">
         <div className="text-center space-y-6">
           <h2 className="text-white">Ready to Transform Your Transport?</h2>
@@ -18,7 +18,7 @@ const CTABanner = () => {
           </p>
           <Button 
             onClick={scrollToContact}
-            className="bg-white text-brand-teal hover:bg-white/90"
+            className="bg-white text-primary hover:bg-white/90"
           >
             Get Started Today
           </Button>

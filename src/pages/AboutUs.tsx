@@ -174,7 +174,7 @@ const AboutUs = () => {
               </div>
               
               <div className="space-y-8">
-                <blockquote className="text-2xl lg:text-3xl text-muted-foreground leading-relaxed italic border-l-4 border-brand-purple pl-8">
+                <blockquote className="text-2xl lg:text-3xl text-muted-foreground leading-relaxed italic border-l-4 border-brand-aqua pl-8">
                   "{teamMembers[currentTeamIndex].quote}"
                 </blockquote>
                 <div className="space-y-2">
@@ -217,7 +217,7 @@ const AboutUs = () => {
       </section>
 
       {/* Join Our Community */}
-      <section className="section-padding diagonal-section">
+      <section className="section-padding bg-brand-aqua">
         <div className="container-custom text-center space-y-12">
           <h2 className="text-white text-5xl lg:text-6xl font-bold">Join Our Community</h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
@@ -233,7 +233,7 @@ const AboutUs = () => {
               <div>
                 <h3 className="text-2xl font-bold text-white mb-2">@ally.mobility</h3>
                 <p className="text-white/80 text-sm mb-4">Follow our journey and see our products in action</p>
-                <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-teal">
+                <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-aqua">
                   Follow on Instagram
                 </Button>
               </div>
@@ -247,7 +247,7 @@ const AboutUs = () => {
               <div>
                 <h3 className="text-2xl font-bold text-white mb-2">ally-mobility</h3>
                 <p className="text-white/80 text-sm mb-4">Professional updates and industry insights</p>
-                <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-teal">
+                <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-aqua">
                   Connect on LinkedIn
                 </Button>
               </div>
@@ -261,7 +261,7 @@ const AboutUs = () => {
               <div>
                 <h3 className="text-2xl font-bold text-white mb-2">bikerave</h3>
                 <p className="text-white/80 text-sm mb-4">Join our community discussions and get support</p>
-                <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-teal">
+                <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-aqua">
                   Join Telegram
                 </Button>
               </div>
@@ -291,7 +291,7 @@ const AboutUs = () => {
                     className="w-full h-64 md:h-full object-cover"
                   />
                   {events[currentEventIndex].status === 'upcoming' && (
-                    <div className="absolute top-4 left-4 bg-brand-purple text-white px-3 py-1 rounded-full text-sm font-medium">
+                    <div className="absolute top-4 left-4 bg-brand-aqua text-white px-3 py-1 rounded-full text-sm font-medium">
                       Bevorstehend
                     </div>
                   )}
@@ -315,7 +315,7 @@ const AboutUs = () => {
                     {events[currentEventIndex].description}
                   </p>
                   
-                  <Button className="btn-purple">
+                  <Button className="btn-aqua">
                     Zum Event →
                   </Button>
                 </div>
@@ -369,7 +369,7 @@ const AboutUs = () => {
 
               <div className="space-y-6">
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-brand-purple/20 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-brand-aqua/20 rounded-full flex items-center justify-center">
                     <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -384,7 +384,7 @@ const AboutUs = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-brand-purple/20 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-brand-aqua/20 rounded-full flex items-center justify-center">
                     <Phone className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -394,7 +394,7 @@ const AboutUs = () => {
                 </div>
 
                 <div className="flex items-center gap-4">
-                  <div className="w-12 h-12 bg-brand-purple/20 rounded-full flex items-center justify-center">
+                  <div className="w-12 h-12 bg-brand-aqua/20 rounded-full flex items-center justify-center">
                     <MapPin className="w-6 h-6 text-primary" />
                   </div>
                   <div>
@@ -408,7 +408,7 @@ const AboutUs = () => {
               </div>
 
               <Button 
-                className="btn-purple text-lg px-8 py-4"
+                className="btn-aqua text-lg px-8 py-4"
                 onClick={() => window.location.href = 'mailto:info@ally-mobility.com'}
               >
                 Contact now

@@ -60,9 +60,7 @@ export default {
 				},
 				brand: {
 					purple: 'hsl(var(--brand-purple))',
-					pink: 'hsl(var(--brand-pink))',
-					teal: 'hsl(var(--brand-teal))',
-					'dark-teal': 'hsl(var(--brand-dark-teal))',
+					'dark-purple': 'hsl(var(--brand-dark-purple))',
 					yellow: 'hsl(var(--brand-yellow))',
 					aqua: 'hsl(var(--brand-aqua))'
 				}
@@ -73,8 +71,6 @@ export default {
 			backgroundImage: {
 				'gradient-primary': 'var(--gradient-primary)',
 				'gradient-hero': 'var(--gradient-hero)',
-				'gradient-diagonal': 'var(--gradient-diagonal)',
-				'gradient-purple': 'var(--gradient-purple)',
 			},
 			boxShadow: {
 				'soft': 'var(--shadow-soft)',
