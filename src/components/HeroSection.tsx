@@ -12,7 +12,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 abstract-bg" style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(${heroBikeStreet})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/lovable-uploads/a4a900f7-d8b6-45a5-8ee6-9920dc1a0b27.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
