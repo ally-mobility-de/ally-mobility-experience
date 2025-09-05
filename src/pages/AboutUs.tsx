@@ -217,17 +217,16 @@ const AboutUs = () => {
       </section>
 
       {/* Join Our Community */}
-      <section className="section-padding relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-brand-purple via-brand-pink to-brand-purple transform -skew-y-3 origin-top-left"></div>
-        <div className="relative container-custom text-center space-y-12 py-16">
+      <section className="section-padding diagonal-section">
+        <div className="container-custom text-center space-y-12">
           <h2 className="text-white text-5xl lg:text-6xl font-bold">Join Our Community</h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
             Connect with us and stay updated on the latest in sustainable urban mobility
           </p>
           
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            {/* Instagram - Lower offset */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center space-y-4 hover:bg-white/20 transition-colors duration-300 transform translate-y-8">
+            {/* Instagram */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center space-y-4 hover:bg-white/20 transition-colors duration-300">
               <div className="w-20 h-20 bg-gradient-to-br from-pink-500 to-orange-400 rounded-2xl mx-auto flex items-center justify-center">
                 <Instagram className="w-10 h-10 text-white" />
               </div>
@@ -240,7 +239,7 @@ const AboutUs = () => {
               </div>
             </div>
 
-            {/* LinkedIn - Middle position */}
+            {/* LinkedIn */}
             <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center space-y-4 hover:bg-white/20 transition-colors duration-300">
               <div className="w-20 h-20 bg-blue-600 rounded-2xl mx-auto flex items-center justify-center">
                 <Linkedin className="w-10 h-10 text-white" />
@@ -254,8 +253,8 @@ const AboutUs = () => {
               </div>
             </div>
 
-            {/* Telegram - Higher offset */}
-            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center space-y-4 hover:bg-white/20 transition-colors duration-300 transform -translate-y-8">
+            {/* Telegram */}
+            <div className="bg-white/10 backdrop-blur-sm rounded-2xl p-8 text-center space-y-4 hover:bg-white/20 transition-colors duration-300">
               <div className="w-20 h-20 bg-blue-500 rounded-2xl mx-auto flex items-center justify-center">
                 <MessageCircle className="w-10 h-10 text-white" />
               </div>
