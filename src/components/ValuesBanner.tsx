@@ -1,11 +1,10 @@
+import { useNavigate } from 'react-router-dom';
+
 const ValuesBanner = () => {
+  const navigate = useNavigate();
+  
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
+    navigate('/customers', { state: { scrollToSection: id, activeIcon: id } });
   };
   const values = [{
     icon: <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -38,7 +37,7 @@ const ValuesBanner = () => {
     title: "Simple & Accessible",
     description: "No driver's license, no stress"
   }];
-  return <section className="section-padding bg-gradient-to-br from-primary via-brand-aqua to-secondary text-white">
+  return <section className="section-padding bg-gradient-to-r from-primary to-brand-aqua text-white">
       <div className="container-custom">
         <div className="text-center space-y-12">
           {/* Header */}
@@ -51,15 +50,15 @@ const ValuesBanner = () => {
 
           {/* Values Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {values.map((value, index) => <button key={index} onClick={() => scrollToSection('customers')} className="group text-center space-y-4 p-6 rounded-2xl hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
+            {values.map((value, index) => <button key={index} onClick={() => scrollToSection(index.toString())} className="group text-center space-y-4 p-6 rounded-2xl hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
                 {/* Icon Circle */}
-                <div className="mx-auto w-20 h-20 bg-brand-aqua/20 rounded-full flex items-center justify-center text-brand-aqua group-hover:bg-brand-aqua group-hover:text-white transition-all duration-300">
+                <div className="mx-auto w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-all duration-300">
                   {value.icon}
                 </div>
                 
                 {/* Content */}
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-white group-hover:text-brand-aqua transition-colors duration-300">
+                  <h4 className="font-semibold text-white group-hover:text-brand-purple transition-colors duration-300">
                     {value.title}
                   </h4>
                   <p className="text-sm text-white/70 leading-relaxed">

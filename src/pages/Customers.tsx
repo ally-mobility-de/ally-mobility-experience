@@ -1,5 +1,5 @@
 import { useState, createElement, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
@@ -10,7 +10,8 @@ import heroCargoBike from "@/assets/hero-cargo-bike.jpg";
 import { Package, Truck, Zap, Shield, Users } from "lucide-react";
 const Customers = () => {
   const navigate = useNavigate();
-  const [activeIcon, setActiveIcon] = useState<number | null>(null);
+  const location = useLocation();
+  const [activeIcon, setActiveIcon] = useState<number | null>(0); // Default to first item
   const customerIcons = [{
     icon: Package,
     title: "Affordable & Practical",
@@ -86,6 +87,13 @@ const Customers = () => {
     image: useCaseTrades,
     features: ["Heavy-duty construction", "Weather resistant", "Secure storage", "Job site mobility"]
   }];
+
+  // Handle navigation from ValuesBanner
+  useEffect(() => {
+    if (location.state?.activeIcon !== undefined) {
+      setActiveIcon(parseInt(location.state.activeIcon));
+    }
+  }, [location.state]);
 
   // Auto-rotate functionality
   useEffect(() => {
