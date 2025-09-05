@@ -105,17 +105,21 @@ const Footer = () => {
             </nav>
           </div>
 
-          {/* Funding Acknowledgment */}
-          <div className="lg:col-span-5 mt-8 pt-8 border-t border-white/20">
-            <div className="flex justify-center">
-              <img 
-                src="/lovable-uploads/cde7af16-d889-43da-929b-7d51be96a45c.png" 
-                alt="Funded by German Federal Ministry for Economic Affairs and Climate Protection and European Social Fund Plus"
-                className="max-w-full h-auto max-h-32"
-              />
-            </div>
-          </div>
-        </div>
+     {/* Funding Acknowledgment (inline unter den Link-Blöcken) */}
+<div className="col-span-full mt-6">
+  <div className="flex flex-col items-center text-center gap-3">
+    <img
+      src="/lovable-uploads/cde7af16-d889-43da-929b-7d51be96a45c.png"
+      alt="Gefördert durch das Bundesministerium und den ESF Plus"
+      className="max-w-full h-auto max-h-24"
+    />
+    <p className="text-white/80 text-sm max-w-3xl">
+      Ally-mobility wird im Rahmen des EXIST-Programms durch das Bundesministerium für Wirtschaft und Energie
+      und den Europäischen Sozialfonds Plus (ESF Plus) gefördert.
+    </p>
+  </div>
+</div>
+
 
         {/* Bottom Bar */}
         <div className="border-t border-white/20 py-8">
