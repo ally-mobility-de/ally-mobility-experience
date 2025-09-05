@@ -8,37 +8,39 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    /* ally-mobility Brand Colors */
+    /* ally-mobility Brand Colors - Updated with reference style */
     --background: 44 29% 96%; /* #F7F4EE cream base */
-    --foreground: 182 100% 23%; /* #2D3136 dark text */
+    --foreground: 197 100% 13%; /* #043a43 dark teal text */
 
     --card: 44 29% 96%;
-    --card-foreground: 182 100% 23%;
+    --card-foreground: 197 100% 13%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 182 100% 23%;
+    --popover-foreground: 197 100% 13%;
 
-    /* Primary: #007744 green */
-    --primary: 188 93% 33%;
+    /* Primary: #043a43 dark teal */
+    --primary: 197 100% 13%;
     --primary-foreground: 0 0% 100%;
 
-    /* Secondary: #68C3A2 light green */
-    --secondary: 157 39% 59%;
-    --secondary-foreground: 157 100% 23%;
+    /* Secondary: #43b28d teal */
+    --secondary: 163 49% 49%;
+    --secondary-foreground: 0 0% 100%;
 
     /* Muted cream tones */
     --muted: 44 29% 93%;
     --muted-foreground: 210 14% 45%;
 
-    /* Accent: #C273BB purple */
-    --accent: 307 35% 60%;
+    /* Accent: #D396EF purple */
+    --accent: 284 73% 74%;
     --accent-foreground: 0 0% 100%;
 
-    /* Additional brand colors */
-    --brand-purple: 269 60% 73%; /* #D396EF */
-    --brand-dark-purple: 182 100% 23%; /* #4D2A73 */
+    /* Additional brand colors - Updated palette */
+    --brand-purple: 284 73% 74%; /* #D396EF main purple */
+    --brand-pink: 300 85% 70%; /* Pink accent */
+    --brand-teal: 163 49% 49%; /* #43b28d teal */
+    --brand-dark-teal: 197 100% 13%; /* #043a43 dark teal */
     --brand-yellow: 62 100% 64%; /* #FCFF5B */
-    --brand-aqua: 157 39% 59%; /* #68C3A2 */
+    --brand-aqua: 157 39% 59%; /* #68C3A2 legacy support */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
@@ -49,10 +51,12 @@ All colors MUST be HSL.
 
     --radius: 1rem;
 
-  /* Gradients */
-  --gradient-primary: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--brand-aqua)));
+  /* Gradients - Updated for diagonal design style */
+  --gradient-primary: linear-gradient(135deg, hsl(var(--brand-dark-teal)), hsl(var(--brand-teal)));
   --gradient-hero: linear-gradient(135deg, hsl(var(--background)), hsl(var(--muted)));
-  --gradient-abstract: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--brand-purple)), hsl(var(--brand-aqua)));
+  --gradient-abstract: linear-gradient(120deg, hsl(var(--brand-teal)), hsl(var(--brand-purple)), hsl(var(--brand-yellow)));
+  --gradient-diagonal: linear-gradient(135deg, hsl(var(--brand-teal)) 0%, hsl(var(--brand-purple)) 70%, hsl(var(--brand-pink)) 100%);
+  --gradient-purple: linear-gradient(135deg, hsl(var(--brand-purple)), hsl(var(--brand-pink)));
   --shadow-soft: 0 4px 20px -4px hsl(var(--primary) / 0.1);
   --shadow-card: 0 2px 12px -2px hsl(var(--primary) / 0.08);
     
@@ -134,7 +138,13 @@ All colors MUST be HSL.
   }
 
   .btn-aqua {
-    @apply bg-brand-aqua text-white px-6 py-3 rounded-lg font-medium
+    @apply bg-brand-teal text-white px-6 py-3 rounded-lg font-medium
+           shadow-soft hover:shadow-lg transform hover:-translate-y-0.5
+           transition-all duration-300 ease-out;
+  }
+
+  .btn-purple {
+    @apply bg-brand-purple text-white px-6 py-3 rounded-lg font-medium
            shadow-soft hover:shadow-lg transform hover:-translate-y-0.5
            transition-all duration-300 ease-out;
   }
@@ -187,7 +197,7 @@ All colors MUST be HSL.
 
   /* Brand specific utilities - colors are already available via Tailwind config */
 
-  /* Abstract Geometric Backgrounds */
+  /* Abstract Geometric Backgrounds - Diagonal style inspired by reference */
   .abstract-bg {
     position: relative;
     overflow: hidden;
@@ -200,10 +210,8 @@ All colors MUST be HSL.
     left: 0;
     right: 0;
     bottom: 0;
-    background: 
-      linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--brand-aqua) / 0.8)),
-      radial-gradient(circle at 20% 30%, hsl(var(--brand-purple) / 0.3) 0%, transparent 50%),
-      radial-gradient(circle at 80% 70%, hsl(var(--accent) / 0.4) 0%, transparent 50%);
+    background: var(--gradient-diagonal);
+    opacity: 0.8;
     z-index: 1;
   }
 
@@ -214,13 +222,9 @@ All colors MUST be HSL.
     left: 0;
     right: 0;
     bottom: 0;
-    background-image: 
-      polygon(0 0, 100% 0, 85% 100%, 0 100%),
-      polygon(15% 0, 100% 0, 100% 100%, 30% 100%);
     background: 
-      linear-gradient(45deg, transparent 40%, hsl(var(--brand-purple) / 0.1) 40%, hsl(var(--brand-purple) / 0.1) 60%, transparent 60%),
-      linear-gradient(-45deg, transparent 40%, hsl(var(--primary) / 0.1) 40%, hsl(var(--primary) / 0.1) 60%, transparent 60%),
-      linear-gradient(135deg, transparent 30%, hsl(var(--brand-aqua) / 0.2) 30%, hsl(var(--brand-aqua) / 0.2) 70%, transparent 70%);
+      linear-gradient(120deg, transparent 0%, hsl(var(--brand-purple) / 0.3) 30%, transparent 70%),
+      linear-gradient(-45deg, transparent 0%, hsl(var(--brand-yellow) / 0.2) 20%, transparent 40%);
     z-index: 2;
   }
 
@@ -229,7 +233,48 @@ All colors MUST be HSL.
     z-index: 3;
   }
 
-  /* Geometric Shapes */
+  /* Diagonal Section Backgrounds - New angled sections */
+  .diagonal-section {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .diagonal-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-primary);
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+    z-index: 1;
+  }
+
+  .diagonal-section-reverse {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .diagonal-section-reverse::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: var(--gradient-purple);
+    clip-path: polygon(0 15%, 100% 0, 100% 100%, 0 100%);
+    z-index: 1;
+  }
+
+  .diagonal-section > *, 
+  .diagonal-section-reverse > * {
+    position: relative;
+    z-index: 3;
+  }
+
+  /* Geometric Shapes - Updated for diagonal reference style */
   .geometric-overlay {
     position: absolute;
     width: 100%;
@@ -243,25 +288,26 @@ All colors MUST be HSL.
   .geometric-overlay::before {
     content: '';
     position: absolute;
-    top: -50%;
-    right: -20%;
-    width: 60%;
-    height: 120%;
-    background: linear-gradient(135deg, hsl(var(--brand-purple) / 0.1), hsl(var(--primary) / 0.2));
-    transform: rotate(15deg);
-    clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 30% 100%);
+    top: -20%;
+    right: -30%;
+    width: 80%;
+    height: 140%;
+    background: var(--gradient-diagonal);
+    transform: rotate(25deg);
+    clip-path: polygon(0% 20%, 100% 0%, 100% 80%, 0% 100%);
+    opacity: 0.3;
   }
 
   .geometric-overlay::after {
     content: '';
     position: absolute;
-    bottom: -30%;
-    left: -10%;
-    width: 40%;
-    height: 80%;
-    background: linear-gradient(45deg, hsl(var(--brand-aqua) / 0.15), hsl(var(--accent) / 0.1));
-    transform: rotate(-20deg);
-    clip-path: polygon(20% 0%, 80% 20%, 100% 100%, 0% 80%);
+    bottom: -40%;
+    left: -20%;
+    width: 60%;
+    height: 100%;
+    background: linear-gradient(135deg, hsl(var(--brand-purple) / 0.4), hsl(var(--brand-yellow) / 0.2));
+    transform: rotate(-15deg);
+    clip-path: polygon(0% 0%, 80% 30%, 100% 100%, 20% 100%);
   }
 
   /* Text utilities */
