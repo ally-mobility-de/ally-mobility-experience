@@ -309,22 +309,6 @@ const Product = () => {
                 </div>
               </div>
 
-              {/* Active Hotspot Info */}
-              {activeHotspot && (
-                <div className="hotspot-info">
-                  {(() => {
-                    const hotspot = currentProduct.hotspots.find(h => h.id === activeHotspot);
-                    if (!hotspot) return null;
-                    
-                    return (
-                      <div className="space-y-4">
-                        <h4 className="font-semibold text-primary">{hotspot.title}</h4>
-                        <p className="text-muted-foreground">{hotspot.description}</p>
-                      </div>
-                    );
-                  })()}
-                </div>
-              )}
             </div>
             
             {/* Right side - Interactive Product Image */}
