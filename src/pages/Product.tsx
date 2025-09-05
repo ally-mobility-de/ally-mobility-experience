@@ -271,14 +271,14 @@ const Product = () => {
       <Header />
       
       {/* Hero Section with Product Selection */}
-      <section id="maximum-versatility" className="section-padding bg-gradient-subtle mt-16 lg:mt-20">
+      <section id="maximum-versatility" className="section-padding bg-gradient-colorful mt-16 lg:mt-20">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             {/* Left side - Product selection and text */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <h1 className="text-primary">Maximum Versatility</h1>
-                <p className="text-xl text-muted-foreground leading-relaxed">
+                <h1 className="text-white">Maximum Versatility</h1>
+                <p className="text-xl text-white/90 leading-relaxed">
                   Flexible modules for every purpose. Thanks to a modular concept and a robust, 
                   high-quality platform, our heavy-duty bicycle trailers are ready for anything. 
                   Whether Flatbed, Box, or Swap Container — we have the right solution.
@@ -298,8 +298,8 @@ const Product = () => {
                       variant={activeProduct === key ? "default" : "outline"}
                       className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                         activeProduct === key 
-                          ? 'bg-primary text-primary-foreground shadow-soft' 
-                          : 'bg-background border-2 border-secondary text-secondary hover:bg-secondary hover:text-white'
+                          ? 'bg-white text-primary shadow-soft' 
+                          : 'bg-white/20 border-2 border-white text-white hover:bg-white hover:text-primary'
                       }`}
                     >
                       {product.name}
@@ -318,8 +318,8 @@ const Product = () => {
                     
                     return (
                       <div className="space-y-4">
-                        <h4 className="font-semibold text-primary">{hotspot.title}</h4>
-                        <p className="text-muted-foreground">{hotspot.description}</p>
+                        <h4 className="font-semibold text-white">{hotspot.title}</h4>
+                        <p className="text-white/80">{hotspot.description}</p>
                       </div>
                     );
                   })()}
@@ -420,8 +420,8 @@ const Product = () => {
           {/* Technical Specifications with Use Case */}
           <div className="space-y-8">
             <div className="text-center space-y-4">
-              <h3 className="text-2xl font-bold text-primary">Technical Specifications</h3>
-              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-white">Technical Specifications</h3>
+              <p className="text-lg text-white/90 max-w-2xl mx-auto">
                 Detailed technical data for our modular cargo platform
               </p>
             </div>

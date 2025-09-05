@@ -78,12 +78,7 @@ const Customers = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding mt-16 lg:mt-20 relative abstract-bg" style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/lovable-uploads/f2c41187-9bfe-4a86-b3df-36135488fd11.png)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}>
+      <section className="section-padding mt-16 lg:mt-20 bg-gradient-diagonal-purple">
         <div className="geometric-overlay"></div>
         <div className="container-custom text-center space-y-8">
           <div className="relative mx-auto max-w-5xl">
@@ -131,7 +126,7 @@ const Customers = () => {
       </section>
 
       {/* Interactive Icons Section */}
-      <section className="section-padding bg-brand-aqua">
+      <section className="section-padding bg-gradient-diagonal-pink">
         <div className="container-custom text-center space-y-12">
           <div className="space-y-4">
             <h2 className="text-white">The Smart Alternative</h2>
@@ -208,7 +203,7 @@ const Customers = () => {
       </section>
 
       {/* Test Ride CTA */}
-      <section className="section-padding bg-brand-dark-purple bg-[#d396ef]">
+      <section className="section-padding bg-gradient-colorful">
         <div className="container-custom text-center space-y-8">
           <h2 className="text-white">Book a Test Ride Now!</h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">

@@ -124,12 +124,7 @@ const AboutUs = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding mt-16 lg:mt-20 relative abstract-bg" style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/lovable-uploads/f2c41187-9bfe-4a86-b3df-36135488fd11.png)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}>
+      <section className="section-padding mt-16 lg:mt-20 bg-gradient-diagonal-purple">
         <div className="geometric-overlay"></div>
         <div className="container-custom text-center space-y-8">
           <div className="relative mx-auto max-w-5xl">
@@ -217,7 +212,7 @@ const AboutUs = () => {
       </section>
 
       {/* Join Our Community */}
-      <section className="section-padding bg-brand-aqua">
+      <section className="section-padding bg-gradient-colorful">
         <div className="container-custom text-center space-y-12">
           <h2 className="text-white text-5xl lg:text-6xl font-bold">Join Our Community</h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
@@ -271,11 +266,11 @@ const AboutUs = () => {
       </section>
 
       {/* Events Section */}
-      <section className="section-padding bg-secondary-light">
+      <section className="section-padding bg-gradient-diagonal-pink">
         <div className="container-custom">
           <div className="text-center space-y-4 mb-12">
-            <h2 className="text-primary text-5xl lg:text-6xl font-bold">Events</h2>
-            <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+            <h2 className="text-white text-5xl lg:text-6xl font-bold">Events</h2>
+            <p className="text-xl text-white/90 max-w-2xl mx-auto">
               Besuchen Sie uns auf den wichtigsten Mobilitätsmessen und Events
             </p>
           </div>
