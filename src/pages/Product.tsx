@@ -271,14 +271,14 @@ const Product = () => {
       <Header />
       
       {/* Hero Section with Product Selection */}
-      <section id="maximum-versatility" className="section-padding bg-gradient-colorful mt-16 lg:mt-20">
+      <section id="maximum-versatility" className="section-padding bg-gradient-subtle mt-16 lg:mt-20">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-16">
             {/* Left side - Product selection and text */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <h1 className="text-white">Maximum Versatility</h1>
-                <p className="text-xl text-white/90 leading-relaxed">
+                <h1 className="text-primary">Maximum Versatility</h1>
+                <p className="text-xl text-muted-foreground leading-relaxed">
                   Flexible modules for every purpose. Thanks to a modular concept and a robust, 
                   high-quality platform, our heavy-duty bicycle trailers are ready for anything. 
                   Whether Flatbed, Box, or Swap Container — we have the right solution.
@@ -298,8 +298,8 @@ const Product = () => {
                       variant={activeProduct === key ? "default" : "outline"}
                       className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${
                         activeProduct === key 
-                          ? 'bg-white text-primary shadow-soft' 
-                          : 'bg-white/20 border-2 border-white text-white hover:bg-white hover:text-primary'
+                          ? 'bg-primary text-primary-foreground shadow-soft' 
+                          : 'bg-background border-2 border-secondary text-secondary hover:bg-secondary hover:text-white'
                       }`}
                     >
                       {product.name}
@@ -318,8 +318,8 @@ const Product = () => {
                     
                     return (
                       <div className="space-y-4">
-                        <h4 className="font-semibold text-white">{hotspot.title}</h4>
-                        <p className="text-white/80">{hotspot.description}</p>
+                        <h4 className="font-semibold text-primary">{hotspot.title}</h4>
+                        <p className="text-muted-foreground">{hotspot.description}</p>
                       </div>
                     );
                   })()}
@@ -420,8 +420,8 @@ const Product = () => {
           {/* Technical Specifications with Use Case */}
           <div className="space-y-8">
             <div className="text-center space-y-4">
-              <h3 className="text-2xl font-bold text-white">Technical Specifications</h3>
-              <p className="text-lg text-white/90 max-w-2xl mx-auto">
+              <h3 className="text-2xl font-bold text-primary">Technical Specifications</h3>
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 Detailed technical data for our modular cargo platform
               </p>
             </div>
@@ -539,20 +539,19 @@ const Product = () => {
       </section>
 
       {/* Download & CTA */}
-      <section className="section-padding bg-gradient-diagonal-blue">
-        <div className="geometric-overlay"></div>
+      <section className="section-padding bg-secondary-light">
         <div className="container-custom text-center space-y-8">
-          <h2 className="text-white">Get Detailed Information</h2>
-          <p className="text-xl text-white/90 max-w-2xl mx-auto">
+          <h2 className="text-primary">Get Detailed Information</h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
             Download our comprehensive product datasheet or schedule a personal 
             consultation to discuss your specific transport requirements.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-primary">
+            <Button className="btn-secondary-outline">
               📄 ally-mobility product datasheet (PDF, 1.25 MB)
             </Button>
             <Button 
-              className="btn-secondary-outline text-white border-white hover:bg-white hover:text-primary"
+              className="btn-aqua"
               onClick={() => navigate('/about-us#contact')}
             >
               📅 Schedule appointment
@@ -562,8 +561,7 @@ const Product = () => {
       </section>
 
       {/* Become a Dealer */}
-      <section className="section-padding bg-gradient-diagonal-green">
-        <div className="geometric-overlay"></div>
+      <section className="section-padding">
         <div className="container-custom">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
@@ -574,14 +572,14 @@ const Product = () => {
               />
             </div>
             <div className="space-y-6">
-              <h2 className="text-white">Become a Dealer</h2>
-              <p className="text-lg text-white/90 leading-relaxed">
+              <h2 className="text-primary">Become a Dealer</h2>
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Join our growing network of partners and bring sustainable mobility 
                 solutions to your region. We support you with comprehensive training, 
                 marketing materials, and ongoing technical support.
               </p>
               <Button 
-                className="btn-secondary-outline text-white border-white hover:bg-white hover:text-primary"
+                className="btn-aqua"
                 onClick={() => navigate('/about-us#contact')}
               >
                 Become a dealer

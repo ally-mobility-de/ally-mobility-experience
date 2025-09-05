@@ -78,7 +78,12 @@ const Customers = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding mt-16 lg:mt-20 bg-gradient-diagonal-purple">
+      <section className="section-padding mt-16 lg:mt-20 relative abstract-bg" style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/lovable-uploads/f2c41187-9bfe-4a86-b3df-36135488fd11.png)`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat'
+      }}>
         <div className="geometric-overlay"></div>
         <div className="container-custom text-center space-y-8">
           <div className="relative mx-auto max-w-5xl">
@@ -98,27 +103,26 @@ const Customers = () => {
       </section>
 
       {/* Header Use Cases */}
-      <section className="section-padding bg-gradient-diagonal-blue">
-        <div className="geometric-overlay"></div>
+      <section className="section-padding">
         <div className="container-custom space-y-16">
-          {headerUseCases.map((useCase, index) => <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center`}>
+          {headerUseCases.map((useCase, index) => <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${useCase.imageLeft ? 'lg:grid-flow-col-dense' : ''}`}>
               {/* Image */}
-              <div className={useCase.imageLeft ? 'lg:order-1' : 'lg:order-2'}>
+              <div className={useCase.imageLeft ? 'lg:col-start-1' : 'lg:col-start-2'}>
                 <img src={useCase.image} alt={useCase.title} className="w-full h-[400px] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300" />
               </div>
               
               {/* Content */}
-              <div className={`space-y-6 ${useCase.imageLeft ? 'lg:order-2' : 'lg:order-1'}`}>
+              <div className={`space-y-6 ${useCase.imageLeft ? 'lg:col-start-2' : 'lg:col-start-1'}`}>
                 <div className="space-y-3">
-                  <h2 className="text-white">{useCase.title}</h2>
-                  <h3 className="text-xl font-semibold text-white/90">{useCase.subtitle}</h3>
+                  <h2 className="text-[#043a43] text-[188_93%_33%]">{useCase.title}</h2>
+                  <h3 className="text-xl font-semibold text-[#43b28d]">{useCase.subtitle}</h3>
                 </div>
                 
-                <p className="text-lg text-white/80 leading-relaxed">
+                <p className="text-lg text-muted-foreground leading-relaxed">
                   {useCase.description}
                 </p>
                 
-                <Button onClick={() => navigate('/product')} className="btn-secondary-outline text-white border-white hover:bg-white hover:text-primary">
+                <Button onClick={() => navigate('/product')} className="btn-secondary-outline">
                   Learn More →
                 </Button>
               </div>
@@ -127,7 +131,7 @@ const Customers = () => {
       </section>
 
       {/* Interactive Icons Section */}
-      <section className="section-padding bg-gradient-diagonal-pink">
+      <section className="section-padding bg-brand-aqua">
         <div className="container-custom text-center space-y-12">
           <div className="space-y-4">
             <h2 className="text-white">The Smart Alternative</h2>
@@ -166,37 +170,36 @@ const Customers = () => {
       </section>
 
       {/* Additional Use Cases */}
-      <section className="section-padding bg-gradient-diagonal-green">
-        <div className="geometric-overlay"></div>
+      <section className="section-padding">
         <div className="container-custom space-y-16">
-          {detailedUseCases.map((useCase, index) => <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center`}>
+          {detailedUseCases.map((useCase, index) => <div key={index} className={`grid grid-cols-1 lg:grid-cols-2 gap-12 items-center ${index % 2 === 1 ? 'lg:grid-flow-col-dense' : ''}`}>
               {/* Image */}
-              <div className={index % 2 === 1 ? 'lg:order-1' : 'lg:order-2'}>
+              <div className={index % 2 === 1 ? 'lg:col-start-1' : 'lg:col-start-2'}>
                 <img src={useCase.image} alt={useCase.title} className="w-full h-[400px] object-cover rounded-2xl shadow-lg hover:shadow-xl transition-shadow duration-300" />
               </div>
               
               {/* Content */}
-              <div className={`space-y-6 ${index % 2 === 1 ? 'lg:order-2' : 'lg:order-1'}`}>
+              <div className={`space-y-6 ${index % 2 === 1 ? 'lg:col-start-2' : 'lg:col-start-1'}`}>
                 <div className="space-y-3">
-                  <h2 className="text-white">{useCase.title}</h2>
-                  <h3 className="text-xl font-semibold text-white/90">{useCase.subtitle}</h3>
+                  <h2 className="text-primary">{useCase.title}</h2>
+                  <h3 className="text-xl font-semibold text-secondary">{useCase.subtitle}</h3>
                 </div>
                 
-                <p className="text-lg text-white/80 leading-relaxed">
+                <p className="text-lg text-muted-foreground leading-relaxed">
                   {useCase.description}
                 </p>
                 
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-white">Key Benefits:</h4>
+                  <h4 className="font-semibold text-foreground">Key Benefits:</h4>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {useCase.features.map((feature, idx) => <li key={idx} className="flex items-center space-x-3">
-                        <div className="w-2 h-2 bg-white rounded-full flex-shrink-0"></div>
-                        <span className="text-white/80">{feature}</span>
+                        <div className="w-2 h-2 bg-brand-aqua rounded-full flex-shrink-0"></div>
+                        <span className="text-muted-foreground">{feature}</span>
                       </li>)}
                   </ul>
                 </div>
                 
-                <Button onClick={() => navigate('/product')} className="btn-secondary-outline text-white border-white hover:bg-white hover:text-primary">
+                <Button onClick={() => navigate('/product')} className="btn-secondary-outline">
                   Explore Solutions →
                 </Button>
               </div>
@@ -205,7 +208,7 @@ const Customers = () => {
       </section>
 
       {/* Test Ride CTA */}
-      <section className="section-padding bg-gradient-colorful">
+      <section className="section-padding bg-brand-dark-purple bg-[#d396ef]">
         <div className="container-custom text-center space-y-8">
           <h2 className="text-white">Book a Test Ride Now!</h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
