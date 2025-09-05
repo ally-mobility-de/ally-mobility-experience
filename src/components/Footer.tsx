@@ -111,7 +111,7 @@ const Footer = () => {
               <img
                 src="/lovable-uploads/adefa6cc-8b89-4cb0-a294-6db863b29fe1.png"
                 alt="Gefördert durch das Bundesministerium für Wirtschaft und Klimaschutz, kofinanziert von der Europäischen Union, EXIST Existenzgründungen aus der Wissenschaft"
-                className="max-w-full h-auto max-h-40 w-auto"
+                className="max-w-full h-auto max-h-35 w-auto"
               />
               <div className="flex justify-center w-full">
                 <p className="text-white/80 text-sm" style={{maxWidth: 'min(100%, 800px)'}}>
