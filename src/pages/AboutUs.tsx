@@ -123,42 +123,12 @@ const AboutUs = () => {
     <div className="min-h-screen bg-background">
       <Header />
       
-      {/* Hero Section */}
-      <section className="section-padding mt-16 lg:mt-20 relative abstract-bg" style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/lovable-uploads/f2c41187-9bfe-4a86-b3df-36135488fd11.png)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}>
-        <div className="geometric-overlay"></div>
-        <div className="container-custom text-center space-y-8">
-          <div className="relative mx-auto max-w-5xl">
-            <img 
-              src={heroCargoBike} 
-              alt="About ally-mobility" 
-              className="w-full h-[600px] object-cover rounded-2xl shadow-lg"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent rounded-2xl flex items-end">
-              <div className="p-8 text-white">
-                <h1 className="text-4xl lg:text-7xl font-bold mb-4">
-                  About ally-mobility
-                </h1>
-                <p className="text-xl opacity-90 max-w-2xl">
-                  Pioneering sustainable urban mobility solutions since 2019. 
-                  We're on a mission to transform how cities move.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* We Are ally-mobility - Team Carousel */}
-      <section className="section-padding">
+      <section className="section-padding mt-16 lg:mt-20">
         <div className="container-custom">
           <div className="text-center space-y-12 mb-16">
             <h2 className="text-6xl lg:text-8xl font-bold text-primary">
-              We are ally-mobility
+              We are <span className="bg-gradient-to-r from-brand-aqua to-brand-purple bg-clip-text text-transparent">ally-mobility</span>
             </h2>
           </div>
           

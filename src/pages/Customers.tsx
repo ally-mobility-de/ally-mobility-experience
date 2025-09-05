@@ -102,26 +102,20 @@ const Customers = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="section-padding mt-16 lg:mt-20 relative abstract-bg" style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/lovable-uploads/f2c41187-9bfe-4a86-b3df-36135488fd11.png)`,
+      <section className="section-padding mt-16 lg:mt-20 relative" style={{
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroCargoBike})`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
       }}>
-        <div className="geometric-overlay"></div>
         <div className="container-custom text-center space-y-8">
-          <div className="relative mx-auto max-w-5xl">
-            <img src={heroCargoBike} alt="Why Choose Radlogistik" className="w-full h-[500px] object-cover rounded-2xl shadow-lg" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-2xl flex items-end">
-              <div className="p-8 text-white">
-                <h1 className="text-4xl lg:text-6xl font-bold mb-4">
-                  Why Choose Radlogistik
-                </h1>
-                <p className="text-xl opacity-90 max-w-2xl">
-                  Discover how our innovative mobility solutions are transforming urban logistics across industries. Join the sustainable transport revolution.
-                </p>
-              </div>
-            </div>
+          <div className="max-w-4xl mx-auto text-white">
+            <h1 className="text-5xl lg:text-7xl font-bold mb-6">
+              Warum Radlogistik
+            </h1>
+            <p className="text-2xl lg:text-3xl opacity-90">
+              Die smarte Lösung für nachhaltige urbane Mobilität
+            </p>
           </div>
         </div>
       </section>
