@@ -7,12 +7,6 @@ const ValuesBanner = () => {
       });
     }
   };
-
-  const getValueOffset = (index: number) => {
-    // Adjust vertical positioning to maintain equal spacing to parallelogram edges
-    const offsets = ['mt-0', 'mt-6', 'mt-3', 'mt-9', 'mt-2'];
-    return offsets[index % offsets.length];
-  };
   const values = [{
     icon: <svg className="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1" />
@@ -44,7 +38,7 @@ const ValuesBanner = () => {
     title: "Simple & Accessible",
     description: "No driver's license, no stress"
   }];
-  return <section className="section-padding parallelogram-section-dark text-white">
+  return <section className="section-padding bg-brand-dark-purple text-white">
       <div className="container-custom">
         <div className="text-center space-y-12">
           {/* Header */}
@@ -57,7 +51,7 @@ const ValuesBanner = () => {
 
           {/* Values Grid */}
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {values.map((value, index) => <button key={index} onClick={() => scrollToSection('customers')} className={`group text-center space-y-4 p-6 rounded-2xl hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1 ${getValueOffset(index)}`}>
+            {values.map((value, index) => <button key={index} onClick={() => scrollToSection('customers')} className="group text-center space-y-4 p-6 rounded-2xl hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
                 {/* Icon Circle */}
                 <div className="mx-auto w-20 h-20 bg-brand-aqua/20 rounded-full flex items-center justify-center text-brand-aqua group-hover:bg-brand-aqua group-hover:text-white transition-all duration-300">
                   {value.icon}
