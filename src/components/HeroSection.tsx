@@ -12,7 +12,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 abstract-bg" style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url(/lovable-uploads/a4a900f7-d8b6-45a5-8ee6-9920dc1a0b27.png)`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/lovable-uploads/a4a900f7-d8b6-45a5-8ee6-9920dc1a0b27.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -23,10 +23,10 @@ const HeroSection = () => {
           {/* Content */}
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-6">
-              <h1 className="text-brand-green leading-tight">
+              <h1 className="text-background leading-tight">
                 Moving Big Things Sustainably
               </h1>
-              <p className="text-xl lg:text-2xl text-muted-foreground leading-relaxed max-w-2xl">
+              <p className="text-xl lg:text-2xl text-background/90 leading-relaxed max-w-2xl">
                 With a robust heavy-duty bicycle trailer, ally-mobility provides a durable solution for 
                 efficient, eco-friendly transport of loads over 500 kg.
               </p>
@@ -50,10 +50,10 @@ const HeroSection = () => {
 
             {/* Trust indicators */}
             <div className="pt-8 space-y-4">
-              <p className="text-sm font-medium text-brand-green uppercase tracking-wide">
+              <p className="text-sm font-medium text-background uppercase tracking-wide">
                 The Smart Alternative
               </p>
-              <div className="flex flex-wrap gap-6 text-sm text-muted-foreground">
+              <div className="flex flex-wrap gap-6 text-sm text-background/80">
                 <span className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-brand-aqua rounded-full"></div>
                   Fast, quiet and efficient

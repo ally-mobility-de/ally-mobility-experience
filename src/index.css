@@ -207,8 +207,8 @@ All colors MUST be HSL.
     right: 0;
     bottom: 0;
     background: 
-      linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--brand-aqua) / 0.8)),
-      radial-gradient(circle at 20% 30%, hsl(var(--brand-purple) / 0.3) 0%, transparent 50%);
+      linear-gradient(135deg, hsl(var(--primary) / 0.2), hsl(var(--brand-aqua) / 0.15)),
+      radial-gradient(circle at 20% 30%, hsl(var(--brand-purple) / 0.1) 0%, transparent 50%);
     z-index: 1;
     will-change: auto;
   }
@@ -237,7 +237,7 @@ All colors MUST be HSL.
     right: -10%;
     width: 40%;
     height: 80%;
-    background: linear-gradient(135deg, hsl(var(--brand-purple) / 0.1), hsl(var(--primary) / 0.2));
+    background: linear-gradient(135deg, hsl(var(--brand-purple) / 0.05), hsl(var(--primary) / 0.1));
     transform: rotate(15deg);
     will-change: auto;
   }
