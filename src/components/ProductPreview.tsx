@@ -8,7 +8,7 @@ import swapImage from "@/assets/product-swap.jpg";
 const products = {
   flatbed: {
     name: 'Flatbed',
-    image: "/lovable-uploads/a39f20e9-95d4-4158-a330-cd0b7e5f1bb3.png",
+    image: "/lovable-uploads/6201085f-1cba-4953-b9f2-4fe3130f99ac.png",
     hotspots: [{
       id: 'frame',
       x: 25,
@@ -56,7 +56,7 @@ const products = {
   },
   box: {
     name: 'Box',
-    image: boxImage,
+    image: "/lovable-uploads/95ac716d-de01-4c19-b0b4-9b381a05897a.png",
     hotspots: [{
       id: 'doors',
       x: 80,
@@ -110,7 +110,7 @@ const products = {
   },
   swap: {
     name: 'Swap Container',
-    image: swapImage,
+    image: "/lovable-uploads/4767952c-fdf6-4f68-8b13-715cd936b332.png",
     hotspots: [{
       id: 'container',
       x: 30,

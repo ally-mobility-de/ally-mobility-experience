@@ -1,7 +1,4 @@
 import { Button } from "@/components/ui/button";
-import flatbedImage from "@/assets/product-flatbed.jpg";
-import boxImage from "@/assets/product-box.jpg";
-import swapImage from "@/assets/product-swap.jpg";
 
 const ProductRange = () => {
   const products = [
@@ -10,7 +7,7 @@ const ProductRange = () => {
       name: 'Flatbed',
       title: 'The All-Rounder',
       description: 'Turn your bike into a cargo bike or multiply your capacity.',
-      image: flatbedImage,
+      image: "/lovable-uploads/6201085f-1cba-4953-b9f2-4fe3130f99ac.png",
       link: '#flatbed'
     },
     {
@@ -18,7 +15,7 @@ const ProductRange = () => {
       name: 'Box',
       title: 'A True Space Miracle',
       description: 'With 2.3 m³ and 500 kg payload.',
-      image: boxImage,
+      image: "/lovable-uploads/95ac716d-de01-4c19-b0b4-9b381a05897a.png",
       link: '#box'
     },
     {
@@ -26,7 +23,7 @@ const ProductRange = () => {
       name: 'Swap Container',
       title: 'Ready for the Swap?',
       description: 'Up to 3 wheeled containers, tool-free, record times.',
-      image: swapImage,
+      image: "/lovable-uploads/4767952c-fdf6-4f68-8b13-715cd936b332.png",
       link: '#swap-container',
       highlight: true
     }
