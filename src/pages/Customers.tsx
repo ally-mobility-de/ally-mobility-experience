@@ -111,7 +111,7 @@ const Customers = () => {
       
       {/* Hero Section */}
       <section className="section-padding mt-16 lg:mt-20 relative" style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroCargoBike})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/lovable-uploads/92748ab3-6dd0-446e-94e4-44447b060534.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
