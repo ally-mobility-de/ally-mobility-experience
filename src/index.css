@@ -138,10 +138,11 @@ All colors MUST be HSL.
   }
 
   .btn-contact {
-    @apply bg-brand-aqua text-white px-6 py-3 rounded-lg font-medium
+    @apply px-6 py-3 rounded-lg font-medium text-white
            shadow-soft hover:shadow-lg transform hover:-translate-y-0.5
            hover:bg-brand-purple hover:text-white
-           transition-all duration-300 ease-out;
+           transition-all duration-300 ease-out !important;
+    background: hsl(188 93% 33%) !important;
   }
 
   .btn-secondary-outline {
