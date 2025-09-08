@@ -157,7 +157,7 @@ const Customers = () => {
       </section>
 
       {/* Interactive Icons Section */}
-      <section className="section-padding bg-gradient-to-br from-brand-aqua to-brand-teal">
+      <section className="section-padding bg-gradient-to-br from-purple-300 to-purple-500">
         <div className="container-custom text-center space-y-12">
           <div className="space-y-4">
             <h2 className="text-white">The Smart Alternative</h2>
