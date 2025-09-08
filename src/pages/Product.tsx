@@ -490,7 +490,7 @@ const Product = () => {
       </section>
 
       {/* Customer Icons Navigation */}
-      <section className="section-padding bg-brand-aqua">
+      <section className="section-padding bg-gradient-to-r from-primary to-brand-aqua">
         <div className="container-custom text-center space-y-12">
           <div className="space-y-4">
             <h2 className="text-white">The Smart Alternative</h2>
