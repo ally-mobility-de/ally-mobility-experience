@@ -323,11 +323,11 @@ const Product = () => {
                   <button
                     key={hotspot.id}
                     onClick={() => toggleHotspot(hotspot.id)}
-                    className="absolute hotspot"
+                    className={`absolute hotspot ${activeHotspot === hotspot.id ? 'bg-brand-aqua text-white' : 'bg-white text-primary'}`}
                     style={{ left: `${hotspot.x}%`, top: `${hotspot.y}%`, transform: 'translate(-50%, -50%)' }}
                     aria-label={`View ${hotspot.title} details`}
                   >
-                    <span className="text-primary font-bold text-lg">+</span>
+                    <span className="font-bold text-lg">+</span>
                   </button>
                 ))}
 

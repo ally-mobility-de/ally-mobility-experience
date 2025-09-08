@@ -309,12 +309,12 @@ const ProductPreview = () => {
               <img src={currentProduct.image} alt={`ally-mobility ${currentProduct.name} cargo trailer`} className="w-full h-auto object-cover transition-opacity duration-500 rounded-2xl" />
               
               {/* Interactive Hotspots */}
-              {currentProduct.hotspots.map(hotspot => <button key={hotspot.id} onClick={() => toggleHotspot(hotspot.id)} className="absolute hotspot" style={{
+              {currentProduct.hotspots.map(hotspot => <button key={hotspot.id} onClick={() => toggleHotspot(hotspot.id)} className={`absolute hotspot ${activeHotspot === hotspot.id ? 'bg-brand-aqua text-white' : 'bg-white text-primary'}`} style={{
               left: `${hotspot.x}%`,
               top: `${hotspot.y}%`,
               transform: 'translate(-50%, -50%)'
             }} aria-label={`View ${hotspot.title} details`}>
-                  <span className="text-primary font-bold text-lg">+</span>
+                  <span className="font-bold text-lg">+</span>
                 </button>)}
 
               {/* Hotspot Callouts with Connecting Lines */}
