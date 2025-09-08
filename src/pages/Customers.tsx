@@ -3,10 +3,6 @@ import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import useCaseDelivery from "@/assets/use-case-delivery.jpg";
-import useCaseTrades from "@/assets/use-case-trades.jpg";
-import useCaseMunicipal from "@/assets/use-case-municipal.jpg";
-import heroCargoBike from "@/assets/hero-cargo-bike.jpg";
 import { Package, Truck, Zap, Shield, Users } from "lucide-react";
 const Customers = () => {
   const navigate = useNavigate();
@@ -47,44 +43,44 @@ const Customers = () => {
     title: "Parcels & Delivery Services",
     subtitle: "More volume for less money",
     description: "Extend your capacity and capabilities with our modular trailer system. Perfect for last-mile delivery operations that need flexibility and efficiency.",
-    image: useCaseDelivery,
+    image: "/Media/use-case-delivery.jpg",
     imageLeft: false
   }, {
     title: "Logistics & Transport",
     subtitle: "Fast, flexible, cost-conscious",
     description: "The professional solution for more speed in in-house & urban logistics. Streamline your operations with our modular cargo system.",
-    image: useCaseTrades,
+    image: "/Media/use-case-trades.jpg",
     imageLeft: true
   }];
   const detailedUseCases = [{
     title: "Cities & Municipalities",
     subtitle: "Today's handcart — by bike, cargo bike, or on foot",
     description: "Universal use guaranteed for municipal services, maintenance, and public space management. Sustainable solutions for modern city operations.",
-    image: useCaseMunicipal,
+    image: "/Media/use-case-municipal.jpg",
     features: ["Sustainable operations", "Noise reduction", "Emission-free transport", "Flexible applications"]
   }, {
     title: "Food & Catering",
     subtitle: "Fresh delivery, zero emissions",
     description: "Transport fresh food and catering supplies with temperature-controlled options. Perfect for restaurants, caterers, and food delivery services needing reliable transport.",
-    image: useCaseDelivery,
+    image: "/Media/use-case-delivery.jpg",
     features: ["Temperature control options", "Hygiene compliance", "Secure transport", "Professional presentation"]
   }, {
     title: "Healthcare & Medical",
     subtitle: "Reliable medical transport",
     description: "Safe and secure transport of medical supplies, equipment, and sensitive materials. Built for hospitals, pharmacies, and medical services requiring dependable logistics.",
-    image: useCaseTrades,
+    image: "/Media/use-case-trades.jpg",
     features: ["Secure compartments", "Climate control ready", "Medical compliance", "Emergency accessibility"]
   }, {
     title: "E-commerce & Retail",
     subtitle: "Last-mile delivery excellence",
     description: "Perfect for online retailers and local shops needing efficient, eco-friendly delivery solutions. Reach customers faster while reducing operational costs.",
-    image: useCaseDelivery,
+    image: "/Media/use-case-delivery.jpg",
     features: ["Same-day delivery", "Reduced fuel costs", "Customer satisfaction", "Brand visibility"]
   }, {
     title: "Construction & Trades", 
     subtitle: "Tools and materials on the move",
     description: "Transport construction tools, materials, and equipment efficiently across job sites. Built tough for the demands of professional tradespeople.",
-    image: useCaseTrades,
+    image: "/Media/use-case-trades.jpg",
     features: ["Heavy-duty construction", "Weather resistant", "Secure storage", "Job site mobility"]
   }];
 
@@ -111,7 +107,7 @@ const Customers = () => {
       
       {/* Hero Section */}
       <section className="section-padding mt-16 lg:mt-20 relative" style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroCargoBike})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/Media/hero-cargo-bike.jpg)`,
         backgroundSize: 'cover',
         backgroundPosition: 'bottom',
         backgroundRepeat: 'no-repeat'
@@ -260,7 +256,7 @@ const Customers = () => {
 
       {/* Large closing image */}
       <section className="h-[400px] relative">
-        <img src={heroCargoBike} alt="ally-mobility in action" className="w-full h-full object-cover" />
+        <img src="/Media/hero-cargo-bike.jpg" alt="ally-mobility in action" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
       </section>
 

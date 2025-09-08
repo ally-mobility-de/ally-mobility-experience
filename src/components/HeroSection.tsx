@@ -1,6 +1,4 @@
 import { Button } from "@/components/ui/button";
-import heroImage from "@/assets/hero-cargo-bike.jpg";
-import heroBikeStreet from "@/assets/hero-bike-street.jpg";
 
 const HeroSection = () => {
   const scrollToSection = (id: string) => {
@@ -12,7 +10,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 abstract-bg" style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/lovable-uploads/a4a900f7-d8b6-45a5-8ee6-9920dc1a0b27.png)`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.1)), url(/Media/hero-cargo-bike.jpg)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -74,7 +72,7 @@ const HeroSection = () => {
           <div className="relative animate-slide-in">
             <div className="relative rounded-2xl overflow-hidden shadow-soft">
               <img 
-                src={heroImage} 
+                src="/Media/hero-cargo-bike.jpg" 
                 alt="ally-mobility heavy-duty cargo bicycle trailer"
                 className="w-full h-auto object-cover"
                 loading="eager"

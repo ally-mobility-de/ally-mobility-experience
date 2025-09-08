@@ -1,5 +1,4 @@
 import { Button } from "@/components/ui/button";
-import testRideImage from "@/assets/test-ride-banner.jpg";
 
 const TestRideBanner = () => {
   const scrollToContact = () => {
@@ -14,7 +13,7 @@ const TestRideBanner = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
-          src={testRideImage}
+          src="/Media/test-ride-banner.jpg"
           alt="Test ride ally-mobility cargo bike"
           className="w-full h-full object-cover"
           loading="lazy"

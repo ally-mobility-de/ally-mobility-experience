@@ -5,10 +5,6 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
-import productFlatbed from "@/assets/product-flatbed.jpg";
-import productBox from "@/assets/product-box.jpg";
-import productSwap from "@/assets/product-swap.jpg";
-import dealerPerson from "@/assets/dealer-person.jpg";
 import { Package, Truck, Zap, Shield, Users } from "lucide-react";
 
 const Product = () => {
@@ -94,7 +90,7 @@ const Product = () => {
   const products = {
     flatbed: {
       name: 'Flatbed',
-      image: productFlatbed,
+      image: "/Media/product-flatbed.jpg",
       hotspots: [
         {
           id: 'frame',
@@ -141,7 +137,7 @@ const Product = () => {
     },
     box: {
       name: 'Box',
-      image: productBox,
+      image: "/Media/product-box.jpg",
       hotspots: [
         {
           id: 'doors',
@@ -190,7 +186,7 @@ const Product = () => {
     },
     swap: {
       name: 'Swap Container',
-      image: productSwap,
+      image: "/Media/product-swap.jpg",
       hotspots: [
         {
           id: 'container',
@@ -550,7 +546,7 @@ const Product = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img 
-                src={dealerPerson} 
+                src="/Media/dealer-person.jpg" 
                 alt="Become a dealer" 
                 className="w-full h-auto rounded-2xl shadow-lg"
               />

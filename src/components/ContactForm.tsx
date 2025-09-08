@@ -102,7 +102,7 @@ const ContactForm = () => {
           {/* Contact Image */}
           <div className="relative">
             <img 
-              src="/lovable-uploads/22891cfa-cad9-47b0-bec1-a05d1b576edc.png" 
+              src="/Media/contact-image.png" 
               alt="Contact ally-mobility team" 
               className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
             />

@@ -109,7 +109,7 @@ const Footer = () => {
           <div className="col-span-full mt-6">
             <div className="flex flex-col items-center text-center gap-3">
               <img
-                src="/lovable-uploads/adefa6cc-8b89-4cb0-a294-6db863b29fe1.png"
+                src="/Media/footer-logo.png"
                 alt="Gefördert durch das Bundesministerium für Wirtschaft und Klimaschutz, kofinanziert von der Europäischen Union, EXIST Existenzgründungen aus der Wissenschaft"
                 className="max-w-full h-auto max-h-24 w-auto"
               />
