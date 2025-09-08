@@ -260,7 +260,7 @@ const Customers = () => {
 
       {/* Large closing image */}
       <section className="h-[400px] relative">
-        <img src={heroCargoBike} alt="ally-mobility in action" className="w-full h-full object-cover" />
+        <img src="/lovable-uploads/c6f797a4-0a09-4b30-b973-9abf93d3fae5.png" alt="Aerial view of town square" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
       </section>
 
