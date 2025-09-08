@@ -60,31 +60,31 @@ const Customers = () => {
     title: "Cities & Municipalities",
     subtitle: "Today's handcart — by bike, cargo bike, or on foot",
     description: "Universal use guaranteed for municipal services, maintenance, and public space management. Sustainable solutions for modern city operations.",
-    image: useCaseMunicipal,
+    image: "/lovable-uploads/274bf0dd-8d84-44ec-85ba-d17b9dd855a9.png",
     features: ["Sustainable operations", "Noise reduction", "Emission-free transport", "Flexible applications"]
   }, {
     title: "Food & Catering",
     subtitle: "Fresh delivery, zero emissions",
     description: "Transport fresh food and catering supplies with temperature-controlled options. Perfect for restaurants, caterers, and food delivery services needing reliable transport.",
-    image: useCaseDelivery,
+    image: "/lovable-uploads/7a660477-c3ed-49dd-81a6-12488352bc7a.png",
     features: ["Temperature control options", "Hygiene compliance", "Secure transport", "Professional presentation"]
   }, {
     title: "Healthcare & Medical",
     subtitle: "Reliable medical transport",
     description: "Safe and secure transport of medical supplies, equipment, and sensitive materials. Built for hospitals, pharmacies, and medical services requiring dependable logistics.",
-    image: useCaseTrades,
+    image: "/lovable-uploads/77f80531-a6af-4684-8050-4933f562c6b1.png",
     features: ["Secure compartments", "Climate control ready", "Medical compliance", "Emergency accessibility"]
   }, {
     title: "E-commerce & Retail",
     subtitle: "Last-mile delivery excellence",
     description: "Perfect for online retailers and local shops needing efficient, eco-friendly delivery solutions. Reach customers faster while reducing operational costs.",
-    image: useCaseDelivery,
+    image: "/lovable-uploads/e4ed336e-42e5-410a-83ae-c4c356bea959.png",
     features: ["Same-day delivery", "Reduced fuel costs", "Customer satisfaction", "Brand visibility"]
   }, {
     title: "Construction & Trades", 
     subtitle: "Tools and materials on the move",
     description: "Transport construction tools, materials, and equipment efficiently across job sites. Built tough for the demands of professional tradespeople.",
-    image: useCaseTrades,
+    image: "/lovable-uploads/8ec38ff0-c003-4bdb-a181-986f630b322e.png",
     features: ["Heavy-duty construction", "Weather resistant", "Secure storage", "Job site mobility"]
   }];
 
