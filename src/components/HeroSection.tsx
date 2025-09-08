@@ -74,7 +74,7 @@ const HeroSection = () => {
           <div className="relative animate-slide-in">
             <div className="relative rounded-2xl overflow-hidden shadow-soft">
               <img 
-                src={heroImage} 
+                src="/lovable-uploads/4cff0e77-29e8-4430-a0ff-b601aa5d12e7.png" 
                 alt="ally-mobility heavy-duty cargo bicycle trailer"
                 className="w-full h-auto object-cover"
                 loading="eager"
