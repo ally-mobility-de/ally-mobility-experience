@@ -1,3 +1,6 @@
+import deliveryImage from "@/assets/use-case-delivery.jpg";
+import tradesImage from "@/assets/use-case-trades.jpg";
+import municipalImage from "@/assets/use-case-municipal.jpg";
 
 const UseCases = () => {
   const useCases = [
@@ -5,28 +8,28 @@ const UseCases = () => {
       title: "Parcels & Delivery Services",
       description: "More volume for less money. Extend your capacity and capabilities.",
       details: "Perfect for last-mile delivery, e-commerce fulfillment, and urban logistics. Navigate narrow streets and reach customers directly at their doorstep.",
-      image: "/Media/use-case-delivery.jpg",
+      image: deliveryImage,
       imagePosition: "right"
     },
     {
       title: "Logistics & Transport", 
       description: "Fast, flexible, cost-conscious — the professional solution for more speed in in-house & urban logistics.",
       details: "Streamline your supply chain with efficient inter-warehouse transport and flexible routing capabilities that adapt to traffic conditions.",
-      image: "/Media/use-case-municipal.jpg",
+      image: municipalImage,
       imagePosition: "left"
     },
     {
       title: "Trades & Service Providers",
       description: "The multitool for flexible deployment. Build instead of jam — more time for your craft.",
       details: "Transport tools, materials, and equipment efficiently. Access construction sites and service locations that are difficult to reach by van.",
-      image: "/Media/use-case-trades.jpg",
+      image: tradesImage,
       imagePosition: "right"
     },
     {
       title: "Cities & Municipalities",
       description: "Today's handcart — by bike, cargo bike, or on foot. Universal use guaranteed.",
       details: "Sustainable city services including park maintenance, waste management, and public space care while reducing urban traffic congestion.",
-    image: "/Media/use-case-municipal.jpg",
+      image: municipalImage,
       imagePosition: "left"
     }
   ];

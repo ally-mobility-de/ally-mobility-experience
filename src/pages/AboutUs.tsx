@@ -4,6 +4,8 @@ import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import heroCargoBike from "@/assets/hero-cargo-bike.jpg";
+import dealerPerson from "@/assets/dealer-person.jpg";
 import { Instagram, Linkedin, MessageCircle, MapPin, Phone, Mail, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
 
 const AboutUs = () => {
@@ -17,21 +19,21 @@ const AboutUs = () => {
       name: "Eliah",
       role: "CEO",
       quote: "We believe mobility should be sustainable, efficient, and accessible to everyone. Our mission is to revolutionize urban transport.",
-      image: "/Media/team-member-1.png"
+      image: "/lovable-uploads/605721e5-fa14-422b-b77a-35b93be0c8ff.png"
     },
     {
       id: 2,
       name: "Chanti",
       role: "CFO",
       quote: "Financial excellence drives sustainable growth. Every investment decision supports our mission of transforming urban mobility.",
-      image: "/Media/team-member-2.png"
+      image: "/lovable-uploads/6f7b3532-0531-4217-84ac-9969faa59981.png"
     },
     {
       id: 3,
       name: "Noah",
       role: "CTO",
       quote: "Innovation through engineering excellence. Every component is designed for durability, efficiency, and user experience.",
-      image: "/Media/team-member-3.png"
+      image: "/lovable-uploads/90e30aa4-dbec-42db-8be2-ccb1c039477f.png"
     }
   ];
 
@@ -52,7 +54,7 @@ const AboutUs = () => {
       location: "Frankfurt, Deutschland",
       description: "Deutschlands größte Fachmesse für nachhaltige Mobilität. Entdecken Sie die neuesten Innovationen im Bereich urbaner Logistik.",
       status: "upcoming",
-      image: "/Media/hero-cargo-bike.jpg"
+      image: heroCargoBike
     },
     {
       id: 2,
@@ -61,7 +63,7 @@ const AboutUs = () => {
       location: "Berlin, Deutschland",
       description: "Internationale Konferenz für nachhaltige Stadtlogistik und Mobilitätslösungen.",
       status: "upcoming",
-      image: "/Media/dealer-person.jpg"
+      image: dealerPerson
     },
     {
       id: 3,
@@ -70,7 +72,7 @@ const AboutUs = () => {
       location: "München, Deutschland", 
       description: "Das größte Lastenrad-Festival Europas mit Test-Parcours und Fachvorträgen.",
       status: "past",
-      image: "/Media/hero-cargo-bike.jpg"
+      image: heroCargoBike
     }
   ];
 
@@ -96,7 +98,7 @@ const AboutUs = () => {
       title: "Our Innovation Lab",
       subtitle: "Where ideas become reality",
       description: "Our state-of-the-art research and development facility is where we continuously innovate and test new solutions for sustainable urban mobility.",
-      image: "/Media/hero-cargo-bike.jpg",
+      image: heroCargoBike,
       buttonText: "Visit Our Lab"
     },
     {
@@ -104,7 +106,7 @@ const AboutUs = () => {
       title: "Sustainability First",
       subtitle: "Building for tomorrow",
       description: "Every decision we make is guided by our commitment to environmental responsibility and creating a more sustainable future for urban transportation.",
-      image: "/Media/dealer-person.jpg",
+      image: dealerPerson,
       buttonText: "Our Green Initiatives"
     },
     {
@@ -112,7 +114,7 @@ const AboutUs = () => {
       title: "Global Impact",
       subtitle: "Transforming cities worldwide",
       description: "From Berlin to Tokyo, our solutions are helping cities reduce emissions, ease traffic congestion, and create more livable urban spaces.",
-      image: "/Media/hero-cargo-bike.jpg",
+      image: heroCargoBike,
       buttonText: "See Our Impact"
     }
   ];
@@ -403,7 +405,7 @@ const AboutUs = () => {
             {/* Contact Image */}
             <div className="relative">
               <img 
-                src="/Media/contact-image.png" 
+                src="/lovable-uploads/22891cfa-cad9-47b0-bec1-a05d1b576edc.png" 
                 alt="Contact ally-mobility team" 
                 className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
               />

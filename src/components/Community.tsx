@@ -20,7 +20,7 @@ const Community = () => {
       excerpt: 'How electric cargo bikes are revolutionizing city logistics and reducing traffic congestion.',
       source: 'Handelsblatt',
       platform: 'News',
-      image: '/Media/community-1.png',
+      image: '/lovable-uploads/93f64d63-22a9-46a0-8efa-e70fbcfcbf49.png',
       link: '#'
     },
     {
@@ -29,7 +29,7 @@ const Community = () => {
       excerpt: 'Over 100 years of automotive experience meets cutting-edge e-mobility technology.',
       source: 'mubea-mobility.com',
       platform: 'Blog',
-      image: '/Media/community-2.png',
+      image: '/lovable-uploads/efb3ba3c-f7c0-44a1-b103-188df448839f.png',
       link: '#'
     },
     {
@@ -38,7 +38,7 @@ const Community = () => {
       excerpt: 'How local delivery services increased efficiency by 40% with modular cargo solutions.',
       source: 'ally-mobility',
       platform: 'LinkedIn',
-      image: '/Media/community-3.png',
+      image: '/lovable-uploads/a05449e6-bcab-4dd7-ab51-a035e539c831.png',
       link: '#'
     },
     {
@@ -47,7 +47,7 @@ const Community = () => {
       excerpt: 'Industry experts discuss the role of cargo bikes in sustainable city planning.',
       source: 'Transport Weekly',
       platform: 'News',
-      image: '/Media/community-4.png',
+      image: '/lovable-uploads/490bcce7-aa4a-4421-94be-46e49da9d3c8.png',
       link: '#'
     },
     {
@@ -56,7 +56,7 @@ const Community = () => {
       excerpt: 'Behind the scenes: Engineering the perfect balance of durability and efficiency.',
       source: 'ally-mobility',
       platform: 'Instagram',
-      image: '/Media/community-5.png',
+      image: '/lovable-uploads/4b19d7f4-7d6d-44c5-9db1-f14823dafd21.png',
       link: '#'
     }
   ];

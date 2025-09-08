@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import dealerImage from "@/assets/dealer-person.jpg";
 
 const DealerCTA = () => {
   const scrollToContact = () => {
@@ -16,7 +17,7 @@ const DealerCTA = () => {
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-soft">
               <img 
-                src="/Media/dealer-person.jpg"
+                src={dealerImage}
                 alt="Become an ally-mobility dealer"
                 className="w-full h-auto object-cover"
                 loading="lazy"
