@@ -535,10 +535,10 @@ const Product = () => {
               📄 ally-mobility product datasheet (PDF, 1.25 MB)
             </Button>
             <Button 
-              className="btn-aqua"
+              className="btn-contact"
               onClick={() => navigate('/about-us#contact')}
             >
-              📅 Schedule appointment
+              Contact us
             </Button>
           </div>
         </div>

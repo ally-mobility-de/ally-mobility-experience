@@ -39,7 +39,7 @@ const TestRideBanner = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button 
                 onClick={scrollToContact}
-                className="bg-white text-primary hover:bg-white/90 px-12 py-6 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300"
+                className="btn-contact px-12 py-6 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
               >
                 Contact us
               </Button>

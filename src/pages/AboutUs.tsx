@@ -395,10 +395,10 @@ const AboutUs = () => {
               </div>
 
               <Button 
-                className="btn-aqua text-lg px-8 py-4"
+                className="btn-contact text-lg px-8 py-4"
                 onClick={() => window.location.href = 'mailto:info@ally-mobility.com'}
               >
-                Contact now
+                Contact us
               </Button>
             </div>
 
