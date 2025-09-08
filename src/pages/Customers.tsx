@@ -113,7 +113,7 @@ const Customers = () => {
       <section className="section-padding mt-16 lg:mt-20 relative" style={{
         backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroCargoBike})`,
         backgroundSize: 'cover',
-        backgroundPosition: 'center',
+        backgroundPosition: 'bottom',
         backgroundRepeat: 'no-repeat'
       }}>
         <div className="container-custom text-center space-y-8">
