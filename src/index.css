@@ -35,7 +35,7 @@ All colors MUST be HSL.
     --accent-foreground: 0 0% 100%;
 
     /* Additional brand colors */
-    --brand-purple: 269 60% 73%; /* #D396EF */
+    --brand-purple: 280 100% 60%; /* #9933FF vibrant purple */
     --brand-dark-purple: 182 100% 23%; /* #4D2A73 */
     --brand-yellow: 62 100% 64%; /* #FCFF5B */
     --brand-aqua: 180 100% 50%; /* #00FFFF vibrant aquamarine */
