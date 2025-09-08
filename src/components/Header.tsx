@@ -74,7 +74,7 @@ const Header = () => {
             >
               About us
             </Link>
-            <Button onClick={handleContactClick} className="btn-contact">
+            <Button variant="outline" onClick={handleContactClick} className="btn-contact">
               Contact us
             </Button>
             
