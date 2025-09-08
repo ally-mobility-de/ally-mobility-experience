@@ -5,6 +5,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import ValuesBanner from "@/components/ValuesBanner";
 import dealerPerson from "@/assets/dealer-person.jpg";
 import { Package, Truck, Zap, Shield, Users } from "lucide-react";
 
@@ -489,35 +490,7 @@ const Product = () => {
         </div>
       </section>
 
-      {/* Customer Icons Navigation */}
-      <section className="section-padding bg-gradient-to-r from-primary to-brand-aqua">
-        <div className="container-custom text-center space-y-12">
-          <div className="space-y-4">
-            <h2 className="text-white">The Smart Alternative</h2>
-            <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Fast, quiet and efficient — right into the heart of the city
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
-            {customerIcons.map((item, index) => (
-              <button
-                key={index}
-                onClick={() => navigate('/customers')}
-                className="flex flex-col items-center space-y-4 group cursor-pointer"
-              >
-                <div className="w-16 h-16 bg-white/20 rounded-full flex items-center justify-center group-hover:bg-white/30 transition-colors duration-300">
-                  <item.icon className="w-8 h-8 text-white" />
-                </div>
-                <div className="text-center">
-                  <h3 className="font-semibold text-white text-sm">{item.title}</h3>
-                  <p className="text-xs text-white/80 mt-1">{item.description}</p>
-                </div>
-              </button>
-            ))}
-          </div>
-        </div>
-      </section>
+      <ValuesBanner />
 
       {/* Download & CTA */}
       <section className="section-padding bg-secondary-light">
