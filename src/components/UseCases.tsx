@@ -1,35 +1,31 @@
-import deliveryImage from "@/assets/use-case-delivery.jpg";
-import tradesImage from "@/assets/use-case-trades.jpg";
-import municipalImage from "@/assets/use-case-municipal.jpg";
-
 const UseCases = () => {
   const useCases = [
     {
       title: "Parcels & Delivery Services",
       description: "More volume for less money. Extend your capacity and capabilities.",
       details: "Perfect for last-mile delivery, e-commerce fulfillment, and urban logistics. Navigate narrow streets and reach customers directly at their doorstep.",
-      image: deliveryImage,
+      image: "/lovable-uploads/3e7d7e88-f834-4c1f-b376-207dfb71fc54.png",
       imagePosition: "right"
     },
     {
       title: "Logistics & Transport", 
       description: "Fast, flexible, cost-conscious — the professional solution for more speed in in-house & urban logistics.",
       details: "Streamline your supply chain with efficient inter-warehouse transport and flexible routing capabilities that adapt to traffic conditions.",
-      image: municipalImage,
+      image: "/lovable-uploads/3fd185e4-d956-4d4f-b43f-b3785ce1d31f.png",
       imagePosition: "left"
     },
     {
       title: "Trades & Service Providers",
       description: "The multitool for flexible deployment. Build instead of jam — more time for your craft.",
       details: "Transport tools, materials, and equipment efficiently. Access construction sites and service locations that are difficult to reach by van.",
-      image: tradesImage,
+      image: "/lovable-uploads/8fb94492-7fe2-4eae-9187-6ecec323bd8a.png",
       imagePosition: "right"
     },
     {
       title: "Cities & Municipalities",
       description: "Today's handcart — by bike, cargo bike, or on foot. Universal use guaranteed.",
       details: "Sustainable city services including park maintenance, waste management, and public space care while reducing urban traffic congestion.",
-      image: municipalImage,
+      image: "/lovable-uploads/08d6fb7d-e9df-42f7-894e-8d315e2c3e92.png",
       imagePosition: "left"
     }
   ];
