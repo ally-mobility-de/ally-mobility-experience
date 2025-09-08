@@ -3,13 +3,12 @@ import { Button } from "@/components/ui/button";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableRow } from "@/components/ui/table";
 import { Package } from "lucide-react";
-import flatbedImage from "@/assets/product-flatbed.jpg";
 import boxImage from "@/assets/product-box.jpg";
 import swapImage from "@/assets/product-swap.jpg";
 const products = {
   flatbed: {
     name: 'Flatbed',
-    image: flatbedImage,
+    image: "/lovable-uploads/a39f20e9-95d4-4158-a330-cd0b7e5f1bb3.png",
     hotspots: [{
       id: 'frame',
       x: 25,
