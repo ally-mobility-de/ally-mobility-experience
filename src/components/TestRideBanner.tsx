@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import testRideImage from "@/assets/test-ride-banner.jpg";
+import testRideImage from "/lovable-uploads/17af3fa0-85f3-4ef2-a676-a056b6303dc2.png";
 
 const TestRideBanner = () => {
   const scrollToContact = () => {
