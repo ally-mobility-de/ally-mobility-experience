@@ -177,7 +177,25 @@ const products = {
 };
 const ProductPreview = () => {
   const [activeProduct, setActiveProduct] = useState('flatbed');
-  const [activeHotspot, setActiveHotspot] = useState<string | null>(null);
+  const [activeHotspot, setActiveHotspot] = useState<string | null>('frame'); // Start with first hotspot open
+
+  // Auto-cycle through hotspots every 10 seconds
+  useEffect(() => {
+    const currentProduct = products[activeProduct as keyof typeof products];
+    const hotspots = currentProduct.hotspots;
+    
+    const interval = setInterval(() => {
+      setActiveHotspot(prevHotspot => {
+        if (!prevHotspot) return hotspots[0].id;
+        
+        const currentIndex = hotspots.findIndex(h => h.id === prevHotspot);
+        const nextIndex = (currentIndex + 1) % hotspots.length;
+        return hotspots[nextIndex].id;
+      });
+    }, 10000); // 10 seconds
+
+    return () => clearInterval(interval);
+  }, [activeProduct]);
 
   // Calculate callout position based on hotspot location - always away from center with L-shaped lines
   const getCalloutPosition = (hotspot: any) => {
@@ -238,11 +256,11 @@ const ProductPreview = () => {
   };
   useEffect(() => {
     const handleProductSwitch = (event: CustomEvent) => {
-      const {
-        productId
-      } = event.detail;
+      const { productId } = event.detail;
       setActiveProduct(productId);
-      setActiveHotspot(null);
+      // Set first hotspot of new product as active
+      const newProduct = products[productId as keyof typeof products];
+      setActiveHotspot(newProduct.hotspots[0].id);
     };
     window.addEventListener('switchProduct', handleProductSwitch as EventListener);
     return () => {
@@ -273,7 +291,9 @@ const ProductPreview = () => {
               <div className="flex flex-wrap gap-3">
                 {Object.entries(products).map(([key, product]) => <Button key={key} onClick={() => {
                 setActiveProduct(key);
-                setActiveHotspot(null);
+                // Set first hotspot of new product as active
+                const newProduct = products[key as keyof typeof products];
+                setActiveHotspot(newProduct.hotspots[0].id);
               }} variant={activeProduct === key ? "default" : "outline"} className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${activeProduct === key ? 'bg-primary text-primary-foreground shadow-soft' : 'bg-background border-2 border-secondary text-secondary hover:bg-secondary hover:text-white'}`}>
                     {product.name}
                     {key === 'swap' && <span className="ml-2 text-xs bg-brand-aqua text-white px-2 py-1 rounded">NEW</span>}
