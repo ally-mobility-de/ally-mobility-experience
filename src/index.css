@@ -35,7 +35,7 @@ All colors MUST be HSL.
     --accent-foreground: 0 0% 100%;
 
     /* Additional brand colors */
-    --brand-purple: 280 100% 60%; /* #9933FF vibrant purple */
+    --brand-purple: 269 60% 73%; /* #D396EF */
     --brand-dark-purple: 182 100% 23%; /* #4D2A73 */
     --brand-yellow: 62 100% 64%; /* #FCFF5B */
     --brand-aqua: 180 100% 50%; /* #00FFFF vibrant aquamarine */
@@ -140,12 +140,8 @@ All colors MUST be HSL.
   .btn-contact {
     @apply bg-brand-aqua text-white px-6 py-3 rounded-lg font-medium
            shadow-soft hover:shadow-lg transform hover:-translate-y-0.5
+           hover:bg-brand-purple hover:text-white
            transition-all duration-300 ease-out;
-  }
-
-  .btn-contact:hover {
-    background-color: hsl(var(--brand-purple)) !important;
-    color: white !important;
   }
 
   .btn-secondary-outline {
