@@ -47,13 +47,13 @@ const Customers = () => {
     title: "Parcels & Delivery Services",
     subtitle: "More volume for less money",
     description: "Extend your capacity and capabilities with our modular trailer system. Perfect for last-mile delivery operations that need flexibility and efficiency.",
-    image: useCaseDelivery,
+    image: "/lovable-uploads/5c14c775-2f2c-43f4-ab3c-44ca8511b32a.png",
     imageLeft: false
   }, {
     title: "Logistics & Transport",
     subtitle: "Fast, flexible, cost-conscious",
     description: "The professional solution for more speed in in-house & urban logistics. Streamline your operations with our modular cargo system.",
-    image: useCaseTrades,
+    image: "/lovable-uploads/5c14c775-2f2c-43f4-ab3c-44ca8511b32a.png",
     imageLeft: true
   }];
   const detailedUseCases = [{
