@@ -47,44 +47,44 @@ const Customers = () => {
     title: "Parcels & Delivery Services",
     subtitle: "More volume for less money",
     description: "Extend your capacity and capabilities with our modular trailer system. Perfect for last-mile delivery operations that need flexibility and efficiency.",
-    image: useCaseDelivery,
+    image: "/lovable-uploads/6e69389e-d4b4-4013-bb8c-c3a39015b30e.png",
     imageLeft: false
   }, {
     title: "Logistics & Transport",
     subtitle: "Fast, flexible, cost-conscious",
     description: "The professional solution for more speed in in-house & urban logistics. Streamline your operations with our modular cargo system.",
-    image: useCaseTrades,
+    image: "/lovable-uploads/5c14c775-2f2c-43f4-ab3c-44ca8511b32a.png",
     imageLeft: true
   }];
   const detailedUseCases = [{
     title: "Cities & Municipalities",
     subtitle: "Today's handcart — by bike, cargo bike, or on foot",
     description: "Universal use guaranteed for municipal services, maintenance, and public space management. Sustainable solutions for modern city operations.",
-    image: useCaseMunicipal,
+    image: "/lovable-uploads/274bf0dd-8d84-44ec-85ba-d17b9dd855a9.png",
     features: ["Sustainable operations", "Noise reduction", "Emission-free transport", "Flexible applications"]
   }, {
     title: "Food & Catering",
     subtitle: "Fresh delivery, zero emissions",
     description: "Transport fresh food and catering supplies with temperature-controlled options. Perfect for restaurants, caterers, and food delivery services needing reliable transport.",
-    image: useCaseDelivery,
+    image: "/lovable-uploads/7a660477-c3ed-49dd-81a6-12488352bc7a.png",
     features: ["Temperature control options", "Hygiene compliance", "Secure transport", "Professional presentation"]
   }, {
     title: "Healthcare & Medical",
     subtitle: "Reliable medical transport",
     description: "Safe and secure transport of medical supplies, equipment, and sensitive materials. Built for hospitals, pharmacies, and medical services requiring dependable logistics.",
-    image: useCaseTrades,
+    image: "/lovable-uploads/77f80531-a6af-4684-8050-4933f562c6b1.png",
     features: ["Secure compartments", "Climate control ready", "Medical compliance", "Emergency accessibility"]
   }, {
     title: "E-commerce & Retail",
     subtitle: "Last-mile delivery excellence",
     description: "Perfect for online retailers and local shops needing efficient, eco-friendly delivery solutions. Reach customers faster while reducing operational costs.",
-    image: useCaseDelivery,
+    image: "/lovable-uploads/e4ed336e-42e5-410a-83ae-c4c356bea959.png",
     features: ["Same-day delivery", "Reduced fuel costs", "Customer satisfaction", "Brand visibility"]
   }, {
     title: "Construction & Trades", 
     subtitle: "Tools and materials on the move",
     description: "Transport construction tools, materials, and equipment efficiently across job sites. Built tough for the demands of professional tradespeople.",
-    image: useCaseTrades,
+    image: "/lovable-uploads/8ec38ff0-c003-4bdb-a181-986f630b322e.png",
     features: ["Heavy-duty construction", "Weather resistant", "Secure storage", "Job site mobility"]
   }];
 
@@ -111,7 +111,7 @@ const Customers = () => {
       
       {/* Hero Section */}
       <section className="section-padding mt-16 lg:mt-20 relative" style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(${heroCargoBike})`,
+        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/lovable-uploads/2b358355-333a-4b95-a477-1d4caff1b7c6.png)`,
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat'
@@ -157,7 +157,7 @@ const Customers = () => {
       </section>
 
       {/* Interactive Icons Section */}
-      <section className="section-padding bg-gradient-to-br from-primary to-brand-aqua">
+      <section className="section-padding bg-gradient-to-br from-brand-aqua to-brand-teal">
         <div className="container-custom text-center space-y-12">
           <div className="space-y-4">
             <h2 className="text-white">The Smart Alternative</h2>
@@ -260,7 +260,7 @@ const Customers = () => {
 
       {/* Large closing image */}
       <section className="h-[400px] relative">
-        <img src={heroCargoBike} alt="ally-mobility in action" className="w-full h-full object-cover" />
+        <img src="/lovable-uploads/c6f797a4-0a09-4b30-b973-9abf93d3fae5.png" alt="Aerial view of town square" className="w-full h-full object-cover" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
       </section>
 
