@@ -5,6 +5,9 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import productFlatbed from "@/assets/product-flatbed.jpg";
+import productBox from "@/assets/product-box.jpg";
+import productSwap from "@/assets/product-swap.jpg";
 import dealerPerson from "@/assets/dealer-person.jpg";
 import { Package, Truck, Zap, Shield, Users } from "lucide-react";
 
@@ -91,7 +94,7 @@ const Product = () => {
   const products = {
     flatbed: {
       name: 'Flatbed',
-      image: "/lovable-uploads/6201085f-1cba-4953-b9f2-4fe3130f99ac.png",
+      image: productFlatbed,
       hotspots: [
         {
           id: 'frame',
@@ -138,7 +141,7 @@ const Product = () => {
     },
     box: {
       name: 'Box',
-      image: "/lovable-uploads/95ac716d-de01-4c19-b0b4-9b381a05897a.png",
+      image: productBox,
       hotspots: [
         {
           id: 'doors',
@@ -187,7 +190,7 @@ const Product = () => {
     },
     swap: {
       name: 'Swap Container',
-      image: "/lovable-uploads/4767952c-fdf6-4f68-8b13-715cd936b332.png",
+      image: productSwap,
       hotspots: [
         {
           id: 'container',
@@ -490,7 +493,7 @@ const Product = () => {
       </section>
 
       {/* Customer Icons Navigation */}
-      <section className="section-padding bg-brand-aqua">
+      <section className="section-padding bg-gradient-to-r from-primary to-brand-aqua">
         <div className="container-custom text-center space-y-12">
           <div className="space-y-4">
             <h2 className="text-white">The Smart Alternative</h2>
