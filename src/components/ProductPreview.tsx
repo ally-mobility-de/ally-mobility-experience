@@ -13,45 +13,45 @@ const products = {
       id: 'frame',
       x: 25,
       y: 30,
-          title: 'Verstärkter Rahmen',
-          description: 'Professionelle Komponente für maximale Haltbarkeit'
+      title: 'Reinforced Frame',
+      description: 'Professional grade component for maximum durability'
     }, {
       id: 'cargo',
       x: 60,
       y: 50,
-          title: 'Ladebereich',
-          description: 'Vielseitige Zurrösen für sicheren Transport'
+      title: 'Cargo Area',
+      description: 'Versatile lashing points for secure transport'
     }, {
       id: 'wheels',
       x: 15,
       y: 75,
-          title: 'Schwerlast-Räder',
-          description: 'Geländegängige Räder für Stadt- und Geländeeinsatz'
+      title: 'Heavy-Duty Wheels',
+      description: 'All-terrain wheels designed for urban and off-road use'
     }, {
       id: 'hitch',
       x: 80,
       y: 65,
-          title: 'Universal-Kupplung',
-          description: 'Kompatibel mit den meisten Fahrrad- und E-Bike-Typen'
+      title: 'Universal Hitch',
+      description: 'Compatible with most bicycle types and e-bikes'
     }, {
       id: 'suspension',
       x: 45,
       y: 80,
-          title: 'Federungssystem',
-          description: 'Fortgeschrittene Federung für sanfte Fahrt und Ladungsschutz'
+      title: 'Suspension System',
+      description: 'Advanced suspension for smooth ride and cargo protection'
     }],
     data: [{
-        label: "Zuladung",
-        value: "500 kg"
-      }, {
-        label: "Ladebereich",
-        value: "186 × 86 cm"
-      }, {
-        label: "Bordwände",
-        value: "25 cm"
-      }, {
-        label: "Ausstattung",
-        value: "Vielseitige Zurrösen"
+      label: "Payload",
+      value: "500 kg"
+    }, {
+      label: "Cargo area",
+      value: "186 × 86 cm"
+    }, {
+      label: "Side walls",
+      value: "25 cm"
+    }, {
+      label: "Features",
+      value: "Versatile lashing points"
     }]
   },
   box: {
@@ -61,14 +61,14 @@ const products = {
       id: 'doors',
       x: 80,
       y: 40,
-      title: 'Schlüsselloses Schließsystem',
-      description: '2 Türen mit erweiterten Sicherheitsfunktionen'
+      title: 'Keyless Lock System',
+      description: '2 doors with advanced security features'
     }, {
       id: 'walls',
       x: 45,
       y: 25,
-      title: 'Wetterfeste Wände',
-      description: 'Vollständig geschlossener Ladungsschutz vor Witterung'
+      title: 'Weatherproof Walls',
+      description: 'Fully enclosed cargo protection from elements'
     }, {
       id: 'floor',
       x: 55,
@@ -89,23 +89,23 @@ const products = {
       description: 'Low loading height for convenient access'
     }],
     data: [{
-        label: "Zuladung",
-        value: "500 kg"
-      }, {
-        label: "Ladebereich",
-        value: "182 × 82 cm"
-      }, {
-        label: "Ladehöhe",
-        value: "156 cm"
-      }, {
-        label: "Volumen",
-        value: "2.3 m³"
-      }, {
-        label: "Türen",
-        value: "2 Türen + schlüsselloses Schloss"
-      }, {
-        label: "Ausstattung",
-        value: "Vielseitige Zurrösen"
+      label: "Payload",
+      value: "500 kg"
+    }, {
+      label: "Cargo area",
+      value: "182 × 82 cm"
+    }, {
+      label: "Cargo height",
+      value: "156 cm"
+    }, {
+      label: "Volume",
+      value: "2.3 m³"
+    }, {
+      label: "Doors",
+      value: "2 doors + keyless lock"
+    }, {
+      label: "Features",
+      value: "Versatile lashing points"
     }]
   },
   swap: {
@@ -143,35 +143,35 @@ const products = {
       description: 'Precision alignment for easy loading'
     }],
     data: [{
-        label: "Konzept",
-        value: "Rollen, laden & fahren"
-      }, {
-        label: "Container",
-        value: "Bis zu 3 Container werkzeugfrei"
-      }, {
-        label: "Beladung",
-        value: "Rekordzeit be-/entladen"
-      }, {
-        label: "Zuladung",
-        value: "150 kg pro Container"
-      }, {
-        label: "Ladebereich",
-        value: "74 × 56 cm"
-      }, {
-        label: "Ladehöhe",
-        value: "156 cm"
-      }, {
-        label: "Volumen",
-        value: "2.3 m³"
-      }, {
-        label: "Türen",
-        value: "2 Türen + schlüsselloses Schloss"
-      }, {
-        label: "Ausstattung",
-        value: "Vielseitige Zurrösen"
-      }, {
-        label: "Mobilität",
-        value: "4 gebremste Rollen"
+      label: "Concept",
+      value: "Roll, load & go"
+    }, {
+      label: "Containers",
+      value: "Up to 3 wheeled containers tool-free"
+    }, {
+      label: "Loading",
+      value: "Record-time loading/unloading"
+    }, {
+      label: "Payload",
+      value: "150 kg per container"
+    }, {
+      label: "Cargo area",
+      value: "74 × 56 cm"
+    }, {
+      label: "Cargo height",
+      value: "156 cm"
+    }, {
+      label: "Volume",
+      value: "2.3 m³"
+    }, {
+      label: "Doors",
+      value: "2 doors + keyless lock"
+    }, {
+      label: "Features",
+      value: "Versatile lashing points"
+    }, {
+      label: "Mobility",
+      value: "4 braked castors"
     }]
   }
 };
@@ -278,7 +278,7 @@ const ProductPreview = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h2 className="text-primary">Maximale Einsatzvielfalt</h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">Flexieble Aufbauten für jeden Zweck.  Ob Pritsche, Box oder Wechselcontainer. Wir bieten Ihnen die passende Lösung.</p>
+              <p className="text-xl text-muted-foreground leading-relaxed">Flexible Aufbauten für jeden Zweck. Ob Pritsche, Box oder Wechselcontainer. Wir bieten Ihnen die passende Lösung.</p>
             </div>
 
             {/* Product Switcher */}
@@ -294,14 +294,6 @@ const ProductPreview = () => {
                     {key === 'swap' && <span className="ml-2 text-xs bg-brand-aqua text-white px-2 py-1 rounded">NEW</span>}
                   </Button>)}
               </div>
-              
-              <Button 
-                onClick={() => window.location.href = `/product?product=${activeProduct}`}
-                variant="default"
-                className="px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 font-medium"
-              >
-                Erfahre mehr
-              </Button>
             </div>
 
           </div>
