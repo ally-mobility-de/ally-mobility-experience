@@ -118,6 +118,7 @@ const Datenschutz = () => {
                       Beim <strong>Klick</strong> auf einen solchen Link verlassen Sie unsere Website; ab diesem Zeitpunkt verarbeitet der jeweilige 
                       Anbieter Daten <strong>in eigener Verantwortlichkeit</strong>. Bitte beachten Sie die dort geltenden Datenschutzhinweise.
                     </p>
+                    <p>
                     <div className="bg-muted p-4 rounded-lg border-l-4 border-primary">
                       <p className="font-semibold">
                         Wichtiger Hinweis: Wir <strong>betten</strong> keine Social‑Media‑Plugins (z. B. Like‑Buttons) ein; es findet daher 
