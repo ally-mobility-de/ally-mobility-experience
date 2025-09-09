@@ -294,6 +294,14 @@ const ProductPreview = () => {
                     {key === 'swap' && <span className="ml-2 text-xs bg-brand-aqua text-white px-2 py-1 rounded">NEW</span>}
                   </Button>)}
               </div>
+              
+              <Button 
+                onClick={() => window.location.href = `/product?product=${activeProduct}`}
+                variant="default"
+                className="px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 font-medium"
+              >
+                Erfahre mehr
+              </Button>
             </div>
 
           </div>
