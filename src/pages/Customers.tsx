@@ -14,78 +14,78 @@ const Customers = () => {
   const [activeIcon, setActiveIcon] = useState<number | null>(0); // Default to first item
   const customerIcons = [{
     icon: Package,
-    title: "Affordable & Practical",
-    subtitle: "More volume for less money",
-    description: "Navigate narrow streets, bike lanes, and pedestrian areas that larger vehicles can't access. Deliver directly to customers' doors without parking restrictions or traffic delays.",
+    title: "Günstig & Praktisch",
+    subtitle: "Mehr Volumen für weniger Geld",
+    description: "Navigieren Sie durch enge Straßen, Radwege und Fußgängerzonen, die größere Fahrzeuge nicht erreichen können. Liefern Sie direkt vor die Haustür ohne Parkbeschränkungen oder Verkehrsstaus.",
     isActive: false
   }, {
     icon: Truck,
-    title: "Robust & Reliable",
-    subtitle: "Proven components & materials",
-    description: "Built with professional-grade materials and components tested for maximum durability in demanding urban environments.",
+    title: "Robust & Zuverlässig",
+    subtitle: "Bewährte Komponenten & Materialien",
+    description: "Gebaut mit professionellen Materialien und Komponenten, die für maximale Haltbarkeit in anspruchsvollen urbanen Umgebungen getestet wurden.",
     isActive: false
   }, {
     icon: Zap,
-    title: "More Flexibility",
-    subtitle: "Modular & versatile, by bike or on foot",
-    description: "Switch between bike-powered transport and manual operation. Modular design adapts to different cargo needs instantly.",
+    title: "Mehr Flexibilität",
+    subtitle: "Modular & vielseitig, per Rad oder zu Fuß",
+    description: "Wechseln Sie zwischen Fahrradantrieb und manueller Bedienung. Modulares Design passt sich verschiedenen Ladungsanforderungen sofort an.",
     isActive: false
   }, {
     icon: Shield,
-    title: "Barrier-Free Mobility",
-    subtitle: "Past traffic, through bollards, right to the doorstep",
-    description: "Navigate narrow streets, bike lanes, and pedestrian areas that larger vehicles can't access. Deliver directly to customers' doors without parking restrictions or traffic delays.",
+    title: "Barrierefreie Mobilität",
+    subtitle: "Am Verkehr vorbei, durch Poller, direkt vor die Haustür",
+    description: "Navigieren Sie durch enge Straßen, Radwege und Fußgängerzonen, die größere Fahrzeuge nicht erreichen können. Liefern Sie direkt vor die Haustür ohne Parkbeschränkungen oder Verkehrsstaus.",
     isActive: false
   }, {
     icon: Users,
-    title: "Simple & Accessible",
-    subtitle: "No driver's license, no stress",
-    description: "Anyone can operate our cargo solutions without special licensing or training. Simple, intuitive design makes urban logistics accessible to everyone.",
+    title: "Einfach & Zugänglich",
+    subtitle: "Kein Führerschein, kein Stress",
+    description: "Jeder kann unsere Cargo-Lösungen ohne spezielle Lizenz oder Schulung bedienen. Einfaches, intuitives Design macht urbane Logistik für jeden zugänglich.",
     isActive: false
   }];
   const headerUseCases = [{
-    title: "Parcels & Delivery Services",
-    subtitle: "More volume for less money",
-    description: "Extend your capacity and capabilities with our modular trailer system. Perfect for last-mile delivery operations that need flexibility and efficiency.",
+    title: "Pakete & Lieferdienste",
+    subtitle: "Mehr Volumen für weniger Geld",
+    description: "Erweitern Sie Ihre Kapazitäten und Möglichkeiten mit unserem modularen Anhängersystem. Perfekt für Lieferoperationen der letzten Meile, die Flexibilität und Effizienz benötigen.",
     image: "/lovable-uploads/6e69389e-d4b4-4013-bb8c-c3a39015b30e.png",
     imageLeft: false
   }, {
-    title: "Logistics & Transport",
-    subtitle: "Fast, flexible, cost-conscious",
-    description: "The professional solution for more speed in in-house & urban logistics. Streamline your operations with our modular cargo system.",
+    title: "Logistik & Transport",
+    subtitle: "Schnell, flexibel, kostenbewusst",
+    description: "Die professionelle Lösung für mehr Geschwindigkeit in der Inhouse- & urbanen Logistik. Optimieren Sie Ihre Abläufe mit unserem modularen Cargo-System.",
     image: "/lovable-uploads/5c14c775-2f2c-43f4-ab3c-44ca8511b32a.png",
     imageLeft: true
   }];
   const detailedUseCases = [{
-    title: "Cities & Municipalities",
-    subtitle: "Today's handcart — by bike, cargo bike, or on foot",
-    description: "Universal use guaranteed for municipal services, maintenance, and public space management. Sustainable solutions for modern city operations.",
+    title: "Städte & Kommunen",
+    subtitle: "Der heutige Handwagen — per Rad, Lastenrad oder zu Fuß",
+    description: "Universeller Einsatz garantiert für kommunale Dienste, Wartung und öffentliche Raumverwaltung. Nachhaltige Lösungen für moderne Stadtoperationen.",
     image: "/lovable-uploads/274bf0dd-8d84-44ec-85ba-d17b9dd855a9.png",
-    features: ["Sustainable operations", "Noise reduction", "Emission-free transport", "Flexible applications"]
+    features: ["Nachhaltige Operationen", "Lärmreduzierung", "Emissionsfreier Transport", "Flexible Anwendungen"]
   }, {
     title: "Food & Catering",
-    subtitle: "Fresh delivery, zero emissions",
-    description: "Transport fresh food and catering supplies with temperature-controlled options. Perfect for restaurants, caterers, and food delivery services needing reliable transport.",
+    subtitle: "Frische Lieferung, null Emissionen",
+    description: "Transport von frischen Lebensmitteln und Catering-Bedarf mit temperaturkontrollierten Optionen. Perfekt für Restaurants, Caterer und Food-Lieferdienste, die zuverlässigen Transport benötigen.",
     image: "/lovable-uploads/7a660477-c3ed-49dd-81a6-12488352bc7a.png",
-    features: ["Temperature control options", "Hygiene compliance", "Secure transport", "Professional presentation"]
+    features: ["Temperaturkontrolloptionen", "Hygiene-Compliance", "Sicherer Transport", "Professionelle Präsentation"]
   }, {
-    title: "Healthcare & Medical",
-    subtitle: "Reliable medical transport",
-    description: "Safe and secure transport of medical supplies, equipment, and sensitive materials. Built for hospitals, pharmacies, and medical services requiring dependable logistics.",
+    title: "Gesundheitswesen & Medizin",
+    subtitle: "Zuverlässiger Medizintransport",
+    description: "Sicherer und geschützter Transport von medizinischen Gütern, Ausrüstung und empfindlichen Materialien. Entwickelt für Krankenhäuser, Apotheken und medizinische Dienste, die zuverlässige Logistik benötigen.",
     image: "/lovable-uploads/77f80531-a6af-4684-8050-4933f562c6b1.png",
-    features: ["Secure compartments", "Climate control ready", "Medical compliance", "Emergency accessibility"]
+    features: ["Sichere Abteile", "Klimakontrolle bereit", "Medizinische Compliance", "Notfall-Zugänglichkeit"]
   }, {
-    title: "E-commerce & Retail",
-    subtitle: "Last-mile delivery excellence",
-    description: "Perfect for online retailers and local shops needing efficient, eco-friendly delivery solutions. Reach customers faster while reducing operational costs.",
+    title: "E-Commerce & Einzelhandel",
+    subtitle: "Exzellenz bei der letzten Meile",
+    description: "Perfekt für Online-Händler und lokale Geschäfte, die effiziente, umweltfreundliche Lieferlösungen benötigen. Erreichen Sie Kunden schneller bei reduzierten Betriebskosten.",
     image: "/lovable-uploads/e4ed336e-42e5-410a-83ae-c4c356bea959.png",
-    features: ["Same-day delivery", "Reduced fuel costs", "Customer satisfaction", "Brand visibility"]
+    features: ["Same-Day-Lieferung", "Reduzierte Treibstoffkosten", "Kundenzufriedenheit", "Markensichtbarkeit"]
   }, {
-    title: "Construction & Trades", 
-    subtitle: "Tools and materials on the move",
-    description: "Transport construction tools, materials, and equipment efficiently across job sites. Built tough for the demands of professional tradespeople.",
+    title: "Bau & Handwerk", 
+    subtitle: "Werkzeuge und Materialien unterwegs",
+    description: "Effizienter Transport von Bauwerkzeugen, Materialien und Ausrüstung über Baustellen hinweg. Robust gebaut für die Anforderungen professioneller Handwerker.",
     image: "/lovable-uploads/8ec38ff0-c003-4bdb-a181-986f630b322e.png",
-    features: ["Heavy-duty construction", "Weather resistant", "Secure storage", "Job site mobility"]
+    features: ["Robuste Konstruktion", "Wetterfest", "Sicherer Stauraum", "Mobilität auf der Baustelle"]
   }];
 
   // Handle navigation from ValuesBanner
@@ -149,7 +149,7 @@ const Customers = () => {
                 </p>
                 
                 <Button onClick={() => navigate('/product')} className="btn-secondary-outline">
-                  Learn More →
+                  Mehr erfahren →
                 </Button>
               </div>
             </div>)}
@@ -160,9 +160,9 @@ const Customers = () => {
       <section className="section-padding bg-gradient-to-r from-primary to-brand-aqua">
         <div className="container-custom text-center space-y-12">
           <div className="space-y-4">
-            <h2 className="text-white">The Smart Alternative</h2>
+            <h2 className="text-white">Die smarte Alternative</h2>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Fast, quiet and efficient — right into the heart of the city
+              Schnell, leise und effizient — direkt ins Herz der Stadt
             </p>
           </div>
           
@@ -227,7 +227,7 @@ const Customers = () => {
                 </p>
                 
                 <div className="space-y-3">
-                  <h4 className="font-semibold text-foreground">Key Benefits:</h4>
+                  <h4 className="font-semibold text-foreground">Wichtigste Vorteile:</h4>
                   <ul className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                     {useCase.features.map((feature, idx) => <li key={idx} className="flex items-center space-x-3">
                         <div className="w-2 h-2 bg-brand-aqua rounded-full flex-shrink-0"></div>
@@ -237,7 +237,7 @@ const Customers = () => {
                 </div>
                 
                 <Button onClick={() => navigate('/product')} className="btn-secondary-outline">
-                  Explore Solutions →
+                  Lösungen erkunden →
                 </Button>
               </div>
             </div>)}
@@ -247,13 +247,13 @@ const Customers = () => {
       {/* Test Ride CTA */}
       <section className="section-padding bg-gradient-to-br from-brand-purple via-accent to-brand-aqua">
         <div className="container-custom text-center space-y-8">
-          <h2 className="text-white">Book a Test Ride Now!</h2>
+          <h2 className="text-white">Jetzt eine Testfahrt buchen!</h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Experience the ally-mobility difference firsthand. Schedule your test ride 
-            and discover how our cargo solutions can transform your business.
+            Erleben Sie den ally-mobility Unterschied aus erster Hand. Vereinbaren Sie Ihre Testfahrt 
+            und entdecken Sie, wie unsere Cargo-Lösungen Ihr Geschäft transformieren können.
           </p>
           <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-purple" onClick={() => navigate('/about-us#contact')}>
-            Schedule Appointment
+            Termin vereinbaren
           </Button>
         </div>
       </section>

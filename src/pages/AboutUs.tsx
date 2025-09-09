@@ -18,21 +18,21 @@ const AboutUs = () => {
       id: 1,
       name: "Eliah",
       role: "CEO",
-      quote: "We believe mobility should be sustainable, efficient, and accessible to everyone. Our mission is to revolutionize urban transport.",
+      quote: "Wir glauben, dass Mobilität nachhaltig, effizient und für jeden zugänglich sein sollte. Unsere Mission ist es, den urbanen Transport zu revolutionieren.",
       image: "/lovable-uploads/605721e5-fa14-422b-b77a-35b93be0c8ff.png"
     },
     {
       id: 2,
       name: "Chanti",
       role: "CFO",
-      quote: "Financial excellence drives sustainable growth. Every investment decision supports our mission of transforming urban mobility.",
+      quote: "Finanzielle Exzellenz treibt nachhaltiges Wachstum an. Jede Investitionsentscheidung unterstützt unsere Mission, urbane Mobilität zu transformieren.",
       image: "/lovable-uploads/6f7b3532-0531-4217-84ac-9969faa59981.png"
     },
     {
       id: 3,
       name: "Noah",
       role: "CTO",
-      quote: "Innovation through engineering excellence. Every component is designed for durability, efficiency, and user experience.",
+      quote: "Innovation durch technische Exzellenz. Jede Komponente ist für Haltbarkeit, Effizienz und Benutzererfahrung entwickelt.",
       image: "/lovable-uploads/90e30aa4-dbec-42db-8be2-ccb1c039477f.png"
     }
   ];
@@ -95,27 +95,27 @@ const AboutUs = () => {
   const bannerBlocks = [
     {
       id: 1,
-      title: "Our Innovation Lab",
-      subtitle: "Where ideas become reality",
-      description: "Our state-of-the-art research and development facility is where we continuously innovate and test new solutions for sustainable urban mobility.",
+      title: "Unser Innovationslabor",
+      subtitle: "Wo Ideen Realität werden",
+      description: "Unsere hochmoderne Forschungs- und Entwicklungseinrichtung ist der Ort, wo wir kontinuierlich innovieren und neue Lösungen für nachhaltige urbane Mobilität testen.",
       image: heroCargoBike,
-      buttonText: "Visit Our Lab"
+      buttonText: "Besuchen Sie unser Labor"
     },
     {
       id: 2,
-      title: "Sustainability First",
-      subtitle: "Building for tomorrow",
-      description: "Every decision we make is guided by our commitment to environmental responsibility and creating a more sustainable future for urban transportation.",
+      title: "Nachhaltigkeit zuerst",
+      subtitle: "Bauen für morgen",
+      description: "Jede Entscheidung, die wir treffen, wird von unserem Engagement für Umweltverantwortung geleitet und schafft eine nachhaltigere Zukunft für urbanen Transport.",
       image: dealerPerson,
-      buttonText: "Our Green Initiatives"
+      buttonText: "Unsere grünen Initiativen"
     },
     {
       id: 3,
-      title: "Global Impact",
-      subtitle: "Transforming cities worldwide",
-      description: "From Berlin to Tokyo, our solutions are helping cities reduce emissions, ease traffic congestion, and create more livable urban spaces.",
+      title: "Globaler Einfluss",
+      subtitle: "Städte weltweit transformieren",
+      description: "Von Berlin bis Tokio helfen unsere Lösungen Städten dabei, Emissionen zu reduzieren, Verkehrsstaus zu verringern und lebenswertere urbane Räume zu schaffen.",
       image: heroCargoBike,
-      buttonText: "See Our Impact"
+      buttonText: "Sehen Sie unseren Einfluss"
     }
   ];
 
@@ -190,9 +190,9 @@ const AboutUs = () => {
       <section className="diagonal-section diagonal-colorful">
         <div className="diagonal-section-content">
           <div className="container-custom text-center space-y-12">
-            <h2 className="text-white text-5xl lg:text-6xl font-bold">Join Our Community</h2>
+            <h2 className="text-white text-5xl lg:text-6xl font-bold">Treten Sie unserer Community bei</h2>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Connect with us and stay updated on the latest in sustainable urban mobility
+              Verbinden Sie sich mit uns und bleiben Sie auf dem Laufenden über die neuesten Entwicklungen in nachhaltiger urbaner Mobilität
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -208,9 +208,9 @@ const AboutUs = () => {
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold bg-gradient-to-br from-pink-600 to-orange-500 bg-clip-text text-transparent">@ally.mobility</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">Follow our journey and see our products in action with daily updates and behind-the-scenes content</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">Folgen Sie unserer Reise und sehen Sie unsere Produkte in Aktion mit täglichen Updates und Behind-the-Scenes-Inhalten</p>
                   <Button className="w-full bg-gradient-to-r from-pink-500 to-orange-400 text-white border-0 hover:from-pink-600 hover:to-orange-500 rounded-2xl py-3 font-semibold shadow-lg">
-                    Follow on Instagram
+                    Auf Instagram folgen
                   </Button>
                 </div>
               </div>
@@ -227,9 +227,9 @@ const AboutUs = () => {
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-blue-700">ally-mobility</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">Professional updates, industry insights, and networking opportunities in sustainable mobility</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">Professionelle Updates, Branchen-Einblicke und Networking-Möglichkeiten in nachhaltiger Mobilität</p>
                   <Button className="w-full bg-blue-600 text-white border-0 hover:bg-blue-700 rounded-2xl py-3 font-semibold shadow-lg">
-                    Connect on LinkedIn
+                    Auf LinkedIn vernetzen
                   </Button>
                 </div>
               </div>
@@ -246,9 +246,9 @@ const AboutUs = () => {
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-blue-600">bikerave</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">Join our community discussions, get instant support, and connect with other mobility enthusiasts</p>
+                  <p className="text-muted-foreground text-sm leading-relaxed">Treten Sie unseren Community-Diskussionen bei, erhalten Sie sofortigen Support und vernetzen Sie sich mit anderen Mobilitäts-Enthusiasten</p>
                   <Button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white border-0 hover:from-blue-600 hover:to-blue-700 rounded-2xl py-3 font-semibold shadow-lg">
-                    Join Telegram
+                    Telegram beitreten
                   </Button>
                 </div>
               </div>
@@ -348,9 +348,9 @@ const AboutUs = () => {
             {/* Contact Information */}
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-primary text-4xl lg:text-5xl font-bold">Contact</h2>
+                <h2 className="text-primary text-4xl lg:text-5xl font-bold">Kontakt</h2>
                 <p className="text-xl text-muted-foreground">
-                  Ready to transform your urban logistics? Get in touch with our team.
+                  Bereit, Ihre urbane Logistik zu transformieren? Kontaktieren Sie unser Team.
                 </p>
               </div>
 
@@ -360,7 +360,7 @@ const AboutUs = () => {
                     <Mail className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">Email</p>
+                    <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">E-Mail</p>
                     <a 
                       href="mailto:info@ally-mobility.com" 
                       className="text-lg font-medium text-primary hover:text-secondary transition-colors"
@@ -398,7 +398,7 @@ const AboutUs = () => {
                 className="btn-contact text-lg px-8 py-4"
                 onClick={() => window.location.href = 'mailto:info@ally-mobility.com'}
               >
-                Contact us
+                Kontaktieren Sie uns
               </Button>
             </div>
 

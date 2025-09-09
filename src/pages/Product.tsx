@@ -91,50 +91,50 @@ const Product = () => {
 
   const products = {
     flatbed: {
-      name: 'Flatbed',
+      name: 'Pritsche',
       image: "/lovable-uploads/6201085f-1cba-4953-b9f2-4fe3130f99ac.png",
       hotspots: [
         {
           id: 'frame',
           x: 25,
           y: 30,
-          title: 'Reinforced Frame',
-          description: 'Professional grade component for maximum durability'
+          title: 'Verstärkter Rahmen',
+          description: 'Professionelle Komponente für maximale Haltbarkeit'
         },
         {
           id: 'cargo',
           x: 60,
           y: 50,
-          title: 'Cargo Area',
-          description: 'Versatile lashing points for secure transport'
+          title: 'Ladefläche',
+          description: 'Vielseitige Zurrösen für sicheren Transport'
         },
         {
           id: 'wheels',
           x: 15,
           y: 75,
-          title: 'Heavy-Duty Wheels',
-          description: 'All-terrain wheels designed for urban and off-road use'
+          title: 'Heavy-Duty Räder',
+          description: 'Geländegängige Räder für urbane und Off-Road Nutzung'
         },
         {
           id: 'hitch',
           x: 80,
           y: 65,
-          title: 'Universal Hitch',
-          description: 'Compatible with most bicycle types and e-bikes'
+          title: 'Universal-Kupplung',
+          description: 'Kompatibel mit den meisten Fahrrad- und E-Bike-Typen'
         },
         {
           id: 'suspension',
           x: 45,
           y: 80,
-          title: 'Suspension System',
-          description: 'Advanced suspension for smooth ride and cargo protection'
+          title: 'Federungssystem',
+          description: 'Fortschrittliche Federung für sanfte Fahrt und Ladungsschutz'
         }
       ],
       data: [
-        { label: "Payload", value: "500 kg" },
-        { label: "Cargo area", value: "186 × 86 cm" },
-        { label: "Side walls", value: "25 cm" },
-        { label: "Features", value: "Versatile lashing points" }
+        { label: "Nutzlast", value: "500 kg" },
+        { label: "Ladefläche", value: "186 × 86 cm" },
+        { label: "Seitenwände", value: "25 cm" },
+        { label: "Ausstattung", value: "Vielseitige Zurrösen" }
       ]
     },
     box: {
@@ -145,121 +145,121 @@ const Product = () => {
           id: 'doors',
           x: 80,
           y: 40,
-          title: 'Keyless Lock System',
-          description: '2 doors with advanced security features'
+          title: 'Schlüsselloses Schließsystem',
+          description: '2 Türen mit erweiterten Sicherheitsfeatures'
         },
         {
           id: 'walls',
           x: 45,
           y: 25,
-          title: 'Weatherproof Walls',
-          description: 'Fully enclosed cargo protection from elements'
+          title: 'Wetterfeste Wände',
+          description: 'Vollständig geschlossener Schutz vor Witterungseinflüssen'
         },
         {
           id: 'floor',
           x: 55,
           y: 70,
-          title: 'Reinforced Floor',
-          description: 'Heavy-duty flooring with anti-slip surface'
+          title: 'Verstärkter Boden',
+          description: 'Robuster Boden mit rutschfester Oberfläche'
         },
         {
           id: 'ventilation',
           x: 25,
           y: 35,
-          title: 'Ventilation System',
-          description: 'Optimal air circulation for cargo protection'
+          title: 'Belüftungssystem',
+          description: 'Optimale Luftzirkulation für Ladungsschutz'
         },
         {
           id: 'loading',
           x: 70,
           y: 60,
-          title: 'Easy Loading',
-          description: 'Low loading height for convenient access'
+          title: 'Einfache Beladung',
+          description: 'Niedrige Ladehöhe für bequemen Zugang'
         }
       ],
       data: [
-        { label: "Payload", value: "500 kg" },
-        { label: "Cargo area", value: "182 × 82 cm" },
-        { label: "Cargo height", value: "156 cm" },
-        { label: "Volume", value: "2.3 m³" },
-        { label: "Doors", value: "2 doors + keyless lock" },
-        { label: "Features", value: "Versatile lashing points" }
+        { label: "Nutzlast", value: "500 kg" },
+        { label: "Ladefläche", value: "182 × 82 cm" },
+        { label: "Ladehöhe", value: "156 cm" },
+        { label: "Volumen", value: "2.3 m³" },
+        { label: "Türen", value: "2 Türen + schlüsselloses Schloss" },
+        { label: "Ausstattung", value: "Vielseitige Zurrösen" }
       ]
     },
     swap: {
-      name: 'Swap Container',
+      name: 'Wechselcontainer',
       image: "/lovable-uploads/4767952c-fdf6-4f68-8b13-715cd936b332.png",
       hotspots: [
         {
           id: 'container',
           x: 30,
           y: 35,
-          title: 'Roll, load & go',
-          description: 'Up to 3 wheeled containers tool-free'
+          title: 'Rollen, laden & los',
+          description: 'Bis zu 3 Rollcontainer werkzeugfrei'
         },
         {
           id: 'castors',
           x: 70,
           y: 80,
-          title: '4 Braked Castors',
-          description: 'Smooth mobility and secure parking'
+          title: '4 Bremsrollen',
+          description: 'Geschmeidige Mobilität und sicheres Parken'
         },
         {
           id: 'mechanism',
           x: 50,
           y: 45,
-          title: 'Quick-Release System',
-          description: 'Effortless container swapping mechanism'
+          title: 'Schnellwechselsystem',
+          description: 'Müheloser Container-Wechselmechanismus'
         },
         {
           id: 'platform',
           x: 75,
           y: 55,
-          title: 'Modular Platform',
-          description: 'Stable base for secure container mounting'
+          title: 'Modulare Plattform',
+          description: 'Stabile Basis für sichere Container-Montage'
         },
         {
           id: 'guide',
           x: 35,
           y: 65,
-          title: 'Container Guides',
-          description: 'Precision alignment for easy loading'
+          title: 'Container-Führung',
+          description: 'Präzise Ausrichtung für einfache Beladung'
         }
       ],
       data: [
-        { label: "Concept", value: "Roll, load & go" },
-        { label: "Containers", value: "Up to 3 wheeled containers tool-free" },
-        { label: "Loading", value: "Record-time loading/unloading" },
-        { label: "Payload", value: "150 kg per container" },
-        { label: "Cargo area", value: "74 × 56 cm" },
-        { label: "Cargo height", value: "156 cm" },
-        { label: "Volume", value: "2.3 m³" },
-        { label: "Doors", value: "2 doors + keyless lock" },
-        { label: "Features", value: "Versatile lashing points" },
-        { label: "Mobility", value: "4 braked castors" }
+        { label: "Konzept", value: "Rollen, laden & los" },
+        { label: "Container", value: "Bis zu 3 Rollcontainer werkzeugfrei" },
+        { label: "Beladung", value: "Rekord-Be- und Entladung" },
+        { label: "Nutzlast", value: "150 kg pro Container" },
+        { label: "Ladefläche", value: "74 × 56 cm" },
+        { label: "Ladehöhe", value: "156 cm" },
+        { label: "Volumen", value: "2.3 m³" },
+        { label: "Türen", value: "2 Türen + schlüsselloses Schloss" },
+        { label: "Ausstattung", value: "Vielseitige Zurrösen" },
+        { label: "Mobilität", value: "4 Bremsrollen" }
       ]
     }
   };
 
   const customerIcons = [
-    { icon: Package, title: "Delivery Services", description: "Last-mile delivery solutions" },
-    { icon: Truck, title: "Logistics", description: "Professional transport solutions" },
-    { icon: Zap, title: "Service Providers", description: "Mobile service operations" },
-    { icon: Shield, title: "Municipalities", description: "Public service applications" },
-    { icon: Users, title: "Healthcare", description: "Medical supply transport" }
+    { icon: Package, title: "Lieferdienste", description: "Lösungen für die letzte Meile" },
+    { icon: Truck, title: "Logistik", description: "Professionelle Transportlösungen" },
+    { icon: Zap, title: "Serviceanbieter", description: "Mobile Serviceoperationen" },
+    { icon: Shield, title: "Kommunen", description: "Öffentliche Dienstanwendungen" },
+    { icon: Users, title: "Gesundheitswesen", description: "Transport medizinischer Güter" }
   ];
 
   const trailerBaseData = [
-    { label: "Load edge height", value: "45 cm" },
-    { label: "Load area L × W", value: "187 × 87 cm" },
-    { label: "Overrun brake", value: "4-way hydraulic" },
-    { label: "Perm. total weight", value: "600 kg" },
-    { label: "Curb weight", value: "90 kg" },
-    { label: "Handbrake", value: "With parking function" },
-    { label: "Hitch", value: "Ball head 50 mm / 18 mm" },
-    { label: "Towing vehicle", value: "1- and 2-track cargo bikes" },
-    { label: "Drive", value: "Optional, retrofittable" },
-    { label: "Hand operation", value: "Up to 6 km/h" }
+    { label: "Ladekantenhöhe", value: "45 cm" },
+    { label: "Ladefläche L × B", value: "187 × 87 cm" },
+    { label: "Auflaufbremse", value: "4-Wege hydraulisch" },
+    { label: "Zul. Gesamtgewicht", value: "600 kg" },
+    { label: "Eigengewicht", value: "90 kg" },
+    { label: "Handbremse", value: "Mit Parkfunktion" },
+    { label: "Kupplung", value: "Kugelkopf 50 mm / 18 mm" },
+    { label: "Zugfahrzeug", value: "1- und 2-spurige Lastenräder" },
+    { label: "Antrieb", value: "Optional, nachrüstbar" },
+    { label: "Handbetrieb", value: "Bis zu 6 km/h" }
   ];
 
   const currentProduct = products[activeProduct as keyof typeof products];
@@ -275,11 +275,11 @@ const Product = () => {
             {/* Left side - Product selection and text */}
             <div className="space-y-8">
               <div className="space-y-6">
-                <h1 className="text-primary">Maximum Versatility</h1>
+                <h1 className="text-primary">Maximale Vielseitigkeit</h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
-                  Flexible modules for every purpose. Thanks to a modular concept and a robust, 
-                  high-quality platform, our heavy-duty bicycle trailers are ready for anything. 
-                  Whether Flatbed, Box, or Swap Container — we have the right solution.
+                  Flexible Module für jeden Zweck. Dank modularem Konzept und einer robusten, 
+                  hochwertigen Plattform sind unsere Heavy-Duty Fahrradanhänger für alles bereit. 
+                  Ob Pritsche, Box oder Wechselcontainer — wir haben die richtige Lösung.
                 </p>
               </div>
 
@@ -301,7 +301,7 @@ const Product = () => {
                       }`}
                     >
                       {product.name}
-                      {key === 'swap' && <span className="ml-2 text-xs bg-brand-aqua text-white px-2 py-1 rounded">NEW</span>}
+                      {key === 'swap' && <span className="ml-2 text-xs bg-brand-aqua text-white px-2 py-1 rounded">NEU</span>}
                     </Button>
                   ))}
                 </div>
@@ -401,10 +401,10 @@ const Product = () => {
 
           {/* Technical Specifications with Use Case */}
           <div className="space-y-8">
-            <div className="text-center space-y-4">
-              <h3 className="text-2xl font-bold text-primary">Technical Specifications</h3>
+              <div className="text-center space-y-4">
+              <h3 className="text-2xl font-bold text-primary">Technische Spezifikationen</h3>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Detailed technical data for our modular cargo platform
+                Detaillierte technische Daten für unsere modulare Cargo-Plattform
               </p>
             </div>
 
@@ -413,14 +413,14 @@ const Product = () => {
               <div className="space-y-6">
                 <div className="space-y-4">
                   <h4 className="text-xl font-semibold text-primary">
-                    {currentProduct.name === 'Flatbed' && 'Perfect for Construction & Trades'}
-                    {currentProduct.name === 'Box' && 'Ideal for Secure Delivery Services'}
-                    {currentProduct.name === 'Swap Container' && 'Revolutionize Your Logistics'}
+                    {currentProduct.name === 'Pritsche' && 'Perfekt für Bau & Handwerk'}
+                    {currentProduct.name === 'Box' && 'Ideal für sichere Lieferdienste'}
+                    {currentProduct.name === 'Wechselcontainer' && 'Revolutionieren Sie Ihre Logistik'}
                   </h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    {currentProduct.name === 'Flatbed' && 'The flatbed configuration offers unlimited versatility for construction materials, tools, and equipment. Its open design with reinforced lashing points makes it perfect for contractors, landscapers, and service technicians who need to transport diverse cargo efficiently.'}
-                    {currentProduct.name === 'Box' && 'The enclosed box design provides weather protection and security for valuable cargo. Perfect for delivery services, e-commerce logistics, and businesses requiring secure transport of sensitive goods in urban environments.'}
-                    {currentProduct.name === 'Swap Container' && 'The innovative swap container system enables record-time loading and unloading. Ideal for high-frequency delivery routes, logistics companies, and businesses that need maximum efficiency in cargo handling operations.'}
+                    {currentProduct.name === 'Pritsche' && 'Die Pritschenkonfiguration bietet unbegrenzte Vielseitigkeit für Baumaterialien, Werkzeuge und Ausrüstung. Ihr offenes Design mit verstärkten Zurrösen macht sie perfekt für Handwerker, Landschaftsgärtner und Servicetechniker, die vielfältige Ladung effizient transportieren müssen.'}
+                    {currentProduct.name === 'Box' && 'Das geschlossene Box-Design bietet Wetterschutz und Sicherheit für wertvolle Ladung. Perfekt für Lieferdienste, E-Commerce-Logistik und Unternehmen, die sicheren Transport empfindlicher Güter in urbanen Umgebungen benötigen.'}
+                    {currentProduct.name === 'Wechselcontainer' && 'Das innovative Wechselcontainer-System ermöglicht Rekord-Be- und Entladung. Ideal für hochfrequente Lieferrouten, Logistikunternehmen und Betriebe, die maximale Effizienz bei Ladungsoperationen benötigen.'}
                   </p>
                 </div>
                 
@@ -431,31 +431,31 @@ const Product = () => {
                       {currentProduct.name === 'Box' && <Shield className="w-4 h-4 text-primary" />}
                       {currentProduct.name === 'Swap Container' && <Zap className="w-4 h-4 text-primary" />}
                     </div>
-                    <h5 className="font-medium text-primary">Key Benefits</h5>
+                    <h5 className="font-medium text-primary">Wichtigste Vorteile</h5>
                   </div>
                   <ul className="space-y-2 text-sm text-muted-foreground">
-                    {currentProduct.name === 'Flatbed' && (
+                    {currentProduct.name === 'Pritsche' && (
                       <>
-                        <li>• Versatile lashing points for any cargo type</li>
-                        <li>• Low loading height for easy access</li>
-                        <li>• Professional-grade reinforced frame</li>
-                        <li>• Compatible with all bike types</li>
+                        <li>• Vielseitige Zurrösen für jeden Ladungstyp</li>
+                        <li>• Niedrige Ladehöhe für einfachen Zugang</li>
+                        <li>• Professioneller verstärkter Rahmen</li>
+                        <li>• Kompatibel mit allen Fahrradtypen</li>
                       </>
                     )}
                     {currentProduct.name === 'Box' && (
                       <>
-                        <li>• Weather-protected cargo compartment</li>
-                        <li>• Keyless lock system for security</li>
-                        <li>• 2.3 m³ of enclosed storage space</li>
-                        <li>• Ideal for valuable or sensitive goods</li>
+                        <li>• Wettergeschütztes Ladeabteil</li>
+                        <li>• Schlüsselloses Schließsystem für Sicherheit</li>
+                        <li>• 2,3 m³ geschlossener Lagerraum</li>
+                        <li>• Ideal für wertvolle oder empfindliche Güter</li>
                       </>
                     )}
-                    {currentProduct.name === 'Swap Container' && (
+                    {currentProduct.name === 'Wechselcontainer' && (
                       <>
-                        <li>• Record-time loading/unloading</li>
-                        <li>• Up to 3 containers without tools</li>
-                        <li>• 4 braked castors for mobility</li>
-                        <li>• Perfect for high-frequency routes</li>
+                        <li>• Rekord-Be- und Entladung</li>
+                        <li>• Bis zu 3 Container ohne Werkzeug</li>
+                        <li>• 4 Bremsrollen für Mobilität</li>
+                        <li>• Perfekt für hochfrequente Routen</li>
                       </>
                     )}
                   </ul>
@@ -467,7 +467,7 @@ const Product = () => {
                 <div className="flex items-center gap-3 mb-4">
                   <Package className="w-5 h-5 text-primary" />
                   <h3 className="text-xl font-semibold text-primary">
-                    {currentProduct.name} Specifications
+                    {currentProduct.name} Spezifikationen
                   </h3>
                 </div>
                 <Table>
@@ -495,20 +495,20 @@ const Product = () => {
       {/* Download & CTA */}
       <section className="section-padding bg-secondary-light">
         <div className="container-custom text-center space-y-8">
-          <h2 className="text-primary">Get Detailed Information</h2>
+          <h2 className="text-primary">Detaillierte Informationen erhalten</h2>
           <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-            Download our comprehensive product datasheet or schedule a personal 
-            consultation to discuss your specific transport requirements.
+            Laden Sie unser umfassendes Produktdatenblatt herunter oder vereinbaren Sie 
+            eine persönliche Beratung, um Ihre spezifischen Transportanforderungen zu besprechen.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="btn-secondary-outline">
-              📄 ally-mobility product datasheet (PDF, 1.25 MB)
+              📄 ally-mobility Produktdatenblatt (PDF, 1,25 MB)
             </Button>
             <Button 
               className="btn-contact"
               onClick={() => navigate('/about-us#contact')}
             >
-              Contact us
+              Kontaktieren Sie uns
             </Button>
           </div>
         </div>
@@ -526,17 +526,17 @@ const Product = () => {
               />
             </div>
             <div className="space-y-6">
-              <h2 className="text-primary">Become a Dealer</h2>
+              <h2 className="text-primary">Werden Sie Händler</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Join our growing network of partners and bring sustainable mobility 
-                solutions to your region. We support you with comprehensive training, 
-                marketing materials, and ongoing technical support.
+                Treten Sie unserem wachsenden Partnernetzwerk bei und bringen Sie nachhaltige 
+                Mobilitätslösungen in Ihre Region. Wir unterstützen Sie mit umfassender Schulung, 
+                Marketingmaterialien und laufendem technischen Support.
               </p>
               <Button 
                 className="btn-aqua"
                 onClick={() => navigate('/about-us#contact')}
               >
-                Become a dealer
+                Händler werden
               </Button>
             </div>
           </div>
