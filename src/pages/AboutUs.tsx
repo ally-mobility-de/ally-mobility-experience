@@ -54,7 +54,7 @@ const AboutUs = () => {
       location: "Frankfurt, Deutschland",
       description: "Deutschlands größte Fachmesse für nachhaltige Mobilität. Entdecken Sie die neuesten Innovationen im Bereich urbaner Logistik.",
       status: "upcoming",
-      image: heroCargoBike
+      image: "/lovable-uploads/9b4e4bef-891c-4551-adf6-e03e4c96dbfb.png"
     },
     {
       id: 2,
@@ -63,7 +63,7 @@ const AboutUs = () => {
       location: "Berlin, Deutschland",
       description: "Internationale Konferenz für nachhaltige Stadtlogistik und Mobilitätslösungen.",
       status: "upcoming",
-      image: dealerPerson
+      image: "/lovable-uploads/bab5eb9f-31a2-47e6-a2ef-a6ba2f49cb98.png"
     },
     {
       id: 3,
@@ -72,7 +72,7 @@ const AboutUs = () => {
       location: "München, Deutschland", 
       description: "Das größte Lastenrad-Festival Europas mit Test-Parcours und Fachvorträgen.",
       status: "past",
-      image: heroCargoBike
+      image: "/lovable-uploads/9ab30c1f-6718-4c8b-a12e-d95bb1174523.png"
     }
   ];
 
