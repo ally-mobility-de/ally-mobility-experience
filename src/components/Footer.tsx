@@ -131,8 +131,8 @@ const Footer = () => {
             </div>
             
             <nav className="flex flex-wrap items-center gap-6 text-sm">
-              <a href="#legal-notice" className="text-white/60 hover:text-white transition-colors duration-300">
-                Legal Notice
+              <a href="/impressum" className="text-white/60 hover:text-white transition-colors duration-300">
+                Impressum
               </a>
               <a href="#privacy" className="text-white/60 hover:text-white transition-colors duration-300">
                 Privacy Policy
