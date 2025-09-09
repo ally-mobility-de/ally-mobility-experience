@@ -45,15 +45,7 @@ const HeroSection = () => {
                   <div className="w-2 h-2 bg-brand-aqua rounded-full"></div>
                   Schnell, leise und effizient: Mitten ins Herz der Stadt
                 </span>
-                <span className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-brand-aqua rounded-full"></div>
-                  Robust & Zuverlässig
-                </span>
-                <span className="flex items-center gap-2">
-                  <div className="w-2 h-2 bg-brand-aqua rounded-full"></div>
-                  Standatisiert
-                </span>
-              </div>
+               </div>
             </div>
           </div>
 
