@@ -37,9 +37,9 @@ const ContactForm = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-8">
             <div className="space-y-4">
-              <h2 className="text-primary text-4xl lg:text-5xl font-bold">Contact</h2>
+              <h2 className="text-primary text-4xl lg:text-5xl font-bold">Kontakt</h2>
               <p className="text-xl text-muted-foreground">
-                Ready to transform your urban logistics? Get in touch with our team.
+                Bereit, Ihre urbane Logistik zu transformieren? Nehmen Sie Kontakt mit unserem Team auf.
               </p>
             </div>
 
@@ -51,7 +51,7 @@ const ContactForm = () => {
                   </svg>
                 </div>
                 <div>
-                  <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">Email</p>
+                  <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">E-Mail</p>
                   <a 
                     href="mailto:info@allymobility" 
                     className="text-lg font-medium text-primary hover:text-secondary transition-colors"
@@ -95,7 +95,7 @@ const ContactForm = () => {
               className="btn-contact text-lg px-8 py-4"
               onClick={() => window.location.href = 'mailto:info@allymobility'}
             >
-              Contact us
+              Kontakt aufnehmen
             </Button>
           </div>
 

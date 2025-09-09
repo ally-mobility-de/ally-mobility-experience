@@ -1,30 +1,30 @@
 const UseCases = () => {
   const useCases = [
     {
-      title: "Parcels & Delivery Services",
-      description: "More volume for less money. Extend your capacity and capabilities.",
-      details: "Perfect for last-mile delivery, e-commerce fulfillment, and urban logistics. Navigate narrow streets and reach customers directly at their doorstep.",
+      title: "Pakete & Lieferdienste",
+      description: "Mehr Volumen für weniger Geld. Erweitern Sie Ihre Kapazität und Möglichkeiten.",
+      details: "Perfekt für die letzte Meile, E-Commerce-Fulfillment und urbane Logistik. Navigieren Sie durch enge Straßen und erreichen Sie Kunden direkt vor der Haustür.",
       image: "/lovable-uploads/3e7d7e88-f834-4c1f-b376-207dfb71fc54.png",
       imagePosition: "right"
     },
     {
-      title: "Logistics & Transport", 
-      description: "Fast, flexible, cost-conscious — the professional solution for more speed in in-house & urban logistics.",
-      details: "Streamline your supply chain with efficient inter-warehouse transport and flexible routing capabilities that adapt to traffic conditions.",
+      title: "Logistik & Transport", 
+      description: "Schnell, flexibel, kostenbewusst — die professionelle Lösung für mehr Tempo in der Inhouse- & urbanen Logistik.",
+      details: "Optimieren Sie Ihre Lieferkette mit effizientem innerbetrieblichen Transport und flexiblen Routingmöglichkeiten, die sich an Verkehrsbedingungen anpassen.",
       image: "/lovable-uploads/3fd185e4-d956-4d4f-b43f-b3785ce1d31f.png",
       imagePosition: "left"
     },
     {
-      title: "Trades & Service Providers",
-      description: "The multitool for flexible deployment. Build instead of jam — more time for your craft.",
-      details: "Transport tools, materials, and equipment efficiently. Access construction sites and service locations that are difficult to reach by van.",
+      title: "Handwerk & Dienstleister",
+      description: "Das Multitool für flexiblen Einsatz. Bauen statt stauen — mehr Zeit für Ihr Handwerk.",
+      details: "Transportieren Sie Werkzeuge, Materialien und Ausrüstung effizient. Erreichen Sie Baustellen und Servicestellen, die mit dem Transporter schwer zugänglich sind.",
       image: "/lovable-uploads/8fb94492-7fe2-4eae-9187-6ecec323bd8a.png",
       imagePosition: "right"
     },
     {
-      title: "Cities & Municipalities",
-      description: "Today's handcart — by bike, cargo bike, or on foot. Universal use guaranteed.",
-      details: "Sustainable city services including park maintenance, waste management, and public space care while reducing urban traffic congestion.",
+      title: "Städte & Kommunen",
+      description: "Der heutige Handkarren — mit Rad, Lastenrad oder zu Fuß. Universeller Einsatz garantiert.",
+      details: "Nachhaltige Stadtdienste einschließlich Parkpflege, Abfallwirtschaft und öffentliche Raumbetreuung bei gleichzeitiger Reduzierung des städtischen Verkehrsstaus.",
       image: "/lovable-uploads/08d6fb7d-e9df-42f7-894e-8d315e2c3e92.png",
       imagePosition: "left"
     }
@@ -43,9 +43,9 @@ const UseCases = () => {
         <div className="text-center space-y-16">
           {/* Header */}
           <div className="space-y-6">
-            <h2 className="text-brand-green">Built for Every Use Case</h2>
+            <h2 className="text-brand-green">Für jeden Anwendungsfall gebaut</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              From urban delivery to municipal services, ally-mobility trailers adapt to your specific needs
+              Von urbaner Lieferung bis zu kommunalen Diensten passen sich ally-mobility Anhänger an Ihre spezifischen Bedürfnisse an
             </p>
           </div>
 
@@ -82,7 +82,7 @@ const UseCases = () => {
                         : 'text-primary hover:text-brand-aqua'
                     }`}
                   >
-                    Learn more about this use case
+                    Mehr über diesen Anwendungsfall erfahren
                     <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>

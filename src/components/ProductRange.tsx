@@ -5,24 +5,24 @@ const ProductRange = () => {
     {
       id: 'flatbed',
       name: 'Flatbed',
-      title: 'The All-Rounder',
-      description: 'Turn your bike into a cargo bike or multiply your capacity.',
+      title: 'Der Allrounder',
+      description: 'Machen Sie aus Ihrem Rad ein Lastenrad oder vervielfachen Sie Ihre Kapazität.',
       image: "/lovable-uploads/6201085f-1cba-4953-b9f2-4fe3130f99ac.png",
       link: '#flatbed'
     },
     {
       id: 'box',
       name: 'Box',
-      title: 'A True Space Miracle',
-      description: 'With 2.3 m³ and 500 kg payload.',
+      title: 'Ein wahres Raumwunder',
+      description: 'Mit 2,3 m³ und 500 kg Zuladung.',
       image: "/lovable-uploads/95ac716d-de01-4c19-b0b4-9b381a05897a.png",
       link: '#box'
     },
     {
       id: 'swap-container',
       name: 'Swap Container',
-      title: 'Ready for the Swap?',
-      description: 'Up to 3 wheeled containers, tool-free, record times.',
+      title: 'Bereit für den Wechsel?',
+      description: 'Bis zu 3 Container, werkzeugfrei, in Rekordzeit.',
       image: "/lovable-uploads/4767952c-fdf6-4f68-8b13-715cd936b332.png",
       link: '#swap-container',
       highlight: true
@@ -44,9 +44,9 @@ const ProductRange = () => {
         <div className="text-center space-y-16">
           {/* Header */}
           <div className="space-y-6">
-            <h2 className="text-brand-green">Maximum Versatility</h2>
+            <h2 className="text-brand-green">Maximale Einsatzvielfalt</h2>
             <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-              Modules for every purpose
+              Module für jeden Zweck
             </p>
           </div>
 
@@ -71,9 +71,9 @@ const ProductRange = () => {
                     
                     {product.highlight && (
                       <div className="absolute top-4 left-4">
-                        <span className="bg-white/90 text-accent px-3 py-1 rounded-full text-sm font-medium shadow-lg">
-                          Featured
-                        </span>
+                         <span className="bg-white/90 text-accent px-3 py-1 rounded-full text-sm font-medium shadow-lg">
+                           Empfohlen
+                         </span>
                       </div>
                     )}
                   </div>

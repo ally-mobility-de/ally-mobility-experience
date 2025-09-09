@@ -52,7 +52,7 @@ const Header = () => {
                   : 'text-foreground hover:text-primary'
               }`}
             >
-              Product
+              Produkt
             </Link>
             <Link 
               to="/customers" 
@@ -62,7 +62,7 @@ const Header = () => {
                   : 'text-foreground hover:text-primary'
               }`}
             >
-              Customers
+              Kunden
             </Link>
             <Link 
               to="/about-us" 
@@ -72,10 +72,10 @@ const Header = () => {
                   : 'text-foreground hover:text-primary'
               }`}
             >
-              About us
+              Über uns
             </Link>
             <Button onClick={handleContactClick} className="btn-secondary-outline">
-              Contact us
+              Kontakt
             </Button>
             
           </nav>

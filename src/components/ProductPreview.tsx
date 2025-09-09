@@ -13,45 +13,45 @@ const products = {
       id: 'frame',
       x: 25,
       y: 30,
-      title: 'Reinforced Frame',
-      description: 'Professional grade component for maximum durability'
+          title: 'Verstärkter Rahmen',
+          description: 'Professionelle Komponente für maximale Haltbarkeit'
     }, {
       id: 'cargo',
       x: 60,
       y: 50,
-      title: 'Cargo Area',
-      description: 'Versatile lashing points for secure transport'
+          title: 'Ladebereich',
+          description: 'Vielseitige Zurrösen für sicheren Transport'
     }, {
       id: 'wheels',
       x: 15,
       y: 75,
-      title: 'Heavy-Duty Wheels',
-      description: 'All-terrain wheels designed for urban and off-road use'
+          title: 'Schwerlast-Räder',
+          description: 'Geländegängige Räder für Stadt- und Geländeeinsatz'
     }, {
       id: 'hitch',
       x: 80,
       y: 65,
-      title: 'Universal Hitch',
-      description: 'Compatible with most bicycle types and e-bikes'
+          title: 'Universal-Kupplung',
+          description: 'Kompatibel mit den meisten Fahrrad- und E-Bike-Typen'
     }, {
       id: 'suspension',
       x: 45,
       y: 80,
-      title: 'Suspension System',
-      description: 'Advanced suspension for smooth ride and cargo protection'
+          title: 'Federungssystem',
+          description: 'Fortgeschrittene Federung für sanfte Fahrt und Ladungsschutz'
     }],
     data: [{
-      label: "Payload",
-      value: "500 kg"
-    }, {
-      label: "Cargo area",
-      value: "186 × 86 cm"
-    }, {
-      label: "Side walls",
-      value: "25 cm"
-    }, {
-      label: "Features",
-      value: "Versatile lashing points"
+        label: "Zuladung",
+        value: "500 kg"
+      }, {
+        label: "Ladebereich",
+        value: "186 × 86 cm"
+      }, {
+        label: "Bordwände",
+        value: "25 cm"
+      }, {
+        label: "Ausstattung",
+        value: "Vielseitige Zurrösen"
     }]
   },
   box: {
@@ -61,14 +61,14 @@ const products = {
       id: 'doors',
       x: 80,
       y: 40,
-      title: 'Keyless Lock System',
-      description: '2 doors with advanced security features'
+      title: 'Schlüsselloses Schließsystem',
+      description: '2 Türen mit erweiterten Sicherheitsfunktionen'
     }, {
       id: 'walls',
       x: 45,
       y: 25,
-      title: 'Weatherproof Walls',
-      description: 'Fully enclosed cargo protection from elements'
+      title: 'Wetterfeste Wände',
+      description: 'Vollständig geschlossener Ladungsschutz vor Witterung'
     }, {
       id: 'floor',
       x: 55,
@@ -89,23 +89,23 @@ const products = {
       description: 'Low loading height for convenient access'
     }],
     data: [{
-      label: "Payload",
-      value: "500 kg"
-    }, {
-      label: "Cargo area",
-      value: "182 × 82 cm"
-    }, {
-      label: "Cargo height",
-      value: "156 cm"
-    }, {
-      label: "Volume",
-      value: "2.3 m³"
-    }, {
-      label: "Doors",
-      value: "2 doors + keyless lock"
-    }, {
-      label: "Features",
-      value: "Versatile lashing points"
+        label: "Zuladung",
+        value: "500 kg"
+      }, {
+        label: "Ladebereich",
+        value: "182 × 82 cm"
+      }, {
+        label: "Ladehöhe",
+        value: "156 cm"
+      }, {
+        label: "Volumen",
+        value: "2.3 m³"
+      }, {
+        label: "Türen",
+        value: "2 Türen + schlüsselloses Schloss"
+      }, {
+        label: "Ausstattung",
+        value: "Vielseitige Zurrösen"
     }]
   },
   swap: {
@@ -143,35 +143,35 @@ const products = {
       description: 'Precision alignment for easy loading'
     }],
     data: [{
-      label: "Concept",
-      value: "Roll, load & go"
-    }, {
-      label: "Containers",
-      value: "Up to 3 wheeled containers tool-free"
-    }, {
-      label: "Loading",
-      value: "Record-time loading/unloading"
-    }, {
-      label: "Payload",
-      value: "150 kg per container"
-    }, {
-      label: "Cargo area",
-      value: "74 × 56 cm"
-    }, {
-      label: "Cargo height",
-      value: "156 cm"
-    }, {
-      label: "Volume",
-      value: "2.3 m³"
-    }, {
-      label: "Doors",
-      value: "2 doors + keyless lock"
-    }, {
-      label: "Features",
-      value: "Versatile lashing points"
-    }, {
-      label: "Mobility",
-      value: "4 braked castors"
+        label: "Konzept",
+        value: "Rollen, laden & fahren"
+      }, {
+        label: "Container",
+        value: "Bis zu 3 Container werkzeugfrei"
+      }, {
+        label: "Beladung",
+        value: "Rekordzeit be-/entladen"
+      }, {
+        label: "Zuladung",
+        value: "150 kg pro Container"
+      }, {
+        label: "Ladebereich",
+        value: "74 × 56 cm"
+      }, {
+        label: "Ladehöhe",
+        value: "156 cm"
+      }, {
+        label: "Volumen",
+        value: "2.3 m³"
+      }, {
+        label: "Türen",
+        value: "2 Türen + schlüsselloses Schloss"
+      }, {
+        label: "Ausstattung",
+        value: "Vielseitige Zurrösen"
+      }, {
+        label: "Mobilität",
+        value: "4 gebremste Rollen"
     }]
   }
 };

@@ -16,17 +16,17 @@ const Footer = () => {
             <div className="space-y-4">
               <div className="text-2xl font-bold text-white">ally-mobility</div>
               <p className="text-white/80 leading-relaxed max-w-md">
-                Moving big things sustainably. Fast, quiet and efficient transport solutions 
-                for the urban environment.
+                Nachhaltig Großes Bewegen. Schnelle, leise und effiziente Transportlösungen 
+                für das urbane Umfeld.
               </p>
             </div>
             
             <div className="space-y-3">
-              <h4 className="font-semibold text-white">Contact</h4>
+              <h4 className="font-semibold text-white">Kontakt</h4>
               <div className="space-y-2 text-white/80">
                 <p>info@ally-mobility.com</p>
                 <p>+49 (0) 30 123 456 789</p>
-                <p>Berlin, Germany<br />Innovation District</p>
+                <p>Berlin, Deutschland<br />Innovation District</p>
               </div>
             </div>
 
@@ -47,60 +47,60 @@ const Footer = () => {
 
           {/* Product Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-white">Product</h4>
+            <h4 className="font-semibold text-white">Produkt</h4>
             <nav className="space-y-2">
               <button onClick={() => scrollToSection('product')} className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
-                Overview
+                Übersicht
               </button>
               <button onClick={() => scrollToSection('product')} className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
-                Flatbed
+                Pritsche
               </button>
               <button onClick={() => scrollToSection('product')} className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
                 Box
               </button>
               <button onClick={() => scrollToSection('product')} className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
-                Swap Container
+                Wechselcontainer
               </button>
             </nav>
           </div>
 
           {/* Customer Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-white">Customers</h4>
+            <h4 className="font-semibold text-white">Kunden</h4>
             <nav className="space-y-2">
               <button onClick={() => scrollToSection('customers')} className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
-                Use Cases
+                Anwendungsfälle
               </button>
               <a href="#delivery" className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
-                Delivery Services
+                Lieferdienste
               </a>
               <a href="#logistics" className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
-                Logistics
+                Logistik
               </a>
               <a href="#trades" className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
-                Trades & Services
+                Handwerk & Dienstleistungen
               </a>
               <a href="#municipal" className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
-                Municipalities
+                Kommunen
               </a>
             </nav>
           </div>
 
           {/* Company & Legal */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-white">Company</h4>
+            <h4 className="font-semibold text-white">Unternehmen</h4>
             <nav className="space-y-2">
               <button onClick={() => scrollToSection('about')} className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
-                About us
+                Über uns
               </button>
               <button onClick={() => scrollToSection('contact')} className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
-                Contact
+                Kontakt
               </button>
               <a href="#dealer" className="block text-brand-aqua font-medium hover:text-white transition-colors duration-300">
-                Become a Dealer
+                Händler werden
               </a>
               <a href="#events" className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
-                Event Calendar
+                Veranstaltungskalender
               </a>
             </nav>
           </div>
@@ -130,10 +130,10 @@ const Footer = () => {
             
             <nav className="flex flex-wrap items-center gap-6 text-sm">
               <a href="#legal-notice" className="text-white/60 hover:text-white transition-colors duration-300">
-                Legal Notice
+                Impressum
               </a>
               <a href="#privacy" className="text-white/60 hover:text-white transition-colors duration-300">
-                Privacy Policy
+                Datenschutz
               </a>
               
               

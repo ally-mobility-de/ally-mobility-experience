@@ -13,10 +13,10 @@ const CTABanner = () => {
     <section className="py-16 bg-gradient-to-r from-primary to-primary/80">
       <div className="container mx-auto px-6 text-center">
         <h2 className="text-3xl font-bold text-white mb-6">
-          Ready to Transform Your Transport?
+          Bereit, Ihren Transport zu transformieren?
         </h2>
         <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
-          Join the sustainable transport revolution with our innovative cargo bikes.
+          Schließen Sie sich der nachhaltigen Transportrevolution mit unseren innovativen Lastenrädern an.
         </p>
         <Button 
           onClick={scrollToContact}
@@ -24,7 +24,7 @@ const CTABanner = () => {
           size="lg"
           className="bg-white text-primary hover:bg-white/90"
         >
-          Get Started Today
+          Jetzt loslegen
         </Button>
       </div>
     </section>

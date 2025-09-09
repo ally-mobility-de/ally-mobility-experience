@@ -16,8 +16,8 @@ const Community = () => {
   const articles: ArticleCard[] = [
     {
       id: '1',
-      title: 'Urban Mobility Redefined',
-      excerpt: 'How electric cargo bikes are revolutionizing city logistics and reducing traffic congestion.',
+      title: 'Urbane Mobilität neu definiert',
+      excerpt: 'Wie elektrische Lastenräder die Stadtlogistik revolutionieren und Verkehrsstaus reduzieren.',
       source: 'Handelsblatt',
       platform: 'News',
       image: '/lovable-uploads/93f64d63-22a9-46a0-8efa-e70fbcfcbf49.png',
@@ -25,8 +25,8 @@ const Community = () => {
     },
     {
       id: '2', 
-      title: 'Sustainability Drives Innovation',
-      excerpt: 'Over 100 years of automotive experience meets cutting-edge e-mobility technology.',
+      title: 'Nachhaltigkeit treibt Innovation an',
+      excerpt: 'Über 100 Jahre Automobilexpertise trifft auf modernste E-Mobilitätstechnologie.',
       source: 'mubea-mobility.com',
       platform: 'Blog',
       image: '/lovable-uploads/efb3ba3c-f7c0-44a1-b103-188df448839f.png',
@@ -34,8 +34,8 @@ const Community = () => {
     },
     {
       id: '3',
-      title: 'Customer Success Story',
-      excerpt: 'How local delivery services increased efficiency by 40% with modular cargo solutions.',
+      title: 'Kundenerfolgsgeschichte',
+      excerpt: 'Wie lokale Lieferdienste ihre Effizienz um 40% mit modularen Frachttransportlösungen steigerten.',
       source: 'ally-mobility',
       platform: 'LinkedIn',
       image: '/lovable-uploads/a05449e6-bcab-4dd7-ab51-a035e539c831.png',
@@ -43,8 +43,8 @@ const Community = () => {
     },
     {
       id: '4',
-      title: 'Future of Urban Transport', 
-      excerpt: 'Industry experts discuss the role of cargo bikes in sustainable city planning.',
+      title: 'Zukunft des urbanen Transports',
+      excerpt: 'Branchenexperten diskutieren die Rolle von Lastenrädern in der nachhaltigen Stadtplanung.',
       source: 'Transport Weekly',
       platform: 'News',
       image: '/lovable-uploads/490bcce7-aa4a-4421-94be-46e49da9d3c8.png',
@@ -52,8 +52,8 @@ const Community = () => {
     },
     {
       id: '5',
-      title: 'Innovation Spotlight',
-      excerpt: 'Behind the scenes: Engineering the perfect balance of durability and efficiency.',
+      title: 'Innovation im Fokus',
+      excerpt: 'Hinter den Kulissen: Die perfekte Balance zwischen Haltbarkeit und Effizienz entwickeln.',
       source: 'ally-mobility',
       platform: 'Instagram',
       image: '/lovable-uploads/4b19d7f4-7d6d-44c5-9db1-f14823dafd21.png',
@@ -91,7 +91,7 @@ const Community = () => {
             <div className="space-y-6">
               <h2 className="text-white">Community & Press</h2>
               <p className="text-xl text-white/90 max-w-3xl mx-auto">
-                Stay updated with the latest news, insights, and stories from the ally-mobility community
+                Bleiben Sie auf dem Laufenden mit den neuesten Nachrichten, Einblicken und Geschichten aus der ally-mobility Community
               </p>
             </div>
 
@@ -127,7 +127,7 @@ const Community = () => {
                                   href={article.link} 
                                   className="inline-flex items-center text-accent hover:text-accent/80 transition-colors font-medium"
                                 >
-                                  Read More →
+                                  Mehr lesen →
                                 </a>
                               </div>
                             </div>
