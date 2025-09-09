@@ -183,11 +183,9 @@ const ProductPreview = () => {
   useEffect(() => {
     const currentProduct = products[activeProduct as keyof typeof products];
     const hotspots = currentProduct.hotspots;
-    
     const interval = setInterval(() => {
       setActiveHotspot(prevHotspot => {
         if (!prevHotspot) return hotspots[0].id;
-        
         const currentIndex = hotspots.findIndex(h => h.id === prevHotspot);
         const nextIndex = (currentIndex + 1) % hotspots.length;
         return hotspots[nextIndex].id;
@@ -256,7 +254,9 @@ const ProductPreview = () => {
   };
   useEffect(() => {
     const handleProductSwitch = (event: CustomEvent) => {
-      const { productId } = event.detail;
+      const {
+        productId
+      } = event.detail;
       setActiveProduct(productId);
       // Set first hotspot of new product as active
       const newProduct = products[productId as keyof typeof products];
@@ -277,13 +277,8 @@ const ProductPreview = () => {
           {/* Content */}
           <div className="space-y-8">
             <div className="space-y-6">
-              <h2 className="text-primary">Maximum Versatility</h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Flexible modules for every purpose. Thanks to a modular concept and a robust, 
-                high-quality platform, our heavy-duty bicycle trailers are ready for anything. 
-                Whether Flatbed, Box, or Swap Container — we have the right solution. 
-                Discover the possibilities.
-              </p>
+              <h2 className="text-primary">Maximale Einsatzvielfalt</h2>
+              <p className="text-xl text-muted-foreground leading-relaxed">Flexieble Aufbauten für jeden Zweck.  Ob Pritsche, Box oder Wechselcontainer. Wir bieten Ihnen die passende Lösung.</p>
             </div>
 
             {/* Product Switcher */}
