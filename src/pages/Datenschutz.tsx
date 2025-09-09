@@ -242,8 +242,7 @@ const Datenschutz = () => {
                   </section>
 
                   <p className="italic text-sm text-muted-foreground border-t pt-6">
-                    Hinweis: Diese Informationen stellen keine Rechtsberatung dar. Für eine verbindliche Prüfung Ihrer individuellen 
-                    Situation wenden Sie sich bitte an eine spezialisierte Kanzlei oder Ihre Aufsichtsbehörde.
+                    Quelle: eRecht24
                   </p>
                 </div>
               </div>
