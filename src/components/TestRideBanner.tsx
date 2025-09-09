@@ -1,24 +1,18 @@
 import { Button } from "@/components/ui/button";
 import testRideImage from "/lovable-uploads/17af3fa0-85f3-4ef2-a676-a056b6303dc2.png";
-
 const TestRideBanner = () => {
   const scrollToContact = () => {
     const element = document.getElementById('contact');
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      element.scrollIntoView({
+        behavior: 'smooth'
+      });
     }
   };
-
-  return (
-    <section className="relative overflow-hidden">
+  return <section className="relative overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0">
-        <img 
-          src={testRideImage}
-          alt="Test ride ally-mobility cargo bike"
-          className="w-full h-full object-cover"
-          loading="lazy"
-        />
+        <img src={testRideImage} alt="Test ride ally-mobility cargo bike" className="w-full h-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-primary/80"></div>
       </div>
 
@@ -37,19 +31,10 @@ const TestRideBanner = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                onClick={scrollToContact}
-                className="btn-contact px-12 py-6 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1"
-              >
+              <Button onClick={scrollToContact} className="btn-contact px-12 py-6 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1">
                 Contact us
               </Button>
-              <Button 
-                variant="outline"
-                onClick={scrollToContact}
-                className="border-2 border-white text-white hover:bg-white hover:text-primary px-12 py-6 text-xl font-semibold rounded-2xl transition-all duration-300"
-              >
-                Learn More
-              </Button>
+              
             </div>
 
             {/* Trust Indicators */}
@@ -70,8 +55,6 @@ const TestRideBanner = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default TestRideBanner;
