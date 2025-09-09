@@ -108,13 +108,11 @@ const Footer = () => {
           {/* Funding Acknowledgment */}
           <div className="col-span-full mt-6">
             <div className="flex flex-col items-center text-center gap-3">
-              <img
-                src="/lovable-uploads/adefa6cc-8b89-4cb0-a294-6db863b29fe1.png"
-                alt="Gefördert durch das Bundesministerium für Wirtschaft und Klimaschutz, kofinanziert von der Europäischen Union, EXIST Existenzgründungen aus der Wissenschaft"
-                className="max-w-full h-auto max-h-24 w-auto"
-              />
+              <img src="/lovable-uploads/adefa6cc-8b89-4cb0-a294-6db863b29fe1.png" alt="Gefördert durch das Bundesministerium für Wirtschaft und Klimaschutz, kofinanziert von der Europäischen Union, EXIST Existenzgründungen aus der Wissenschaft" className="max-w-full h-auto max-h-24 w-auto" />
               <div className="flex justify-center w-full">
-                <p className="text-white/80 text-sm" style={{maxWidth: 'min(100%, 600px)'}}>
+                <p className="text-white/80 text-sm" style={{
+                maxWidth: 'min(100%, 600px)'
+              }}>
                   Ally-mobility wird im Rahmen des EXIST-Programms durch das Bundesministerium für Wirtschaft und Klimaschutz
                   und den Europäischen Sozialfonds Plus (ESF Plus) gefördert.
                 </p>
@@ -131,18 +129,14 @@ const Footer = () => {
             </div>
             
             <nav className="flex flex-wrap items-center gap-6 text-sm">
-              <a href="/impressum" className="text-white/60 hover:text-white transition-colors duration-300">
-                Impressum
+              <a href="#legal-notice" className="text-white/60 hover:text-white transition-colors duration-300">
+                Legal Notice
               </a>
-              <a href="/datenschutz" className="text-white/60 hover:text-white transition-colors duration-300">
-                Datenschutz
+              <a href="#privacy" className="text-white/60 hover:text-white transition-colors duration-300">
+                Privacy Policy
               </a>
-              <a href="#terms" className="text-white/60 hover:text-white transition-colors duration-300">
-                Terms & Conditions
-              </a>
-              <a href="#cookies" className="text-white/60 hover:text-white transition-colors duration-300">
-                Cookie Settings
-              </a>
+              
+              
             </nav>
           </div>
         </div>
