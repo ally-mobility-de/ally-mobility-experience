@@ -22,17 +22,17 @@ const TestRideBanner = () => {
           <div className="text-center space-y-8 max-w-4xl mx-auto">
             <div className="space-y-6">
               <h2 className="text-white text-5xl md:text-6xl lg:text-7xl font-bold">
-                Jetzt Probefahrt buchen!
+                Book a Test Ride Now!
               </h2>
               <p className="text-white/90 text-xl md:text-2xl leading-relaxed max-w-2xl mx-auto">
-                Erleben Sie die Kraft und Vielseitigkeit der ally-mobility Anhänger aus erster Hand. 
-                Spüren Sie den Unterschied, den nachhaltiger Transport für Ihr Unternehmen machen kann.
+                Experience the power and versatility of ally-mobility trailers firsthand. 
+                Feel the difference sustainable transport can make for your business.
               </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Button onClick={scrollToContact} className="btn-contact px-12 py-6 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1">
-                Kontakt aufnehmen
+                Contact us
               </Button>
               
             </div>
@@ -41,15 +41,15 @@ const TestRideBanner = () => {
             <div className="pt-12 grid grid-cols-1 md:grid-cols-3 gap-8 text-center">
               <div className="space-y-2">
                 <div className="text-4xl font-bold text-brand-yellow">500kg</div>
-                <div className="text-white/80">Maximale Zuladungskapazität</div>
+                <div className="text-white/80">Maximum payload capacity</div>
               </div>
               <div className="space-y-2">
                 <div className="text-4xl font-bold text-brand-yellow">50km</div>
-                <div className="text-white/80">Elektrische Reichweite mit 2 Batterien</div>
+                <div className="text-white/80">Electric range with 2 batteries</div>
               </div>
               <div className="space-y-2">
                 <div className="text-4xl font-bold text-brand-yellow">2.3m³</div>
-                <div className="text-white/80">Ladevolumen-Kapazität</div>
+                <div className="text-white/80">Cargo volume capacity</div>
               </div>
             </div>
           </div>
