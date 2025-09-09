@@ -278,7 +278,10 @@ const ProductPreview = () => {
           <div className="space-y-8">
             <div className="space-y-6">
               <h2 className="text-primary">Maximale Einsatzvielfalt</h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">Flexible Aufbauten für jeden Zweck. Ob Pritsche, Box oder Wechselcontainer. Wir bieten Ihnen die passende Lösung.</p>
+              <p className="text-xl text-muted-foreground leading-relaxed">Flexible Aufbauten für jeden Zweck. Ob Pritsche, Box oder Wechselcontainer. Wir bieten Ihnen die passende Lösung.
+Die robuste Basis bildet unser Fahrrad-Schwerlastanhänger, welcher für Lasten über 500 kg entwickelt wurde. Dank unseres Schnellwechsel-Systems ist ein Tausch zwischen den Aufbauten problemlos möglich.
+
+            </p>
             </div>
 
             {/* Product Switcher */}
