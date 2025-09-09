@@ -128,7 +128,7 @@ const AboutUs = () => {
         <div className="container-custom">
           <div className="text-center space-y-12 mb-16">
             <h2 className="text-6xl lg:text-8xl font-bold text-primary">
-              wir sind <span className="bg-gradient-to-r from-brand-aqua to-brand-purple bg-clip-text text-transparent">ally-mobility</span>
+              Wir sind <span className="bg-gradient-to-r from-brand-aqua to-brand-purple bg-clip-text text-transparent">ally-mobility</span>
             </h2>
           </div>
           
