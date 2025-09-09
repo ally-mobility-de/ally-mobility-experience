@@ -43,15 +43,15 @@ const HeroSection = () => {
               <div className="flex flex-wrap gap-6 text-sm text-background/80">
                 <span className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-brand-aqua rounded-full"></div>
-                  Schnell, leise und effizient
+                  Schnell, leise und effizient: Mitten ins Herz der Stadt
                 </span>
                 <span className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-brand-aqua rounded-full"></div>
-                  Mitten ins Herz der Stadt
+                  Robust & Zuverlässig
                 </span>
                 <span className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-brand-aqua rounded-full"></div>
-                  Bis zu 500 kg Zuladung
+                  Standatisiert
                 </span>
               </div>
             </div>
