@@ -7,51 +7,51 @@ import boxImage from "@/assets/product-box.jpg";
 import swapImage from "@/assets/product-swap.jpg";
 const products = {
   flatbed: {
-    name: 'Flatbed',
+    name: 'Pritsche',
     image: "/lovable-uploads/6201085f-1cba-4953-b9f2-4fe3130f99ac.png",
     hotspots: [{
       id: 'frame',
       x: 25,
       y: 30,
-      title: 'Reinforced Frame',
-      description: 'Professional grade component for maximum durability'
+      title: 'Verstärkter Rahmen',
+      description: 'Professionelle Komponente für maximale Haltbarkeit'
     }, {
       id: 'cargo',
       x: 60,
       y: 50,
-      title: 'Cargo Area',
-      description: 'Versatile lashing points for secure transport'
+      title: 'Ladefläche',
+      description: 'Vielseitige Verzurrösen für sicheren Transport'
     }, {
       id: 'wheels',
       x: 15,
       y: 75,
-      title: 'Heavy-Duty Wheels',
-      description: 'All-terrain wheels designed for urban and off-road use'
+      title: 'Schwerlast-Räder',
+      description: 'Geländetaugliche Räder für Stadt- und Offroad-Einsatz'
     }, {
       id: 'hitch',
       x: 80,
       y: 65,
-      title: 'Universal Hitch',
-      description: 'Compatible with most bicycle types and e-bikes'
+      title: 'Universal-Kupplung',
+      description: 'Kompatibel mit den meisten Fahrrad- und E-Bike-Typen'
     }, {
       id: 'suspension',
       x: 45,
       y: 80,
-      title: 'Suspension System',
-      description: 'Advanced suspension for smooth ride and cargo protection'
+      title: 'Federungssystem',
+      description: 'Fortschrittliche Federung für ruhige Fahrt und Ladungsschutz'
     }],
     data: [{
-      label: "Payload",
+      label: "Zuladung",
       value: "500 kg"
     }, {
-      label: "Cargo area",
+      label: "Ladefläche",
       value: "186 × 86 cm"
     }, {
-      label: "Side walls",
+      label: "Seitenwände",
       value: "25 cm"
     }, {
-      label: "Features",
-      value: "Versatile lashing points"
+      label: "Ausstattung",
+      value: "Vielseitige Verzurrösen"
     }]
   },
   box: {
@@ -61,117 +61,117 @@ const products = {
       id: 'doors',
       x: 80,
       y: 40,
-      title: 'Keyless Lock System',
-      description: '2 doors with advanced security features'
+      title: 'Schlüsselloses Schließsystem',
+      description: '2 Türen mit fortschrittlichen Sicherheitsfunktionen'
     }, {
       id: 'walls',
       x: 45,
       y: 25,
-      title: 'Weatherproof Walls',
-      description: 'Fully enclosed cargo protection from elements'
+      title: 'Wetterfeste Wände',
+      description: 'Vollständig geschlossener Schutz vor Witterungseinflüssen'
     }, {
       id: 'floor',
       x: 55,
       y: 70,
-      title: 'Reinforced Floor',
-      description: 'Heavy-duty flooring with anti-slip surface'
+      title: 'Verstärkter Boden',
+      description: 'Schwerlast-Bodenbelag mit rutschfester Oberfläche'
     }, {
       id: 'ventilation',
       x: 25,
       y: 35,
-      title: 'Ventilation System',
-      description: 'Optimal air circulation for cargo protection'
+      title: 'Belüftungssystem',
+      description: 'Optimale Luftzirkulation zum Schutz der Ladung'
     }, {
       id: 'loading',
       x: 70,
       y: 60,
-      title: 'Easy Loading',
-      description: 'Low loading height for convenient access'
+      title: 'Einfache Beladung',
+      description: 'Niedrige Ladehöhe für bequemen Zugang'
     }],
     data: [{
-      label: "Payload",
+      label: "Zuladung",
       value: "500 kg"
     }, {
-      label: "Cargo area",
+      label: "Ladefläche",
       value: "182 × 82 cm"
     }, {
-      label: "Cargo height",
+      label: "Ladehöhe",
       value: "156 cm"
     }, {
-      label: "Volume",
-      value: "2.3 m³"
+      label: "Volumen",
+      value: "2,3 m³"
     }, {
-      label: "Doors",
-      value: "2 doors + keyless lock"
+      label: "Türen",
+      value: "2 Türen + schlüsselloses Schloss"
     }, {
-      label: "Features",
-      value: "Versatile lashing points"
+      label: "Ausstattung",
+      value: "Vielseitige Verzurrösen"
     }]
   },
   swap: {
-    name: 'Swap Container',
+    name: 'Wechselcontainer',
     image: "/lovable-uploads/4767952c-fdf6-4f68-8b13-715cd936b332.png",
     hotspots: [{
       id: 'container',
       x: 30,
       y: 35,
-      title: 'Roll, load & go',
-      description: 'Up to 3 wheeled containers tool-free'
+      title: 'Rollen, laden & fahren',
+      description: 'Bis zu 3 Rollcontainer werkzeugfrei'
     }, {
       id: 'castors',
       x: 70,
       y: 80,
-      title: '4 Braked Castors',
-      description: 'Smooth mobility and secure parking'
+      title: '4 gebremste Rollen',
+      description: 'Sanfte Mobilität und sicheres Parken'
     }, {
       id: 'mechanism',
       x: 50,
       y: 45,
-      title: 'Quick-Release System',
-      description: 'Effortless container swapping mechanism'
+      title: 'Schnellwechsel-System',
+      description: 'Müheloser Container-Wechselmechanismus'
     }, {
       id: 'platform',
       x: 75,
       y: 55,
-      title: 'Modular Platform',
-      description: 'Stable base for secure container mounting'
+      title: 'Modulare Plattform',
+      description: 'Stabile Basis für sichere Container-Befestigung'
     }, {
       id: 'guide',
       x: 35,
       y: 65,
-      title: 'Container Guides',
-      description: 'Precision alignment for easy loading'
+      title: 'Container-Führungen',
+      description: 'Präzise Ausrichtung für einfache Beladung'
     }],
     data: [{
-      label: "Concept",
-      value: "Roll, load & go"
+      label: "Konzept",
+      value: "Rollen, laden & fahren"
     }, {
-      label: "Containers",
-      value: "Up to 3 wheeled containers tool-free"
+      label: "Container",
+      value: "Bis zu 3 Rollcontainer werkzeugfrei"
     }, {
-      label: "Loading",
-      value: "Record-time loading/unloading"
+      label: "Beladung",
+      value: "Rekordzeit Be-/Entladung"
     }, {
-      label: "Payload",
-      value: "150 kg per container"
+      label: "Zuladung",
+      value: "150 kg pro Container"
     }, {
-      label: "Cargo area",
+      label: "Ladefläche",
       value: "74 × 56 cm"
     }, {
-      label: "Cargo height",
+      label: "Ladehöhe",
       value: "156 cm"
     }, {
-      label: "Volume",
-      value: "2.3 m³"
+      label: "Volumen",
+      value: "2,3 m³"
     }, {
-      label: "Doors",
-      value: "2 doors + keyless lock"
+      label: "Türen",
+      value: "2 Türen + schlüsselloses Schloss"
     }, {
-      label: "Features",
-      value: "Versatile lashing points"
+      label: "Ausstattung",
+      value: "Vielseitige Verzurrösen"
     }, {
-      label: "Mobility",
-      value: "4 braked castors"
+      label: "Mobilität",
+      value: "4 gebremste Rollen"
     }]
   }
 };
@@ -294,7 +294,7 @@ Die robuste Basis bildet unser Fahrrad-Schwerlastanhänger, welcher für Lasten 
                 setActiveHotspot(newProduct.hotspots[0].id);
               }} variant={activeProduct === key ? "default" : "outline"} className={`px-6 py-3 rounded-lg font-medium transition-all duration-300 ${activeProduct === key ? 'bg-primary text-primary-foreground shadow-soft' : 'bg-background border-2 border-secondary text-secondary hover:bg-secondary hover:text-white'}`}>
                     {product.name}
-                    {key === 'swap' && <span className="ml-2 text-xs bg-brand-aqua text-white px-2 py-1 rounded">NEW</span>}
+                    {key === 'swap' && <span className="ml-2 text-xs bg-brand-aqua text-white px-2 py-1 rounded">NEU</span>}
                   </Button>)}
               </div>
             </div>
@@ -362,7 +362,7 @@ Die robuste Basis bildet unser Fahrrad-Schwerlastanhänger, welcher für Lasten 
             {/* Product indicator */}
             <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 shadow-card">
               <div className="text-sm font-medium text-primary">
-                {currentProduct.name} Configuration
+                {currentProduct.name} Konfiguration
               </div>
             </div>
           </div>
