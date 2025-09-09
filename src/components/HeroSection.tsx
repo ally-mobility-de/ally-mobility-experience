@@ -28,30 +28,30 @@ const HeroSection = () => {
 
             <div className="flex flex-col sm:flex-row gap-4">
               <Button onClick={() => scrollToSection('product')} className="btn-hero">
-                Go to Product
+                Zum Produkt
               </Button>
               <Button variant="outline" onClick={() => scrollToSection('contact')} className="btn-secondary-outline">
-                Get in Touch
+                Anfragen
               </Button>
             </div>
 
             {/* Trust indicators */}
             <div className="pt-8 space-y-4">
               <p className="text-sm font-medium text-background uppercase tracking-wide">
-                The Smart Alternative
+                Die Smart Alternative
               </p>
               <div className="flex flex-wrap gap-6 text-sm text-background/80">
                 <span className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-brand-aqua rounded-full"></div>
-                  Fast, quiet and efficient
+                  Schnell, leise und effizient
                 </span>
                 <span className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-brand-aqua rounded-full"></div>
-                  Right into the heart of the city
+                  Mitten ins Herz der Stadt
                 </span>
                 <span className="flex items-center gap-2">
                   <div className="w-2 h-2 bg-brand-aqua rounded-full"></div>
-                  Up to 500kg payload
+                  Bis zu 500 kg Zuladung
                 </span>
               </div>
             </div>
@@ -65,13 +65,13 @@ const HeroSection = () => {
             
             {/* Floating stats */}
             <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-card hidden lg:block">
-              <div className="text-2xl font-bold text-brand-green">500kg</div>
-              <div className="text-sm text-muted-foreground">Max Payload</div>
+              <div className="text-2xl font-bold text-brand-green">500 kg</div>
+              <div className="text-sm text-muted-foreground">Zuladung</div>
             </div>
             
             <div className="absolute -top-6 -right-6 bg-white rounded-xl p-4 shadow-card hidden lg:block">
-              <div className="text-2xl font-bold text-brand-green">2.3m³</div>
-              <div className="text-sm text-muted-foreground">Cargo Volume</div>
+              <div className="text-2xl font-bold text-brand-green">2.3 m³</div>
+              <div className="text-sm text-muted-foreground">Ladevolumen</div>
             </div>
           </div>
         </div>
