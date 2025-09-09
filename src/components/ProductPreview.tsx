@@ -295,12 +295,13 @@ const ProductPreview = () => {
                   </Button>)}
               </div>
               
-              <a 
-                href={`/product?product=${activeProduct}`}
-                className="text-primary font-medium hover:text-primary/80 underline underline-offset-4 transition-colors cursor-pointer"
+              <Button 
+                onClick={() => window.location.href = `/product?product=${activeProduct}`}
+                variant="default"
+                className="px-8 py-3 bg-primary text-primary-foreground hover:bg-primary/90 font-medium"
               >
                 Erfahre mehr
-              </a>
+              </Button>
             </div>
 
           </div>
