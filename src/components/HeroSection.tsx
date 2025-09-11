@@ -57,12 +57,12 @@ const HeroSection = () => {
             
             {/* Floating stats */}
             <div className="absolute -bottom-6 -left-6 bg-white rounded-xl p-4 shadow-card hidden lg:block">
-              <div className="text-2xl font-bold text-brand-green">500 kg</div>
+              <div className="text-2xl font-bold text-brand-green">Heavy-Duty: 500 kg</div>
               <div className="text-sm text-muted-foreground">Zuladung</div>
             </div>
             
             <div className="absolute -top-6 -right-6 bg-white rounded-xl p-4 shadow-card hidden lg:block">
-              <div className="text-2xl font-bold text-brand-green">2.3 m³</div>
+              <div className="text-2xl font-bold text-brand-green">Bis zu 2.3 m³</div>
               <div className="text-sm text-muted-foreground">Ladevolumen</div>
             </div>
           </div>
