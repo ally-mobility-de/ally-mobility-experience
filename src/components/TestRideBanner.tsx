@@ -13,7 +13,7 @@ const TestRideBanner = () => {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img src={testRideImage} alt="Test ride ally-mobility cargo bike" className="w-full h-full object-cover" loading="lazy" />
-        <div className="absolute inset-0 bg-primary/80"></div>
+        <div className="absolute inset-0 bg-primary/40"></div>
       </div>
 
       {/* Content */}
@@ -31,7 +31,7 @@ const TestRideBanner = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={scrollToContact} className="bg-purple-600 hover:bg-purple-700 text-white px-12 py-6 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300">
+              <Button onClick={scrollToContact} className="bg-slate-700 hover:bg-slate-800 text-white px-12 py-6 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300">
                 Kontakt aufnehmen
               </Button>
               
