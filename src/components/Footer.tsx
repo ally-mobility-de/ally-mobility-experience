@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -129,12 +131,12 @@ const Footer = () => {
             </div>
             
             <nav className="flex flex-wrap items-center gap-6 text-sm">
-              <a href="#legal-notice" className="text-white/60 hover:text-white transition-colors duration-300">
+              <Link to="/impressum" className="text-white/60 hover:text-white transition-colors duration-300">
                 Impressum
-              </a>
-              <a href="#privacy" className="text-white/60 hover:text-white transition-colors duration-300">
+              </Link>
+              <Link to="/datenschutz" className="text-white/60 hover:text-white transition-colors duration-300">
                 Datenschutz
-              </a>
+              </Link>
               
               
             </nav>
