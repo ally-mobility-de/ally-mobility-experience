@@ -23,8 +23,8 @@ const UseCases = () => {
     },
     {
       title: "Städte & Kommunen",
-      description: "Der heutige Handkarren — mit Rad, Lastenrad oder zu Fuß. Universeller Einsatz garantiert.",
-      details: "Nachhaltige Stadtdienste einschließlich Parkpflege, Abfallwirtschaft und öffentliche Raumbetreuung bei gleichzeitiger Reduzierung des städtischen Verkehrsstaus.",
+      description: "Sauber, leise, flexibel: als Handwagen oder mit dem Rad – mit positivem Image im öffentlichen Raum. ",
+      details: "Perfekt für Stadtdieste in verkehrsberuhigte Bereiche und Wege mit Zugangsbeschränkungen – etwa Parkanlagen, Campusareale oder Fußgängerzonen. Perfekt für den alltäglichen City-Einsatz: Stadtreinigung, Parkpflege, Werbeanbringung, etc. - Vorran als Vorbild.",
       image: "/lovable-uploads/08d6fb7d-e9df-42f7-894e-8d315e2c3e92.png",
       imagePosition: "left"
     }
