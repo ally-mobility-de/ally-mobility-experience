@@ -8,9 +8,9 @@ const UseCases = () => {
       imagePosition: "right"
     },
     {
-      title: "Logistik & Transport", 
-      description: "Schnell, flexibel, kostenbewusst — die professionelle Lösung für mehr Tempo in der Inhouse- & urbanen Logistik.",
-      details: "Optimieren Sie Ihre Lieferkette mit effizientem innerbetrieblichen Transport und flexiblen Routingmöglichkeiten, die sich an Verkehrsbedingungen anpassen.",
+      title: "Innerbetriebliche Logistik & Transport", 
+      description: "Echter Allrounder — robuster Handwagen für flexieble Zugfahrzeuge.",
+      details: "Für Werksgelände, Messehallen oder Campuslogistik: ein Handwagen, kompatibel mit Fahrrädern und Cargobikes. Unser System verbindet Außen- und Innenlogistik nahtlos. Standardisierte Maße erleichtern das Vorpacken und die Nutzung von Eurobehältern; Auf- und Abkoppeln geht in wenigen Handgriffen. Das robuste Design trägt bis zu 500 kg zuverlässig im Dauerbetrieb und lässt sich platzsparend auch senkrecht lagern. Weniger tragen, mehr rollen - das steigert Motivation, Gesundheit und Produktivität.",
       image: "/lovable-uploads/3fd185e4-d956-4d4f-b43f-b3785ce1d31f.png",
       imagePosition: "left"
     },
