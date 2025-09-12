@@ -15,9 +15,9 @@ const UseCases = () => {
       imagePosition: "left"
     },
     {
-      title: "Handwerk & Dienstleister",
-      description: "Das Multitool für flexiblen Einsatz. Bauen statt stauen — mehr Zeit für Ihr Handwerk.",
-      details: "Transportieren Sie Werkzeuge, Materialien und Ausrüstung effizient. Erreichen Sie Baustellen und Servicestellen, die mit dem Transporter schwer zugänglich sind.",
+      title: "Handwerk & mobile Dienstleistungen ",
+      description: "Ankuppeln und losfahren - die mobile Plattform für Ihre Ideen.",
+      details: "Von der mobilen Werkbank bis zum Imbisswagen: Unser Schwerlast-Anhänger ist für Heavy-Duty ausgelegt und trägt hohe Lasten zuverlässig. Dank standardisierter Maße und modularer Aufbauten (Box, Pritsche, Wechselcontainer) passen Sie die Plattform in Minuten an den Auftrag an. Das Zugfahrzeug wechseln Sie frei – ohne Änderungen am Aufbau. Vielseitige, geräumige und simple Transportlösung für City-Einsätze: Gartenpflege, Schornsteinfeger, Wasser-/Strominstallationen, Holzbau, Gebäudeservice, Marktstand, Street-Food – wir liefern die Plattform für Ihre Idee.",
       image: "/lovable-uploads/8fb94492-7fe2-4eae-9187-6ecec323bd8a.png",
       imagePosition: "right"
     },
@@ -63,7 +63,7 @@ const UseCases = () => {
                   useCase.imagePosition === 'left' ? 'lg:col-start-2' : ''
                 }`}>
                   <div className="space-y-4">
-                    <h3 className="text-3xl font-semibold text-brand-green text-center">
+                    <h3 className="text-3xl font-semibold text-brand-green text-left">
                       {useCase.title}
                     </h3>
                     <p className="text-xl text-brand-aqua font-medium text-left">
