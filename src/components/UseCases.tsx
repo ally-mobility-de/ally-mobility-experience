@@ -63,13 +63,13 @@ const UseCases = () => {
                   useCase.imagePosition === 'left' ? 'lg:col-start-2' : ''
                 }`}>
                   <div className="space-y-4">
-                    <h3 className="text-3xl font-semibold text-brand-green">
+                    <h3 className="text-3xl font-semibold text-brand-green text-center">
                       {useCase.title}
                     </h3>
-                    <p className="text-xl text-brand-aqua font-medium">
+                    <p className="text-xl text-brand-aqua font-medium text-left">
                       {useCase.description}
                     </p>
-                    <p className="text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed text-left">
                       {useCase.details}
                     </p>
                   </div>
