@@ -2,8 +2,8 @@ const UseCases = () => {
   const useCases = [
     {
       title: "Pakete & Lieferdienste",
-      description: "Mehr Volumen für weniger Geld. Erweitern Sie Ihre Kapazität und Möglichkeiten.",
-      details: "Perfekt für die letzte Meile, E-Commerce-Fulfillment und urbane Logistik. Navigieren Sie durch enge Straßen und erreichen Sie Kunden direkt vor der Haustür.",
+      description: "Mehr Volumen für weniger Geld - wir machen Touren effizient.",
+      details: "Perfekt für die letzte Meile, E-Commerce-Fulfillment und urbane Logistik. Unser Schwerlast-Fahrradanhänger skaliert Ihre Kapazitäten exakt nach Bedarf. Durch flexieibles An & Abkoppeln nutzen Sie unterschiedliche Zugfahrzeuge oder sogar zu Fuß. In Fußgängerzonen oder Gebäuden wechseln Sie in den Handbetrieb. So beliefern Sie komplexe Routen, sparen Rückfahrten dank größerer Zuladung und holen Retouren direkt am Sammelpukt per vorbeladenem Hänger ab.",
       image: "/lovable-uploads/3e7d7e88-f834-4c1f-b376-207dfb71fc54.png",
       imagePosition: "right"
     },
@@ -69,7 +69,8 @@ const UseCases = () => {
                     <p className="text-xl text-brand-aqua font-medium">
                       {useCase.description}
                     </p>
-                    <p className="text-lg text-muted-foreground leading-relaxed">
+                    <p className="text-muted-foreground leading-relaxed">
+                      {useCase.details}
                     </p>
                   </div>
 
