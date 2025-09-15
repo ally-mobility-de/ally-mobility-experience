@@ -3,21 +3,24 @@ const UseCases = () => {
     {
       title: "Pakete & Lieferdienste",
       description: "Mehr Volumen für weniger Geld - wir machen Touren effizient.",
-      details: "Perfekt für die letzte Meile, E-Commerce-Fulfillment und urbane Logistik. Unser Schwerlast-Fahrradanhänger skaliert Ihre Kapazitäten exakt nach Bedarf. Durch flexieibles An & Abkoppeln nutzen Sie unterschiedliche Zugfahrzeuge oder sogar zu Fuß. In Fußgängerzonen oder Gebäuden wechseln Sie in den Handbetrieb. So beliefern Sie komplexe Routen, sparen Rückfahrten dank größerer Zuladung und holen Retouren direkt am Sammelpukt per vorbeladenem Hänger ab.",
+      details: "Perfekt für die letzte Meile, E-Commerce-Fulfillment und urbane Logistik. Unser Schwerlast-Fahrradanhänger skaliert Ihre Kapazitäten exakt nach Bedarf. Durch flexieibles An & Abkoppeln nutzen Sie unterschiedliche Zugfahrzeuge oder sogar zu Fuß. In Fußgängerzonen oder Gebäuden wechseln Sie in den Handbetrieb. So beliefern Sie komplexe Routen, sparen Rückfahrten dank größerer Zuladung und holen Retouren direkt am Sammelpukt per vorbeladenem Hänger ab - ",
+      boldText: "die smarte Alternative.",
       image: "/lovable-uploads/3e7d7e88-f834-4c1f-b376-207dfb71fc54.png",
       imagePosition: "right"
     },
     {
       title: "Innerbetriebliche Logistik & Transport", 
       description: "Echter Allrounder — robuster Handwagen für flexieble Zugfahrzeuge.",
-      details: "Für Werksgelände, Messehallen oder Campuslogistik: ein Handwagen, kompatibel mit Fahrrädern und Cargobikes. Unser System verbindet Außen- und Innenlogistik nahtlos. Standardisierte Maße erleichtern das Vorpacken und die Nutzung von Eurobehältern; Auf- und Abkoppeln geht in wenigen Handgriffen. Das robuste Design trägt bis zu 500 kg zuverlässig im Dauerbetrieb und lässt sich platzsparend auch senkrecht lagern. Weniger tragen, mehr rollen - das steigert Motivation, Gesundheit und Produktivität.",
+      details: "Für Werksgelände, Messehallen oder Campuslogistik: ein Handwagen, kompatibel mit Fahrrädern und Cargobikes. Unser System verbindet Außen- und Innenlogistik nahtlos. Standardisierte Maße erleichtern das Vorpacken und die Nutzung von Eurobehältern; Auf- und Abkoppeln geht in wenigen Handgriffen. Das robuste Design trägt bis zu 500 kg zuverlässig im Dauerbetrieb und lässt sich platzsparend auch senkrecht lagern. Weniger tragen, mehr rollen - ",
+      boldText: "das steigert Motivation, Gesundheit und Produktivität.",
       image: "/lovable-uploads/3fd185e4-d956-4d4f-b43f-b3785ce1d31f.png",
       imagePosition: "left"
     },
     {
       title: "Handwerk & mobile Dienstleistungen ",
       description: "Ankuppeln und losfahren - die mobile Plattform für Ihre Ideen.",
-      details: "Von der mobilen Werkbank bis zum Imbisswagen: Unser Schwerlast-Anhänger ist für Heavy-Duty ausgelegt und trägt hohe Lasten zuverlässig. Dank standardisierter Maße und modularer Aufbauten (Box, Pritsche, Wechselcontainer) passen Sie die Plattform in Minuten an den Auftrag an. Das Zugfahrzeug wechseln Sie frei – ohne Änderungen am Aufbau. Vielseitige, geräumige und simple Transportlösung für City-Einsätze: Gartenpflege, Schornsteinfeger, Wasser-/Strominstallationen, Holzbau, Gebäudeservice, Marktstand, Street-Food – wir liefern die Plattform für Ihre Idee.",
+      details: "Von der mobilen Werkbank bis zum Imbisswagen: Unser Schwerlast-Anhänger ist für Heavy-Duty ausgelegt und trägt hohe Lasten zuverlässig. Dank standardisierter Maße und modularer Aufbauten (Box, Pritsche, Wechselcontainer) passen Sie die Plattform in Minuten an den Auftrag an. Das Zugfahrzeug wechseln Sie frei – ohne Änderungen am Aufbau. Vielseitige, geräumige und simple Transportlösung für City-Einsätze: Gartenpflege, Schornsteinfeger, Wasser-/Strominstallationen, Holzbau, Gebäudeservice, Marktstand, Street-Food – ",
+      boldText: "wir liefern die Plattform für Ihre Idee.", 
       image: "/lovable-uploads/8fb94492-7fe2-4eae-9187-6ecec323bd8a.png",
       imagePosition: "right"
     },
