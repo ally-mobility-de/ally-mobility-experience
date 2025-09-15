@@ -31,11 +31,11 @@ All colors MUST be HSL.
     --muted-foreground: 210 14% 45%;
 
     /* Accent: #C273BB purple */
-    --accent: 307 35% 60%;
+    --accent: 44 29% 96%;
     --accent-foreground: 0 0% 100%;
 
     /* Additional brand colors */
-    --brand-purple: 44 29% 96%;; /* Updated purple color */
+    --brand-purple: 264 28% 71%; /* Updated purple color */
     --brand-dark-purple: 182 100% 23%; /* #4D2A73 */
     --brand-yellow: 62 100% 64%; /* #FCFF5B */
     --brand-aqua: 157 39% 59%; /* #68C3A2 */
