@@ -57,6 +57,8 @@ const ProductRange = () => {
                   key={product.id}
                   className={`product-card group cursor-pointer ${
                     product.highlight ? 'purple-card ring-0' : ''
+                  } ${
+                    product.id === 'box' ? 'bg-white border-2 border-brand-purple' : ''
                   }`}
                   onClick={() => navigateToProduct(product.id)}
                 >
