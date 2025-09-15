@@ -31,7 +31,7 @@ const TestRideBanner = () => {
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button onClick={scrollToContact} className="bg-brand-purple hover:bg-brand-accent text-white px-12 py-6 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300">
+              <Button onClick={scrollToContact} className="bg-brand-aqua hover:bg-brand-purple text-white px-12 py-6 text-xl font-semibold rounded-2xl shadow-2xl hover:shadow-3xl transform hover:-translate-y-1 transition-all duration-300">
                 Kontakt aufnehmen
               </Button>
               

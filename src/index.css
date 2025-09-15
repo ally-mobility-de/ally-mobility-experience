@@ -149,7 +149,14 @@ All colors MUST be HSL.
 
   .btn-secondary-outline {
     @apply border-2 border-secondary text-secondary px-6 py-3 rounded-lg font-medium
-           hover:bg-secondary hover:text-white transition-all duration-300 ease-out;
+           hover:bg-brand-purple hover:text-white transition-all duration-300 ease-out;
+  }
+
+  .btn-aqua {
+    @apply bg-brand-aqua text-white px-8 py-4 rounded-lg font-medium text-lg
+           shadow-soft hover:shadow-lg transform hover:-translate-y-0.5 
+           hover:bg-brand-purple hover:text-white
+           transition-all duration-300 ease-out;
   }
 
   /* Interactive Hotspots */

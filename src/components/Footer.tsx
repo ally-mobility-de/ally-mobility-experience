@@ -84,7 +84,7 @@ const Footer = () => {
               <Link to="/about-us#contact" className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
                 Kontakt
               </Link>
-              <Link to="/product#dealer" className="block text-brand-aqua font-medium hover:text-white transition-colors duration-300">
+              <Link to="/product#dealer" className="block text-brand-aqua font-medium hover:text-brand-purple transition-colors duration-300">
                 Händler werden
               </Link>
               <Link to="/about-us#events" className="block text-white/80 hover:text-brand-aqua transition-colors duration-300">
