@@ -39,7 +39,7 @@ All colors MUST be HSL.
     --brand-dark-purple: 182 100% 23%; /* #4D2A73 */
     --brand-yellow: 62 100% 64%; /* #FCFF5B */
     --brand-aqua: 157 39% 59%; /* #68C3A2 */
-    --brand-aqua: 182 100% 23%; /*Dunkel Azurblau #007074 */
+    --brand-dark-aqua: 182 100% 23%; /*Dunkel Azurblau #007074 */
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
