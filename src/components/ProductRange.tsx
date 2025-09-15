@@ -56,7 +56,7 @@ const ProductRange = () => {
                 <div
                   key={product.id}
                   className={`product-card group cursor-pointer ${
-                    product.highlight ? 'bg-white border-4 border-brand-purple' : ''
+                    product.highlight ? 'bg-white border-3 border-brand-purple' : ''
                   } ${
                     product.id === 'box' ? '' : ''
                   }`}
