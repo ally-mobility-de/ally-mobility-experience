@@ -62,7 +62,9 @@ export default {
 					purple: 'hsl(var(--brand-purple))',
 					'dark-purple': 'hsl(var(--brand-dark-purple))',
 					yellow: 'hsl(var(--brand-yellow))',
-					aqua: 'hsl(var(--brand-aqua))'
+					aqua: 'hsl(var(--brand-aqua))',
+					'dark-aqua': 'hsl(var(--brand-dark-aqua))',
+					'dark-aquamarine': 'hsl(var(--brand-dark-aquamarine))'
 				}
 			},
 			fontFamily: {
