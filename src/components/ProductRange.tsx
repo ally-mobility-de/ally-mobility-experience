@@ -56,9 +56,9 @@ const ProductRange = () => {
                 <div
                   key={product.id}
                   className={`product-card group cursor-pointer ${
-                    product.highlight ? 'purple-card ring-0' : ''
+                    product.highlight ? 'bg-white border-2 border-brand-purple' : ''
                   } ${
-                    product.id === 'box' ? 'bg-white border-2 border-brand-purple' : ''
+                    product.id === 'box' ? '' : ''
                   }`}
                   onClick={() => navigateToProduct(product.id)}
                 >
@@ -85,14 +85,14 @@ const ProductRange = () => {
                     <div className="space-y-2">
                       <h3 className={`text-2xl font-semibold transition-colors duration-300 ${
                         product.highlight 
-                          ? 'text-white group-hover:text-white/90' 
+                          ? 'text-brand-green group-hover:text-primary' 
                           : 'text-brand-green group-hover:text-primary'
                       }`}>
                         {product.title}
                       </h3>
                       <p className={`leading-relaxed ${
                         product.highlight 
-                          ? 'text-white/90' 
+                          ? 'text-muted-foreground' 
                           : 'text-muted-foreground'
                       }`}>
                         {product.description}
@@ -102,14 +102,14 @@ const ProductRange = () => {
                     <div className="flex items-center justify-between pt-4">
                       <div className={`text-sm font-medium uppercase tracking-wide ${
                         product.highlight 
-                          ? 'text-white/80' 
+                          ? 'text-brand-aqua' 
                           : 'text-brand-aqua'
                       }`}>
                         {product.name}
                       </div>
                       <div className={`w-8 h-8 rounded-full flex items-center justify-center transition-all duration-300 ${
                         product.highlight 
-                          ? 'bg-white/20 text-white group-hover:bg-white group-hover:text-accent' 
+                          ? 'bg-primary/10 group-hover:bg-primary group-hover:text-white' 
                           : 'bg-primary/10 group-hover:bg-primary group-hover:text-white'
                       }`}>
                         <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
