@@ -37,7 +37,7 @@ const ValuesBanner = () => {
     title: "Einfach & Zugänglich",
     description: "Kein Führerschein, kein Stress"
   }];
-  return <section className="py-12 bg-gradient-to-r from-primary to-brand-aqua text-white">
+  return <section className="section-padding bg-gradient-to-r from-primary to-brand-aqua text-white">
       <div className="container-custom">
         <div className="text-center space-y-12">
           {/* Header */}
