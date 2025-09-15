@@ -52,13 +52,13 @@ const ValuesBanner = () => {
           <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-8">
             {values.map((value, index) => <button key={index} onClick={() => scrollToSection(index.toString())} className="group text-center space-y-4 p-6 rounded-2xl hover:bg-white/10 transition-all duration-300 transform hover:-translate-y-1">
                 {/* Icon Circle */}
-                <div className="mx-auto w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-brand-purple group-hover:bg-brand-purple group-hover:text-white transition-all duration-300">
+                <div className="mx-auto w-20 h-20 bg-white/20 rounded-full flex items-center justify-center text-brand-dark-aqua group-hover:bg-brand-dark-aqua group-hover:text-white transition-all duration-300">
                   {value.icon}
                 </div>
                 
                 {/* Content */}
                 <div className="space-y-2">
-                  <h4 className="font-semibold text-white group-hover:text-brand-purple transition-colors duration-300">
+                  <h4 className="font-semibold text-white group-hover:text-brand-dark-aqua transition-colors duration-300">
                     {value.title}
                   </h4>
                   <p className="text-sm text-white/70 leading-relaxed">
