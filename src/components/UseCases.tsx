@@ -24,7 +24,8 @@ const UseCases = () => {
     {
       title: "Städte & Kommunen",
       description: "Sauber, leise, flexibel: als Handwagen oder mit dem Rad – mit positivem Image im öffentlichen Raum. ",
-      details: "Perfekt für Stadtdieste in verkehrsberuhigte Bereiche und Wege mit Zugangsbeschränkungen – etwa Parkanlagen, Campusareale oder Fußgängerzonen. Perfekt für den alltäglichen City-Einsatz: Stadtreinigung, Parkpflege, Werbeanbringung, etc. - Vorran als Vorbild.",
+      details: "Perfekt für Stadtdieste in verkehrsberuhigte Bereiche und Wege mit Zugangsbeschränkungen – etwa Parkanlagen, Campusareale oder Fußgängerzonen. Perfekt für den alltäglichen City-Einsatz: Stadtreinigung, Parkpflege, Werbeanbringung, etc. - ",
+      boldText: "Vorran als Vorbild",
       image: "/lovable-uploads/08d6fb7d-e9df-42f7-894e-8d315e2c3e92.png",
       imagePosition: "left"
     }
@@ -71,6 +72,7 @@ const UseCases = () => {
                     </p>
                     <p className="text-muted-foreground leading-relaxed text-left">
                       {useCase.details}
+                      {useCase.boldText && <strong>{useCase.boldText}</strong>}
                     </p>
                   </div>
 
