@@ -61,7 +61,7 @@ const ValuesBanner = () => {
                   <h4 className="font-semibold text-white group-hover:text-dark-aqua transition-colors duration-300">
                     {value.title}
                   </h4>
-                  <p className="text-sm text-white/70 leading-relaxed">
+                  <p className="text-sm text-brand-dark-aqua leading-relaxed">
                     {value.description}
                   </p>
                 </div>
