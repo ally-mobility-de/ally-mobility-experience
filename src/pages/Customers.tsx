@@ -131,7 +131,7 @@ const Customers = () => {
         if (current === null) return 0;
         return (current + 1) % customerIcons.length;
       });
-    }, 10000); // 10 seconds
+    }, 15000); // 10 seconds
 
     return () => clearInterval(interval);
   }, [customerIcons.length]);
