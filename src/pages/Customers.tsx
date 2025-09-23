@@ -32,7 +32,7 @@ const Customers = () => {
     isActive: false
   }, {
     icon: Shield,
-    title: "Barrierefreie Mobilität",
+    title: "Mobilität ohne Hürden",
     subtitle: "Am Verkehr vorbei, durch Poller, direkt vor die Haustür",
     description: "Navigieren Sie durch enge Straßen, Radwege und Fußgängerzonen, die größere Fahrzeuge nicht erreichen können. Liefern Sie direkt vor die Haustür ohne Parkbeschränkungen oder Verkehrsstaus.",
     isActive: false
