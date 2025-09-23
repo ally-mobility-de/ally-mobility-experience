@@ -44,7 +44,7 @@ const Customers = () => {
     isActive: false
   }];
   const headerUseCases = [{
-    title: "Städte droht der Verkehrsinfarkt",
+    title: "Verkehrsinfarkt",
     subtitle: "Rund 36% mehr Lieferfahrzeuge erwartet",
     description: (
       <div>
