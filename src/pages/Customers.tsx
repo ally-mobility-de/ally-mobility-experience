@@ -16,31 +16,49 @@ const Customers = () => {
     icon: Package,
     title: "Günstig & Praktisch",
     subtitle: "Mehr Volumen für weniger Geld",
-    description: "Navigieren Sie durch enge Straßen, Radwege und Fußgängerzonen, die größere Fahrzeuge nicht erreichen können. Liefern Sie direkt vor die Haustür ohne Parkbeschränkungen oder Verkehrsstaus.",
+    description: (
+      <div>
+      <p> Sie senken Ihre Gesamtbetriebskosten durch <strong>geringere Anschaffungs-, Betriebs-, Wartungs- und Parkkosten</strong> im Vergleich zu motorisierten Fahrzeugen. Gleichzeitig sparen Sie Zeit, weil Sie näher ans Ziel kommen und Abläufe planbarer werden – auf dem Werksgelände, im Quartier oder bei Events. Weniger Standzeiten und eine höhere Stoppdichte <strong>steigern die Produktivität in Service, Logistik und kommunalen Einsätzen</strong>. Ergebnis: mehr Leistung pro Euro – in jedem Einsatzbereich.
+      </p>
+      </div>),
     isActive: false
   }, {
     icon: Truck,
     title: "Robust & Zuverlässig",
     subtitle: "Bewährte Komponenten & Materialien",
-    description: "Gebaut mit professionellen Materialien und Komponenten, die für maximale Haltbarkeit in anspruchsvollen urbanen Umgebungen getestet wurden.",
+    description:  (
+      <div>
+      <p> Mit bewährten Komponenten und robusten Materialien sorgen wir <strong>langlebigen Dauereinsatz</strong> - von Handwerk bis zur Letzte-Meile. Gleichzeitig leisten Sie einen sichtbaren Beitrag zur Nachhaltigkeit: <strong>weniger CO₂ und Schadstoffe und geringere Lärmbelastung</strong>. Ihr Betrieb profiliert sich als innovativ und umweltbewusst – <strong>ein klarer Imagegewinn.</strong>
+      </p>
+      </div>),
     isActive: false
   }, {
     icon: Zap,
     title: "Mehr Flexibilität",
     subtitle: "Modular & vielseitig, per Rad oder zu Fuß",
-    description: "Wechseln Sie zwischen Fahrradantrieb und manueller Bedienung. Modulares Design passt sich verschiedenen Ladungsanforderungen sofort an.",
+    description:   (
+      <div>
+      <p> Modulare Aufbauten und der Wechsel zwischen <strong>Rad- und Handbetrieb</strong> lassen sich exakt auf Auftrag, Strecke und Tagesform zuschneiden. Sie können Mitarbeitende <strong>ohne Führerschein</strongY> einsetzen, kurzfristig umplanen und verschiedene Zugfahrzeuge nutzen – vom zweispurigen Cargobike bis zum konventionellen Fahrrad. </p>
+      </div>),
     isActive: false
   }, {
     icon: Shield,
-    title: "Mobilität ohne Hürden",
+    title: "Barrierefreie Mobilität",
     subtitle: "Am Verkehr vorbei, durch Poller, direkt vor die Haustür",
-    description: "Navigieren Sie durch enge Straßen, Radwege und Fußgängerzonen, die größere Fahrzeuge nicht erreichen können. Liefern Sie direkt vor die Haustür ohne Parkbeschränkungen oder Verkehrsstaus.",
+    description:  (
+      <div>
+      <p> Vorbei am Stau, über Radwege und – wo freigegeben – durch Fußgängerzonen erreichen Sie Ziele <strong>zuverlässig und pünktlich</strong>. Poller, verkehrsberuhigte Bereiche und Innenhöfe werden zugänglich, <strong>die Parkplatzsuche entfällt komplett</strong>. Besonders auf kurzen bis mittleren Distanzen in dicht besiedelten Gebieten ist das unschlagbar - <strong>direkte Anfahrt und flexible Routenwahl</strong>.</p>
+      </div>),
     isActive: false
   }, {
     icon: Users,
     title: "Einfach & Zugänglich",
     subtitle: "Kein Führerschein, kein Stress",
-    description: "Jeder kann unsere Cargo-Lösungen ohne spezielle Lizenz oder Schulung bedienen. Einfaches, intuitives Design macht urbane Logistik für jeden zugänglich.",
+    description:   (
+      <div>
+      <p> Der Einstieg ist niedrigschwellig: <strong>kein Führerschein, schnelle Einarbeitung</strong>, weniger Verkehrs- und Parkstress. Mehr Bewegung und frische Luft <strong>fördern Gesundheit und Motivation</strong>; das kann Ausfalltage senken und die Teamzufriedenheit erhöhen. Gleichzeitig wird Ihr Unternehmen für Bewerbende attraktiver – <strong>moderne, umweltfreundliche Mobilität überzeugt</strong>.
+      </p>
+      </div>),
     isActive: false
   }];
   const headerUseCases = [{
