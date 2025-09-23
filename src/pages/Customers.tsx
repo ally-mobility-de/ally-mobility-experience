@@ -49,16 +49,21 @@ const Customers = () => {
     description: (
       <div>
         <p>Transport- und Lieferdienste in urbanen Gebieten stehen vor verschiedenen herausforderungen wie <strong>Staus, hohem Verkehrsaufkommen, nappen Parkplätzen</strong> und zeitlichen <strong>Einschränkungen durch Lärm- und Verkehrsschutzregelungen.</strong> Dies führt zu Verzögerung und Zeitdruck bei Lieferungen, besonders während der Stoßzeiten. Zudem gibt es immer <strong>weniger Park und Haltemögllichkeiten</strong>, was die Be- und Entladung möhsam und zeitintensiv macht. Des Weiteren steigen die Kosten für Fahrzeuge, Kraftstoff und Wartung während <strong>strengere Co2-Vorgaben</strong> den Druck auf umweltfreundlichere Lösungen erhöhen.</p>
-        
+        <p> </p>
         <p>Eine Studie von McKinsey zeigt, dass die zunehmende <strong>Lezte-Meile-Dienste</strong> in Großstädten bis 2030 zu einem Anstieg der Lieferfahrzeuge um <strong>35%</strong> führen könnten.</p>
       </div>
     ),
     image: "/lovable-uploads/6e69389e-d4b4-4013-bb8c-c3a39015b30e.png",
     imageLeft: false
   }, {
-    title: "Logistik & Transport",
+    title: "Die Lösung: Radlogistik",
     subtitle: "Schnell, flexibel, kostenbewusst",
-    description: "Die professionelle Lösung für mehr Geschwindigkeit in der Inhouse- & urbanen Logistik. Optimieren Sie Ihre Abläufe mit unserem modularen Cargo-System.",
+    description: (
+      <div>
+      <p> Die Radlogistik bietet dazu eine <strong>flexible und umweltfreundliche Alternative</strong>. Fahrräder können <strong>Staus umgehen, verkehrsberuhigte Zonen vefahren</strong> und <strong>direkt bis vor die Haustür</strong> liefern, ohne dabei von Park oder halteverboten betroffen zu sein. Di Implementierung von E-Antrieben ermöglicht den Transport geößerer lasten. Da für Fahrräder <strong>kein Führerschein</strong> erforderlich ist, vergrößert sich der Pool potentieller Arbeitskräfte.</p>
+      <p> Es besteht <strong>kaum noch ein Nachteil zu den deutlich größeren Transportern</strong>, obwohl <strong>Anschaffungs- und Betriebskosten</strong> deutlich geringer sind.</p>
+      </div>
+      ),
     image: "/lovable-uploads/5c14c775-2f2c-43f4-ab3c-44ca8511b32a.png",
     imageLeft: true
   }];
