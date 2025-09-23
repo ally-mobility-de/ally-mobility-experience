@@ -73,6 +73,24 @@ const AboutUs = () => {
       description: "Das größte Lastenrad-Festival Europas mit Test-Parcours und Fachvorträgen.",
       status: "past",
       image: "/lovable-uploads/9ab30c1f-6718-4c8b-a12e-d95bb1174523.png"
+    },
+    {
+      id: 4,
+      title: "Green Transport Expo",
+      date: "8-10 Juni 2025",
+      location: "Hamburg, Deutschland",
+      description: "Europas führende Messe für umweltfreundliche Transportlösungen und E-Mobility. Innovative Technologien für nachhaltige Mobilität.",
+      status: "upcoming",
+      image: "/lovable-uploads/c6ca3796-a012-4b60-b80e-3a0a8f3f21bd.png"
+    },
+    {
+      id: 5,
+      title: "Smart City Conference",
+      date: "18-20 Oktober 2025",
+      location: "Köln, Deutschland",
+      description: "Konferenz für intelligente Stadtentwicklung und nachhaltige Mobilitätskonzepte in urbanen Räumen.",
+      status: "upcoming",
+      image: "/lovable-uploads/adefa6cc-8b89-4cb0-a294-6db863b29fe1.png"
     }
   ];
 
