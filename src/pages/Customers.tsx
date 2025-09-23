@@ -38,7 +38,7 @@ const Customers = () => {
     subtitle: "Modular & vielseitig, per Rad oder zu Fuß",
     description:   (
       <div>
-      <p> Modulare Aufbauten und der Wechsel zwischen <strong>Rad- und Handbetrieb</strong> lassen sich exakt auf Auftrag, Strecke und Tagesform zuschneiden. Sie können Mitarbeitende <strong>ohne Führerschein</strongY> einsetzen, kurzfristig umplanen und verschiedene Zugfahrzeuge nutzen – vom zweispurigen Cargobike bis zum konventionellen Fahrrad. </p>
+      <p> Modulare Aufbauten und der Wechsel zwischen <strong>Rad- und Handbetrieb</strong> lassen sich exakt auf Auftrag, Strecke und Tagesform zuschneiden. Sie können Mitarbeitende <strong>ohne Führerschein</strong> einsetzen, kurzfristig umplanen und verschiedene Zugfahrzeuge nutzen – vom zweispurigen Cargobike bis zum konventionellen Fahrrad. </p>
       </div>),
     isActive: false
   }, {
