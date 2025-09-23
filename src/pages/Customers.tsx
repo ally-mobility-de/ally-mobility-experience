@@ -47,9 +47,10 @@ const Customers = () => {
     title: "Städte droht der Verkehrsinfarkt",
     subtitle: "Rund 36% mehr Lieferfahrzeuge erwartet",
     description: (
-      <>
-        Transport- und Lieferdienste in urbanen Gebieten stehen vor verschiedenen herausforderungen wie <strong>Staus, hohem Verkehrsaufkommen, nappen Parkplätzen</strong> und zeitlichen <strong>Einschränkungen durch Lärm- und Verkehrsschutzregelungen.</strong> Dies führt zu Verzögerung und Zeitdruck bei Lieferungen, besonders während der Stoßzeiten. Zudem gibt es immer <strong>weniger Park ud Haltemögllichkeiten</strong>, was die Be- und Entladung möhsam und zeitintensiv macht. Des Weiteren steigen die Kosten für Fahrzeuge, Kraftstoff und Wartung während <strong>strengere Co2-Vorgaben</strong> den Druck auf umweltfreundlichere Lösungen erhöhen. Eine Studie von MCKinsey zeigt, dass die zunehmende <strong>Lezte-Meile-Dienste</strong> in Großstädten bis 2030 zu einem Anstieg der Lieferfahrzeuge um <strong>35%</strong> führen könnten.
-      </>
+      <div>
+        <p>Transport- und Lieferdienste in urbanen Gebieten stehen vor verschiedenen herausforderungen wie <strong>Staus, hohem Verkehrsaufkommen, nappen Parkplätzen</strong> und zeitlichen <strong>Einschränkungen durch Lärm- und Verkehrsschutzregelungen.</strong> Dies führt zu Verzögerung und Zeitdruck bei Lieferungen, besonders während der Stoßzeiten. Zudem gibt es immer <strong>weniger Park ud Haltemögllichkeiten</strong>, was die Be- und Entladung möhsam und zeitintensiv macht. Des Weiteren steigen die Kosten für Fahrzeuge, Kraftstoff und Wartung während <strong>strengere Co2-Vorgaben</strong> den Druck auf umweltfreundlichere Lösungen erhöhen.</p>
+        <p>Eine Studie von McKinsey zeigt, dass die zunehmende <strong>Lezte-Meile-Dienste</strong> in Großstädten bis 2030 zu einem Anstieg der Lieferfahrzeuge um <strong>35%</strong> führen könnten.</p>
+      </div>
     ),
     image: "/lovable-uploads/6e69389e-d4b4-4013-bb8c-c3a39015b30e.png",
     imageLeft: false
@@ -148,9 +149,9 @@ const Customers = () => {
                   <h3 className="text-xl font-semibold text-[#43b28d]">{useCase.subtitle}</h3>
                 </div>
                 
-                <p className="text-lg text-muted-foreground leading-relaxed">
+                <div className="text-lg text-muted-foreground leading-relaxed space-y-4">
                   {useCase.description}
-                </p>
+                </div>
                 
                 <Button onClick={() => navigate('/product')} className="btn-secondary-outline">
                   Mehr erfahren →
