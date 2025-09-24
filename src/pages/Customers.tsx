@@ -87,6 +87,18 @@ const Customers = () => {
     imageLeft: true
   }];
   const detailedUseCases = [{
+        title: "Städte & Kommunen",
+    subtitle: "Der heutige Handwagen — per Rad, Lastenrad oder zu Fuß",
+    description: "Universeller Einsatz garantiert für kommunale Dienste, Wartung und öffentliche Raumverwaltung. Nachhaltige Lösungen für moderne Stadtoperationen.",
+    image: "/lovable-uploads/274bf0dd-8d84-44ec-85ba-d17b9dd855a9.png",
+    features: ["Nachhaltige Operationen", "Lärmreduzierung", "Emissionsfreier Transport", "Flexible Anwendungen"]
+  }, {
+        title: "Städte & Kommunen",
+    subtitle: "Der heutige Handwagen — per Rad, Lastenrad oder zu Fuß",
+    description: "Universeller Einsatz garantiert für kommunale Dienste, Wartung und öffentliche Raumverwaltung. Nachhaltige Lösungen für moderne Stadtoperationen.",
+    image: "/lovable-uploads/274bf0dd-8d84-44ec-85ba-d17b9dd855a9.png",
+    features: ["Nachhaltige Operationen", "Lärmreduzierung", "Emissionsfreier Transport", "Flexible Anwendungen"]
+  }, {
     title: "Städte & Kommunen",
     subtitle: "Der heutige Handwagen — per Rad, Lastenrad oder zu Fuß",
     description: "Universeller Einsatz garantiert für kommunale Dienste, Wartung und öffentliche Raumverwaltung. Nachhaltige Lösungen für moderne Stadtoperationen.",
