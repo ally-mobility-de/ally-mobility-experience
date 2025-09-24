@@ -1,4 +1,4 @@
-import { useState, createElement, useEffect } from 'react';
+import { useState, createElement, useEffect, useRef } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import Header from "@/components/Header";
@@ -12,6 +12,7 @@ const Customers = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const [activeIcon, setActiveIcon] = useState<number | null>(0); // Default to first item
+  const intervalRef = useRef<NodeJS.Timeout | null>(null);
   const customerIcons = [{
     icon: Package,
     title: "Günstig & Praktisch",
@@ -124,16 +125,33 @@ const Customers = () => {
     }
   }, [location.state]);
 
-  // Auto-rotate functionality
-  useEffect(() => {
-    const interval = setInterval(() => {
+  // Function to start/restart the timer
+  const startTimer = () => {
+    if (intervalRef.current) {
+      clearInterval(intervalRef.current);
+    }
+    intervalRef.current = setInterval(() => {
       setActiveIcon((current) => {
         if (current === null) return 0;
         return (current + 1) % customerIcons.length;
       });
     }, 20000); // 20 seconds
+  };
 
-    return () => clearInterval(interval);
+  // Function to handle icon click and reset timer
+  const handleIconClick = (index: number) => {
+    setActiveIcon(index);
+    startTimer(); // Reset the timer
+  };
+
+  // Auto-rotate functionality
+  useEffect(() => {
+    startTimer();
+    return () => {
+      if (intervalRef.current) {
+        clearInterval(intervalRef.current);
+      }
+    };
   }, [customerIcons.length]);
   return <div className="min-h-screen bg-background">
       <Header />
@@ -198,7 +216,7 @@ const Customers = () => {
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {customerIcons.map((item, index) => <div key={index} className="space-y-4">
                 <button 
-                  onClick={() => setActiveIcon(index)} 
+                  onClick={() => handleIconClick(index)} 
                   className={`w-20 h-20 rounded-full flex items-center justify-center mx-auto transition-all duration-300 cursor-pointer group ${
                     activeIcon === index 
                       ? 'bg-white text-brand-aqua shadow-lg scale-110' 
