@@ -116,7 +116,7 @@ const Customers = () => {
       <p> Ob mobiler <strong></strong>Werkzeugwagen, Marktstand oder Street-Food: Der Schwerlast-Anhänger bringt Ihr Werkzeug, Material und Ausrüstung zuverlässig dorthin, wo Sie arbeiten. Mit <strong>standardisierten Montagepunkten</strong> und modularen Aufbauten konfigurieren Sie Ihr Setup im Handumdrehen.</p>
       <p> Die City-taugliche Plattform bleibt <strong>geräumig, intuitiv und flexibel</strong> – wie die wahl des Zugfahrzeuges. </p>
       </div>
-      ),"Effizienter Transport von Bauwerkzeugen, Materialien und Ausrüstung über Baustellen hinweg. Robust gebaut für die Anforderungen professioneller Handwerker.",
+      ),
     image: "/lovable-uploads/8ec38ff0-c003-4bdb-a181-986f630b322e.png",
     features: ["Robust & tragfähig", "Imagegewinn", "Echter Allrounder", "Nachhaltig"]
   }, {
