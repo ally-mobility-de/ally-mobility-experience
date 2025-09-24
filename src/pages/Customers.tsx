@@ -87,17 +87,38 @@ const Customers = () => {
     imageLeft: true
   }];
   const detailedUseCases = [{
-        title: "Städte & Kommunen",
-    subtitle: "Der heutige Handwagen — per Rad, Lastenrad oder zu Fuß",
-    description: "Universeller Einsatz garantiert für kommunale Dienste, Wartung und öffentliche Raumverwaltung. Nachhaltige Lösungen für moderne Stadtoperationen.",
+        title: "Post & Paketzustellung",
+    subtitle: "Hohe Sendungsvolumen, viele Stopps & enge Zeitfenster",
+    description:(
+      <div>
+      <p> Sie liefern die letzte Meile schneller: Unser Schwerlast-Fahrradanhänger <strong>skaliert Ihre Tourenkapazität exakt nach Bedarf</strong> – ideal bei Peaks und schwankenden Volumina. Per An- & Abkoppeln wechseln Sie flexibel zwischen <strong>E-Bike, Cargobike oder Handbetrieb</strong> und erreichen so Fußgängerzonen, Innenhöfe und Gebäude ohne Umwege.</p>
+      <p> Vorbeladene Hänger übernehmen Sie direkt am Sammelpunkt, Retouren nehmen Sie im selben Lauf mit. Die höhere Zuladung reduziert Rückfahrten und macht Ihre Routen planbarer, dichter und wirtschaftlicher.</p>
+      </div>
+      ),
     image: "/lovable-uploads/274bf0dd-8d84-44ec-85ba-d17b9dd855a9.png",
-    features: ["Nachhaltige Operationen", "Lärmreduzierung", "Emissionsfreier Transport", "Flexible Anwendungen"]
+    features: ["Skalierbar", "Park & Haltemöglichkeiten", "Geringe Anschaffungskosten", "Optimierte Routenführung"]
   }, {
-        title: "Städte & Kommunen",
-    subtitle: "Der heutige Handwagen — per Rad, Lastenrad oder zu Fuß",
-    description: "Universeller Einsatz garantiert für kommunale Dienste, Wartung und öffentliche Raumverwaltung. Nachhaltige Lösungen für moderne Stadtoperationen.",
+        title: "Innerbetriebliche Logistik & Transport",
+    subtitle: "Der moderne Handwagen — per Rad, Lastenrad oder zu Fuß",
+    description:(
+      <div>
+      <p> Auf Werksgeländen, in Messehallen oder auf dem Campus arbeitet unser Handwagen nahtlos mit Fahrrädern oder im Handbetrieb zusammen. Er verbindet Außen- und Innenlogistik ohne Umladen: <strong>standardisierte Maße</strong> erleichtern das Vorpacken und die Nutzung von Euro-Wechselbehältern.</p>
+      <p> Der robuste Rahmen bewegt bis zu <strong>500 kg</strong> im Dauerbetrieb und lässt sich platzsparend senkrecht abstellen.</p>
+      </div>
+      ),
     image: "/lovable-uploads/274bf0dd-8d84-44ec-85ba-d17b9dd855a9.png",
-    features: ["Nachhaltige Operationen", "Lärmreduzierung", "Emissionsfreier Transport", "Flexible Anwendungen"]
+    features: ["Flexible Anwenungen", "Ergonomie & Motivation", "Robust & Zuverlässig", "Standartisiert"]
+      }, {
+    title: "Mobiles Handwerk & Dienstleistungen", 
+    subtitle: "Die mobile Plattform für Ihre Ideen",
+    description: (
+      <div>
+      <p> Ob mobiler <strong></strong>Werkzeugwagen, Marktstand oder Street-Food: Der Schwerlast-Anhänger bringt Ihr Werkzeug, Material und Ausrüstung zuverlässig dorthin, wo Sie arbeiten. Mit <strong>standardisierten Montagepunkten</strong> und modularen Aufbauten konfigurieren Sie Ihr Setup im Handumdrehen.</p>
+      <p> Die City-taugliche Plattform bleibt <strong>geräumig, intuitiv und flexibel</strong> – wie die wahl des Zugfahrzeuges. </p>
+      </div>
+      ),"Effizienter Transport von Bauwerkzeugen, Materialien und Ausrüstung über Baustellen hinweg. Robust gebaut für die Anforderungen professioneller Handwerker.",
+    image: "/lovable-uploads/8ec38ff0-c003-4bdb-a181-986f630b322e.png",
+    features: ["Robust & tragfähig", "Imagegewinn", "Echter Allrounder", "Nachhaltig"]
   }, {
     title: "Städte & Kommunen",
     subtitle: "Der heutige Handwagen — per Rad, Lastenrad oder zu Fuß",
@@ -122,12 +143,7 @@ const Customers = () => {
     description: "Perfekt für Online-Händler und lokale Geschäfte, die effiziente, umweltfreundliche Lieferlösungen benötigen. Erreichen Sie Kunden schneller bei reduzierten Betriebskosten.",
     image: "/lovable-uploads/e4ed336e-42e5-410a-83ae-c4c356bea959.png",
     features: ["Same-Day-Lieferung", "Reduzierte Treibstoffkosten", "Kundenzufriedenheit", "Markensichtbarkeit"]
-  }, {
-    title: "Bau & Handwerk", 
-    subtitle: "Werkzeuge und Materialien unterwegs",
-    description: "Effizienter Transport von Bauwerkzeugen, Materialien und Ausrüstung über Baustellen hinweg. Robust gebaut für die Anforderungen professioneller Handwerker.",
-    image: "/lovable-uploads/8ec38ff0-c003-4bdb-a181-986f630b322e.png",
-    features: ["Robuste Konstruktion", "Wetterfest", "Sicherer Stauraum", "Mobilität auf der Baustelle"]
+
   }];
 
   // Handle navigation from ValuesBanner
