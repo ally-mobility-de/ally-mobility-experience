@@ -121,28 +121,15 @@ const Customers = () => {
     features: ["Robust & tragfähig", "Imagegewinn", "Echter Allrounder", "Nachhaltig"]
   }, {
     title: "Städte & Kommunen",
-    subtitle: "Der heutige Handwagen — per Rad, Lastenrad oder zu Fuß",
-    description: "Universeller Einsatz garantiert für kommunale Dienste, Wartung und öffentliche Raumverwaltung. Nachhaltige Lösungen für moderne Stadtoperationen.",
+    subtitle: "Mit positivem Image im öffentlichen Raum",
+    description:(
+      <div>
+      <p> <strong>Universell einsetzbar</strong> für kommunale Dienste und den öffentlichen Raum: Unser Fahrradanhänger lässt sich mühelos durch <strong>Parks, Campusareale und Fußgängerzonen</strong> manövrieren. Vor Ort arbeiten Sie komfortabel im Handbetrieb; anschließend koppeln Sie ans Rad an und sind zügig im nächsten Bezirk.</p>
+      <p>  So werden Stadtreinigung, Werbeanbringung, Parkpflege etc. leiser, bürgernäher und effizienter – mit positivem Vorbildcharakter. </p>
+      </div>
+      ),
     image: "/lovable-uploads/274bf0dd-8d84-44ec-85ba-d17b9dd855a9.png",
-    features: ["Nachhaltige Operationen", "Lärmreduzierung", "Emissionsfreier Transport", "Flexible Anwendungen"]
-  }, {
-    title: "Food & Catering",
-    subtitle: "Frische Lieferung, null Emissionen",
-    description: "Transport von frischen Lebensmitteln und Catering-Bedarf mit temperaturkontrollierten Optionen. Perfekt für Restaurants, Caterer und Food-Lieferdienste, die zuverlässigen Transport benötigen.",
-    image: "/lovable-uploads/7a660477-c3ed-49dd-81a6-12488352bc7a.png",
-    features: ["Temperaturkontrolloptionen", "Hygiene-Compliance", "Sicherer Transport", "Professionelle Präsentation"]
-  }, {
-    title: "Gesundheitswesen & Medizin",
-    subtitle: "Zuverlässiger Medizintransport",
-    description: "Sicherer und geschützter Transport von medizinischen Gütern, Ausrüstung und empfindlichen Materialien. Entwickelt für Krankenhäuser, Apotheken und medizinische Dienste, die zuverlässige Logistik benötigen.",
-    image: "/lovable-uploads/77f80531-a6af-4684-8050-4933f562c6b1.png",
-    features: ["Sichere Abteile", "Klimakontrolle bereit", "Medizinische Compliance", "Notfall-Zugänglichkeit"]
-  }, {
-    title: "E-Commerce & Einzelhandel",
-    subtitle: "Exzellenz bei der letzten Meile",
-    description: "Perfekt für Online-Händler und lokale Geschäfte, die effiziente, umweltfreundliche Lieferlösungen benötigen. Erreichen Sie Kunden schneller bei reduzierten Betriebskosten.",
-    image: "/lovable-uploads/e4ed336e-42e5-410a-83ae-c4c356bea959.png",
-    features: ["Same-Day-Lieferung", "Reduzierte Treibstoffkosten", "Kundenzufriedenheit", "Markensichtbarkeit"]
+    features: ["Modulare Aufbauten", "Lärmreduzierung", "Emissionsfreier Transport", "Universeller Einsatz"]
 
   }];
 
