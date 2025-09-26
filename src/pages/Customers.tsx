@@ -309,10 +309,9 @@ const Customers = () => {
       {/* Test Ride CTA */}
       <section className="section-padding bg-gradient-to-br from-brand-purple via-accent to-brand-aqua">
         <div className="container-custom text-center space-y-8">
-          <h2 className="text-white">Jetzt eine Testfahrt buchen!</h2>
+          <h2 className="text-white">Jetzt anfragen & Probefahrt sichern</h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Erleben Sie den ally-mobility Unterschied aus erster Hand. Vereinbaren Sie Ihre Testfahrt 
-            und entdecken Sie, wie unsere Cargo-Lösungen Ihr Geschäft transformieren können.
+            Überzeugen Sie sich selbst & erleben Sie unser Sytem auf Ihrer Strecke.
           </p>
           <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-purple" onClick={() => navigate('/about-us#contact')}>
             Termin vereinbaren
