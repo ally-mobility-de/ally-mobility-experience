@@ -19,22 +19,21 @@ const AboutUs = () => {
       name: "Eliah",
       role: "CEO",
       quote: "Wir glauben, dass Mobilität nachhaltig, effizient und für jeden zugänglich sein sollte. Unsere Mission ist es, den urbanen Transport zu revolutionieren.",
-      image: "/lovable-uploads/605721e5-fa14-422b-b77a-35b93be0c8ff.png"
+      image: "/lovable-uploads/90e30aa4-dbec-42db-8be2-ccb1c039477f.png"
     },
     {
       id: 2,
       name: "Chanti",
       role: "CFO",
-      quote: "Finanzielle Exzellenz treibt nachhaltiges Wachstum an. Jede Investitionsentscheidung unterstützt unsere Mission, urbane Mobilität zu transformieren.",
+      quote: "Wir setzen Geld dort ein, wo es Zukunft baut: in nachhaltiges Wachstum und urbane Mobilität.",
       image: "/lovable-uploads/6f7b3532-0531-4217-84ac-9969faa59981.png"
     },
     {
       id: 3,
       name: "Noah",
       role: "CTO",
-      quote: "Innovation durch technische Exzellenz. Jede Komponente ist für Haltbarkeit, Effizienz und Benutzererfahrung entwickelt.",
-      image: "/lovable-uploads/90e30aa4-dbec-42db-8be2-ccb1c039477f.png"
-    }
+      quote: "Robust, effizient, benutzerfreundlich – getestet im Alltag, optimiert für Ihren täglichen Einsatz. ",
+      image: "/lovable-uploads/605721e5-fa14-422b-b77a-35b93be0c8ff.png"
   ];
 
   // Auto-cycling for team carousel
