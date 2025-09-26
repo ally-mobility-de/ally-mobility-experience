@@ -17,120 +17,102 @@ const Customers = () => {
     icon: Package,
     title: "Günstig & Praktisch",
     subtitle: "Mehr Volumen für weniger Geld",
-    description: (
-      <div>
+    description: <div>
       <p> Sie senken Ihre Gesamtbetriebskosten durch <strong>geringere Anschaffungs-, Betriebs-, Wartungs- und Parkkosten</strong> im Vergleich zu motorisierten Fahrzeugen. Gleichzeitig sparen Sie Zeit, weil Sie näher ans Ziel kommen und Abläufe planbarer werden – auf dem Werksgelände, im Quartier oder bei Events. Weniger Standzeiten und eine höhere Stoppdichte <strong>steigern die Produktivität in Service, Logistik und kommunalen Einsätzen</strong>. Ergebnis: mehr Leistung pro Euro – in jedem Einsatzbereich.
       </p>
-      </div>),
+      </div>,
     isActive: false
   }, {
     icon: Truck,
     title: "Robust & Zuverlässig",
     subtitle: "Bewährte Komponenten & Materialien",
-    description:  (
-      <div>
+    description: <div>
       <p> Mit bewährten Komponenten und robusten Materialien sorgen wir <strong>langlebigen Dauereinsatz</strong> - von Handwerk bis zur Letzte-Meile. Gleichzeitig leisten Sie einen sichtbaren Beitrag zur Nachhaltigkeit: <strong>weniger CO₂ und Schadstoffe und geringere Lärmbelastung</strong>. Ihr Betrieb profiliert sich als innovativ und umweltbewusst – <strong>ein klarer Imagegewinn.</strong>
       </p>
-      </div>),
+      </div>,
     isActive: false
   }, {
     icon: Zap,
     title: "Mehr Flexibilität",
     subtitle: "Modular & vielseitig, per Rad oder zu Fuß",
-    description:   (
-      <div>
+    description: <div>
       <p> Modulare Aufbauten und der Wechsel zwischen <strong>Rad- und Handbetrieb</strong> lassen sich exakt auf Auftrag, Strecke und Tagesform zuschneiden. Sie können Mitarbeitende <strong>ohne Führerschein</strong> einsetzen, kurzfristig umplanen und verschiedene Zugfahrzeuge nutzen – vom zweispurigen Cargobike bis zum konventionellen Fahrrad. </p>
-      </div>),
+      </div>,
     isActive: false
   }, {
     icon: Shield,
     title: "Barrierefreie Mobilität",
     subtitle: "Am Verkehr vorbei, durch Poller, direkt vor die Haustür",
-    description:  (
-      <div>
+    description: <div>
       <p> Vorbei am Stau, über Radwege und – wo freigegeben – durch Fußgängerzonen erreichen Sie Ziele <strong>zuverlässig und pünktlich</strong>. Poller, verkehrsberuhigte Bereiche und Innenhöfe werden zugänglich, <strong>die Parkplatzsuche entfällt komplett</strong>. Besonders auf kurzen bis mittleren Distanzen in dicht besiedelten Gebieten ist das unschlagbar - <strong>direkte Anfahrt und flexible Routenwahl</strong>.</p>
-      </div>),
+      </div>,
     isActive: false
   }, {
     icon: Users,
     title: "Einfach & Zugänglich",
     subtitle: "Kein Führerschein, kein Stress",
-    description:   (
-      <div>
+    description: <div>
       <p> Der Einstieg ist niedrigschwellig: <strong>kein Führerschein, schnelle Einarbeitung</strong>, weniger Verkehrs- und Parkstress. Mehr Bewegung und frische Luft <strong>fördern Gesundheit und Motivation</strong>; das kann Ausfalltage senken und die Teamzufriedenheit erhöhen. Gleichzeitig wird Ihr Unternehmen für Bewerbende attraktiver – <strong>moderne, umweltfreundliche Mobilität überzeugt</strong>.
       </p>
-      </div>),
+      </div>,
     isActive: false
   }];
   const headerUseCases = [{
     title: "Verkehrsinfarkt",
     subtitle: "Rund 36% mehr Lieferfahrzeuge erwartet",
-    description: (
-      <div>
+    description: <div>
         <p>Transport- und Lieferdienste in urbanen Gebieten stehen vor verschiedenen herausforderungen wie <strong>Staus, hohem Verkehrsaufkommen, nappen Parkplätzen</strong> und zeitlichen <strong>Einschränkungen durch Lärm- und Verkehrsschutzregelungen.</strong> Dies führt zu Verzögerung und Zeitdruck bei Lieferungen, besonders während der Stoßzeiten. Zudem gibt es immer <strong>weniger Park und Haltemögllichkeiten</strong>, was die Be- und Entladung möhsam und zeitintensiv macht. Des Weiteren steigen die Kosten für Fahrzeuge, Kraftstoff und Wartung während <strong>strengere Co2-Vorgaben</strong> den Druck auf umweltfreundlichere Lösungen erhöhen.</p>
         <p> </p>
         <p>Eine Studie von McKinsey zeigt, dass die zunehmende <strong>Lezte-Meile-Dienste</strong> in Großstädten bis 2030 zu einem Anstieg der Lieferfahrzeuge um <strong>35%</strong> führen könnten.</p>
-      </div>
-    ),
+      </div>,
     image: "/lovable-uploads/6e69389e-d4b4-4013-bb8c-c3a39015b30e.png",
     imageLeft: false
   }, {
     title: "Die Lösung: Radlogistik",
     subtitle: "Schnell, flexibel, kostenbewusst",
-    description: (
-      <div>
+    description: <div>
       <p> Die Radlogistik bietet dazu eine <strong>flexible und umweltfreundliche Alternative</strong>. Fahrräder können <strong>Staus umgehen, verkehrsberuhigte Zonen vefahren</strong> und <strong>direkt bis vor die Haustür</strong> liefern, ohne dabei von Park oder halteverboten betroffen zu sein. Di Implementierung von E-Antrieben ermöglicht den Transport geößerer lasten. Da für Fahrräder <strong>kein Führerschein</strong> erforderlich ist, vergrößert sich der Pool potentieller Arbeitskräfte.</p>
       <p> Es besteht <strong>kaum noch ein Nachteil zu den deutlich größeren Transportern</strong>, obwohl <strong>Anschaffungs- und Betriebskosten</strong> deutlich geringer sind.</p>
-      </div>
-      ),
+      </div>,
     image: "/lovable-uploads/5c14c775-2f2c-43f4-ab3c-44ca8511b32a.png",
     imageLeft: true
   }];
   const detailedUseCases = [{
-        title: "Post & Paketzustellung",
+    title: "Post & Paketzustellung",
     subtitle: "Hohe Sendungsvolumen, viele Stopps & enge Zeitfenster",
-    description:(
-      <div>
+    description: <div>
       <p> Sie liefern die letzte Meile schneller: Unser Schwerlast-Fahrradanhänger <strong>skaliert Ihre Tourenkapazität exakt nach Bedarf</strong> – ideal bei Peaks und schwankenden Volumina. Per An- & Abkoppeln wechseln Sie flexibel zwischen <strong>E-Bike, Cargobike oder Handbetrieb</strong> und erreichen so Fußgängerzonen, Innenhöfe und Gebäude ohne Umwege.</p>
       <p> Vorbeladene Hänger übernehmen Sie direkt am Sammelpunkt, Retouren nehmen Sie im selben Lauf mit. Die höhere Zuladung reduziert Rückfahrten und macht Ihre Routen planbarer, dichter und wirtschaftlicher.</p>
-      </div>
-      ),
+      </div>,
     image: "/lovable-uploads/274bf0dd-8d84-44ec-85ba-d17b9dd855a9.png",
     features: ["Skalierbar", "Park & Haltemöglichkeiten", "Geringe Anschaffungskosten", "Optimierte Routenführung"]
   }, {
-        title: "Innerbetriebliche Logistik & Transport",
+    title: "Innerbetriebliche Logistik & Transport",
     subtitle: "Der moderne Handwagen — per Rad, Lastenrad oder zu Fuß",
-    description:(
-      <div>
+    description: <div>
       <p> Auf Werksgeländen, in Messehallen oder auf dem Campus arbeitet unser Handwagen nahtlos mit Fahrrädern oder im Handbetrieb zusammen. Er verbindet Außen- und Innenlogistik ohne Umladen: <strong>standardisierte Maße</strong> erleichtern das Vorpacken und die Nutzung von Euro-Wechselbehältern.</p>
       <p> Der robuste Rahmen bewegt bis zu <strong>500 kg</strong> im Dauerbetrieb und lässt sich platzsparend senkrecht abstellen.</p>
-      </div>
-      ),
+      </div>,
     image: "/lovable-uploads/274bf0dd-8d84-44ec-85ba-d17b9dd855a9.png",
     features: ["Flexible Anwenungen", "Ergonomie & Motivation", "Robust & Zuverlässig", "Standartisiert"]
-      }, {
-    title: "Mobiles Handwerk & Dienstleistungen", 
+  }, {
+    title: "Mobiles Handwerk & Dienstleistungen",
     subtitle: "Die mobile Plattform für Ihre Ideen",
-    description: (
-      <div>
+    description: <div>
       <p> Ob mobiler <strong></strong>Werkzeugwagen, Marktstand oder Street-Food: Der Schwerlast-Anhänger bringt Ihr Werkzeug, Material und Ausrüstung zuverlässig dorthin, wo Sie arbeiten. Mit <strong>standardisierten Montagepunkten</strong> und modularen Aufbauten konfigurieren Sie Ihr Setup im Handumdrehen.</p>
       <p> Die City-taugliche Plattform bleibt <strong>geräumig, intuitiv und flexibel</strong> – wie die wahl des Zugfahrzeuges. </p>
-      </div>
-      ),
+      </div>,
     image: "/lovable-uploads/8ec38ff0-c003-4bdb-a181-986f630b322e.png",
     features: ["Robust & tragfähig", "Imagegewinn", "Echter Allrounder", "Nachhaltig"]
   }, {
     title: "Städte & Kommunen",
     subtitle: "Mit positivem Image im öffentlichen Raum",
-    description:(
-      <div>
+    description: <div>
       <p> <strong>Universell einsetzbar</strong> für kommunale Dienste und den öffentlichen Raum: Unser Fahrradanhänger lässt sich mühelos durch <strong>Parks, Campusareale und Fußgängerzonen</strong> manövrieren. Vor Ort arbeiten Sie komfortabel im Handbetrieb; anschließend koppeln Sie ans Rad an und sind zügig im nächsten Bezirk.</p>
       <p>  So werden Stadtreinigung, Werbeanbringung, Parkpflege etc. leiser, bürgernäher und effizienter – mit positivem Vorbildcharakter. </p>
-      </div>
-      ),
+      </div>,
     image: "/lovable-uploads/274bf0dd-8d84-44ec-85ba-d17b9dd855a9.png",
     features: ["Modulare Aufbauten", "Lärmreduzierung", "Emissionsfreier Transport", "Universeller Einsatz"]
-
   }];
 
   // Handle navigation from ValuesBanner
@@ -146,7 +128,7 @@ const Customers = () => {
       clearInterval(intervalRef.current);
     }
     intervalRef.current = setInterval(() => {
-      setActiveIcon((current) => {
+      setActiveIcon(current => {
         if (current === null) return 0;
         return (current + 1) % customerIcons.length;
       });
@@ -173,11 +155,11 @@ const Customers = () => {
       
       {/* Hero Section */}
       <section className="section-padding mt-16 lg:mt-20 relative" style={{
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/lovable-uploads/2b358355-333a-4b95-a477-1d4caff1b7c6.png)`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        backgroundRepeat: 'no-repeat'
-      }}>
+      backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(/lovable-uploads/2b358355-333a-4b95-a477-1d4caff1b7c6.png)`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat'
+    }}>
         <div className="container-custom text-center space-y-8">
           <div className="max-w-4xl mx-auto text-white">
             <h1 className="text-5xl lg:text-7xl font-bold mb-6">
@@ -210,9 +192,7 @@ const Customers = () => {
                   {useCase.description}
                 </div>
                 
-                <Button onClick={() => navigate('/product')} className="btn-secondary-outline">
-                  Mehr erfahren →
-                </Button>
+                
               </div>
             </div>)}
         </div>
@@ -230,22 +210,11 @@ const Customers = () => {
           
           <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
             {customerIcons.map((item, index) => <div key={index} className="space-y-4">
-                <button 
-                  onClick={() => handleIconClick(index)} 
-                  className={`w-20 h-20 rounded-full flex items-center justify-center mx-auto transition-all duration-300 cursor-pointer group ${
-                    activeIcon === index 
-                      ? 'bg-white text-brand-aqua shadow-lg scale-110' 
-                      : 'bg-white/20 text-white hover:bg-white/30'
-                  }`}
-                >
-                  <item.icon className={`w-10 h-10 transition-transform duration-300 ${
-                    activeIcon === index ? 'scale-110' : 'group-hover:scale-110'
-                  }`} />
+                <button onClick={() => handleIconClick(index)} className={`w-20 h-20 rounded-full flex items-center justify-center mx-auto transition-all duration-300 cursor-pointer group ${activeIcon === index ? 'bg-white text-brand-aqua shadow-lg scale-110' : 'bg-white/20 text-white hover:bg-white/30'}`}>
+                  <item.icon className={`w-10 h-10 transition-transform duration-300 ${activeIcon === index ? 'scale-110' : 'group-hover:scale-110'}`} />
                 </button>
                 <div className="text-center">
-                  <h3 className={`font-semibold text-lg transition-colors duration-300 ${
-                    activeIcon === index ? 'text-white' : 'text-white/90'
-                  }`}>{item.title}</h3>
+                  <h3 className={`font-semibold text-lg transition-colors duration-300 ${activeIcon === index ? 'text-white' : 'text-white/90'}`}>{item.title}</h3>
                   <p className="text-sm text-white/80 mt-1">{item.subtitle}</p>
                 </div>
               </div>)}
