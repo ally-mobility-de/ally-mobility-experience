@@ -41,7 +41,7 @@ const AboutUs = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTeamIndex((prev) => (prev + 1) % teamMembers.length);
-    }, 10000); // Change every 10 seconds
+    }, 15000); // Change every 15 seconds
 
     return () => clearInterval(interval);
   }, [teamMembers.length]);
@@ -210,7 +210,7 @@ const AboutUs = () => {
           <div className="container-custom text-center space-y-12">
             <h2 className="text-white text-5xl lg:text-6xl font-bold">Treten Sie unserer Community bei</h2>
             <p className="text-xl text-white/90 max-w-2xl mx-auto">
-              Verbinden Sie sich mit uns und bleiben Sie auf dem Laufenden über die neuesten Entwicklungen in nachhaltiger urbaner Mobilität
+              Vernetzen Sie sich mit uns und bleiben Sie auf dem Laufenden über die neuesten Entwicklungen in nachhaltiger urbaner Mobilität
             </p>
             
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
@@ -244,7 +244,7 @@ const AboutUs = () => {
                   </div>
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold text-blue-700">ally-mobility</h3>
+                  <h3 className="text-2xl font-bold text-blue-700">ally mobility</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">Professionelle Updates, Branchen-Einblicke und Networking-Möglichkeiten in nachhaltiger Mobilität</p>
                   <Button className="w-full bg-blue-600 text-white border-0 hover:bg-blue-700 rounded-2xl py-3 font-semibold shadow-lg">
                     Auf LinkedIn vernetzen
@@ -263,10 +263,10 @@ const AboutUs = () => {
                   </div>
                 </div>
                 <div className="space-y-4">
-                  <h3 className="text-2xl font-bold text-blue-600">bikerave</h3>
-                  <p className="text-muted-foreground text-sm leading-relaxed">Treten Sie unseren Community-Diskussionen bei, erhalten Sie sofortigen Support und vernetzen Sie sich mit anderen Mobilitäts-Enthusiasten</p>
+                  <h3 className="text-2xl font-bold text-blue-600">t.me/bikerave</h3>
+                  <p className="text-muted-foreground text-sm leading-relaxed">Treten Sie unserer Community bei, erhalten Sie Infos über die nächsten Events & Projekte rund um ally-mobility.</p>
                   <Button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white border-0 hover:from-blue-600 hover:to-blue-700 rounded-2xl py-3 font-semibold shadow-lg">
-                    Telegram beitreten
+                    Telegram-Community beitreten
                   </Button>
                 </div>
               </div>
@@ -281,7 +281,7 @@ const AboutUs = () => {
           <div className="text-center space-y-4 mb-12">
             <h2 className="text-primary text-5xl lg:text-6xl font-bold">Events</h2>
             <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
-              Besuchen Sie uns auf den wichtigsten Mobilitätsmessen und Events
+              Besuchen Sie uns auf den wichtigsten Messen und Events
             </p>
           </div>
 
@@ -383,7 +383,7 @@ const AboutUs = () => {
                       href="mailto:info@ally-mobility.com" 
                       className="text-lg font-medium text-primary hover:text-secondary transition-colors"
                     >
-                      info@ally-mobility.com
+                      info@ally-mobility.de
                     </a>
                   </div>
                 </div>
@@ -394,7 +394,7 @@ const AboutUs = () => {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">Telefon</p>
-                    <p className="text-lg font-medium text-foreground">+49 (0) 30 12345678</p>
+                    <p className="text-lg font-medium text-foreground">+49 (0) 162 2946705</p>
                   </div>
                 </div>
 
@@ -405,8 +405,8 @@ const AboutUs = () => {
                   <div>
                     <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">Adresse</p>
                     <p className="text-lg font-medium text-foreground">
-                      Musterstraße 123<br />
-                      10115 Berlin, Deutschland
+                      Haselbacherstraße 18A<br />
+                      04617 Treben, Deutschland
                     </p>
                   </div>
                 </div>
