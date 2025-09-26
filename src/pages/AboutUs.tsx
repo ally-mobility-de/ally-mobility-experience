@@ -34,6 +34,7 @@ const AboutUs = () => {
       role: "CTO",
       quote: "Robust, effizient, benutzerfreundlich – getestet im Alltag, optimiert für Ihren täglichen Einsatz. ",
       image: "/lovable-uploads/605721e5-fa14-422b-b77a-35b93be0c8ff.png"
+    }
   ];
 
   // Auto-cycling for team carousel
