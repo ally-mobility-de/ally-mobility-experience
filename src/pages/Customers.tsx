@@ -311,7 +311,7 @@ const Customers = () => {
         <div className="container-custom text-center space-y-8">
           <h2 className="text-white">Jetzt anfragen & Probefahrt sichern</h2>
           <p className="text-xl text-white/90 max-w-2xl mx-auto">
-            Überzeugen Sie sich selbst & erleben Sie unser Sytem auf Ihrer Strecke.
+            Überzeugen Sie sich selbst & erleben Sie unser Sytem auf Ihrer Strecke. Ob <strong>Pritsche, Box oder Wechselconatiner</strong>, nutzen Sie die Vorteile der Radlogistik.
           </p>
           <Button className="btn-secondary-outline text-white border-white hover:bg-white hover:text-brand-purple" onClick={() => navigate('/about-us#contact')}>
             Termin vereinbaren
