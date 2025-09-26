@@ -7,138 +7,114 @@ import Footer from "@/components/Footer";
 import heroCargoBike from "@/assets/hero-cargo-bike.jpg";
 import dealerPerson from "@/assets/dealer-person.jpg";
 import { Instagram, Linkedin, MessageCircle, MapPin, Phone, Mail, Calendar, ChevronLeft, ChevronRight } from "lucide-react";
-
 const AboutUs = () => {
   const navigate = useNavigate();
   const [currentEventIndex, setCurrentEventIndex] = useState(0);
   const [currentTeamIndex, setCurrentTeamIndex] = useState(0);
-
-  const teamMembers = [
-    {
-      id: 1,
-      name: "Eliah",
-      role: "CEO",
-      quote: "Wir glauben, dass Mobilität nachhaltig, effizient und für jeden zugänglich sein sollte. Unsere Mission ist es, den urbanen Transport zu revolutionieren.",
-      image: "/lovable-uploads/90e30aa4-dbec-42db-8be2-ccb1c039477f.png"
-    },
-    {
-      id: 2,
-      name: "Chanti",
-      role: "CFO",
-      quote: "Wir setzen Geld dort ein, wo es Zukunft baut: in nachhaltiges Wachstum und urbane Mobilität.",
-      image: "/lovable-uploads/6f7b3532-0531-4217-84ac-9969faa59981.png"
-    },
-    {
-      id: 3,
-      name: "Noah",
-      role: "CTO",
-      quote: "Robust, effizient, benutzerfreundlich – getestet im Alltag, optimiert für Ihren täglichen Einsatz. ",
-      image: "/lovable-uploads/605721e5-fa14-422b-b77a-35b93be0c8ff.png"
-    }
-  ];
+  const teamMembers = [{
+    id: 1,
+    name: "Eliah",
+    role: "CEO",
+    quote: "Wir glauben, dass Mobilität nachhaltig, effizient und für jeden zugänglich sein sollte. Unsere Mission ist es, den urbanen Transport zu revolutionieren.",
+    image: "/lovable-uploads/90e30aa4-dbec-42db-8be2-ccb1c039477f.png"
+  }, {
+    id: 2,
+    name: "Chanti",
+    role: "CFO",
+    quote: "Wir setzen Geld dort ein, wo es Zukunft baut: in nachhaltiges Wachstum und urbane Mobilität.",
+    image: "/lovable-uploads/6f7b3532-0531-4217-84ac-9969faa59981.png"
+  }, {
+    id: 3,
+    name: "Noah",
+    role: "CTO",
+    quote: "Robust, effizient, benutzerfreundlich – getestet im Alltag, optimiert für Ihren täglichen Einsatz. ",
+    image: "/lovable-uploads/605721e5-fa14-422b-b77a-35b93be0c8ff.png"
+  }];
 
   // Auto-cycling for team carousel
   useEffect(() => {
     const interval = setInterval(() => {
-      setCurrentTeamIndex((prev) => (prev + 1) % teamMembers.length);
+      setCurrentTeamIndex(prev => (prev + 1) % teamMembers.length);
     }, 15000); // Change every 15 seconds
 
     return () => clearInterval(interval);
   }, [teamMembers.length]);
-
-  const events = [
-    {
-      id: 1,
-      title: "mobifuture 2025",
-      date: "15-17 März 2025",
-      location: "Frankfurt, Deutschland",
-      description: "Deutschlands größte Fachmesse für nachhaltige Mobilität. Entdecken Sie die neuesten Innovationen im Bereich urbaner Logistik.",
-      status: "upcoming",
-      image: "/lovable-uploads/9b4e4bef-891c-4551-adf6-e03e4c96dbfb.png"
-    },
-    {
-      id: 2,
-      title: "Urban Logistics Summit",
-      date: "22-24 April 2025", 
-      location: "Berlin, Deutschland",
-      description: "Internationale Konferenz für nachhaltige Stadtlogistik und Mobilitätslösungen.",
-      status: "upcoming",
-      image: "/lovable-uploads/bab5eb9f-31a2-47e6-a2ef-a6ba2f49cb98.png"
-    },
-    {
-      id: 3,
-      title: "Cargo Bike Festival",
-      date: "12-14 September 2024",
-      location: "München, Deutschland", 
-      description: "Das größte Lastenrad-Festival Europas mit Test-Parcours und Fachvorträgen.",
-      status: "past",
-      image: "/lovable-uploads/9ab30c1f-6718-4c8b-a12e-d95bb1174523.png"
-    },
-    {
-      id: 4,
-      title: "Green Transport Expo",
-      date: "8-10 Juni 2025",
-      location: "Hamburg, Deutschland",
-      description: "Europas führende Messe für umweltfreundliche Transportlösungen und E-Mobility. Innovative Technologien für nachhaltige Mobilität.",
-      status: "upcoming",
-      image: "/lovable-uploads/c6ca3796-a012-4b60-b80e-3a0a8f3f21bd.png"
-    },
-    {
-      id: 5,
-      title: "Smart City Conference",
-      date: "18-20 Oktober 2025",
-      location: "Köln, Deutschland",
-      description: "Konferenz für intelligente Stadtentwicklung und nachhaltige Mobilitätskonzepte in urbanen Räumen.",
-      status: "upcoming",
-      image: "/lovable-uploads/adefa6cc-8b89-4cb0-a294-6db863b29fe1.png"
-    }
-  ];
-
+  const events = [{
+    id: 1,
+    title: "mobifuture 2025",
+    date: "15-17 März 2025",
+    location: "Frankfurt, Deutschland",
+    description: "Deutschlands größte Fachmesse für nachhaltige Mobilität. Entdecken Sie die neuesten Innovationen im Bereich urbaner Logistik.",
+    status: "upcoming",
+    image: "/lovable-uploads/9b4e4bef-891c-4551-adf6-e03e4c96dbfb.png"
+  }, {
+    id: 2,
+    title: "Urban Logistics Summit",
+    date: "22-24 April 2025",
+    location: "Berlin, Deutschland",
+    description: "Internationale Konferenz für nachhaltige Stadtlogistik und Mobilitätslösungen.",
+    status: "upcoming",
+    image: "/lovable-uploads/bab5eb9f-31a2-47e6-a2ef-a6ba2f49cb98.png"
+  }, {
+    id: 3,
+    title: "Cargo Bike Festival",
+    date: "12-14 September 2024",
+    location: "München, Deutschland",
+    description: "Das größte Lastenrad-Festival Europas mit Test-Parcours und Fachvorträgen.",
+    status: "past",
+    image: "/lovable-uploads/9ab30c1f-6718-4c8b-a12e-d95bb1174523.png"
+  }, {
+    id: 4,
+    title: "Green Transport Expo",
+    date: "8-10 Juni 2025",
+    location: "Hamburg, Deutschland",
+    description: "Europas führende Messe für umweltfreundliche Transportlösungen und E-Mobility. Innovative Technologien für nachhaltige Mobilität.",
+    status: "upcoming",
+    image: "/lovable-uploads/c6ca3796-a012-4b60-b80e-3a0a8f3f21bd.png"
+  }, {
+    id: 5,
+    title: "Smart City Conference",
+    date: "18-20 Oktober 2025",
+    location: "Köln, Deutschland",
+    description: "Konferenz für intelligente Stadtentwicklung und nachhaltige Mobilitätskonzepte in urbanen Räumen.",
+    status: "upcoming",
+    image: "/lovable-uploads/adefa6cc-8b89-4cb0-a294-6db863b29fe1.png"
+  }];
   const nextEvent = () => {
-    setCurrentEventIndex((prev) => (prev + 1) % events.length);
+    setCurrentEventIndex(prev => (prev + 1) % events.length);
   };
-
   const prevEvent = () => {
-    setCurrentEventIndex((prev) => (prev - 1 + events.length) % events.length);
+    setCurrentEventIndex(prev => (prev - 1 + events.length) % events.length);
   };
-
   const nextTeam = () => {
-    setCurrentTeamIndex((prev) => (prev + 1) % teamMembers.length);
+    setCurrentTeamIndex(prev => (prev + 1) % teamMembers.length);
   };
-
   const prevTeam = () => {
-    setCurrentTeamIndex((prev) => (prev - 1 + teamMembers.length) % teamMembers.length);
+    setCurrentTeamIndex(prev => (prev - 1 + teamMembers.length) % teamMembers.length);
   };
-
-  const bannerBlocks = [
-    {
-      id: 1,
-      title: "Unser Innovationslabor",
-      subtitle: "Wo Ideen Realität werden",
-      description: "Unsere hochmoderne Forschungs- und Entwicklungseinrichtung ist der Ort, wo wir kontinuierlich innovieren und neue Lösungen für nachhaltige urbane Mobilität testen.",
-      image: heroCargoBike,
-      buttonText: "Besuchen Sie unser Labor"
-    },
-    {
-      id: 2,
-      title: "Nachhaltigkeit zuerst",
-      subtitle: "Bauen für morgen",
-      description: "Jede Entscheidung, die wir treffen, wird von unserem Engagement für Umweltverantwortung geleitet und schafft eine nachhaltigere Zukunft für urbanen Transport.",
-      image: dealerPerson,
-      buttonText: "Unsere grünen Initiativen"
-    },
-    {
-      id: 3,
-      title: "Globaler Einfluss",
-      subtitle: "Städte weltweit transformieren",
-      description: "Von Berlin bis Tokio helfen unsere Lösungen Städten dabei, Emissionen zu reduzieren, Verkehrsstaus zu verringern und lebenswertere urbane Räume zu schaffen.",
-      image: heroCargoBike,
-      buttonText: "Sehen Sie unseren Einfluss"
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const bannerBlocks = [{
+    id: 1,
+    title: "Unser Innovationslabor",
+    subtitle: "Wo Ideen Realität werden",
+    description: "Unsere hochmoderne Forschungs- und Entwicklungseinrichtung ist der Ort, wo wir kontinuierlich innovieren und neue Lösungen für nachhaltige urbane Mobilität testen.",
+    image: heroCargoBike,
+    buttonText: "Besuchen Sie unser Labor"
+  }, {
+    id: 2,
+    title: "Nachhaltigkeit zuerst",
+    subtitle: "Bauen für morgen",
+    description: "Jede Entscheidung, die wir treffen, wird von unserem Engagement für Umweltverantwortung geleitet und schafft eine nachhaltigere Zukunft für urbanen Transport.",
+    image: dealerPerson,
+    buttonText: "Unsere grünen Initiativen"
+  }, {
+    id: 3,
+    title: "Globaler Einfluss",
+    subtitle: "Städte weltweit transformieren",
+    description: "Von Berlin bis Tokio helfen unsere Lösungen Städten dabei, Emissionen zu reduzieren, Verkehrsstaus zu verringern und lebenswertere urbane Räume zu schaffen.",
+    image: heroCargoBike,
+    buttonText: "Sehen Sie unseren Einfluss"
+  }];
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* We Are ally-mobility - Team Carousel */}
@@ -154,11 +130,7 @@ const AboutUs = () => {
             {/* Team Member Display */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div className="relative">
-                <img 
-                  src={teamMembers[currentTeamIndex].image} 
-                  alt={`${teamMembers[currentTeamIndex].name} - ${teamMembers[currentTeamIndex].role}`}
-                  className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
-                />
+                <img src={teamMembers[currentTeamIndex].image} alt={`${teamMembers[currentTeamIndex].name} - ${teamMembers[currentTeamIndex].role}`} className="w-full h-[500px] object-cover rounded-2xl shadow-lg" />
               </div>
               
               <div className="space-y-8">
@@ -174,29 +146,15 @@ const AboutUs = () => {
 
             {/* Manual Navigation */}
             <div className="flex justify-between items-center mt-8">
-              <button
-                onClick={prevTeam}
-                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center"
-              >
+              <button onClick={prevTeam} className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center">
                 <ChevronLeft className="w-6 h-6" />
               </button>
               
               <div className="flex gap-2">
-                {teamMembers.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentTeamIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                      index === currentTeamIndex ? 'bg-primary' : 'bg-primary/30'
-                    }`}
-                  />
-                ))}
+                {teamMembers.map((_, index) => <button key={index} onClick={() => setCurrentTeamIndex(index)} className={`w-3 h-3 rounded-full transition-colors duration-300 ${index === currentTeamIndex ? 'bg-primary' : 'bg-primary/30'}`} />)}
               </div>
               
-              <button
-                onClick={nextTeam}
-                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center"
-              >
+              <button onClick={nextTeam} className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center">
                 <ChevronRight className="w-6 h-6" />
               </button>
             </div>
@@ -220,9 +178,7 @@ const AboutUs = () => {
                   <div className="w-24 h-24 bg-gradient-to-br from-pink-500 via-red-500 to-yellow-500 rounded-3xl mx-auto flex items-center justify-center shadow-lg group-hover:shadow-pink-500/25 transition-shadow duration-500">
                     <Instagram className="w-12 h-12 text-white" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">•</span>
-                  </div>
+                  
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold bg-gradient-to-br from-pink-600 to-orange-500 bg-clip-text text-transparent">@ally.mobility</h3>
@@ -239,9 +195,7 @@ const AboutUs = () => {
                   <div className="w-24 h-24 bg-gradient-to-br from-blue-600 to-blue-800 rounded-3xl mx-auto flex items-center justify-center shadow-lg group-hover:shadow-blue-500/25 transition-shadow duration-500">
                     <Linkedin className="w-12 h-12 text-white" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">✓</span>
-                  </div>
+                  
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-blue-700">ally mobility</h3>
@@ -258,9 +212,7 @@ const AboutUs = () => {
                   <div className="w-24 h-24 bg-gradient-to-br from-blue-400 to-blue-600 rounded-3xl mx-auto flex items-center justify-center shadow-lg group-hover:shadow-blue-400/25 transition-shadow duration-500">
                     <MessageCircle className="w-12 h-12 text-white" />
                   </div>
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-orange-500 rounded-full flex items-center justify-center">
-                    <span className="text-white text-xs font-bold">!</span>
-                  </div>
+                  
                 </div>
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-blue-600">t.me/bikerave</h3>
@@ -290,16 +242,10 @@ const AboutUs = () => {
             <div className="bg-white rounded-2xl shadow-lg overflow-hidden">
               <div className="grid grid-cols-1 md:grid-cols-2">
                 <div className="relative">
-                  <img 
-                    src={events[currentEventIndex].image} 
-                    alt={events[currentEventIndex].title}
-                    className="w-full h-64 md:h-full object-cover"
-                  />
-                  {events[currentEventIndex].status === 'upcoming' && (
-                    <div className="absolute top-4 left-4 bg-brand-aqua text-white px-3 py-1 rounded-full text-sm font-medium">
+                  <img src={events[currentEventIndex].image} alt={events[currentEventIndex].title} className="w-full h-64 md:h-full object-cover" />
+                  {events[currentEventIndex].status === 'upcoming' && <div className="absolute top-4 left-4 bg-brand-aqua text-white px-3 py-1 rounded-full text-sm font-medium">
                       Bevorstehend
-                    </div>
-                  )}
+                    </div>}
                 </div>
                 <div className="p-8 space-y-6">
                   <div className="space-y-3">
@@ -329,29 +275,15 @@ const AboutUs = () => {
 
             {/* Carousel Navigation */}
             <div className="flex justify-between items-center mt-6">
-              <button
-                onClick={prevEvent}
-                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center"
-              >
+              <button onClick={prevEvent} className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center">
                 ←
               </button>
               
               <div className="flex gap-2">
-                {events.map((_, index) => (
-                  <button
-                    key={index}
-                    onClick={() => setCurrentEventIndex(index)}
-                    className={`w-3 h-3 rounded-full transition-colors duration-300 ${
-                      index === currentEventIndex ? 'bg-primary' : 'bg-primary/30'
-                    }`}
-                  />
-                ))}
+                {events.map((_, index) => <button key={index} onClick={() => setCurrentEventIndex(index)} className={`w-3 h-3 rounded-full transition-colors duration-300 ${index === currentEventIndex ? 'bg-primary' : 'bg-primary/30'}`} />)}
               </div>
               
-              <button
-                onClick={nextEvent}
-                className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center"
-              >
+              <button onClick={nextEvent} className="w-12 h-12 rounded-full bg-white border-2 border-primary text-primary hover:bg-primary hover:text-white transition-colors duration-300 flex items-center justify-center">
                 →
               </button>
             </div>
@@ -379,10 +311,7 @@ const AboutUs = () => {
                   </div>
                   <div>
                     <p className="text-sm font-medium text-muted-foreground uppercase tracking-wide">E-Mail</p>
-                    <a 
-                      href="mailto:info@ally-mobility.com" 
-                      className="text-lg font-medium text-primary hover:text-secondary transition-colors"
-                    >
+                    <a href="mailto:info@ally-mobility.com" className="text-lg font-medium text-primary hover:text-secondary transition-colors">
                       info@ally-mobility.de
                     </a>
                   </div>
@@ -412,21 +341,14 @@ const AboutUs = () => {
                 </div>
               </div>
 
-              <Button 
-                className="btn-contact text-lg px-8 py-4"
-                onClick={() => window.location.href = 'mailto:info@ally-mobility.com'}
-              >
+              <Button className="btn-contact text-lg px-8 py-4" onClick={() => window.location.href = 'mailto:info@ally-mobility.com'}>
                 Kontaktieren Sie uns
               </Button>
             </div>
 
             {/* Contact Image */}
             <div className="relative">
-              <img 
-                src="/lovable-uploads/2954cfe6-0b98-4fad-bf9d-34aa2d4a7822.png" 
-                alt="Contact ally-mobility team" 
-                className="w-full h-[500px] object-cover rounded-2xl shadow-lg"
-              />
+              <img src="/lovable-uploads/2954cfe6-0b98-4fad-bf9d-34aa2d4a7822.png" alt="Contact ally-mobility team" className="w-full h-[500px] object-cover rounded-2xl shadow-lg" />
               <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent rounded-2xl"></div>
             </div>
           </div>
@@ -434,8 +356,6 @@ const AboutUs = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default AboutUs;
