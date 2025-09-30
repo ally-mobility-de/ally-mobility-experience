@@ -518,14 +518,24 @@ const Product = () => {
             </div>
             <div className="space-y-6">
               <h2 className="text-primary">Werden Sie Vertriebspartner</h2>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                <strong>Händler:</strong> Treten Sie unserem Partnernetzwerk bei und bringen Sie nachhaltige Transportlösungen in Ihre Region.
-                Unsere Heavy-Duty-Anhänger und Aufbauten sind <strong>modular, standardisiert und simpel</strong> – ideal für Beratung, Demo und Verkauf.
+              
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-primary">Händler</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Treten Sie unserem Partnernetzwerk bei und bringen Sie nachhaltige Transportlösungen in Ihre Region.
+                  Unsere Heavy-Duty-Anhänger und Aufbauten sind <strong>modular, standardisiert und simpel</strong> – ideal für Beratung, Demo und Verkauf.
                 </p>
-              <p><strong>Partner:</strong> Erweitern Sie Ihre Variantenvielfalt - Unser modulares, standardisiertes System macht Ihr Lastenrad zur <strong>kapazitätsstarken Gesamtlösung</strong>. 
-                Als Zugfahrzeug erschließen Sie neue Segmente und profitieren von <strong>gegenseitiger Promotion</strong>. 
-                Werden Sie Teil eines einheitlichen Systems und nutzen Sie die Vorteile einer <strong>standardisierten Logistikplattform</strong>: kompatible Schnittstellen, schnelle Integration und effiziente Abläufe. 
-              </p>
+              </div>
+
+              <div className="space-y-4">
+                <h3 className="text-xl font-semibold text-primary">Partner</h3>
+                <p className="text-lg text-muted-foreground leading-relaxed">
+                  Erweitern Sie Ihre Variantenvielfalt - Unser modulares, standardisiertes System macht Ihr Lastenrad zur <strong>kapazitätsstarken Gesamtlösung</strong>. 
+                  Als Zugfahrzeug erschließen Sie neue Segmente und profitieren von <strong>gegenseitiger Promotion</strong>. 
+                  Werden Sie Teil eines einheitlichen Systems und nutzen Sie die Vorteile einer <strong>standardisierten Logistikplattform</strong>: kompatible Schnittstellen, schnelle Integration und effiziente Abläufe. 
+                </p>
+              </div>
+
               <Button className="btn-aqua" onClick={() => navigate('/about-us#contact')}>
                 Vertriebspartner werden
               </Button>
