@@ -399,7 +399,7 @@ const Product = () => {
               {/* Product indicator */}
               <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg px-3 py-2 shadow-card">
                 <div className="text-sm font-medium text-primary">
-                  {currentProduct.name} Configuration
+                  {currentProduct.name}
                 </div>
               </div>
             </div>
