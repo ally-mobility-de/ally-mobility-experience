@@ -420,7 +420,7 @@ const Product = () => {
                 <div className="space-y-4">
                   <h4 className="text-xl font-semibold text-primary">
                     {currentProduct.name === 'Pritsche' && 'Perfekt für Bau & Handwerk'}
-                    {currentProduct.name === 'Box' && 'Ideal für sichere Lieferdienste'}
+                    {currentProduct.name === 'Box' && 'Maximales Volumen für die Letzte-Meile'}
                     {currentProduct.name === 'Wechselcontainer' && 'Revolutionieren Sie Ihre Logistik'}
                   </h4>
                   <p className="text-muted-foreground leading-relaxed">
