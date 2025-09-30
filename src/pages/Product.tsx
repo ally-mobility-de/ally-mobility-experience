@@ -408,9 +408,9 @@ const Product = () => {
           {/* Technical Specifications with Use Case */}
           <div className="space-y-8">
               <div className="text-center space-y-4">
-              <h3 className="text-2xl font-bold text-primary">Technische Spezifikationen</h3>
+              <h3 className="text-2xl font-bold text-primary">Technische Details zum Produkt</h3>
               <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-                Detaillierte technische Daten für unsere modulare Cargo-Plattform
+                Detaillierte technische Details für unsere Cargo-Module
               </p>
             </div>
 
@@ -424,9 +424,9 @@ const Product = () => {
                     {currentProduct.name === 'Wechselcontainer' && 'Revolutionieren Sie Ihre Logistik'}
                   </h4>
                   <p className="text-muted-foreground leading-relaxed">
-                    {currentProduct.name === 'Pritsche' && 'Die Pritschenkonfiguration bietet unbegrenzte Vielseitigkeit für Baumaterialien, Werkzeuge und Ausrüstung. Ihr offenes Design mit verstärkten Zurrösen macht sie perfekt für Handwerker, Landschaftsgärtner und Servicetechniker, die vielfältige Ladung effizient transportieren müssen.'}
-                    {currentProduct.name === 'Box' && 'Das geschlossene Box-Design bietet Wetterschutz und Sicherheit für wertvolle Ladung. Perfekt für Lieferdienste, E-Commerce-Logistik und Unternehmen, die sicheren Transport empfindlicher Güter in urbanen Umgebungen benötigen.'}
-                    {currentProduct.name === 'Wechselcontainer' && 'Das innovative Wechselcontainer-System ermöglicht Rekord-Be- und Entladung. Ideal für hochfrequente Lieferrouten, Logistikunternehmen und Betriebe, die maximale Effizienz bei Ladungsoperationen benötigen.'}
+                    {currentProduct.name === 'Pritsche' && 'Die Pritsche bietet unbegrenzte Vielseitigkeit für Baumaterialien, Werkzeuge und Ausrüstung. Ihr offenes Design mit verstärkten Zurrösen macht sie zum echten Allrounder perfekt für Handwerker, Landschaftsgärtner und andere Service-Dienstleistungen, die geräumige Ladung transportieren wollen.'}
+                    {currentProduct.name === 'Box' && 'Das geschlossene Box-Design bietet Wetterschutz und Sicherheit für Ihre Ladung. Perfekt für Lieferdienste, Letzte-Meile und Unternehmen, die große Volumina empfindlicher Güter zuverlässig durch die Stadt transportieren.'}
+                    {currentProduct.name === 'Wechselcontainer' && 'Unser innovatives Wechselsystem ermöglicht extrem schnelle Übergaben: Container werden vorbeladen, am Fahrzeug in Sekunden getauscht und am Zielort nahtlos integriert – abstellen, neuen Container aufnehmen, weiterfahren. Ideal für hochfrequente Lieferrouten, Logistikunternehmen und alle Betriebe, die Taktzeiten senken und Durchsatz steigern wollen.'}
                   </p>
                 </div>
                 
@@ -442,21 +442,21 @@ const Product = () => {
                   <ul className="space-y-2 text-sm text-muted-foreground">
                     {currentProduct.name === 'Pritsche' && <>
                         <li>• Vielseitige Zurrösen für jeden Ladungstyp</li>
-                        <li>• Niedrige Ladehöhe für einfachen Zugang</li>
-                        <li>• Professioneller verstärkter Rahmen</li>
+                        <li>• Niedrige Ladehöhe für einfaches Be und Entladen</li>
+                        <li>• Hochwertiger verstärkter Rahmen</li>
                         <li>• Kompatibel mit allen Fahrradtypen</li>
                       </>}
                     {currentProduct.name === 'Box' && <>
-                        <li>• Wettergeschütztes Ladeabteil</li>
-                        <li>• Schlüsselloses Schließsystem für Sicherheit</li>
+                        <li>• Wetter & Diebstahlschutz</li>
+                        <li>• Schlüsselloses Schließsystem</li>
                         <li>• 2,3 m³ geschlossener Lagerraum</li>
-                        <li>• Ideal für wertvolle oder empfindliche Güter</li>
+                        <li>• Schnelles Be- und Entladen</li>
                       </>}
                     {currentProduct.name === 'Wechselcontainer' && <>
                         <li>• Rekord-Be- und Entladung</li>
-                        <li>• Bis zu 3 Container ohne Werkzeug</li>
-                        <li>• 4 Bremsrollen für Mobilität</li>
-                        <li>• Perfekt für hochfrequente Routen</li>
+                        <li>• Bis zu 3 Wechselcontainer</li>
+                        <li>• Rollbar mit Bremsfunktion</li>
+                        <li>• Standartisiert & Herstellerübergreifend</li>
                       </>}
                   </ul>
                 </div>
