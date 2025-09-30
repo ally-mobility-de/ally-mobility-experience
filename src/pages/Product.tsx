@@ -512,13 +512,15 @@ const Product = () => {
       {/* Become a Dealer */}
       <section className="section-padding">
         <div className="container-custom">
+          <div className="text-center space-y-4 mb-12">
+            <h2 className="text-primary">Werden Sie Vertriebspartner</h2>
+          </div>
+          
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div>
               <img src={dealerPerson} alt="Become a dealer" className="w-full h-auto rounded-2xl shadow-lg" />
             </div>
             <div className="space-y-6">
-              <h2 className="text-primary">Werden Sie Vertriebspartner</h2>
-              
               <div className="space-y-4">
                 <h3 className="text-xl font-semibold text-primary">Händler</h3>
                 <p className="text-lg text-muted-foreground leading-relaxed">
