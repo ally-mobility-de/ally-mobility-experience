@@ -528,6 +528,9 @@ const Product = () => {
               </p>
               <Button className="btn-aqua" onClick={() => navigate('/about-us#contact')}>
                 Vertriebspartner werden
+              </Button>
+            </div>
+          </div>
         </div>
       </section>
 
