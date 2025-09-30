@@ -40,7 +40,7 @@ const ValuesBanner = () => {
   }];
   return <section className="section-padding bg-gradient-to-r from-primary to-brand-aqua text-white">
       <div className="container-custom">
-        <div className="text-center space-y-12">
+        <div className="text-center space-y-8">
           {/* Header */}
           <div className="space-y-6">
             <h2 className="text-white">Die Smart Alternative</h2>
