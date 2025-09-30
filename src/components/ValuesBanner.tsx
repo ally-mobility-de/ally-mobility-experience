@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+import { ChevronDown } from 'lucide-react';
 
 const ValuesBanner = () => {
   const navigate = useNavigate();
@@ -64,6 +65,11 @@ const ValuesBanner = () => {
                   <p className="text-sm text-white leading-relaxed">
                     {value.description}
                   </p>
+                  
+                  {/* Click indicator */}
+                  <div className="pt-2 flex justify-center">
+                    <ChevronDown className="w-5 h-5 text-white/60 group-hover:text-white group-hover:translate-y-1 transition-all duration-300" />
+                  </div>
                 </div>
               </button>)}
           </div>
