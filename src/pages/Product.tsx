@@ -322,7 +322,7 @@ const Product = () => {
                 <h1 className="text-primary">Maximale Vielseitigkeit</h1>
                 <p className="text-xl text-muted-foreground leading-relaxed">
                   Flexible Module für jeden Zweck. Unsere Heavy-Duty-Fahrradanhänger kombinieren eine stabile Plattform mit wechselbaren Modulen.
-                  Pritsche, Box, Wechselcontainer – ein System für jeden Zweck.
+                  Pritsche, Box, Wechselcontainer – <strong>ein System für jeden Zweck</strong>.
                 </p>
               </div>
 
