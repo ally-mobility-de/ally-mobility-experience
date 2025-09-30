@@ -517,20 +517,17 @@ const Product = () => {
               <img src={dealerPerson} alt="Become a dealer" className="w-full h-auto rounded-2xl shadow-lg" />
             </div>
             <div className="space-y-6">
-              <h2 className="text-primary">Werden Sie Händler // Partner</h2>
+              <h2 className="text-primary">Werden Sie Vertriebspartner</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
                 <strong>Händler:</strong> Treten Sie unserem Partnernetzwerk bei und bringen Sie nachhaltige Transportlösungen in Ihre Region.
                 Unsere Heavy-Duty-Anhänger und Aufbauten sind <strong>modular, standardisiert und simpel</strong> – ideal für Beratung, Demo und Verkauf.
                 </p>
-              <p><strong>Partner:</strong>Erweitern Sie Ihre Variantenvielfalt - Unser modulares, standardisiertes System macht Ihr Lastenrad zur kapazitätsstarken Gesamtlösung. 
+              <p><strong>Partner:</strong> Erweitern Sie Ihre Variantenvielfalt - Unser modulares, standardisiertes System macht Ihr Lastenrad zur kapazitätsstarken Gesamtlösung. 
                 Als Zugfahrzeug erschließen Sie neue Segmente und profitieren von gegenseitiger Promotion. 
                 Werden Sie Teil eines einheitlichen Systems und nutzen Sie die Vorteile einer standardisierten Logistikplattform: kompatible Schnittstellen, schnelle Integration und effiziente Abläufe. 
               </p>
               <Button className="btn-aqua" onClick={() => navigate('/about-us#contact')}>
-                Händler // Partner werden
-              </Button>
-            </div>
-          </div>
+                Vertriebspartner werden
         </div>
       </section>
 
