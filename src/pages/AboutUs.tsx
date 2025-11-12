@@ -183,7 +183,10 @@ const AboutUs = () => {
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold bg-gradient-to-br from-pink-600 to-orange-500 bg-clip-text text-transparent">@ally.mobility</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">Folgen Sie unserer Reise und sehen Sie unsere Produkte in Aktion mit täglichen Updates und Behind-the-Scenes-Inhalten</p>
-                  <Button className="w-full bg-gradient-to-r from-pink-500 to-orange-400 text-white border-0 hover:from-pink-600 hover:to-orange-500 rounded-2xl py-3 font-semibold shadow-lg">
+                  <Button 
+                    className="w-full bg-gradient-to-r from-pink-500 to-orange-400 text-white border-0 hover:from-pink-600 hover:to-orange-500 rounded-2xl py-3 font-semibold shadow-lg"
+                    onClick={() => window.open('https://www.instagram.com/ally.mobility/', '_blank')}
+                  >
                     Auf Instagram folgen
                   </Button>
                 </div>
@@ -200,7 +203,10 @@ const AboutUs = () => {
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-blue-700">ally mobility</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">Professionelle Updates, Branchen-Einblicke und Networking-Möglichkeiten in nachhaltiger Mobilität</p>
-                  <Button className="w-full bg-blue-600 text-white border-0 hover:bg-blue-700 rounded-2xl py-3 font-semibold shadow-lg">
+                  <Button 
+                    className="w-full bg-blue-600 text-white border-0 hover:bg-blue-700 rounded-2xl py-3 font-semibold shadow-lg"
+                    onClick={() => window.open('https://www.linkedin.com/company/ally-mobility/', '_blank')}
+                  >
                     Auf LinkedIn vernetzen
                   </Button>
                 </div>
@@ -217,7 +223,10 @@ const AboutUs = () => {
                 <div className="space-y-4">
                   <h3 className="text-2xl font-bold text-blue-600">t.me/bikerave</h3>
                   <p className="text-muted-foreground text-sm leading-relaxed">Treten Sie unserer Community bei, erhalten Sie Infos über die nächsten Events & Projekte rund um ally-mobility.</p>
-                  <Button className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white border-0 hover:from-blue-600 hover:to-blue-700 rounded-2xl py-3 font-semibold shadow-lg">
+                  <Button 
+                    className="w-full bg-gradient-to-r from-blue-500 to-blue-600 text-white border-0 hover:from-blue-600 hover:to-blue-700 rounded-2xl py-3 font-semibold shadow-lg"
+                    onClick={() => window.open('https://www.t.me/bikerave', '_blank')}
+                  >
                     Telegram-Community beitreten
                   </Button>
                 </div>
