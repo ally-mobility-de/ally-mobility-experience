@@ -23,7 +23,7 @@ const HeroSection = () => {
           <div className="space-y-8 animate-fade-in">
             <div className="space-y-6">
               <h1 className="text-background leading-tight">Nachhaltig Großes Bewegen</h1>
-              <p className="text-xl lg:text-2xl text-background/90 leading-relaxed max-w-2xl">Mit einem robusten Schwerlast-Fahrradanhänger bietet ally-mobility eine langlebige Lösung für effizienten nd umweltfreundlichen Transport von Lasten über 500kg. </p>
+              <p className="text-xl lg:text-2xl text-background/90 leading-relaxed max-w-2xl">Mit einem robusten Schwerlast-Fahrradanhänger bietet ally-mobility eine langlebige Lösung für effizienten und umweltfreundlichen Transport von Lasten über 500kg.   </p>
             </div>
 
             <div className="flex flex-col sm:flex-row gap-4">
