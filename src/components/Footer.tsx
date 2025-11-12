@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-
 const Footer = () => {
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -28,7 +27,31 @@ const Footer = () => {
               <div className="space-y-2 text-white/80">
                 <p>info@ally-mobility.com</p>
                 <p>+49 (0) 30 123 456 789</p>
-                <p>Berlin, Deutschland<br />Innovation District</p>
+                <p>Treben, Deutschland
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <br />Innovation District</p>
               </div>
             </div>
           </div>
